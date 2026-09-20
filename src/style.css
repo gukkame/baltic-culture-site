@@ -36,7 +36,8 @@ body {
   background-color: var(--color-parchment);
   background-image:
     radial-gradient(circle at 20% 20%, rgba(217, 164, 65, 0.08), transparent 45%),
-    radial-gradient(circle at 80% 60%, rgba(79, 111, 82, 0.08), transparent 45%);
+    radial-gradient(circle at 80% 60%, rgba(79, 111, 82, 0.08), transparent 45%),
+    url("/images/texture-paper.svg");
   color: var(--color-ink);
   font-family: var(--font-sans);
 }
