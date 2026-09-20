@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-parchment: #f6efdc;
+  --color-parchment-dark: #e9dcb9;
+  --color-parchment-darker: #dccca0;
+  --color-terracotta: #c1622d;
+  --color-terracotta-dark: #93481f;
+  --color-amber: #d9a441;
+  --color-amber-dark: #a97a24;
+  --color-forest: #4f6f52;
+  --color-forest-dark: #35492f;
+  --color-ink: #3a2e22;
+  --color-ink-light: #6b5a45;
+
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-parchment);
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(217, 164, 65, 0.08), transparent 45%),
+    radial-gradient(circle at 80% 60%, rgba(79, 111, 82, 0.08), transparent 45%);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--color-terracotta-dark);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-forest-dark);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 0.5rem 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
