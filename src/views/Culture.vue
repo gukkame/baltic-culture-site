@@ -37,7 +37,7 @@ const heroImage = computed(() =>
     </RouterLink>
   </section>
 
-  <section v-else class="relative mx-auto max-w-6xl px-4 py-8 sm:py-12">
+  <section v-else class="relative">
     <!-- Shared clip-path definition for the masked hero image, scales via objectBoundingBox -->
     <svg width="0" height="0" class="absolute" aria-hidden="true">
       <defs>
@@ -56,10 +56,12 @@ const heroImage = computed(() =>
       </defs>
     </svg>
 
-    <CornerSprig class="pointer-events-none absolute bottom-4 right-4 hidden opacity-70 sm:block" />
-
-    <div class="grid gap-8 lg:grid-cols-2 lg:items-start">
-      <div>
+    <!-- Header row: text column stays within the site's normal content width; the hero
+         image column has no horizontal padding so it bleeds flush to the page's top-right
+         corner, matching the reference design. Capped at max-w so it stays sane on very
+         wide monitors. -->
+    <div class="mx-auto grid max-w-[1800px] gap-8 lg:grid-cols-2 lg:items-start">
+      <div class="mx-auto w-full max-w-6xl px-4 pt-8 sm:pt-12">
         <RouterLink to="/" class="inline-flex items-center gap-1 text-sm text-ink-light hover:text-terracotta-dark">
           ← {{ t('culture.backHome') }}
         </RouterLink>
@@ -77,14 +79,14 @@ const heroImage = computed(() =>
         </p>
       </div>
 
-      <div
-        class="aspect-[942/542] w-full overflow-hidden rounded-2xl [clip-path:url(#cultureHeroMask)]"
-      >
+      <div class="aspect-[942/542] w-full overflow-hidden [clip-path:url(#cultureHeroMask)]">
         <img :src="heroImage" alt="" class="h-full w-full object-cover" />
       </div>
     </div>
 
-    <div class="mt-8">
+    <CornerSprig class="pointer-events-none absolute bottom-4 right-4 hidden opacity-70 sm:block" />
+
+    <div class="mx-auto mt-8 max-w-6xl px-4 pb-8 sm:pb-12">
       <div role="group" :aria-label="t('culture.filters.all')" class="flex flex-wrap gap-2">
         <button
           type="button"
