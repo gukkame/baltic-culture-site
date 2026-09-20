@@ -18,13 +18,19 @@ const item = computed(() => findItem(props.country, props.itemId))
   <section v-if="!item" class="mx-auto max-w-3xl px-4 py-12">
     <h1 class="font-serif text-3xl text-ink">{{ t('item.notFoundTitle') }}</h1>
     <p class="mt-2 text-ink-light">{{ t('item.notFoundBody') }}</p>
-    <RouterLink :to="`/culture/${country}`" class="mt-6 inline-block text-terracotta-dark hover:underline">
+    <RouterLink
+      :to="`/culture/${country}`"
+      class="mt-6 inline-block text-terracotta-dark underline-offset-4 transition-colors duration-150 hover:text-terracotta hover:underline"
+    >
       ← {{ t('item.backToCulture') }}
     </RouterLink>
   </section>
 
   <article v-else class="mx-auto max-w-3xl px-4 py-12">
-    <RouterLink :to="`/culture/${country}`" class="text-sm text-terracotta-dark hover:underline">
+    <RouterLink
+      :to="`/culture/${country}`"
+      class="text-sm text-terracotta-dark underline-offset-4 transition-colors duration-150 hover:text-terracotta hover:underline"
+    >
       ← {{ t('item.backToCulture') }}
     </RouterLink>
 

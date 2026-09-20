@@ -32,7 +32,10 @@ const heroImage = computed(() =>
   <section v-if="!validCountry" class="mx-auto max-w-5xl px-4 py-12">
     <h1 class="font-serif text-3xl text-ink">{{ t('culture.notFoundTitle') }}</h1>
     <p class="mt-2 text-ink-light">{{ t('culture.notFoundBody') }}</p>
-    <RouterLink to="/" class="mt-6 inline-block text-terracotta-dark hover:underline">
+    <RouterLink
+      to="/"
+      class="mt-6 inline-block text-terracotta-dark underline-offset-4 transition-colors duration-150 hover:text-terracotta hover:underline"
+    >
       {{ t('culture.backHome') }}
     </RouterLink>
   </section>
@@ -72,7 +75,10 @@ const heroImage = computed(() =>
         class="mx-auto min-h-[clamp(140px,22vw,220px)] max-w-6xl px-4 pb-2 pt-10 sm:min-h-[clamp(180px,20vw,260px)] sm:px-6 sm:pt-16 lg:min-h-[clamp(320px,29vw,520px)] lg:px-8"
       >
         <div class="max-w-[60%] sm:max-w-[60%] lg:max-w-md">
-          <RouterLink to="/" class="inline-flex items-center gap-1 text-sm text-ink-light hover:text-terracotta-dark">
+          <RouterLink
+            to="/"
+            class="inline-flex items-center gap-1 text-sm text-ink-light underline-offset-4 transition-colors duration-150 hover:text-terracotta-dark hover:underline"
+          >
             ← {{ t('culture.backHome') }}
           </RouterLink>
 
@@ -98,8 +104,12 @@ const heroImage = computed(() =>
         <button
           type="button"
           :aria-pressed="activeFilter === 'all'"
-          class="rounded-full px-4 py-1.5 text-sm font-medium transition"
-          :class="activeFilter === 'all' ? 'bg-ink text-parchment' : 'bg-parchment-dark text-ink-light hover:text-ink'"
+          class="rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150"
+          :class="
+            activeFilter === 'all'
+              ? 'bg-ink text-parchment hover:bg-ink-light'
+              : 'bg-parchment-dark text-ink-light hover:bg-parchment-darker hover:text-ink'
+          "
           @click="activeFilter = 'all'"
         >
           {{ t('culture.filters.all') }}
@@ -107,8 +117,12 @@ const heroImage = computed(() =>
         <button
           type="button"
           :aria-pressed="activeFilter === 'dance'"
-          class="rounded-full px-4 py-1.5 text-sm font-medium transition"
-          :class="activeFilter === 'dance' ? 'bg-ink text-parchment' : 'bg-parchment-dark text-ink-light hover:text-ink'"
+          class="rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150"
+          :class="
+            activeFilter === 'dance'
+              ? 'bg-ink text-parchment hover:bg-ink-light'
+              : 'bg-parchment-dark text-ink-light hover:bg-parchment-darker hover:text-ink'
+          "
           @click="activeFilter = 'dance'"
         >
           {{ t('culture.dances') }}
@@ -116,8 +130,12 @@ const heroImage = computed(() =>
         <button
           type="button"
           :aria-pressed="activeFilter === 'song'"
-          class="rounded-full px-4 py-1.5 text-sm font-medium transition"
-          :class="activeFilter === 'song' ? 'bg-ink text-parchment' : 'bg-parchment-dark text-ink-light hover:text-ink'"
+          class="rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150"
+          :class="
+            activeFilter === 'song'
+              ? 'bg-ink text-parchment hover:bg-ink-light'
+              : 'bg-parchment-dark text-ink-light hover:bg-parchment-darker hover:text-ink'
+          "
           @click="activeFilter = 'song'"
         >
           {{ t('culture.songs') }}
@@ -128,7 +146,7 @@ const heroImage = computed(() =>
         <li v-for="item in filteredItems" :key="item.id">
           <RouterLink
             :to="`/culture/${validCountry}/${item.id}`"
-            class="group flex h-full flex-col overflow-hidden rounded-2xl bg-parchment-light shadow-paper ring-1 ring-parchment-dark transition hover:shadow-paper-hover"
+            class="group flex h-full flex-col overflow-hidden rounded-2xl bg-parchment-light shadow-paper ring-1 ring-parchment-dark transition duration-200 hover:bg-parchment hover:shadow-paper-hover"
           >
             <img
               :src="`/${item.image}`"

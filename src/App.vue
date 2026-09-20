@@ -16,19 +16,28 @@ watchEffect(() => {
   <div class="flex min-h-screen flex-col">
     <header v-if="!route.meta.hideGlobalNav" class="border-b border-parchment-dark bg-parchment/80">
       <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
-        <RouterLink to="/" class="font-serif text-xl font-semibold text-ink">
+        <RouterLink
+          to="/"
+          class="font-serif text-xl font-semibold text-ink transition-colors duration-150 hover:text-terracotta-dark"
+        >
           {{ t('site.title') }}
         </RouterLink>
         <nav aria-label="Primary" class="flex items-center gap-4">
-          <RouterLink to="/quiz" class="text-ink hover:text-terracotta">
+          <RouterLink
+            to="/quiz"
+            class="text-ink underline-offset-4 transition-colors duration-150 hover:text-terracotta-dark hover:underline"
+          >
             {{ t('nav.quiz') }}
           </RouterLink>
-          <RouterLink to="/collection" class="text-ink hover:text-terracotta">
+          <RouterLink
+            to="/collection"
+            class="text-ink underline-offset-4 transition-colors duration-150 hover:text-terracotta-dark hover:underline"
+          >
             {{ t('nav.collection') }}
           </RouterLink>
           <button
             type="button"
-            class="rounded-full border border-forest px-3 py-1 text-sm font-medium text-forest-dark hover:bg-forest hover:text-white"
+            class="rounded-full border border-forest px-3 py-1.5 text-sm font-medium text-forest-dark transition-colors duration-150 hover:bg-forest hover:text-white"
             :aria-label="t('nav.localeToggle')"
             @click="toggleLocale"
           >
