@@ -46,9 +46,13 @@ html {
 body {
   background-color: var(--color-parchment);
   background-image:
-    radial-gradient(circle at 20% 20%, rgba(183, 122, 36, 0.05), transparent 45%),
-    radial-gradient(circle at 80% 60%, rgba(82, 99, 74, 0.05), transparent 45%),
+    radial-gradient(ellipse at 20% 10%, rgba(255, 255, 255, 0.22), transparent 45%),
+    radial-gradient(ellipse at 80% 70%, rgba(180, 150, 110, 0.06), transparent 50%),
     url("/images/texture-paper.svg");
+  background-size:
+    auto,
+    auto,
+    480px 480px;
   color: var(--color-ink);
   font-family: var(--font-sans);
 }
