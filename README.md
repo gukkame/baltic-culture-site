@@ -21,7 +21,17 @@ src/
 ## Scripts
 
 ```
+npm install      # install dependencies
 npm run dev       # start dev server
 npm run build     # type-check (vue-tsc) + production build
 npm run preview   # preview the production build
 ```
+
+
+### Claude instructions
+
+- Use as little packages as possible
+- Use i18 for translations
+- Use JSON files for content (dances, songs, quiz questions)
+- Use localStorage for quiz progress and badge collection
+- Use latest accesability rules
