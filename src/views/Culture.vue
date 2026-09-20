@@ -61,7 +61,7 @@ const heroImage = computed(() =>
          corner, matching the reference design. Capped at max-w so it stays sane on very
          wide monitors. -->
     <div class="mx-auto grid max-w-[1800px] gap-8 lg:grid-cols-2 lg:items-start">
-      <div class="mx-auto w-full max-w-6xl px-4 pt-8 sm:pt-12">
+      <div class="mx-auto w-full max-w-6xl px-4 pb-2 pt-10 sm:px-6 sm:pt-16 lg:px-8">
         <RouterLink to="/" class="inline-flex items-center gap-1 text-sm text-ink-light hover:text-terracotta-dark">
           ← {{ t('culture.backHome') }}
         </RouterLink>

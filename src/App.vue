@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { watchEffect } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
 import { useLocale } from './composables/useLocale'
 
 const { locale, toggleLocale, t } = useLocale()
+const route = useRoute()
 
 watchEffect(() => {
   document.documentElement.lang = locale.value
@@ -13,7 +14,7 @@ watchEffect(() => {
 <template>
   <a class="skip-link" href="#main-content">{{ t('nav.skipToContent') }}</a>
   <div class="flex min-h-screen flex-col">
-    <header class="border-b border-parchment-dark bg-parchment/80">
+    <header v-if="!route.meta.hideGlobalNav" class="border-b border-parchment-dark bg-parchment/80">
       <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
         <RouterLink to="/" class="font-serif text-xl font-semibold text-ink">
           {{ t('site.title') }}

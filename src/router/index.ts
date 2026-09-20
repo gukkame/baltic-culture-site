@@ -5,9 +5,21 @@ import ItemDetail from '../views/ItemDetail.vue'
 import Quiz from '../views/Quiz.vue'
 import Collection from '../views/Collection.vue'
 
+declare module 'vue-router' {
+  interface RouteMeta {
+    hideGlobalNav?: boolean
+  }
+}
+
 const routes: RouteRecordRaw[] = [
   { path: '/', name: 'home', component: Home },
-  { path: '/culture/:country', name: 'culture', component: Culture, props: true },
+  {
+    path: '/culture/:country',
+    name: 'culture',
+    component: Culture,
+    props: true,
+    meta: { hideGlobalNav: true },
+  },
   {
     path: '/culture/:country/:itemId',
     name: 'item-detail',
