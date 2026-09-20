@@ -56,38 +56,44 @@ const heroImage = computed(() =>
       </defs>
     </svg>
 
-    <!-- Header row: image stays pinned to the top-right corner at every breakpoint (never
-         stacks below the text), just narrower on small screens. Text column stays within
-         the site's normal content width; the image column has no horizontal padding so it
-         bleeds flush to the page's top-right corner. Capped at max-w so it stays sane on
-         very wide monitors. -->
-    <div class="mx-auto grid max-w-[1800px] grid-cols-[62%_38%] items-start gap-3 sm:grid-cols-[65%_35%] sm:gap-6 lg:grid-cols-2 lg:gap-8">
-      <div class="mx-auto w-full max-w-6xl pb-2 pl-4 pt-10 sm:pl-6 sm:pt-16 lg:pl-8">
-        <RouterLink to="/" class="inline-flex items-center gap-1 text-sm text-ink-light hover:text-terracotta-dark">
-          ← {{ t('culture.backHome') }}
-        </RouterLink>
-
-        <div class="mt-4 flex items-center gap-2 text-ink">
-          <FolkEmblem :size="20" />
-          <span class="font-medium">{{ t(`common.${validCountry}`) }}</span>
-        </div>
-
-        <h1 class="mt-3 font-serif text-2xl leading-tight text-ink sm:text-3xl lg:text-4xl">
-          {{ t(`culture.pages.${validCountry}.headline`) }}
-        </h1>
-        <p class="mt-4 max-w-md text-sm text-ink-light sm:text-base">
-          {{ t(`culture.pages.${validCountry}.description`) }}
-        </p>
+    <!-- Header row: the hero image is absolutely positioned, pinned to the page's top-right
+         corner at every breakpoint, just narrower on small screens. The text column reserves
+         matching min-height (via aspect-ratio math) so later content never collides with the
+         floated-out image, and shares the exact same horizontal padding as the card grid
+         below it. Capped at max-w so the image stays sane on very wide monitors. -->
+    <div class="relative mx-auto max-w-[1800px]">
+      <div
+        class="absolute right-0 top-0 aspect-[942/542] w-[38%] overflow-hidden [clip-path:url(#cultureHeroMask)] sm:w-[35%] lg:w-1/2"
+      >
+        <img :src="heroImage" alt="" class="h-full w-full object-cover" />
       </div>
 
-      <div class="aspect-[942/542] w-full overflow-hidden [clip-path:url(#cultureHeroMask)]">
-        <img :src="heroImage" alt="" class="h-full w-full object-cover" />
+      <div
+        class="mx-auto min-h-[clamp(140px,22vw,220px)] max-w-6xl px-4 pb-2 pt-10 sm:min-h-[clamp(180px,20vw,260px)] sm:px-6 sm:pt-16 lg:min-h-[clamp(320px,29vw,520px)] lg:px-8"
+      >
+        <div class="max-w-[60%] sm:max-w-[60%] lg:max-w-md">
+          <RouterLink to="/" class="inline-flex items-center gap-1 text-sm text-ink-light hover:text-terracotta-dark">
+            ← {{ t('culture.backHome') }}
+          </RouterLink>
+
+          <div class="mt-4 flex items-center gap-2 text-ink">
+            <FolkEmblem :size="20" />
+            <span class="font-medium">{{ t(`common.${validCountry}`) }}</span>
+          </div>
+
+          <h1 class="mt-3 font-serif text-2xl leading-tight text-ink sm:text-3xl lg:text-4xl">
+            {{ t(`culture.pages.${validCountry}.headline`) }}
+          </h1>
+          <p class="mt-4 max-w-md text-sm text-ink-light sm:text-base">
+            {{ t(`culture.pages.${validCountry}.description`) }}
+          </p>
+        </div>
       </div>
     </div>
 
     <CornerSprig class="pointer-events-none absolute bottom-4 right-4 hidden opacity-70 sm:block" />
 
-    <div class="mx-auto mt-8 max-w-6xl px-4 pb-8 sm:pb-12">
+    <div class="mx-auto mt-8 max-w-6xl px-4 pb-8 sm:px-6 sm:pb-12 lg:px-8">
       <div role="group" :aria-label="t('culture.filters.all')" class="flex flex-wrap gap-2">
         <button
           type="button"
