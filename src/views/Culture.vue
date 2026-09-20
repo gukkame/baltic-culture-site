@@ -56,12 +56,13 @@ const heroImage = computed(() =>
       </defs>
     </svg>
 
-    <!-- Header row: text column stays within the site's normal content width; the hero
-         image column has no horizontal padding so it bleeds flush to the page's top-right
-         corner, matching the reference design. Capped at max-w so it stays sane on very
-         wide monitors. -->
-    <div class="mx-auto grid max-w-[1800px] gap-8 lg:grid-cols-2 lg:items-start">
-      <div class="mx-auto w-full max-w-6xl px-4 pb-2 pt-10 sm:px-6 sm:pt-16 lg:px-8">
+    <!-- Header row: image stays pinned to the top-right corner at every breakpoint (never
+         stacks below the text), just narrower on small screens. Text column stays within
+         the site's normal content width; the image column has no horizontal padding so it
+         bleeds flush to the page's top-right corner. Capped at max-w so it stays sane on
+         very wide monitors. -->
+    <div class="mx-auto grid max-w-[1800px] grid-cols-[62%_38%] items-start gap-3 sm:grid-cols-[65%_35%] sm:gap-6 lg:grid-cols-2 lg:gap-8">
+      <div class="mx-auto w-full max-w-6xl pb-2 pl-4 pt-10 sm:pl-6 sm:pt-16 lg:pl-8">
         <RouterLink to="/" class="inline-flex items-center gap-1 text-sm text-ink-light hover:text-terracotta-dark">
           ← {{ t('culture.backHome') }}
         </RouterLink>
@@ -71,10 +72,10 @@ const heroImage = computed(() =>
           <span class="font-medium">{{ t(`common.${validCountry}`) }}</span>
         </div>
 
-        <h1 class="mt-3 font-serif text-3xl leading-tight text-ink sm:text-4xl">
+        <h1 class="mt-3 font-serif text-2xl leading-tight text-ink sm:text-3xl lg:text-4xl">
           {{ t(`culture.pages.${validCountry}.headline`) }}
         </h1>
-        <p class="mt-4 max-w-md text-ink-light">
+        <p class="mt-4 max-w-md text-sm text-ink-light sm:text-base">
           {{ t(`culture.pages.${validCountry}.description`) }}
         </p>
       </div>
