@@ -63,7 +63,7 @@ const heroImage = computed(() =>
          below it. Capped at max-w so the image stays sane on very wide monitors. -->
     <div class="relative mx-auto max-w-[1800px]">
       <div
-        class="absolute right-0 top-0 aspect-[942/542] w-[38%] overflow-hidden [clip-path:url(#cultureHeroMask)] sm:w-[35%] lg:w-1/2"
+        class="absolute right-0 top-0 aspect-[942/542] w-[38%] overflow-hidden drop-shadow-[0_8px_20px_rgba(50,35,20,0.14)] [clip-path:url(#cultureHeroMask)] sm:w-[35%] lg:w-1/2"
       >
         <img :src="heroImage" alt="" class="h-full w-full object-cover" />
       </div>
@@ -128,7 +128,7 @@ const heroImage = computed(() =>
         <li v-for="item in filteredItems" :key="item.id">
           <RouterLink
             :to="`/culture/${validCountry}/${item.id}`"
-            class="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-parchment-dark transition hover:shadow-md"
+            class="group flex h-full flex-col overflow-hidden rounded-2xl bg-parchment-light shadow-paper ring-1 ring-parchment-dark transition hover:shadow-paper-hover"
           >
             <img
               :src="`/${item.image}`"
