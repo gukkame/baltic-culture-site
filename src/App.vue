@@ -1,9 +1,15 @@
 <script setup lang="ts">
-import { watchEffect } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
+import { computed, watchEffect } from 'vue'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
 import { useLocale } from './composables/useLocale'
 
 const { locale, toggleLocale, t } = useLocale()
+const route = useRoute()
+const isHome = computed(() => route.name === 'home')
+
+function focusMain() {
+  document.getElementById('main-content')?.focus()
+}
 
 watchEffect(() => {
   document.documentElement.lang = locale.value
@@ -11,9 +17,9 @@ watchEffect(() => {
 </script>
 
 <template>
-  <a class="skip-link" href="#main-content">{{ t('nav.skipToContent') }}</a>
+  <a class="skip-link" href="#main-content" @click.prevent="focusMain">{{ t('nav.skipToContent') }}</a>
   <div class="flex min-h-screen flex-col">
-    <header class="border-b border-parchment-dark bg-parchment/80">
+    <header v-if="!isHome" class="border-b border-parchment-dark bg-parchment/80">
       <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
         <RouterLink to="/" class="font-serif text-xl font-semibold text-ink">
           {{ t('site.title') }}
@@ -37,11 +43,11 @@ watchEffect(() => {
       </div>
     </header>
 
-    <main id="main-content" class="flex-1">
+    <main id="main-content" tabindex="-1" class="flex-1">
       <RouterView />
     </main>
 
-    <footer class="border-t border-parchment-dark py-6 text-center text-sm text-ink-light">
+    <footer v-if="!isHome" class="border-t border-parchment-dark py-6 text-center text-sm text-ink-light">
       {{ t('site.title') }} — placeholder content
     </footer>
   </div>
