@@ -1,0 +1,45 @@
+{
+  "site": {
+    "title": "Baltijos Tautų Paveldas"
+  },
+  "nav": {
+    "home": "Pradžia",
+    "quiz": "Viktorina",
+    "collection": "Ženkliukų kolekcija",
+    "localeToggle": "Perjungti kalbą į latvių",
+    "skipToContent": "Pereiti prie pagrindinio turinio"
+  },
+  "home": {
+    "pickCulture": "Pasirink, ką tyrinėti",
+    "latviaDesc": "Rotaļas žaidimai, ziņģes dainelės ir liaudies šokiai.",
+    "lithuaniaDesc": "Sutartinių daugiabalsis dainavimas, kaimo šokiai ir dainos.",
+    "explore": "Tyrinėti"
+  },
+  "culture": {
+    "backHome": "Atgal į pradžią",
+    "dances": "Šokiai",
+    "songs": "Dainos",
+    "viewDetails": "Žiūrėti daugiau",
+    "difficulty": {
+      "beginner": "Pradedantiesiems",
+      "intermediate": "Vidutinio lygio",
+      "advanced": "Pažengusiems"
+    },
+    "notFoundTitle": "Kultūra nerasta",
+    "notFoundBody": "Deja, tokio skyriaus nėra."
+  },
+  "item": {
+    "backToCulture": "Atgal į sąrašą",
+    "watchVideo": "Žiūrėti vaizdo įrašą",
+    "category": {
+      "dance": "Šokis",
+      "song": "Daina"
+    },
+    "notFoundTitle": "Įrašas nerastas",
+    "notFoundBody": "Deja, šio įrašo nėra."
+  },
+  "common": {
+    "latvia": "Latvija",
+    "lithuania": "Lietuva"
+  }
+}

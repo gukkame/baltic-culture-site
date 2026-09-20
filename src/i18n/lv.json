@@ -1,0 +1,45 @@
+{
+  "site": {
+    "title": "Baltijas Tautas Mantojums"
+  },
+  "nav": {
+    "home": "Sākums",
+    "quiz": "Viktorīna",
+    "collection": "Nozīmīšu kolekcija",
+    "localeToggle": "Mainīt valodu uz lietuviešu",
+    "skipToContent": "Pāriet uz galveno saturu"
+  },
+  "home": {
+    "pickCulture": "Izvēlies, ko izpētīt",
+    "latviaDesc": "Rotaļas, ziņģes un tautas dejas.",
+    "lithuaniaDesc": "Sutartinės daudzbalsība, kaimo šokiai un dziesmas.",
+    "explore": "Apskatīt"
+  },
+  "culture": {
+    "backHome": "Atpakaļ uz sākumu",
+    "dances": "Dejas",
+    "songs": "Dziesmas",
+    "viewDetails": "Skatīt vairāk",
+    "difficulty": {
+      "beginner": "Iesācējiem",
+      "intermediate": "Vidējs līmenis",
+      "advanced": "Pieredzējušiem"
+    },
+    "notFoundTitle": "Kultūra nav atrasta",
+    "notFoundBody": "Diemžēl šāda sadaļa neeksistē."
+  },
+  "item": {
+    "backToCulture": "Atpakaļ uz sarakstu",
+    "watchVideo": "Skatīties video",
+    "category": {
+      "dance": "Deja",
+      "song": "Dziesma"
+    },
+    "notFoundTitle": "Ieraksts nav atrasts",
+    "notFoundBody": "Diemžēl šis ieraksts neeksistē."
+  },
+  "common": {
+    "latvia": "Latvija",
+    "lithuania": "Lietuva"
+  }
+}

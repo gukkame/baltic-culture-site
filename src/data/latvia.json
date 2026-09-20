@@ -1,0 +1,184 @@
+[
+  {
+    "id": "dejotprieks",
+    "category": "dance",
+    "difficulty": "beginner",
+    "sourceUrl": "https://dejaszeltafonds.lv/deja/dejotprieks/",
+    "contentStatus": "ai-generated-placeholder",
+    "image": "images/latvia/dejotprieks.svg",
+    "imageAlt": {
+      "lv": "Dejotāju grupa priecīgi kustas aplī, izstarojot deju prieku",
+      "lt": "Šokėjų grupė džiaugsmingai juda ratu, spinduliuodama šokio džiaugsmą"
+    },
+    "videoUrl": "",
+    "audioUrl": "",
+    "title": {
+      "lv": "Dejotprieks",
+      "lt": "Šokio džiaugsmas"
+    },
+    "tagline": {
+      "lv": "Dzīvespriecīga deja, kas svin pašu dejošanas prieku",
+      "lt": "Gyvybingas šokis, švenčiantis patį šokimo džiaugsmą"
+    },
+    "description": {
+      "lv": "Dejotprieks ir vieglas, dzīvespriecīgs solis, kurā uzsvars likts nevis uz sarežģītu tehniku, bet gan uz kopīgu prieku un enerģiju, ko dejotāji sniedz cits citam. Šis vietturis gaida īsto aprakstu no dejaszeltafonds.lv — teksts ir mākslīgā intelekta ģenerēts, kamēr avota lapa nav pieejama.",
+      "lt": "Šokio džiaugsmas — tai lengvas, gyvybingas žingsnis, kuriame svarbiausia ne sudėtinga technika, o bendras džiaugsmas ir energija, kuria šokėjai dalijasi vieni su kitais. Šis vietaženklis laukia tikro aprašymo iš dejaszeltafonds.lv — tekstas sugeneruotas dirbtinio intelekto, kol originalus puslapis nepasiekiamas."
+    }
+  },
+  {
+    "id": "dizdancis",
+    "category": "dance",
+    "difficulty": "advanced",
+    "sourceUrl": "https://dejaszeltafonds.lv/deja/dizdancis/",
+    "contentStatus": "ai-generated-placeholder",
+    "image": "images/latvia/dizdancis.svg",
+    "imageAlt": {
+      "lv": "Liels dejotāju ansamblis veido sarežģītu figūru brīvdabas skatuvē",
+      "lt": "Didelis šokėjų ansamblis lauko scenoje formuoja sudėtingą figūrą"
+    },
+    "videoUrl": "",
+    "audioUrl": "",
+    "title": {
+      "lv": "Diždancis",
+      "lt": "Didysis šokis"
+    },
+    "tagline": {
+      "lv": "Vērienīga ansambļa deja ar sarežģītām figūrām",
+      "lt": "Įspūdingas ansamblio šokis su sudėtingomis figūromis"
+    },
+    "description": {
+      "lv": "Diždancis, kā liecina nosaukums, ir vērienīga deja, kurā liels dalībnieku skaits kopīgi veido lielformāta figūras un rakstus. Šis vietturis gaida īsto aprakstu no dejaszeltafonds.lv — teksts ir mākslīgā intelekta ģenerēts, kamēr avota lapa nav pieejama.",
+      "lt": "Didysis šokis, kaip rodo pavadinimas, yra įspūdingas šokis, kuriame gausus dalyvių skaičius kartu formuoja didelio masto figūras ir raštus. Šis vietaženklis laukia tikro aprašymo iš dejaszeltafonds.lv — tekstas sugeneruotas dirbtinio intelekto, kol originalus puslapis nepasiekiamas."
+    }
+  },
+  {
+    "id": "govju-kazaks",
+    "category": "dance",
+    "difficulty": "intermediate",
+    "sourceUrl": "https://dejaszeltafonds.lv/deja/govju-kazaks/",
+    "contentStatus": "ai-generated-placeholder",
+    "image": "images/latvia/govju-kazaks.svg",
+    "imageAlt": {
+      "lv": "Dejotāji rotaļīgi atdarina govju gaitu straujā kazaka solī",
+      "lt": "Šokėjai žaismingai mėgdžioja karvių eiseną sparčiu kazoko žingsniu"
+    },
+    "videoUrl": "",
+    "audioUrl": "",
+    "title": {
+      "lv": "Govju kazaks",
+      "lt": "Karvių kazokas"
+    },
+    "tagline": {
+      "lv": "Rotaļīga, humoristiska deja ar kazaka soļa motīvu",
+      "lt": "Žaismingas, humoristinis šokis su kazoko žingsnio motyvu"
+    },
+    "description": {
+      "lv": "Govju kazaks apvieno straujā kazaka deju stilu ar rotaļīgu, humoristisku lauku sadzīves tēlojumu. Nosaukums liecina par zemnieku sadzīves un dzīvnieku tēlu ietekmi latviešu deju folklorā. Šis vietturis gaida īsto aprakstu no dejaszeltafonds.lv — teksts ir mākslīgā intelekta ģenerēts, kamēr avota lapa nav pieejama.",
+      "lt": "Karvių kazokas sujungia sparčiojo kazoko šokio stilių su žaismingu, humoristiniu kaimo buities vaizdavimu. Pavadinimas atskleidžia valstiečių buities ir gyvūnų įvaizdžių įtaką latvių šokių folklorui. Šis vietaženklis laukia tikro aprašymo iš dejaszeltafonds.lv — tekstas sugeneruotas dirbtinio intelekto, kol originalus puslapis nepasiekiamas."
+    }
+  },
+  {
+    "id": "meitu-mate",
+    "category": "dance",
+    "difficulty": "intermediate",
+    "sourceUrl": "https://dejaszeltafonds.lv/deja/meitu-mate/",
+    "contentStatus": "ai-generated-placeholder",
+    "image": "images/latvia/meitu-mate.svg",
+    "imageAlt": {
+      "lv": "Sievietes tautas tērpos veido aploces kustību, vadot jaunākas dejotājas",
+      "lt": "Moterys tautiniais drabužiais formuoja apskritimo judesį, vesdamos jaunesnes šokėjas"
+    },
+    "videoUrl": "",
+    "audioUrl": "",
+    "title": {
+      "lv": "Meitu māte",
+      "lt": "Merginų motina"
+    },
+    "tagline": {
+      "lv": "Deja par paaudžu saikni un meitu pulciņa vadītāju",
+      "lt": "Šokis apie kartų ryšį ir merginų būrelio vedlę"
+    },
+    "description": {
+      "lv": "Meitu māte simboliski attēlo vecākās paaudzes lomu jaunāko meiteņu pulciņa vadīšanā un audzināšanā, ko izceļ mīksta, cieņpilna kustību valoda. Šis vietturis gaida īsto aprakstu no dejaszeltafonds.lv — teksts ir mākslīgā intelekta ģenerēts, kamēr avota lapa nav pieejama.",
+      "lt": "Merginų motina simboliškai vaizduoja vyresniosios kartos vaidmenį vedant ir auklėjant jaunesnių merginų būrelį, tai pabrėžia švelni, pagarbi judesių kalba. Šis vietaženklis laukia tikro aprašymo iš dejaszeltafonds.lv — tekstas sugeneruotas dirbtinio intelekto, kol originalus puslapis nepasiekiamas."
+    }
+  },
+  {
+    "id": "pie-daugavas",
+    "category": "dance",
+    "difficulty": "beginner",
+    "sourceUrl": "https://dejaszeltafonds.lv/deja/pie-daugavas/",
+    "contentStatus": "ai-generated-placeholder",
+    "image": "images/latvia/pie-daugavas.svg",
+    "imageAlt": {
+      "lv": "Dejotāji viļņveida kustībā atdarina Daugavas upes tecējumu",
+      "lt": "Šokėjai banguojančiu judesiu mėgdžioja Dauguvos upės tekėjimą"
+    },
+    "videoUrl": "",
+    "audioUrl": "",
+    "title": {
+      "lv": "Pie Daugavas",
+      "lt": "Prie Dauguvos"
+    },
+    "tagline": {
+      "lv": "Lirisks deju tēlojums par Latvijas lielo upi",
+      "lt": "Lyriškas šokio vaizdinys apie didžiąją Latvijos upę"
+    },
+    "description": {
+      "lv": "Pie Daugavas ir lirisks deju stāstījums, kura plūstošās kustības atdarina Latvijas lielākās upes tecējumu un tās nozīmi ļaužu dzīvē gadsimtu gaitā. Šis vietturis gaida īsto aprakstu no dejaszeltafonds.lv — teksts ir mākslīgā intelekta ģenerēts, kamēr avota lapa nav pieejama.",
+      "lt": "Prie Dauguvos — tai lyriškas šokio pasakojimas, kurio tekantys judesiai mėgdžioja didžiausios Latvijos upės tėkmę ir jos svarbą žmonių gyvenime per amžius. Šis vietaženklis laukia tikro aprašymo iš dejaszeltafonds.lv — tekstas sugeneruotas dirbtinio intelekto, kol originalus puslapis nepasiekiamas."
+    }
+  },
+  {
+    "id": "sudmalinas",
+    "category": "dance",
+    "difficulty": "beginner",
+    "sourceUrl": "https://dejaszeltafonds.lv/deja/sudmalinas/",
+    "contentStatus": "ai-generated-placeholder",
+    "image": "images/latvia/sudmalinas.svg",
+    "imageAlt": {
+      "lv": "Dejotāji aplī atdarina dzirnavu riteņa kustību tautas tērpos",
+      "lt": "Šokėjai rate mėgdžioja malūno rato judesį tautiniais drabužiais"
+    },
+    "videoUrl": "",
+    "audioUrl": "",
+    "title": {
+      "lv": "Sudmaliņas",
+      "lt": "Sudmalinos"
+    },
+    "tagline": {
+      "lv": "Rotaļīga riņķa deja, kas atdarina dzirnavu ratu",
+      "lt": "Žaismingas ratelio šokis, vaizduojantis malūno ratą"
+    },
+    "description": {
+      "lv": "Sudmaliņas ir viena no populārākajām latviešu rotaļdejām, kurā pāri, sadevušies rokās, veido riņķi un ar mainīgu tempu atdarina dzirnavu ratu griešanos. Šis vietturis gaida īsto aprakstu no dejaszeltafonds.lv — teksts ir mākslīgā intelekta ģenerēts, kamēr avota lapa nav pieejama.",
+      "lt": "Sudmalinos yra vienas populiariausių latvių žaidimo šokių, kuriame poros, susikibusios rankomis, sudaro ratą ir kintamu tempu mėgdžioja besisukantį malūno ratą. Šis vietaženklis laukia tikro aprašymo iš dejaszeltafonds.lv — tekstas sugeneruotas dirbtinio intelekto, kol originalus puslapis nepasiekiamas."
+    }
+  },
+  {
+    "id": "tudalin-tagadin",
+    "category": "dance",
+    "difficulty": "intermediate",
+    "sourceUrl": "https://dejaszeltafonds.lv/deja/tudalin-tagadin/",
+    "contentStatus": "ai-generated-placeholder",
+    "image": "images/latvia/tudalin-tagadin.svg",
+    "imageAlt": {
+      "lv": "Dejotāju pāri strauji mainās vietām dziesmas ritmā",
+      "lt": "Šokėjų poros greitai keičiasi vietomis dainos ritmu"
+    },
+    "videoUrl": "",
+    "audioUrl": "",
+    "title": {
+      "lv": "Tūdaliņ', tagadiņ'",
+      "lt": "Tuoj pat, dabar pat"
+    },
+    "tagline": {
+      "lv": "Rosīga deja, kas nosaukta pēc steidzīgas tautasdziesmas rindas",
+      "lt": "Judrus šokis, pavadintas pagal skubrią liaudies dainos eilutę"
+    },
+    "description": {
+      "lv": "Tūdaliņ', tagadiņ' ir dzīva, steidzīga deja, kuras nosaukums cēlies no bieži sastopamas latviešu tautasdziesmu rindas, un tās temps atspoguļo vārdu nozīmi — 'tūlīt, tagad'. Šis vietturis gaida īsto aprakstu no dejaszeltafonds.lv — teksts ir mākslīgā intelekta ģenerēts, kamēr avota lapa nav pieejama.",
+      "lt": "Tuoj pat, dabar pat — tai gyvas, skubrus šokis, kurio pavadinimas kilęs iš dažnai latvių liaudies dainose sutinkamos eilutės, o jo tempas atspindi žodžių prasmę — „tuoj pat, dabar“. Šis vietaženklis laukia tikro aprašymo iš dejaszeltafonds.lv — tekstas sugeneruotas dirbtinio intelekto, kol originalus puslapis nepasiekiamas."
+    }
+  }
+]

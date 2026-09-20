@@ -1,0 +1,394 @@
+[
+  {
+    "id": "linksmasis-sokis",
+    "category": "dance",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=PNtlBWSjBnE",
+    "contentStatus": "verified-from-source",
+    "image": "images/lithuania/linksmasis-sokis.svg",
+    "imageAlt": {
+      "lv": "Jauni dejotāji lauku sētā priecīgi dejo pāru dejā",
+      "lt": "Jauni šokėjai kaimo sodyboje linksmai šoka poriniame šokyje"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=PNtlBWSjBnE",
+    "audioUrl": "",
+    "title": {
+      "lv": "Priecīgā deja",
+      "lt": "Linksmasis šokis"
+    },
+    "tagline": {
+      "lv": "Sabiedriska deja, kas dejotājiem paredzēta pašiem sev",
+      "lt": "Socialinis šokis, skirtas patiems šokėjams"
+    },
+    "description": {
+      "lv": "Priecīgā deja nav paredzēta skatītājiem — tā ir 'deja pašiem dejotājiem', kas kalpoja lauku kopienas saliedēšanai. Jauniešiem tā bija veids, kā satikties, izrādīt simpātijas un atrast dzīvesbiedru.",
+      "lt": "Linksmasis šokis nėra skirtas žiūrovams — tai „šokis patiems šokėjams“, padėjęs suartinti kaimo bendruomenę. Jaunimui tai buvo būdas susipažinti, parodyti simpatiją ir susirasti porą."
+    }
+  },
+  {
+    "id": "vaiku-ratelis",
+    "category": "dance",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=bJxlcGJEG6w",
+    "contentStatus": "verified-from-source",
+    "image": "images/lithuania/vaiku-ratelis.svg",
+    "imageAlt": {
+      "lv": "Bērni veido rotaļīgu apli pagalmā, dziedot un dejojot",
+      "lt": "Vaikai kieme sudaro žaismingą ratelį, dainuodami ir šokdami"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=bJxlcGJEG6w",
+    "audioUrl": "",
+    "title": {
+      "lv": "Bērnu rotaļdeja",
+      "lt": "Vaikų ratelis"
+    },
+    "tagline": {
+      "lv": "Dzīvespriecīga riņķa rotaļa mazākajiem dejotājiem",
+      "lt": "Gyvybingas ratelio žaidimas patiems mažiausiems šokėjams"
+    },
+    "description": {
+      "lv": "Šī rotaļdeja pieder pie bērnu un jauniešu tautas deju kategorijas — riņķa rotaļām. Lietuviešu tradīcijā jaunākos dejotājus sauc par 'spirgučiem' (šis vārds saglabāts arī Lietuvas Dziesmu svētku jaunāko dejotāju grupu nosaukumā), un pati deja ir dzīva, enerģiska un rotaļīga.",
+      "lt": "Šis šokis priklauso vaikų ir jaunimo tautinių šokių kategorijai — ratelio žaidimams. Lietuvos tradicijoje patys jauniausi šokėjai vadinami „spirgučiais“ (šis pavadinimas išlikęs ir Lietuvos Dainų šventės jauniausių šokėjų grupių pavadinime), o pats šokis yra gyvas, energingas ir žaismingas."
+    }
+  },
+  {
+    "id": "vaiku-ratelis-variantas",
+    "category": "dance",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
+    "contentStatus": "verified-from-source",
+    "sourceNote": "Source material reused the same YouTube link (BqQItZLiFS8) for this entry and for 'Blezdingėlė' below — worth confirming with the project owner whether separate clips exist for each dance.",
+    "image": "images/lithuania/vaiku-ratelis-variantas.svg",
+    "imageAlt": {
+      "lv": "Bērnu grupa atkārto rotaļdejas soļus otrā variācijā",
+      "lt": "Vaikų grupė antrame variante kartoja ratelio žingsnius"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
+    "audioUrl": "",
+    "title": {
+      "lv": "Bērnu rotaļdeja (variants)",
+      "lt": "Vaikų ratelis (variantas)"
+    },
+    "tagline": {
+      "lv": "Tā paša 'spirguļu' rotaļdeju loka otrs variants",
+      "lt": "Antras tos pačios „spirgučių“ ratelio šokių šeimos variantas"
+    },
+    "description": {
+      "lv": "Šis ieraksts pieder tai pašai bērnu 'spirguļu' riņķa deju kategorijai — enerģiska, rotaļīga dinamika atdarina bērnu dzīvespriecīgo kustību. Avota materiālā šai dejai piesaistīta tā pati video saite, kas dejai 'Blezdingėlė' — tas jāprecizē ar klientu.",
+      "lt": "Šis įrašas priklauso tai pačiai vaikų „spirgučių“ ratelio šokių kategorijai — energinga, žaisminga dinamika mėgdžioja gyvą vaikų judesį. Šaltinio medžiagoje šiam šokiui priskirta ta pati vaizdo įrašo nuoroda kaip ir šokiui „Blezdingėlė“ — tai reikėtų patikslinti su užsakovu."
+    }
+  },
+  {
+    "id": "blezdingele",
+    "category": "dance",
+    "difficulty": "intermediate",
+    "sourceUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
+    "contentStatus": "verified-from-source",
+    "sourceNote": "Source material reused the same YouTube link (BqQItZLiFS8) for this entry and for 'Vaikų ratelis (variantas)' above — worth confirming with the project owner whether separate clips exist for each dance.",
+    "image": "images/lithuania/blezdingele.svg",
+    "imageAlt": {
+      "lv": "Dejotāji ar plūstošām kustībām atdarina bezdelīgu lidojumu",
+      "lt": "Šokėjai plastiškais judesiais mėgdžioja kregždžių skrydį"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
+    "audioUrl": "",
+    "title": {
+      "lv": "Bezdelīdziņa",
+      "lt": "Blezdingėlė"
+    },
+    "tagline": {
+      "lv": "Sena žemaišu deja, kas atdarina bezdelīgas lidojumu",
+      "lt": "Sena žemaitiška deja, mėgdžiojanti kregždės skrydį"
+    },
+    "description": {
+      "lv": "Blezdingėlė ir sena lietuviešu tautas deja, kas cēlusies Žemaitijā un ar plūstošām, viegli slīdošām kustībām atdarina bezdelīgu lidojumu. Nosaukums cēlies no žemaišu vārda 'blezdinga', kas nozīmē bezdelīgu.",
+      "lt": "Blezdingėlė yra sena lietuvių liaudies deja, kilusi Žemaitijoje ir plastiškais, slystančiais judesiais mėgdžiojanti kregždžių skrydį. Pavadinimas kilęs iš žemaitiško žodžio „blezdinga“, reiškiančio kregždę."
+    }
+  },
+  {
+    "id": "lendleris-zemaitiskais",
+    "category": "dance",
+    "difficulty": "intermediate",
+    "sourceUrl": "https://www.youtube.com/watch?v=4neeFA--Tps",
+    "contentStatus": "verified-from-source",
+    "image": "images/lithuania/lendleris-zemaitiskais.svg",
+    "imageAlt": {
+      "lv": "Dejotāju pāri lēni grozās lēnā, elegantā solī",
+      "lt": "Šokėjų poros lėtai sukasi lėtu, elegantišku žingsniu"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=4neeFA--Tps",
+    "audioUrl": "",
+    "title": {
+      "lv": "Žemaišu lendlers",
+      "lt": "Žemaitiškas lenderis"
+    },
+    "tagline": {
+      "lv": "No kaimiņzemes pārņemta deja, kas kļuvusi savdabīgi žemaitiska",
+      "lt": "Iš kaimyninio krašto perimtas šokis, tapęs savitai žemaitišku"
+    },
+    "description": {
+      "lv": "Šī deja pārņemta no kaimiņzemes — visticamāk, Vācijas vai Prūsijas —, un pieder pie 'lendlera' tipa dejām. Laika gaitā tā kļuvusi pilnībā 'polietuvota' un ieguvusi savdabīgi žemaitisku raksturu.",
+      "lt": "Šis šokis perimtas iš kaimyninio krašto — tikėtina, Vokietijos ar Prūsijos — ir priklauso „lenderio“ tipo šokiams. Laikui bėgant jis visiškai „sulietuvėjo“ ir įgavo savitą žemaitišką charakterį."
+    }
+  },
+  {
+    "id": "dobilelis",
+    "category": "dance",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=CYc_albY-2k",
+    "contentStatus": "verified-from-source",
+    "image": "images/lithuania/dobilelis.svg",
+    "imageAlt": {
+      "lv": "Dejotāji lauka ainā tēlo āboliņa audzēšanu un pļaušanu",
+      "lt": "Šokėjai lauko scenoje vaizduoja dobilų auginimą ir pjovimą"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=CYc_albY-2k",
+    "audioUrl": "",
+    "title": {
+      "lv": "Āboliņš",
+      "lt": "Dobilėlis"
+    },
+    "tagline": {
+      "lv": "Zemnieku darba deja-rotaļa par āboliņa audzēšanu",
+      "lt": "Valstiečių darbo šokis-žaidimas apie dobilų auginimą"
+    },
+    "description": {
+      "lv": "Dobilėlis ir žemaišu agrāra darba deja-rotaļa, kas atspoguļo zemnieka saikni ar dabu un lauku darbiem. Āboliņa audzēšana bija būtiska lopu barošanai, tāpēc labs āboliņa novākums simbolizēja saimniecības labklājību un veiksmi.",
+      "lt": "Dobilėlis yra žemaitiškas agrarinis darbo šokis-žaidimas, atspindintis valstiečio ryšį su gamta ir lauko darbais. Dobilų auginimas buvo gyvybiškai svarbus gyvulių pašarui, todėl geras dobilų derlius simbolizavo ūkio gerovę ir sėkmę."
+    }
+  },
+  {
+    "id": "unknown-song-1",
+    "category": "song",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=LnkV9_o4c8o",
+    "contentStatus": "ai-generated-placeholder",
+    "image": "images/lithuania/unknown-song-1.svg",
+    "imageAlt": {
+      "lv": "Dziedātāju grupa lauku vidē, gaidot precīzu dziesmas nosaukumu",
+      "lt": "Dainininkų grupė kaimo aplinkoje, laukiant tikslaus dainos pavadinimo"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=LnkV9_o4c8o",
+    "audioUrl": "",
+    "title": {
+      "lv": "Nezināma tautasdziesma Nr. 1",
+      "lt": "Nežinoma liaudies daina Nr. 1"
+    },
+    "tagline": {
+      "lv": "Gaida īsto nosaukumu un aprakstu no avota video",
+      "lt": "Laukia tikro pavadinimo ir aprašymo iš šaltinio vaizdo įrašo"
+    },
+    "description": {
+      "lv": "Avota materiālā šai dziesmai bija pievienota tikai video saite, bez nosaukuma vai apraksta. Šis teksts ir pilnībā mākslīgā intelekta ģenerēts vietturis — reālais saturs jāiegūst, noklausoties video vai vaicājot klientam.",
+      "lt": "Šaltinio medžiagoje šiai dainai buvo pridėta tik vaizdo įrašo nuoroda, be pavadinimo ar aprašymo. Šis tekstas yra visiškai dirbtinio intelekto sugeneruotas vietaženklis — tikrą turinį reikia gauti peržiūrėjus vaizdo įrašą arba paklausus užsakovo."
+    }
+  },
+  {
+    "id": "unknown-song-2",
+    "category": "song",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=Oq31-hjH__g",
+    "contentStatus": "ai-generated-placeholder",
+    "image": "images/lithuania/unknown-song-2.svg",
+    "imageAlt": {
+      "lv": "Dziedātāju grupa lauku vidē, gaidot precīzu dziesmas nosaukumu",
+      "lt": "Dainininkų grupė kaimo aplinkoje, laukiant tikslaus dainos pavadinimo"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=Oq31-hjH__g",
+    "audioUrl": "",
+    "title": {
+      "lv": "Nezināma tautasdziesma Nr. 2",
+      "lt": "Nežinoma liaudies daina Nr. 2"
+    },
+    "tagline": {
+      "lv": "Gaida īsto nosaukumu un aprakstu no avota video",
+      "lt": "Laukia tikro pavadinimo ir aprašymo iš šaltinio vaizdo įrašo"
+    },
+    "description": {
+      "lv": "Avota materiālā šai dziesmai bija pievienota tikai video saite, bez nosaukuma vai apraksta. Šis teksts ir pilnībā mākslīgā intelekta ģenerēts vietturis — reālais saturs jāiegūst, noklausoties video vai vaicājot klientam.",
+      "lt": "Šaltinio medžiagoje šiai dainai buvo pridėta tik vaizdo įrašo nuoroda, be pavadinimo ar aprašymo. Šis tekstas yra visiškai dirbtinio intelekto sugeneruotas vietaženklis — tikrą turinį reikia gauti peržiūrėjus vaizdo įrašą arba paklausus užsakovo."
+    }
+  },
+  {
+    "id": "unknown-song-3",
+    "category": "song",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=GXv3W1UOLhg",
+    "contentStatus": "ai-generated-placeholder",
+    "image": "images/lithuania/unknown-song-3.svg",
+    "imageAlt": {
+      "lv": "Dziedātāju grupa lauku vidē, gaidot precīzu dziesmas nosaukumu",
+      "lt": "Dainininkų grupė kaimo aplinkoje, laukiant tikslaus dainos pavadinimo"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=GXv3W1UOLhg",
+    "audioUrl": "",
+    "title": {
+      "lv": "Nezināma tautasdziesma Nr. 3",
+      "lt": "Nežinoma liaudies daina Nr. 3"
+    },
+    "tagline": {
+      "lv": "Gaida īsto nosaukumu un aprakstu no avota video",
+      "lt": "Laukia tikro pavadinimo ir aprašymo iš šaltinio vaizdo įrašo"
+    },
+    "description": {
+      "lv": "Avota materiālā šai dziesmai bija pievienota tikai video saite, bez nosaukuma vai apraksta. Šis teksts ir pilnībā mākslīgā intelekta ģenerēts vietturis — reālais saturs jāiegūst, noklausoties video vai vaicājot klientam.",
+      "lt": "Šaltinio medžiagoje šiai dainai buvo pridėta tik vaizdo įrašo nuoroda, be pavadinimo ar aprašymo. Šis tekstas yra visiškai dirbtinio intelekto sugeneruotas vietaženklis — tikrą turinį reikia gauti peržiūrėjus vaizdo įrašą arba paklausus užsakovo."
+    }
+  },
+  {
+    "id": "unknown-song-4",
+    "category": "song",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=HpurNXPOCdo",
+    "contentStatus": "ai-generated-placeholder",
+    "image": "images/lithuania/unknown-song-4.svg",
+    "imageAlt": {
+      "lv": "Dziedātāju grupa lauku vidē, gaidot precīzu dziesmas nosaukumu",
+      "lt": "Dainininkų grupė kaimo aplinkoje, laukiant tikslaus dainos pavadinimo"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=HpurNXPOCdo",
+    "audioUrl": "",
+    "title": {
+      "lv": "Nezināma tautasdziesma Nr. 4",
+      "lt": "Nežinoma liaudies daina Nr. 4"
+    },
+    "tagline": {
+      "lv": "Gaida īsto nosaukumu un aprakstu no avota video",
+      "lt": "Laukia tikro pavadinimo ir aprašymo iš šaltinio vaizdo įrašo"
+    },
+    "description": {
+      "lv": "Avota materiālā šai dziesmai bija pievienota tikai video saite, bez nosaukuma vai apraksta. Šis teksts ir pilnībā mākslīgā intelekta ģenerēts vietturis — reālais saturs jāiegūst, noklausoties video vai vaicājot klientam.",
+      "lt": "Šaltinio medžiagoje šiai dainai buvo pridėta tik vaizdo įrašo nuoroda, be pavadinimo ar aprašymo. Šis tekstas yra visiškai dirbtinio intelekto sugeneruotas vietaženklis — tikrą turinį reikia gauti peržiūrėjus vaizdo įrašą arba paklausus užsakovo."
+    }
+  },
+  {
+    "id": "unknown-song-5",
+    "category": "song",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=uBbbKnvtsic",
+    "contentStatus": "ai-generated-placeholder",
+    "image": "images/lithuania/unknown-song-5.svg",
+    "imageAlt": {
+      "lv": "Dziedātāju grupa lauku vidē, gaidot precīzu dziesmas nosaukumu",
+      "lt": "Dainininkų grupė kaimo aplinkoje, laukiant tikslaus dainos pavadinimo"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=uBbbKnvtsic",
+    "audioUrl": "",
+    "title": {
+      "lv": "Nezināma tautasdziesma Nr. 5",
+      "lt": "Nežinoma liaudies daina Nr. 5"
+    },
+    "tagline": {
+      "lv": "Gaida īsto nosaukumu un aprakstu no avota video",
+      "lt": "Laukia tikro pavadinimo ir aprašymo iš šaltinio vaizdo įrašo"
+    },
+    "description": {
+      "lv": "Avota materiālā šai dziesmai bija pievienota tikai video saite, bez nosaukuma vai apraksta. Šis teksts ir pilnībā mākslīgā intelekta ģenerēts vietturis — reālais saturs jāiegūst, noklausoties video vai vaicājot klientam.",
+      "lt": "Šaltinio medžiagoje šiai dainai buvo pridėta tik vaizdo įrašo nuoroda, be pavadinimo ar aprašymo. Šis tekstas yra visiškai dirbtinio intelekto sugeneruotas vietaženklis — tikrą turinį reikia gauti peržiūrėjus vaizdo įrašą arba paklausus užsakovo."
+    }
+  },
+  {
+    "id": "isjos-brolutelis",
+    "category": "song",
+    "difficulty": "advanced",
+    "sourceUrl": "https://www.youtube.com/watch?v=8eE2MxX7hoA",
+    "contentStatus": "verified-from-source",
+    "image": "images/lithuania/isjos-brolutelis.svg",
+    "imageAlt": {
+      "lv": "Sievietes daudzbalsīgi dzied tradicionālā aukštaitiešu kārtā",
+      "lt": "Moterys daugiabalsiai gieda tradicine aukštaitiška gaida"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=8eE2MxX7hoA",
+    "audioUrl": "",
+    "title": {
+      "lv": "Aizjāja bāleliņš, sodāto",
+      "lt": "Išjos brolutėlis, sodauto"
+    },
+    "tagline": {
+      "lv": "Aukštaitijas sutartinė — dialogs starp brāli un māsu",
+      "lt": "Aukštaitijos sutartinė — brolio ir sesers dialogas"
+    },
+    "description": {
+      "lv": "Šī ir sutartinė — lietuviešu daudzbalsīgās dziedāšanas stila dziesma — no Aukštaitijas reģiona, kas veidota kā dialogs starp brāli un māsu. Māsa jautā, ko brālis viņai atvedīs no Rīgas; brālis apsola zelta gredzenu.",
+      "lt": "Tai sutartinė — lietuvių daugiabalsio dainavimo stiliaus daina — iš Aukštaitijos regiono, sukurta kaip brolio ir sesers dialogas. Sesuo klausia, ką brolis jai parveš iš Rygos; brolis pažada auksinį žiedą."
+    }
+  },
+  {
+    "id": "oi-sermuksnio",
+    "category": "song",
+    "difficulty": "intermediate",
+    "sourceUrl": "https://www.youtube.com/watch?v=cyA6Ekh70hA",
+    "contentStatus": "verified-from-source",
+    "image": "images/lithuania/oi-sermuksnio.svg",
+    "imageAlt": {
+      "lv": "Jauns karavīrs dodas ceļā, kaimiņi to pavada dziedot",
+      "lt": "Jaunas karys leidžiasi į kelią, kaimynai jį palydi dainuodami"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=cyA6Ekh70hA",
+    "audioUrl": "",
+    "title": {
+      "lv": "Ak, pīlādzīti",
+      "lt": "Oi Šermukšnio"
+    },
+    "tagline": {
+      "lv": "Dziesma par jaunu karavīru un viņa ceļu uz dienestu",
+      "lt": "Daina apie jauną karį ir jo kelią į tarnybą"
+    },
+    "description": {
+      "lv": "Dziesma vēsta par jaunu karavīru, kas dodas dienēt armijā, viņa ceļojumu un cīņu pret ienaidnieku — tā atspoguļo karavīru drosmi un apņēmību.",
+      "lt": "Daina pasakoja apie jauną karį, išeinantį tarnauti kariuomenėje, jo kelionę ir kovą su priešu — ji atspindi karių drąsą ir ryžtą."
+    }
+  },
+  {
+    "id": "mona-bolundele",
+    "category": "song",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=Jxk0aRv-gwo",
+    "contentStatus": "verified-from-source",
+    "image": "images/lithuania/mona-bolundele.svg",
+    "imageAlt": {
+      "lv": "Baloži mierīgi laižas pie sētas, kamēr dzied sievietes",
+      "lt": "Balandžiai ramiai tupia prie sodybos, kol moterys dainuoja"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=Jxk0aRv-gwo",
+    "audioUrl": "",
+    "title": {
+      "lv": "Mona bolundele",
+      "lt": "Mona bolundele"
+    },
+    "tagline": {
+      "lv": "Sena žemaišu dziesma par baložu pasargāšanu",
+      "lt": "Sena žemaitiška daina apie balandžių apsaugojimą"
+    },
+    "description": {
+      "lv": "Sena žemaišu tautasdziesma, kurā lūdz kaimiņu neizbaidīt balodus. Baloži — mierīgi putni, kas dzīvo cilvēku tuvumā, barojas ar graudiem, dēj olas un audzina mazuļus — simbolizē ģimenes harmoniju, dzīvi un tās turpināšanos.",
+      "lt": "Sena žemaitiška liaudies daina, kurioje prašoma kaimyno neišgąsdinti balandžių. Balandžiai — ramūs paukščiai, gyvenantys šalia žmonių, mintantys grūdais, dedantys kiaušinius ir auginantys jauniklius — simbolizuoja šeimos darną, gyvybę ir jos tęstinumą."
+    }
+  },
+  {
+    "id": "ne-bet-kokia-mergele",
+    "category": "song",
+    "difficulty": "advanced",
+    "sourceUrl": "https://www.youtube.com/watch?v=wlBKWpXPjjo",
+    "contentStatus": "verified-from-source",
+    "image": "images/lithuania/ne-bet-kokia-mergele.svg",
+    "imageAlt": {
+      "lv": "Jauna sieviete lepni dejo ar izvēlētu partneri svētku ainā",
+      "lt": "Jauna mergina išdidžiai šoka su išrinktu partneriu šventės scenoje"
+    },
+    "videoUrl": "https://www.youtube.com/watch?v=wlBKWpXPjjo",
+    "audioUrl": "",
+    "title": {
+      "lv": "Ne jau jebkura meitene es biju",
+      "lt": "Ne bet kokia aš mergelė buvau"
+    },
+    "tagline": {
+      "lv": "Dzūkijas dziesma par lepnu un izvēlīgu jaunavu",
+      "lt": "Dzūkijos daina apie išdidžią ir rinktinę merginą"
+    },
+    "description": {
+      "lv": "No Dzūkijas reģiona — dziesma par jaunu sievieti, kas lepojas ar savu izvēlīgumu, izvēloties skaistus, labi ģērbtus jauniešus. Dejojot ar jaunekli, viņa jūtas priecīga, it kā zeme trīcētu un rūta ziedētu viņas galvā, gredzeniem mirdzot; dejojot ar atraitni, liktenis apgriežas otrādi — zeme it kā sabrūk, rūta novīst, gredzeni sarūsē.",
+      "lt": "Iš Dzūkijos regiono — daina apie jauną moterį, besididžiuojančią savo rinktinumu, renkantis gražius, gerai apsirengusius vaikinus. Šokdama su jaunikaičiu, ji jaučiasi laiminga, tarsi žemė drebėtų ir ruta žydėtų ant galvos, žieduose spindint; šokdama su našliu, likimas apsiverčia — žemė tarsi griūva, ruta vysta, žiedai rūdija."
+    }
+  }
+]
