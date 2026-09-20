@@ -12,7 +12,7 @@ const { t } = useLocale()
     <h2 class="mt-12 font-serif text-2xl text-ink">{{ t('home.pickCulture') }}</h2>
     <div class="mt-4 grid gap-6 sm:grid-cols-2">
       <RouterLink
-        to="/culture/latvia"
+        to="/latvia"
         class="group block rounded-lg border border-parchment-dark bg-parchment-light/60 p-6 shadow-paper transition duration-200 hover:border-terracotta hover:bg-parchment-light hover:shadow-paper-hover"
       >
         <h3 class="font-serif text-xl text-ink">{{ t('common.latvia') }}</h3>
@@ -25,7 +25,7 @@ const { t } = useLocale()
       </RouterLink>
 
       <RouterLink
-        to="/culture/lithuania"
+        to="/lithuania"
         class="group block rounded-lg border border-parchment-dark bg-parchment-light/60 p-6 shadow-paper transition duration-200 hover:border-terracotta hover:bg-parchment-light hover:shadow-paper-hover"
       >
         <h3 class="font-serif text-xl text-ink">{{ t('common.lithuania') }}</h3>

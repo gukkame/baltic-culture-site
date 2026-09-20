@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, type RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
 import Culture from '../views/Culture.vue'
 import ItemDetail from '../views/ItemDetail.vue'
@@ -13,25 +13,25 @@ declare module 'vue-router' {
 
 const routes: RouteRecordRaw[] = [
   { path: '/', name: 'home', component: Home },
+  { path: '/quiz', name: 'quiz', component: Quiz },
+  { path: '/collection', name: 'collection', component: Collection },
   {
-    path: '/culture/:country',
+    path: '/:country',
     name: 'culture',
     component: Culture,
     props: true,
     meta: { hideGlobalNav: true },
   },
   {
-    path: '/culture/:country/:itemId',
+    path: '/:country/:itemId',
     name: 'item-detail',
     component: ItemDetail,
     props: true,
   },
-  { path: '/quiz', name: 'quiz', component: Quiz },
-  { path: '/collection', name: 'collection', component: Collection },
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
   scrollBehavior() {
     return { top: 0 }

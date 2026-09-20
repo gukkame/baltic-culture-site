@@ -145,7 +145,7 @@ const heroImage = computed(() =>
       <ul class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <li v-for="item in filteredItems" :key="item.id">
           <RouterLink
-            :to="`/culture/${validCountry}/${item.id}`"
+            :to="`/${validCountry}/${item.id}`"
             class="group flex h-full flex-col overflow-hidden rounded-2xl bg-parchment-light shadow-paper ring-1 ring-parchment-dark transition duration-200 hover:bg-parchment hover:shadow-paper-hover"
           >
             <img
