@@ -25,6 +25,19 @@
       "intermediate": "Vidējs līmenis",
       "advanced": "Pieredzējušiem"
     },
+    "filters": {
+      "all": "Visas"
+    },
+    "pages": {
+      "latvia": {
+        "headline": "Dejas un dziesmas, kas vieno paaudzes",
+        "description": "Latvijas tautas deju un dziesmu mantojums stāsta par dabu, darbu un kopības prieku. Šeit dzimušas rotaļdejas un tautasdziesmas, kas joprojām dzīvo svētkos un Dziesmu svētkos."
+      },
+      "lithuania": {
+        "headline": "Dziesmas un dejas cauri gadsimtiem",
+        "description": "Lietuvas tautas mūzikas un deju tradīcijas iezīmē senā sutartinės daudzbalsība un reģionu savdabīgās dejas. Katra dziesma un deja stāsta par lauku dzīvi, dabu un cilvēku attiecībām."
+      }
+    },
     "notFoundTitle": "Kultūra nav atrasta",
     "notFoundBody": "Diemžēl šāda sadaļa neeksistē."
   },
