@@ -14,10 +14,12 @@
 
 Generated using the built-in imagegen tool, using the supplied reference image for composition, then the new hero for texture/style consistency. Original generated files remain in the local imagegen output directory.
 
-- public/artwork/baltic-table-painted-v1.png — painted scene and empty table.
-- public/artwork/painted-land-v1.png — painted land texture clipped to the country shapes.
+- public/artwork/baltic-table-painted-v1.webp — painted scene and empty table (1586x992, WebP q75).
+- public/artwork/painted-land-v1.webp — painted land texture clipped to the country shapes (pre-cropped to the map's 800:360 ratio, 1536x691).
 
 The raster files are separate from all interface text, labels, and interactive controls.
+
+The original lossless PNGs (about 3 MB each) and the 2.3 MB paper-bg.jpg were replaced by the optimized files above, cutting the homepage image weight from roughly 8.8 MB to about 0.56 MB. The originals are still in git history if the artwork ever needs re-exporting.
 
 ## Map geometry
 

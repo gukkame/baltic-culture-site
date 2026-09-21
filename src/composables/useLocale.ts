@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import lv from '../i18n/lv.json'
 import lt from '../i18n/lt.json'
 
@@ -6,7 +6,28 @@ export type Locale = 'lv' | 'lt'
 
 const dictionaries = { lv, lt } as const
 
-const locale = ref<Locale>('lv')
+const STORAGE_KEY = 'baltic-locale'
+
+// Storage can be unavailable (private mode, blocked cookies), so never let it break the app.
+function loadLocale(): Locale {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY)
+    if (stored === 'lv' || stored === 'lt') return stored
+  } catch {
+    // fall through to the default
+  }
+  return 'lv'
+}
+
+const locale = ref<Locale>(loadLocale())
+
+watch(locale, (value) => {
+  try {
+    localStorage.setItem(STORAGE_KEY, value)
+  } catch {
+    // ignore: the choice just won't persist
+  }
+})
 
 function toggleLocale(): void {
   locale.value = locale.value === 'lv' ? 'lt' : 'lv'

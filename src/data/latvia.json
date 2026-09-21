@@ -5,12 +5,7 @@
     "difficulty": "beginner",
     "sourceUrl": "https://dejaszeltafonds.lv/deja/dejotprieks/",
     "contentStatus": "ai-generated-placeholder",
-    "image": "images/latvia/dejotprieks.svg",
-    "imageAlt": {
-      "lv": "Dejotāju grupa priecīgi kustas aplī, izstarojot deju prieku",
-      "lt": "Šokėjų grupė džiaugsmingai juda ratu, spinduliuodama šokio džiaugsmą"
-    },
-    "videoUrl": "",
+    "videoUrl": "https://www.youtube.com/watch?v=WOPTsHUa0ws",
     "audioUrl": "",
     "title": {
       "lv": "Dejotprieks",
@@ -31,12 +26,7 @@
     "difficulty": "advanced",
     "sourceUrl": "https://dejaszeltafonds.lv/deja/dizdancis/",
     "contentStatus": "ai-generated-placeholder",
-    "image": "images/latvia/dizdancis.svg",
-    "imageAlt": {
-      "lv": "Liels dejotāju ansamblis veido sarežģītu figūru brīvdabas skatuvē",
-      "lt": "Didelis šokėjų ansamblis lauko scenoje formuoja sudėtingą figūrą"
-    },
-    "videoUrl": "",
+    "videoUrl": "https://www.youtube.com/watch?v=RKG5OTweBxU",
     "audioUrl": "",
     "title": {
       "lv": "Diždancis",
@@ -57,12 +47,7 @@
     "difficulty": "intermediate",
     "sourceUrl": "https://dejaszeltafonds.lv/deja/govju-kazaks/",
     "contentStatus": "ai-generated-placeholder",
-    "image": "images/latvia/govju-kazaks.svg",
-    "imageAlt": {
-      "lv": "Dejotāji rotaļīgi atdarina govju gaitu straujā kazaka solī",
-      "lt": "Šokėjai žaismingai mėgdžioja karvių eiseną sparčiu kazoko žingsniu"
-    },
-    "videoUrl": "",
+    "videoUrl": "https://www.youtube.com/watch?v=cPfRto31n9Y",
     "audioUrl": "",
     "title": {
       "lv": "Govju kazaks",
@@ -83,12 +68,7 @@
     "difficulty": "intermediate",
     "sourceUrl": "https://dejaszeltafonds.lv/deja/meitu-mate/",
     "contentStatus": "ai-generated-placeholder",
-    "image": "images/latvia/meitu-mate.svg",
-    "imageAlt": {
-      "lv": "Sievietes tautas tērpos veido aploces kustību, vadot jaunākas dejotājas",
-      "lt": "Moterys tautiniais drabužiais formuoja apskritimo judesį, vesdamos jaunesnes šokėjas"
-    },
-    "videoUrl": "",
+    "videoUrl": "https://www.youtube.com/watch?v=-3Vk1nMazFE",
     "audioUrl": "",
     "title": {
       "lv": "Meitu māte",
@@ -109,12 +89,7 @@
     "difficulty": "beginner",
     "sourceUrl": "https://dejaszeltafonds.lv/deja/pie-daugavas/",
     "contentStatus": "ai-generated-placeholder",
-    "image": "images/latvia/pie-daugavas.svg",
-    "imageAlt": {
-      "lv": "Dejotāji viļņveida kustībā atdarina Daugavas upes tecējumu",
-      "lt": "Šokėjai banguojančiu judesiu mėgdžioja Dauguvos upės tekėjimą"
-    },
-    "videoUrl": "",
+    "videoUrl": "https://www.youtube.com/watch?v=s9a56Hnb8p4",
     "audioUrl": "",
     "title": {
       "lv": "Pie Daugavas",
@@ -135,12 +110,7 @@
     "difficulty": "beginner",
     "sourceUrl": "https://dejaszeltafonds.lv/deja/sudmalinas/",
     "contentStatus": "ai-generated-placeholder",
-    "image": "images/latvia/sudmalinas.svg",
-    "imageAlt": {
-      "lv": "Dejotāji aplī atdarina dzirnavu riteņa kustību tautas tērpos",
-      "lt": "Šokėjai rate mėgdžioja malūno rato judesį tautiniais drabužiais"
-    },
-    "videoUrl": "",
+    "videoUrl": "https://www.youtube.com/watch?v=oiy_Hz0WMoI",
     "audioUrl": "",
     "title": {
       "lv": "Sudmaliņas",
@@ -161,12 +131,7 @@
     "difficulty": "intermediate",
     "sourceUrl": "https://dejaszeltafonds.lv/deja/tudalin-tagadin/",
     "contentStatus": "ai-generated-placeholder",
-    "image": "images/latvia/tudalin-tagadin.svg",
-    "imageAlt": {
-      "lv": "Dejotāju pāri strauji mainās vietām dziesmas ritmā",
-      "lt": "Šokėjų poros greitai keičiasi vietomis dainos ritmu"
-    },
-    "videoUrl": "",
+    "videoUrl": "https://www.youtube.com/watch?v=pqJalRZL9B8",
     "audioUrl": "",
     "title": {
       "lv": "Tūdaliņ', tagadiņ'",

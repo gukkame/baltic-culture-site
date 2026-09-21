@@ -1,20 +1,31 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --color-parchment: #f6efdc;
-  --color-parchment-dark: #e9dcb9;
-  --color-parchment-darker: #dccca0;
-  --color-terracotta: #c1622d;
-  --color-terracotta-dark: #93481f;
-  --color-amber: #d9a441;
-  --color-amber-dark: #a97a24;
-  --color-forest: #4f6f52;
-  --color-forest-dark: #35492f;
-  --color-ink: #3a2e22;
-  --color-ink-light: #6b5a45;
+  /* Handmade-paper surfaces: page -> light panel/card -> aged edge -> deepest edge */
+  --color-parchment: #f3ebdd;
+  --color-parchment-light: #f8f1e5;
+  --color-parchment-dark: #e8dac3;
+  --color-parchment-darker: #d5c09d;
 
-  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
-  --font-sans: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+  /* Latvian folk accents: red, ochre, forest, indigo */
+  --color-terracotta: #9e2929;
+  --color-terracotta-dark: #7a1f1f;
+  --color-amber: #b77a24;
+  --color-amber-dark: #93611c;
+  --color-forest: #52634a;
+  --color-forest-dark: #3c4a36;
+  --color-indigo: #214a68;
+  --color-indigo-dark: #17364c;
+
+  --color-ink: #29251f;
+  --color-ink-light: #5c4d3a;
+
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Work Sans', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Soft, low-contrast shadows for a tactile paper feel rather than a UI-panel feel */
+  --shadow-paper: 0 2px 8px rgba(50, 35, 20, 0.06);
+  --shadow-paper-hover: 0 14px 28px rgba(50, 35, 20, 0.16);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -34,9 +45,16 @@ html {
 
 body {
   background-color: var(--color-parchment);
+  /* A translucent parchment wash sits over the photo so body text (which has
+     no opaque card behind it on most pages) keeps solid WCAG AA contrast
+     regardless of where the image's darker areas land. */
   background-image:
-    radial-gradient(circle at 20% 20%, rgba(217, 164, 65, 0.08), transparent 45%),
-    radial-gradient(circle at 80% 60%, rgba(79, 111, 82, 0.08), transparent 45%);
+    linear-gradient(rgba(243, 235, 221, 0.6), rgba(243, 235, 221, 0.6)),
+    url('/images/backgrounds/paper-bg.webp');
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
   color: var(--color-ink);
   font-family: var(--font-sans);
 }

@@ -27,7 +27,7 @@ function toTop() {
 <template>
   <div class="folk-home">
     <section class="home-stage" aria-labelledby="home-title">
-      <img class="home-art" src="/artwork/baltic-table-painted-v1.png" alt="" fetchpriority="high" />
+      <img class="home-art" src="/artwork/baltic-table-painted-v1.webp" alt="" fetchpriority="high" decoding="async" />
       <div class="home-shade" aria-hidden="true" />
       <header class="home-header">
         <RouterLink to="/" class="home-brand" :aria-label="`${copy.brandTop} ${copy.brandBottom}`">
@@ -63,9 +63,9 @@ function toTop() {
       </div>
       <div class="home-stage-bottom">
         <span class="home-country-shortcuts">
-          <RouterLink to="/culture/latvia">{{ copy.latvia }} <span aria-hidden="true">↗</span></RouterLink>
+          <RouterLink to="/latvia">{{ copy.latvia }} <span aria-hidden="true">↗</span></RouterLink>
           <span aria-hidden="true">·</span>
-          <RouterLink to="/culture/lithuania">{{ copy.lithuania }} <span aria-hidden="true">↗</span></RouterLink>
+          <RouterLink to="/lithuania">{{ copy.lithuania }} <span aria-hidden="true">↗</span></RouterLink>
         </span>
         <button class="home-scroll" @click="goTo(story)">{{ copy.scroll }} <span aria-hidden="true">↓</span></button>
       </div>

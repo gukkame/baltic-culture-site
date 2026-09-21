@@ -5,11 +5,6 @@
     "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=PNtlBWSjBnE",
     "contentStatus": "verified-from-source",
-    "image": "images/lithuania/linksmasis-sokis.svg",
-    "imageAlt": {
-      "lv": "Jauni dejotāji lauku sētā priecīgi dejo pāru dejā",
-      "lt": "Jauni šokėjai kaimo sodyboje linksmai šoka poriniame šokyje"
-    },
     "videoUrl": "https://www.youtube.com/watch?v=PNtlBWSjBnE",
     "audioUrl": "",
     "title": {
@@ -31,11 +26,6 @@
     "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=bJxlcGJEG6w",
     "contentStatus": "verified-from-source",
-    "image": "images/lithuania/vaiku-ratelis.svg",
-    "imageAlt": {
-      "lv": "Bērni veido rotaļīgu apli pagalmā, dziedot un dejojot",
-      "lt": "Vaikai kieme sudaro žaismingą ratelį, dainuodami ir šokdami"
-    },
     "videoUrl": "https://www.youtube.com/watch?v=bJxlcGJEG6w",
     "audioUrl": "",
     "title": {
@@ -58,11 +48,6 @@
     "sourceUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
     "contentStatus": "verified-from-source",
     "sourceNote": "Source material reused the same YouTube link (BqQItZLiFS8) for this entry and for 'Blezdingėlė' below — worth confirming with the project owner whether separate clips exist for each dance.",
-    "image": "images/lithuania/vaiku-ratelis-variantas.svg",
-    "imageAlt": {
-      "lv": "Bērnu grupa atkārto rotaļdejas soļus otrā variācijā",
-      "lt": "Vaikų grupė antrame variante kartoja ratelio žingsnius"
-    },
     "videoUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
     "audioUrl": "",
     "title": {
@@ -85,11 +70,6 @@
     "sourceUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
     "contentStatus": "verified-from-source",
     "sourceNote": "Source material reused the same YouTube link (BqQItZLiFS8) for this entry and for 'Vaikų ratelis (variantas)' above — worth confirming with the project owner whether separate clips exist for each dance.",
-    "image": "images/lithuania/blezdingele.svg",
-    "imageAlt": {
-      "lv": "Dejotāji ar plūstošām kustībām atdarina bezdelīgu lidojumu",
-      "lt": "Šokėjai plastiškais judesiais mėgdžioja kregždžių skrydį"
-    },
     "videoUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
     "audioUrl": "",
     "title": {
@@ -111,11 +91,6 @@
     "difficulty": "intermediate",
     "sourceUrl": "https://www.youtube.com/watch?v=4neeFA--Tps",
     "contentStatus": "verified-from-source",
-    "image": "images/lithuania/lendleris-zemaitiskais.svg",
-    "imageAlt": {
-      "lv": "Dejotāju pāri lēni grozās lēnā, elegantā solī",
-      "lt": "Šokėjų poros lėtai sukasi lėtu, elegantišku žingsniu"
-    },
     "videoUrl": "https://www.youtube.com/watch?v=4neeFA--Tps",
     "audioUrl": "",
     "title": {
@@ -137,11 +112,6 @@
     "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=CYc_albY-2k",
     "contentStatus": "verified-from-source",
-    "image": "images/lithuania/dobilelis.svg",
-    "imageAlt": {
-      "lv": "Dejotāji lauka ainā tēlo āboliņa audzēšanu un pļaušanu",
-      "lt": "Šokėjai lauko scenoje vaizduoja dobilų auginimą ir pjovimą"
-    },
     "videoUrl": "https://www.youtube.com/watch?v=CYc_albY-2k",
     "audioUrl": "",
     "title": {
@@ -163,11 +133,6 @@
     "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=LnkV9_o4c8o",
     "contentStatus": "ai-generated-placeholder",
-    "image": "images/lithuania/unknown-song-1.svg",
-    "imageAlt": {
-      "lv": "Dziedātāju grupa lauku vidē, gaidot precīzu dziesmas nosaukumu",
-      "lt": "Dainininkų grupė kaimo aplinkoje, laukiant tikslaus dainos pavadinimo"
-    },
     "videoUrl": "https://www.youtube.com/watch?v=LnkV9_o4c8o",
     "audioUrl": "",
     "title": {
@@ -189,11 +154,6 @@
     "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=Oq31-hjH__g",
     "contentStatus": "ai-generated-placeholder",
-    "image": "images/lithuania/unknown-song-2.svg",
-    "imageAlt": {
-      "lv": "Dziedātāju grupa lauku vidē, gaidot precīzu dziesmas nosaukumu",
-      "lt": "Dainininkų grupė kaimo aplinkoje, laukiant tikslaus dainos pavadinimo"
-    },
     "videoUrl": "https://www.youtube.com/watch?v=Oq31-hjH__g",
     "audioUrl": "",
     "title": {
@@ -215,11 +175,6 @@
     "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=GXv3W1UOLhg",
     "contentStatus": "ai-generated-placeholder",
-    "image": "images/lithuania/unknown-song-3.svg",
-    "imageAlt": {
-      "lv": "Dziedātāju grupa lauku vidē, gaidot precīzu dziesmas nosaukumu",
-      "lt": "Dainininkų grupė kaimo aplinkoje, laukiant tikslaus dainos pavadinimo"
-    },
     "videoUrl": "https://www.youtube.com/watch?v=GXv3W1UOLhg",
     "audioUrl": "",
     "title": {
@@ -241,11 +196,6 @@
     "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=HpurNXPOCdo",
     "contentStatus": "ai-generated-placeholder",
-    "image": "images/lithuania/unknown-song-4.svg",
-    "imageAlt": {
-      "lv": "Dziedātāju grupa lauku vidē, gaidot precīzu dziesmas nosaukumu",
-      "lt": "Dainininkų grupė kaimo aplinkoje, laukiant tikslaus dainos pavadinimo"
-    },
     "videoUrl": "https://www.youtube.com/watch?v=HpurNXPOCdo",
     "audioUrl": "",
     "title": {
@@ -267,11 +217,6 @@
     "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=uBbbKnvtsic",
     "contentStatus": "ai-generated-placeholder",
-    "image": "images/lithuania/unknown-song-5.svg",
-    "imageAlt": {
-      "lv": "Dziedātāju grupa lauku vidē, gaidot precīzu dziesmas nosaukumu",
-      "lt": "Dainininkų grupė kaimo aplinkoje, laukiant tikslaus dainos pavadinimo"
-    },
     "videoUrl": "https://www.youtube.com/watch?v=uBbbKnvtsic",
     "audioUrl": "",
     "title": {
@@ -293,11 +238,6 @@
     "difficulty": "advanced",
     "sourceUrl": "https://www.youtube.com/watch?v=8eE2MxX7hoA",
     "contentStatus": "verified-from-source",
-    "image": "images/lithuania/isjos-brolutelis.svg",
-    "imageAlt": {
-      "lv": "Sievietes daudzbalsīgi dzied tradicionālā aukštaitiešu kārtā",
-      "lt": "Moterys daugiabalsiai gieda tradicine aukštaitiška gaida"
-    },
     "videoUrl": "https://www.youtube.com/watch?v=8eE2MxX7hoA",
     "audioUrl": "",
     "title": {
@@ -319,11 +259,6 @@
     "difficulty": "intermediate",
     "sourceUrl": "https://www.youtube.com/watch?v=cyA6Ekh70hA",
     "contentStatus": "verified-from-source",
-    "image": "images/lithuania/oi-sermuksnio.svg",
-    "imageAlt": {
-      "lv": "Jauns karavīrs dodas ceļā, kaimiņi to pavada dziedot",
-      "lt": "Jaunas karys leidžiasi į kelią, kaimynai jį palydi dainuodami"
-    },
     "videoUrl": "https://www.youtube.com/watch?v=cyA6Ekh70hA",
     "audioUrl": "",
     "title": {
@@ -345,11 +280,6 @@
     "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=Jxk0aRv-gwo",
     "contentStatus": "verified-from-source",
-    "image": "images/lithuania/mona-bolundele.svg",
-    "imageAlt": {
-      "lv": "Baloži mierīgi laižas pie sētas, kamēr dzied sievietes",
-      "lt": "Balandžiai ramiai tupia prie sodybos, kol moterys dainuoja"
-    },
     "videoUrl": "https://www.youtube.com/watch?v=Jxk0aRv-gwo",
     "audioUrl": "",
     "title": {
@@ -371,11 +301,6 @@
     "difficulty": "advanced",
     "sourceUrl": "https://www.youtube.com/watch?v=wlBKWpXPjjo",
     "contentStatus": "verified-from-source",
-    "image": "images/lithuania/ne-bet-kokia-mergele.svg",
-    "imageAlt": {
-      "lv": "Jauna sieviete lepni dejo ar izvēlētu partneri svētku ainā",
-      "lt": "Jauna mergina išdidžiai šoka su išrinktu partneriu šventės scenoje"
-    },
     "videoUrl": "https://www.youtube.com/watch?v=wlBKWpXPjjo",
     "audioUrl": "",
     "title": {

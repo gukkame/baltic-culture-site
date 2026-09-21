@@ -14,6 +14,24 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Work+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script>
+      // Home page only: start fetching the hero art and map texture now, instead of
+      // waiting for the JS bundle to mount the components that reference them.
+      if (location.pathname === '/') {
+        var head = document.head
+        ;[
+          ['/artwork/baltic-table-painted-v1.webp', 'high'],
+          ['/artwork/painted-land-v1.webp', 'auto'],
+        ].forEach(function (a) {
+          var l = document.createElement('link')
+          l.rel = 'preload'
+          l.as = 'image'
+          l.href = a[0]
+          l.setAttribute('fetchpriority', a[1])
+          head.appendChild(l)
+        })
+      }
+    </script>
     <title>Baltic Folk Culture | Latvia &amp; Lithuania</title>
   </head>
   <body>

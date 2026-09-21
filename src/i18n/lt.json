@@ -3,10 +3,6 @@
     "title": "Baltijos Tautų Paveldas"
   },
   "nav": {
-    "home": "Pradžia",
-    "quiz": "Viktorina",
-    "collection": "Ženkliukų kolekcija",
-    "localeToggle": "Perjungti kalbą į latvių",
     "skipToContent": "Pereiti prie pagrindinio turinio"
   },
   "home": {
@@ -25,12 +21,29 @@
       "intermediate": "Vidutinio lygio",
       "advanced": "Pažengusiems"
     },
+    "filters": {
+      "all": "Visi"
+    },
+    "pages": {
+      "latvia": {
+        "headline": "Šokiai ir dainos, jungiantys kartas",
+        "description": "Latvijos liaudies šokių ir dainų paveldas pasakoja apie gamtą, darbą ir bendrystės džiaugsmą. Čia gimė žaidimų šokiai ir liaudies dainos, kurios ir šiandien gyvos šventėse bei Dainų šventėje."
+      },
+      "lithuania": {
+        "headline": "Dainos ir šokiai per amžius",
+        "description": "Lietuvos liaudies muzikos ir šokių tradicijas žymi sena sutartinių daugiabalsystė ir savitos regionų dejos. Kiekviena daina ir šokis pasakoja apie kaimo gyvenimą, gamtą ir žmonių santykius."
+      }
+    },
     "notFoundTitle": "Kultūra nerasta",
     "notFoundBody": "Deja, tokio skyriaus nėra."
   },
   "item": {
     "backToCulture": "Atgal į sąrašą",
     "watchVideo": "Žiūrėti vaizdo įrašą",
+    "next": {
+      "dance": "Kitas šokis",
+      "song": "Kita daina"
+    },
     "category": {
       "dance": "Šokis",
       "song": "Daina"

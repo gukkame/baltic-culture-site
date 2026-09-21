@@ -66,16 +66,16 @@
 .home-story { max-width: 1220px; margin: auto; padding: 94px 40px 74px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px 100px; outline: none; }
 .home-story .home-eyebrow { color: #a2553e; }
 .home-story h2 { margin-top: 17px; white-space: pre-line; font-size: clamp(30px, 3vw, 45px); font-weight: 400; line-height: 1.25; letter-spacing: -.03em; }
-.home-story-body { align-self: center; color: #746d5b; font-size: 14px; line-height: 1.95; padding-top: 22px; max-width: 470px; }
+.home-story-body { align-self: center; color: #6e6856; font-size: 14px; line-height: 1.95; padding-top: 22px; max-width: 470px; }
 .home-chapters { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 14px; border-top: 1px solid #39433325; }
 .home-chapter { display: flex; gap: 15px; padding: 34px 27px 0 0; position: relative; outline: none; }
 .home-chapter + .home-chapter { padding-left: 27px; border-left: 1px solid #39433325; }
-.home-chapter-number { font-size: 10px; color: #a47250; letter-spacing: .1em; padding-top: 6px; }
+.home-chapter-number { font-size: 10px; color: #8b6144; letter-spacing: .1em; padding-top: 6px; }
 .home-chapter h3 { font-family: var(--font-serif); font-size: 21px; line-height: 1.4; font-weight: 400; padding-right: 17px; }
-.home-chapter p { color: #746d5b; font-size: 12px; line-height: 1.8; margin-top: 10px; max-width: 245px; }
+.home-chapter p { color: #6e6856; font-size: 12px; line-height: 1.8; margin-top: 10px; max-width: 245px; }
 .home-chapter svg { position: absolute; width: 28px; height: 28px; right: 14px; top: 32px; color: #aa6243; opacity: .6; }
-.home-soon { display: inline-block; color: #92644d; font-size: 9px; letter-spacing: .09em; text-transform: uppercase; margin-top: 14px; border-bottom: 1px solid #bda888; padding-bottom: 4px; }
-.home-footer { max-width: 1300px; margin: auto; padding: 27px 40px; border-top: 1px solid #39433325; display: flex; justify-content: space-between; align-items: center; font-size: 10px; color: #7b705b; gap: 30px; }
+.home-soon { display: inline-block; color: #8b5f49; font-size: 9px; letter-spacing: .09em; text-transform: uppercase; margin-top: 14px; border-bottom: 1px solid #bda888; padding-bottom: 4px; }
+.home-footer { max-width: 1300px; margin: auto; padding: 27px 40px; border-top: 1px solid #39433325; display: flex; justify-content: space-between; align-items: center; font-size: 10px; color: #6f6552; gap: 30px; }
 .home-footer > div { display: flex; align-items: center; gap: 14px; }
 .home-footer svg { width: 24px; height: 24px; flex-shrink: 0; color: #a2553e; }
 .home-footer button { white-space: nowrap; padding: 10px 0; }

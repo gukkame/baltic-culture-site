@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 942 542" width="942" height="542" role="img" aria-label="">
+  <defs>
+    <linearGradient id="lt-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#33473a" />
+      <stop offset="45%" stop-color="#4f6f52" />
+      <stop offset="100%" stop-color="#e9c77b" />
+    </linearGradient>
+    <linearGradient id="lt-field" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d9a441" />
+      <stop offset="100%" stop-color="#8a7233" />
+    </linearGradient>
+  </defs>
+
+  <rect width="942" height="542" fill="url(#lt-sky)" />
+  <circle cx="230" cy="290" r="65" fill="#fbe0a8" opacity="0.9" />
+
+  <rect y="360" width="942" height="182" fill="url(#lt-field)" opacity="0.85" />
+  <g stroke="#5a4a1f" stroke-width="2" opacity="0.4">
+    <path d="M0 400 Q471 380 942 400" fill="none" />
+    <path d="M0 430 Q471 410 942 430" fill="none" />
+    <path d="M0 460 Q471 440 942 460" fill="none" />
+  </g>
+
+  <g fill="#26301f">
+    <path d="M40 360 L48 260 L56 360 Z" />
+    <path d="M56 300 L86 280 L58 292 Z" />
+    <path d="M56 320 L26 305 L54 312 Z" />
+    <rect x="52" y="255" width="8" height="10" />
+  </g>
+
+  <g fill="#1f2a1c">
+    <path d="M540 362 L610 240 L660 320 L720 220 L800 362 Z" />
+    <path d="M700 362 L760 270 L810 330 L860 250 L942 362 Z" />
+  </g>
+</svg>
