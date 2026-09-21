@@ -5,14 +5,8 @@ import ItemDetail from '../views/ItemDetail.vue'
 import Quiz from '../views/Quiz.vue'
 import Collection from '../views/Collection.vue'
 
-declare module 'vue-router' {
-  interface RouteMeta {
-    hideGlobalNav?: boolean
-  }
-}
-
 const routes: RouteRecordRaw[] = [
-  { path: '/', name: 'home', component: Home, meta: { hideGlobalNav: true } },
+  { path: '/', name: 'home', component: Home },
   { path: '/quiz', name: 'quiz', component: Quiz },
   { path: '/collection', name: 'collection', component: Collection },
   {
@@ -20,7 +14,6 @@ const routes: RouteRecordRaw[] = [
     name: 'culture',
     component: Culture,
     props: true,
-    meta: { hideGlobalNav: true },
   },
   {
     path: '/:country/:itemId',

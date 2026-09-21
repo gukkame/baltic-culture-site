@@ -3,10 +3,6 @@
     "title": "Baltijas Tautas Mantojums"
   },
   "nav": {
-    "home": "Sākums",
-    "quiz": "Viktorīna",
-    "collection": "Nozīmīšu kolekcija",
-    "localeToggle": "Mainīt valodu uz lietuviešu",
     "skipToContent": "Pāriet uz galveno saturu"
   },
   "home": {
@@ -44,6 +40,10 @@
   "item": {
     "backToCulture": "Atpakaļ uz sarakstu",
     "watchVideo": "Skatīties video",
+    "next": {
+      "dance": "Nākamā deja",
+      "song": "Nākamā dziesma"
+    },
     "category": {
       "dance": "Deja",
       "song": "Dziesma"

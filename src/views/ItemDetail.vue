@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLocale } from '../composables/useLocale'
-import { findItem, youtubeEmbedUrl } from '../data'
+import { findItem, findNextItem, youtubeEmbedUrl } from '../data'
 
 const props = defineProps<{
   country: string
@@ -12,6 +12,7 @@ const props = defineProps<{
 const { locale, t } = useLocale()
 
 const item = computed(() => findItem(props.country, props.itemId))
+const nextItem = computed(() => findNextItem(props.country, props.itemId))
 </script>
 
 <template>
@@ -62,5 +63,27 @@ const item = computed(() => findItem(props.country, props.itemId))
         />
       </div>
     </div>
+
+    <nav
+      v-if="nextItem"
+      :aria-label="t(`item.next.${item.category}`)"
+      class="mt-12 border-t border-parchment-dark pt-6"
+    >
+      <RouterLink
+        :to="`/${country}/${nextItem.id}`"
+        class="group flex items-center justify-between gap-4 rounded-2xl bg-parchment-light p-4 shadow-paper ring-1 ring-parchment-dark transition duration-200 hover:bg-parchment hover:shadow-paper-hover"
+      >
+        <span class="min-w-0">
+          <span class="block text-xs text-ink-light">{{ t(`item.next.${item.category}`) }}</span>
+          <span class="mt-1 block truncate font-serif text-lg text-ink">{{ nextItem.title[locale] }}</span>
+        </span>
+        <span
+          class="text-2xl text-ink transition group-hover:translate-x-1 group-hover:text-terracotta-dark"
+          aria-hidden="true"
+        >
+          →
+        </span>
+      </RouterLink>
+    </nav>
   </article>
 </template>

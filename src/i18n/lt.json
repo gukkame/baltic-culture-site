@@ -3,10 +3,6 @@
     "title": "Baltijos Tautų Paveldas"
   },
   "nav": {
-    "home": "Pradžia",
-    "quiz": "Viktorina",
-    "collection": "Ženkliukų kolekcija",
-    "localeToggle": "Perjungti kalbą į latvių",
     "skipToContent": "Pereiti prie pagrindinio turinio"
   },
   "home": {
@@ -44,6 +40,10 @@
   "item": {
     "backToCulture": "Atgal į sąrašą",
     "watchVideo": "Žiūrėti vaizdo įrašą",
+    "next": {
+      "dance": "Kitas šokis",
+      "song": "Kita daina"
+    },
     "category": {
       "dance": "Šokis",
       "song": "Daina"
