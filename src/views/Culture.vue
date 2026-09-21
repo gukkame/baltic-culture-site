@@ -177,7 +177,7 @@ const heroImage = computed(() =>
             @focus="previewId = item.id"
             @blur="previewId = undefined"
           >
-            <ItemCardMedia :item="item" :alt="item.imageAlt[locale]" :active="previewId === item.id" />
+            <ItemCardMedia :item="item" :active="previewId === item.id" />
             <div class="flex flex-1 flex-col gap-1 p-4">
               <h3 class="font-serif text-lg text-ink">{{ item.title[locale] }}</h3>
               <p class="text-xs text-ink-light">

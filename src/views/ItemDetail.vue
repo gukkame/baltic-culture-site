@@ -35,19 +35,12 @@ const nextItem = computed(() => findNextItem(props.country, props.itemId))
       ← {{ t('item.backToCulture') }}
     </RouterLink>
 
-    <span class="mt-4 inline-block rounded-full bg-parchment-dark px-3 py-1 text-xs text-ink-light">
+    <span class="mt-4 ml-2 inline-block rounded-full bg-parchment-dark px-3 py-1 text-xs text-ink-light">
       {{ t(`item.category.${item.category}`) }} · {{ t(`culture.difficulty.${item.difficulty}`) }}
     </span>
 
     <h1 class="mt-3 font-serif text-4xl text-ink">{{ item.title[locale] }}</h1>
     <p class="mt-2 text-lg text-ink-light">{{ item.tagline[locale] }}</p>
-
-    <img
-      :src="`/${item.image}`"
-      :alt="item.imageAlt[locale]"
-      class="mt-6 aspect-video w-full rounded-lg border border-parchment-dark object-cover"
-      loading="lazy"
-    />
 
     <p class="mt-6 whitespace-pre-line leading-relaxed text-ink">{{ item.description[locale] }}</p>
 

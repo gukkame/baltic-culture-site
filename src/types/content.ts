@@ -10,8 +10,6 @@ export interface ContentItem {
   id: string
   category: ItemCategory
   difficulty: Difficulty
-  image: string
-  imageAlt: LocalizedText
   videoUrl: string
   audioUrl: string
   title: LocalizedText

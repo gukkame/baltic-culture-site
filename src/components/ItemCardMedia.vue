@@ -2,23 +2,22 @@
 import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import type { ContentItem } from '../types/content'
 import { youtubePreviewUrl, youtubeThumbnailUrl } from '../data'
+import FolkEmblem from './FolkEmblem.vue'
 
 const props = defineProps<{
   item: ContentItem
-  alt: string
   /** True while the parent card is hovered or focused. */
   active: boolean
 }>()
 
 const PREVIEW_DELAY_MS = 400
 
-const placeholder = computed(() => `/${props.item.image}`)
 const thumbnail = computed(() => (props.item.videoUrl ? youtubeThumbnailUrl(props.item.videoUrl) : undefined))
 const previewUrl = computed(() => (props.item.videoUrl ? youtubePreviewUrl(props.item.videoUrl) : undefined))
 
-// Fall back to the illustrated placeholder if the thumbnail can't load.
+// No video, or its thumbnail can't load: show a plain block instead of a broken image.
 const thumbnailFailed = ref(false)
-const src = computed(() => (thumbnail.value && !thumbnailFailed.value ? thumbnail.value : placeholder.value))
+const showThumbnail = computed(() => thumbnail.value && !thumbnailFailed.value)
 
 // Only autoplay where hover exists and the user hasn't asked for reduced motion.
 const canPreview =
@@ -52,15 +51,19 @@ onBeforeUnmount(() => clearTimeout(timer))
 <template>
   <div class="relative aspect-video w-full overflow-hidden bg-parchment-dark">
     <img
-      :src="src"
-      :alt="alt"
+      v-if="showThumbnail"
+      :src="thumbnail"
+      alt=""
       class="h-full w-full object-cover"
       loading="lazy"
       @error="thumbnailFailed = true"
     />
+    <div v-else class="flex h-full w-full items-center justify-center text-ink-light/40">
+      <FolkEmblem :size="40" />
+    </div>
 
     <span
-      v-if="thumbnail && !videoReady"
+      v-if="showThumbnail && !videoReady"
       class="absolute bottom-2 left-2 flex h-7 w-7 items-center justify-center rounded-full bg-ink/70 text-xs text-parchment"
       aria-hidden="true"
     >
