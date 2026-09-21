@@ -12,7 +12,7 @@ declare module 'vue-router' {
 }
 
 const routes: RouteRecordRaw[] = [
-  { path: '/', name: 'home', component: Home },
+  { path: '/', name: 'home', component: Home, meta: { hideGlobalNav: true } },
   { path: '/quiz', name: 'quiz', component: Quiz },
   { path: '/collection', name: 'collection', component: Collection },
   {
