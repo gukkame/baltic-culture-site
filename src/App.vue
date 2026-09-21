@@ -12,7 +12,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <a class="skip-link" href="#main-content">{{ t('nav.skipToContent') }}</a>
+  <a class="skip-link" href="#main-content" @click.prevent="focusMain">{{ t('nav.skipToContent') }}</a>
   <div class="flex min-h-screen flex-col">
     <header v-if="!route.meta.hideGlobalNav" class="border-b border-parchment-dark bg-parchment/80">
       <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
@@ -47,11 +47,11 @@ watchEffect(() => {
       </div>
     </header>
 
-    <main id="main-content" class="flex-1">
+    <main id="main-content" tabindex="-1" class="flex-1">
       <RouterView />
     </main>
 
-    <footer class="border-t border-parchment-dark py-6 text-center text-sm text-ink-light">
+    <footer v-if="!isHome" class="border-t border-parchment-dark py-6 text-center text-sm text-ink-light">
       {{ t('site.title') }} — placeholder content
     </footer>
   </div>
