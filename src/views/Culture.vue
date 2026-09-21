@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLocale } from '../composables/useLocale'
 import { contentByCountry, isCountry } from '../data'
 import FolkEmblem from '../components/FolkEmblem.vue'
 import CornerSprig from '../components/CornerSprig.vue'
+import ItemCardMedia from '../components/ItemCardMedia.vue'
 
 const props = defineProps<{
   country: string
@@ -18,10 +19,31 @@ const items = computed(() => (validCountry.value ? contentByCountry[validCountry
 type Filter = 'all' | 'dance' | 'song'
 const activeFilter = ref<Filter>('all')
 
-const filteredItems = computed(() => {
-  if (activeFilter.value === 'all') return items.value
-  return items.value.filter((item) => item.category === activeFilter.value)
+// Hide a category filter when the country has nothing in it (e.g. Latvia has no songs yet).
+const hasDances = computed(() => items.value.some((item) => item.category === 'dance'))
+const hasSongs = computed(() => items.value.some((item) => item.category === 'song'))
+
+// "All" only means something when there are two categories to tell apart.
+const showAll = computed(() => hasDances.value && hasSongs.value)
+
+// The component is reused across countries, so don't keep a filter the new country lacks.
+watch(validCountry, () => {
+  activeFilter.value = 'all'
 })
+
+// With a single category left, that category is the (only) active filter.
+const currentFilter = computed<Filter>(() => {
+  if (showAll.value) return activeFilter.value
+  return hasDances.value ? 'dance' : hasSongs.value ? 'song' : 'all'
+})
+
+const filteredItems = computed(() => {
+  if (currentFilter.value === 'all') return items.value
+  return items.value.filter((item) => item.category === currentFilter.value)
+})
+
+// Card currently hovered/focused; only that card plays its video preview.
+const previewId = ref<string>()
 
 const heroImage = computed(() =>
   validCountry.value ? `/images/hero/${validCountry.value}.svg` : '',
@@ -102,11 +124,12 @@ const heroImage = computed(() =>
     <div class="mx-auto mt-8 max-w-6xl px-4 pb-8 sm:px-6 sm:pb-12 lg:px-8">
       <div role="group" :aria-label="t('culture.filters.all')" class="flex flex-wrap gap-2">
         <button
+          v-if="showAll"
           type="button"
-          :aria-pressed="activeFilter === 'all'"
+          :aria-pressed="currentFilter === 'all'"
           class="rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150"
           :class="
-            activeFilter === 'all'
+            currentFilter === 'all'
               ? 'bg-ink text-parchment hover:bg-ink-light'
               : 'bg-parchment-dark text-ink-light hover:bg-parchment-darker hover:text-ink'
           "
@@ -115,11 +138,12 @@ const heroImage = computed(() =>
           {{ t('culture.filters.all') }}
         </button>
         <button
+          v-if="hasDances"
           type="button"
-          :aria-pressed="activeFilter === 'dance'"
+          :aria-pressed="currentFilter === 'dance'"
           class="rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150"
           :class="
-            activeFilter === 'dance'
+            currentFilter === 'dance'
               ? 'bg-ink text-parchment hover:bg-ink-light'
               : 'bg-parchment-dark text-ink-light hover:bg-parchment-darker hover:text-ink'
           "
@@ -128,11 +152,12 @@ const heroImage = computed(() =>
           {{ t('culture.dances') }}
         </button>
         <button
+          v-if="hasSongs"
           type="button"
-          :aria-pressed="activeFilter === 'song'"
+          :aria-pressed="currentFilter === 'song'"
           class="rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150"
           :class="
-            activeFilter === 'song'
+            currentFilter === 'song'
               ? 'bg-ink text-parchment hover:bg-ink-light'
               : 'bg-parchment-dark text-ink-light hover:bg-parchment-darker hover:text-ink'
           "
@@ -147,13 +172,12 @@ const heroImage = computed(() =>
           <RouterLink
             :to="`/${validCountry}/${item.id}`"
             class="group flex h-full flex-col overflow-hidden rounded-2xl bg-parchment-light shadow-paper ring-1 ring-parchment-dark transition duration-200 hover:bg-parchment hover:shadow-paper-hover"
+            @mouseenter="previewId = item.id"
+            @mouseleave="previewId = undefined"
+            @focus="previewId = item.id"
+            @blur="previewId = undefined"
           >
-            <img
-              :src="`/${item.image}`"
-              :alt="item.imageAlt[locale]"
-              class="aspect-[4/3] w-full object-cover"
-              loading="lazy"
-            />
+            <ItemCardMedia :item="item" :alt="item.imageAlt[locale]" :active="previewId === item.id" />
             <div class="flex flex-1 flex-col gap-1 p-4">
               <h3 class="font-serif text-lg text-ink">{{ item.title[locale] }}</h3>
               <p class="text-xs text-ink-light">

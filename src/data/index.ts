@@ -28,7 +28,25 @@ export function findNextItem(country: string | undefined, itemId: string | undef
   return sameCategory[(index + 1) % sameCategory.length]
 }
 
+export function youtubeId(videoUrl: string): string | undefined {
+  return videoUrl.match(/[?&]v=([^&]+)/)?.[1]
+}
+
 export function youtubeEmbedUrl(videoUrl: string): string {
-  const match = videoUrl.match(/[?&]v=([^&]+)/)
-  return match ? `https://www.youtube.com/embed/${match[1]}` : videoUrl
+  const id = youtubeId(videoUrl)
+  return id ? `https://www.youtube.com/embed/${id}` : videoUrl
+}
+
+/** hqdefault is 4:3 with letterbox bars, so crop it with object-cover in a 16:9 box. */
+export function youtubeThumbnailUrl(videoUrl: string): string | undefined {
+  const id = youtubeId(videoUrl)
+  return id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : undefined
+}
+
+/** Muted, looping, chrome-less embed for hover previews on cards. */
+export function youtubePreviewUrl(videoUrl: string): string | undefined {
+  const id = youtubeId(videoUrl)
+  return id
+    ? `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&mute=1&controls=0&disablekb=1&modestbranding=1&playsinline=1&rel=0&loop=1&playlist=${id}`
+    : undefined
 }
