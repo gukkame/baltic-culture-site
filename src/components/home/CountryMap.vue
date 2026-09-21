@@ -15,7 +15,7 @@ const countries = computed(() => [...countryGeometry].reverse().map((country) =>
   ...country,
   name: country.id === 'latvia' ? props.latvia : props.lithuania,
   subtitle: country.id === 'latvia' ? props.latviaSubtitle : props.lithuaniaSubtitle,
-  href: router.resolve(`/culture/${country.id}`).href,
+  href: router.resolve(`/${country.id}`).href,
   tint: country.id === 'latvia' ? '#863d27' : '#183f35',
   offset: country.id === 'latvia' ? -7 : 8,
 })))

@@ -1,10 +1,15 @@
 <script setup lang="ts">
-import { watchEffect } from 'vue'
+import { computed, watchEffect } from 'vue'
 import { RouterLink, RouterView, useRoute } from 'vue-router'
 import { useLocale } from './composables/useLocale'
 
 const { locale, toggleLocale, t } = useLocale()
 const route = useRoute()
+const isHome = computed(() => route.name === 'home')
+
+function focusMain() {
+  document.getElementById('main-content')?.focus()
+}
 
 watchEffect(() => {
   document.documentElement.lang = locale.value

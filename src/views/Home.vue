@@ -63,9 +63,9 @@ function toTop() {
       </div>
       <div class="home-stage-bottom">
         <span class="home-country-shortcuts">
-          <RouterLink to="/culture/latvia">{{ copy.latvia }} <span aria-hidden="true">↗</span></RouterLink>
+          <RouterLink to="/latvia">{{ copy.latvia }} <span aria-hidden="true">↗</span></RouterLink>
           <span aria-hidden="true">·</span>
-          <RouterLink to="/culture/lithuania">{{ copy.lithuania }} <span aria-hidden="true">↗</span></RouterLink>
+          <RouterLink to="/lithuania">{{ copy.lithuania }} <span aria-hidden="true">↗</span></RouterLink>
         </span>
         <button class="home-scroll" @click="goTo(story)">{{ copy.scroll }} <span aria-hidden="true">↓</span></button>
       </div>
