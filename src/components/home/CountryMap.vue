@@ -25,7 +25,7 @@ const countries = computed(() => [...countryGeometry].reverse().map((country) =>
   <svg class="country-map" viewBox="0 0 800 360" role="group" :aria-label="label">
     <defs>
       <pattern id="painted-land" patternUnits="userSpaceOnUse" width="800" height="360">
-        <image href="/artwork/painted-land-v1.png" width="800" height="360" preserveAspectRatio="xMidYMid slice" />
+        <image href="/artwork/painted-land-v1.webp" width="800" height="360" preserveAspectRatio="xMidYMid slice" />
       </pattern>
       <linearGradient id="map-edge" x1="0" y1="0" x2="0.3" y2="1">
         <stop stop-color="#e2bc79" /><stop offset=".4" stop-color="#977047" /><stop offset="1" stop-color="#493c2c" />

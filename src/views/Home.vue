@@ -27,7 +27,10 @@ function toTop() {
 <template>
   <div class="folk-home">
     <section class="home-stage" aria-labelledby="home-title">
-      <img class="home-art" src="/artwork/baltic-table-painted-v1.png" alt="" fetchpriority="high" />
+      <picture>
+        <source srcset="/artwork/baltic-table-painted-v1.avif" type="image/avif" />
+        <img class="home-art" src="/artwork/baltic-table-painted-v1.webp" alt="" fetchpriority="high" decoding="async" />
+      </picture>
       <div class="home-shade" aria-hidden="true" />
       <header class="home-header">
         <RouterLink to="/" class="home-brand" :aria-label="`${copy.brandTop} ${copy.brandBottom}`">
