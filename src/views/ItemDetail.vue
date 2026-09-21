@@ -64,7 +64,7 @@ const nextItem = computed(() => findNextItem(props.country, props.itemId))
     >
       <RouterLink
         :to="`/${country}/${nextItem.id}`"
-        class="group flex items-center justify-between gap-4 rounded-2xl bg-parchment-light p-4 shadow-paper ring-1 ring-parchment-dark transition duration-200 hover:bg-parchment hover:shadow-paper-hover"
+        class="group flex items-center justify-between gap-4 rounded-2xl bg-parchment-light p-4 shadow-paper ring-1 ring-parchment-dark transition duration-300 ease-out hover:-translate-y-1 hover:bg-parchment hover:shadow-paper-hover hover:ring-terracotta/30"
       >
         <span class="min-w-0">
           <span class="block text-xs text-ink-light">{{ t(`item.next.${item.category}`) }}</span>

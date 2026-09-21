@@ -171,7 +171,7 @@ const heroImage = computed(() =>
         <li v-for="item in filteredItems" :key="item.id">
           <RouterLink
             :to="`/${validCountry}/${item.id}`"
-            class="group flex h-full flex-col overflow-hidden rounded-2xl bg-parchment-light shadow-paper ring-1 ring-parchment-dark transition duration-200 hover:bg-parchment hover:shadow-paper-hover"
+            class="group flex h-full flex-col overflow-hidden rounded-2xl bg-parchment-light shadow-paper ring-1 ring-parchment-dark transition duration-300 ease-out hover:-translate-y-1.5 hover:bg-parchment hover:shadow-paper-hover hover:ring-terracotta/30 focus-visible:-translate-y-1.5 focus-visible:shadow-paper-hover"
             @mouseenter="previewId = item.id"
             @mouseleave="previewId = undefined"
             @focus="previewId = item.id"
@@ -179,13 +179,13 @@ const heroImage = computed(() =>
           >
             <ItemCardMedia :item="item" :active="previewId === item.id" />
             <div class="flex flex-1 flex-col gap-1 p-4">
-              <h3 class="font-serif text-lg text-ink">{{ item.title[locale] }}</h3>
+              <h3 class="font-serif text-lg text-ink transition-colors duration-200 group-hover:text-terracotta-dark group-focus-visible:text-terracotta-dark">{{ item.title[locale] }}</h3>
               <p class="text-xs text-ink-light">
                 {{ t(`item.category.${item.category}`) }} · {{ t(`common.${validCountry}`) }}
               </p>
               <p class="mt-1 text-sm text-ink-light">{{ item.tagline[locale] }}</p>
               <span
-                class="mt-auto pt-3 text-lg text-ink transition group-hover:translate-x-1 group-hover:text-terracotta-dark"
+                class="mt-auto pt-3 text-lg text-ink transition group-hover:translate-x-2 group-hover:text-terracotta-dark group-focus-visible:translate-x-2 group-focus-visible:text-terracotta-dark"
                 aria-hidden="true"
               >
                 →

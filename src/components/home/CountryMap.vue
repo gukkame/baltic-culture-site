@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRouter } from 'vue-router'
+import { RouterLink } from 'vue-router'
 import countryGeometry from './countryGeometry.json'
 
 const props = defineProps<{
@@ -10,12 +10,10 @@ const props = defineProps<{
   latviaSubtitle: string
   lithuaniaSubtitle: string
 }>()
-const router = useRouter()
 const countries = computed(() => [...countryGeometry].reverse().map((country) => ({
   ...country,
   name: country.id === 'latvia' ? props.latvia : props.lithuania,
   subtitle: country.id === 'latvia' ? props.latviaSubtitle : props.lithuaniaSubtitle,
-  href: router.resolve(`/${country.id}`).href,
   tint: country.id === 'latvia' ? '#863d27' : '#183f35',
   offset: country.id === 'latvia' ? -7 : 8,
 })))
@@ -38,7 +36,9 @@ const countries = computed(() => [...countryGeometry].reverse().map((country) =>
       </filter>
     </defs>
     <g v-for="country in countries" :key="country.id" :transform="`translate(0 ${country.offset})`">
-      <a :href="country.href" :aria-label="`${country.name}: ${country.subtitle}`" class="map-country" :class="`map-country--${country.id}`">
+      <!-- Client-side navigation: a plain href reloads the page and resets the chosen language. -->
+      <RouterLink v-slot="{ href, navigate }" :to="`/${country.id}`" custom>
+      <a :href="href" :aria-label="`${country.name}: ${country.subtitle}`" class="map-country" :class="`map-country--${country.id}`" @click="navigate">
         <title>{{ country.name }} · {{ country.subtitle }}</title>
         <g class="map-piece">
           <path :d="country.path" transform="translate(0 22)" fill="#322b22" stroke="#322b22" stroke-width="3" filter="url(#map-shadow)" />
@@ -59,6 +59,7 @@ const countries = computed(() => [...countryGeometry].reverse().map((country) =>
           </g>
         </g>
       </a>
+      </RouterLink>
     </g>
   </svg>
 </template>

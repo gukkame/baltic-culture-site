@@ -50,36 +50,42 @@ onBeforeUnmount(() => clearTimeout(timer))
 
 <template>
   <div class="relative aspect-video w-full overflow-hidden bg-parchment-dark">
-    <img
-      v-if="showThumbnail"
-      :src="thumbnail"
-      alt=""
-      class="h-full w-full object-cover"
-      loading="lazy"
-      @error="thumbnailFailed = true"
-    />
-    <div v-else class="flex h-full w-full items-center justify-center text-ink-light/40">
-      <FolkEmblem :size="40" />
+    <!-- Zooms with the parent card's hover/focus (the card is the Tailwind `group`); thumbnail and
+         video preview sit in the same layer so they scale together. -->
+    <div
+      class="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-105 group-focus-visible:scale-105"
+    >
+      <img
+        v-if="showThumbnail"
+        :src="thumbnail"
+        alt=""
+        class="h-full w-full object-cover"
+        loading="lazy"
+        @error="thumbnailFailed = true"
+      />
+      <div v-else class="flex h-full w-full items-center justify-center text-ink-light/40">
+        <FolkEmblem :size="40" />
+      </div>
+
+      <iframe
+        v-if="showVideo && previewUrl"
+        :src="previewUrl"
+        title=""
+        tabindex="-1"
+        aria-hidden="true"
+        allow="autoplay; encrypted-media"
+        class="pointer-events-none absolute left-1/2 top-1/2 aspect-video h-full min-w-full -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300"
+        :class="videoReady ? 'opacity-100' : 'opacity-0'"
+        @load="videoReady = true"
+      />
     </div>
 
     <span
       v-if="showThumbnail && !videoReady"
-      class="absolute bottom-2 left-2 flex h-7 w-7 items-center justify-center rounded-full bg-ink/70 text-xs text-parchment"
+      class="absolute bottom-2 left-2 flex h-7 w-7 items-center justify-center rounded-full bg-ink/70 text-xs text-parchment transition-transform duration-300 group-hover:scale-110"
       aria-hidden="true"
     >
       ▶
     </span>
-
-    <iframe
-      v-if="showVideo && previewUrl"
-      :src="previewUrl"
-      title=""
-      tabindex="-1"
-      aria-hidden="true"
-      allow="autoplay; encrypted-media"
-      class="pointer-events-none absolute left-1/2 top-1/2 aspect-video h-full min-w-full -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300"
-      :class="videoReady ? 'opacity-100' : 'opacity-0'"
-      @load="videoReady = true"
-    />
   </div>
 </template>

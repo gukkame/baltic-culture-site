@@ -25,7 +25,7 @@
 
   /* Soft, low-contrast shadows for a tactile paper feel rather than a UI-panel feel */
   --shadow-paper: 0 2px 8px rgba(50, 35, 20, 0.06);
-  --shadow-paper-hover: 0 6px 18px rgba(50, 35, 20, 0.1);
+  --shadow-paper-hover: 0 14px 28px rgba(50, 35, 20, 0.16);
 }
 
 @media (prefers-reduced-motion: reduce) {
