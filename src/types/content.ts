@@ -6,6 +6,21 @@ export interface LocalizedText {
   lt: string
 }
 
+export type QuizCountry = 'latvia' | 'lithuania' | 'both'
+
+export interface QuizQuestion {
+  /** Also the id of the badge earned for answering correctly. */
+  id: string
+  country: QuizCountry
+  /** The dance or song this question is about, if any (used to link to and from its page). */
+  itemId?: string
+  question: LocalizedText
+  options: LocalizedText[]
+  /** Index into `options`. */
+  correct: number
+  explanation: LocalizedText
+}
+
 export interface ContentItem {
   id: string
   category: ItemCategory

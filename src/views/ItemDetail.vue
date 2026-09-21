@@ -57,6 +57,20 @@ const nextItem = computed(() => findNextItem(props.country, props.itemId))
       </div>
     </div>
 
+    <section class="mt-10 rounded-2xl bg-parchment-light p-5 shadow-paper ring-1 ring-parchment-dark sm:flex sm:items-center sm:justify-between sm:gap-6">
+      <div>
+        <h2 class="font-serif text-xl text-ink">{{ t('item.testTitle') }}</h2>
+        <p class="mt-1 text-sm text-ink-light">{{ t('item.testText') }}</p>
+      </div>
+      <RouterLink
+        to="/viktorina"
+        class="mt-4 inline-flex shrink-0 items-center gap-2 rounded-full bg-terracotta px-5 py-2.5 text-sm font-medium text-parchment transition-colors duration-150 hover:bg-terracotta-dark sm:mt-0"
+      >
+        {{ t('item.testButton') }}
+        <span aria-hidden="true">→</span>
+      </RouterLink>
+    </section>
+
     <nav
       v-if="nextItem"
       :aria-label="t(`item.next.${item.category}`)"

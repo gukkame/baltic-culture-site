@@ -1,7 +1,7 @@
 {
   "lv": {
     "brandTop": "Baltijas", "brandBottom": "tautas mantojums",
-    "navExplore": "Iepazīsti", "navQuiz": "Viktorīnas", "navAbout": "Par projektu", "navLabel": "Galvenā navigācija", "languageLabel": "Izvēlies valodu",
+    "navExplore": "Iepazīsti", "navQuiz": "Viktorīna", "navAbout": "Par projektu", "navLabel": "Galvenā navigācija", "languageLabel": "Izvēlies valodu",
     "eyebrow": "LATVIJAS UN LIETUVAS DZĪVĀS TRADĪCIJAS",
     "titleFirst": "Dejo. Dziedi.", "titleSecond": "Iepazīsti.",
     "lead": "Divas kaimiņzemes. Tik daudz stāstu.",
@@ -12,12 +12,12 @@
     "storyBody": "Tautas deja un dziesma glabā cilvēku atmiņas, dabas ritmu un kopā būšanas prieku. Ieklausies, ieskaties un atrodi savu saikni ar divu kaimiņzemju tradīcijām.",
     "danceTitle": "Iepazīsti deju", "danceText": "Atklāj soļus, kustības un stāstus, kas pulcē cilvēkus kopā.",
     "songTitle": "Ieklausies dziesmā", "songText": "Sadzirdi valodu, melodiju un sajūtas, kas ceļo cauri paaudzēm.",
-    "quizTitle": "Pārbaudi zināšanas", "quizText": "Pēc ceļojuma atgriezies pie iepazītā un izaicini savu atmiņu.", "quizSoon": "Viktorīnas drīzumā",
+    "quizTitle": "Pārbaudi zināšanas", "quizText": "Pēc ceļojuma atgriezies pie iepazītā un izaicini savu atmiņu.", "quizCta": "Sākt viktorīnu",
     "footer": "Latvijas un Lietuvas dejas, dziesmas un kopīgie stāsti.", "backTop": "Uz sākumu"
   },
   "lt": {
     "brandTop": "Baltijos", "brandBottom": "tautos paveldas",
-    "navExplore": "Pažink", "navQuiz": "Viktorinos", "navAbout": "Apie projektą", "navLabel": "Pagrindinė navigacija", "languageLabel": "Pasirink kalbą",
+    "navExplore": "Pažink", "navQuiz": "Viktorina", "navAbout": "Apie projektą", "navLabel": "Pagrindinė navigacija", "languageLabel": "Pasirink kalbą",
     "eyebrow": "GYVOSIOS LATVIJOS IR LIETUVOS TRADICIJOS",
     "titleFirst": "Šok. Dainuok.", "titleSecond": "Pažink.",
     "lead": "Dvi kaimynės. Tiek daug istorijų.",
@@ -28,7 +28,7 @@
     "storyBody": "Liaudies šokiai ir dainos saugo žmonių prisiminimus, gamtos ritmą ir buvimo kartu džiaugsmą. Įsiklausyk, įsižiūrėk ir atrask savo ryšį su dviejų kaimyninių šalių tradicijomis.",
     "danceTitle": "Pažink šokį", "danceText": "Atrask žingsnius, judesius ir istorijas, kurios suburia žmones.",
     "songTitle": "Įsiklausyk į dainą", "songText": "Išgirsk kalbą, melodiją ir jausmus, kurie keliauja per kartas.",
-    "quizTitle": "Pasitikrink žinias", "quizText": "Po kelionės prisimink, ką atradai, ir išbandyk savo atmintį.", "quizSoon": "Viktorinos jau netrukus",
+    "quizTitle": "Pasitikrink žinias", "quizText": "Po kelionės prisimink, ką atradai, ir išbandyk savo atmintį.", "quizCta": "Pradėti viktoriną",
     "footer": "Latvijos ir Lietuvos šokiai, dainos ir bendros istorijos.", "backTop": "Į pradžią"
   }
 }

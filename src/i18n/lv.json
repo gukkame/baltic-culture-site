@@ -49,7 +49,27 @@
       "song": "Dziesma"
     },
     "notFoundTitle": "Ieraksts nav atrasts",
-    "notFoundBody": "Diemžēl šis ieraksts neeksistē."
+    "notFoundBody": "Diemžēl šis ieraksts neeksistē.",
+    "testTitle": "Pārbaudi savas zināšanas",
+    "testText": "Atbildi uz jautājumiem par abu tautu kultūru un vāc nozīmītes.",
+    "testButton": "Uz viktorīnu"
+  },
+  "quiz": {
+    "title": "Viktorīna",
+    "intro": "Jautājumi par Latvijas un Lietuvas dejām un dziesmām. Atbildi pareizi un vāc nozīmītes!",
+    "badges": "Nozīmītes",
+    "both": "Latvija un Lietuva",
+    "correct": "Pareizi!",
+    "incorrect": "Ne gluži. Mēģini vēlreiz!",
+    "tryAgain": "Mēģināt vēlreiz",
+    "badgeEarned": "Nozīmīte iegūta.",
+    "learnMore": "Uzzināt vairāk",
+    "allDone": "Apsveicam! Visas nozīmītes savāktas!",
+    "startOver": "Sākt no jauna",
+    "resetTitle": "Sākt no jauna?",
+    "resetConfirm": "Visas iegūtās nozīmītes tiks dzēstas, un viktorīna sāksies no pirmā jautājuma.",
+    "resetButton": "Jā, sākt no jauna",
+    "cancel": "Atcelt"
   },
   "common": {
     "latvia": "Latvija",

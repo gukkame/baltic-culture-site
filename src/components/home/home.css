@@ -30,9 +30,9 @@
 .home-brand svg { width: 47px; height: 47px; }
 .home-brand small { font-family: var(--font-sans); font-size: 12px; letter-spacing: .08em; }
 .home-nav { margin-left: auto; display: flex; gap: 33px; font-size: 13px; color: #253a31; }
-.home-nav button { position: relative; padding: 12px 0; text-shadow: 0 1px 8px #fff3daaa; }
-.home-nav button::after { content: ''; position: absolute; bottom: 5px; left: 0; right: 100%; height: 1px; background: currentColor; transition: right .2s ease; }
-.home-nav button:hover::after { right: 0; }
+.home-nav button, .home-nav a { position: relative; display: inline-block; padding: 12px 0; text-shadow: 0 1px 8px #fff3daaa; }
+.home-nav button::after, .home-nav a::after { content: ''; position: absolute; bottom: 5px; left: 0; right: 100%; height: 1px; background: currentColor; transition: right .2s ease; }
+.home-nav button:hover::after, .home-nav a:hover::after { right: 0; }
 .home-languages { display: flex; align-items: center; gap: 7px; font-size: 12px; background: #f5eedce6; color: #263f36; border-radius: 50px; padding: 0 7px; }
 .home-languages button { min-width: 35px; min-height: 44px; opacity: .75; }
 .home-languages button[aria-pressed="true"] { opacity: 1; font-weight: 600; }
@@ -74,7 +74,10 @@
 .home-chapter h3 { font-family: var(--font-serif); font-size: 21px; line-height: 1.4; font-weight: 400; padding-right: 17px; }
 .home-chapter p { color: #6e6856; font-size: 12px; line-height: 1.8; margin-top: 10px; max-width: 245px; }
 .home-chapter svg { position: absolute; width: 28px; height: 28px; right: 14px; top: 32px; color: #aa6243; opacity: .6; }
-.home-soon { display: inline-block; color: #8b5f49; font-size: 9px; letter-spacing: .09em; text-transform: uppercase; margin-top: 14px; border-bottom: 1px solid #bda888; padding-bottom: 4px; }
+.home-quiz-link { display: inline-block; color: #7a3a26; font-size: 10px; font-weight: 500; letter-spacing: .09em; text-transform: uppercase; margin-top: 14px; border-bottom: 1px solid currentColor; padding-bottom: 4px; transition: color .2s; }
+.home-quiz-link span { display: inline-block; transition: transform .2s; }
+.home-quiz-link:hover { color: #b04d3d; }
+.home-quiz-link:hover span { transform: translateX(3px); }
 .home-footer { max-width: 1300px; margin: auto; padding: 27px 40px; border-top: 1px solid #39433325; display: flex; justify-content: space-between; align-items: center; font-size: 10px; color: #6f6552; gap: 30px; }
 .home-footer > div { display: flex; align-items: center; gap: 14px; }
 .home-footer svg { width: 24px; height: 24px; flex-shrink: 0; color: #a2553e; }

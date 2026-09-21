@@ -1,0 +1,319 @@
+[
+  {
+    "id": "linksmasis-sokis",
+    "country": "lithuania",
+    "itemId": "linksmasis-sokis",
+    "question": {
+      "lv": "Kam galvenokārt bija paredzēta Priecīgā deja?",
+      "lt": "Kam pirmiausia buvo skirtas Linksmasis šokis?"
+    },
+    "options": [
+      { "lv": "Skatītājiem uz skatuves", "lt": "Žiūrovams scenoje" },
+      { "lv": "Pašiem dejotājiem", "lt": "Patiems šokėjams" },
+      { "lv": "Tikai bērniem", "lt": "Tik vaikams" }
+    ],
+    "correct": 1,
+    "explanation": {
+      "lv": "Tā bija „deja pašiem dejotājiem“ — tā saliedēja lauku kopienu un palīdzēja jauniešiem satikties un atrast dzīvesbiedru.",
+      "lt": "Tai buvo „šokis patiems šokėjams“ — jis suartino kaimo bendruomenę ir padėjo jaunimui susipažinti ir rasti porą."
+    }
+  },
+  {
+    "id": "govju-kazaks",
+    "country": "latvia",
+    "itemId": "govju-kazaks",
+    "question": {
+      "lv": "Ko dejā „Govju kazaks“ dara saimniece?",
+      "lt": "Ką šokyje „Govju kazaks“ daro šeimininkė?"
+    },
+    "options": [
+      { "lv": "Ar bungām sāk pļaujas svētkus", "lt": "Būgnais pradeda pjūties šventę" },
+      { "lv": "Vada dejotājus ar koklēm", "lt": "Veda šokėjus kanklėmis" },
+      {
+        "lv": "Ar koka āmurīti ritmiski sitot pa dēli, aicina talciniekus pusdienās",
+        "lt": "Mediniu kūjeliu ritmiškai belsdama į lentą, kviečia talkininkus pietauti"
+      }
+    ],
+    "correct": 2,
+    "explanation": {
+      "lv": "Saimniece katru soļu kombināciju pavada, ritmiski sitot ar koka āmurīti pa dēli — šo ritmu izpilda arī dejotāji.",
+      "lt": "Šeimininkė kiekvieną žingsnių derinį lydi ritmiškai belsdama mediniu kūjeliu į lentą — šį ritmą atkartoja ir šokėjai."
+    }
+  },
+  {
+    "id": "blezdingele",
+    "country": "lithuania",
+    "itemId": "blezdingele",
+    "question": {
+      "lv": "Ko atdarina deja „Bezdelīdziņa“ (Blezdingėlė)?",
+      "lt": "Ką mėgdžioja šokis „Blezdingėlė“?"
+    },
+    "options": [
+      { "lv": "Upes tecējumu", "lt": "Upės tėkmę" },
+      { "lv": "Bezdelīgas lidojumu", "lt": "Kregždės skrydį" },
+      { "lv": "Dzirnavu rata griešanos", "lt": "Malūno rato sukimąsi" }
+    ],
+    "correct": 1,
+    "explanation": {
+      "lv": "Nosaukums cēlies no žemaišu vārda „blezdinga“ — bezdelīga.",
+      "lt": "Pavadinimas kilęs iš žemaitiško žodžio „blezdinga“ — kregždė."
+    }
+  },
+  {
+    "id": "sudmalinas",
+    "country": "latvia",
+    "itemId": "sudmalinas",
+    "question": {
+      "lv": "No kā veidojusies deja „Sudmaliņas“?",
+      "lt": "Iš ko susiformavo šokis „Sudmaliņas“?"
+    },
+    "options": [
+      { "lv": "No vienas dzejnieka sacerētas dziesmas", "lt": "Iš vienos poeto sukurtos dainos" },
+      {
+        "lv": "No daudziem dažādu novadu folkloras variantiem",
+        "lt": "Iš daugelio skirtingų regionų folkloro variantų"
+      },
+      { "lv": "No ārzemju deju krājuma", "lt": "Iš užsienio šokių rinkinio" }
+    ],
+    "correct": 1,
+    "explanation": {
+      "lv": "Šī etnogrāfiskā deja ir savdabīga atlase no daudziem variantiem, izmantojot vairāku novadu folkloras materiālus.",
+      "lt": "Šis etnografinis šokis — savotiška daugelio variantų atranka, panaudojant kelių regionų folkloro medžiagą."
+    }
+  },
+  {
+    "id": "vaiku-ratelis",
+    "country": "lithuania",
+    "itemId": "vaiku-ratelis",
+    "question": {
+      "lv": "Kā Lietuvas tradīcijā sauc jaunākos dejotājus?",
+      "lt": "Kaip Lietuvos tradicijoje vadinami jauniausi šokėjai?"
+    },
+    "options": [
+      { "lv": "Žvirbliukai", "lt": "Žvirbliukai" },
+      { "lv": "Bitutės", "lt": "Bitutės" },
+      { "lv": "Spirgučiai", "lt": "Spirgučiai" }
+    ],
+    "correct": 2,
+    "explanation": {
+      "lv": "Jaunākos dejotājus sauc par „spirgučiem“ — šis vārds saglabāts arī Lietuvas Dziesmu svētku jaunāko dejotāju grupu nosaukumā.",
+      "lt": "Jauniausi šokėjai vadinami „spirgučiais“ — šis pavadinimas išlikęs ir Dainų šventės jauniausių šokėjų grupių pavadinime."
+    }
+  },
+  {
+    "id": "meitu-mate",
+    "country": "latvia",
+    "itemId": "meitu-mate",
+    "question": {
+      "lv": "Par ko stāsta deja „Meitu māte“?",
+      "lt": "Apie ką pasakoja šokis „Meitu māte“?"
+    },
+    "options": [
+      {
+        "lv": "Par divu ģimeņu tikšanos pirms precībām, kur mātes izrāda savus bērnus",
+        "lt": "Apie dviejų šeimų susitikimą prieš vedybas, kur motinos giriasi savo vaikais"
+      },
+      { "lv": "Par meitu došanos uz tirgu", "lt": "Apie merginų kelionę į turgų" },
+      { "lv": "Par mātes atvadām no dēla", "lt": "Apie motinos atsisveikinimą su sūnumi" }
+    ],
+    "correct": 0,
+    "explanation": {
+      "lv": "Tā ir ornamentāli sižetiska deja par divu ģimeņu tikšanos pirms precībām — mātes izrāda viena otrai savu atvašu skaistumu un diženumu.",
+      "lt": "Tai ornamentinis siužetinis šokis apie dviejų šeimų susitikimą prieš vedybas — motinos viena kitai demonstruoja savo vaikų grožį ir didingumą."
+    }
+  },
+  {
+    "id": "dobilelis",
+    "country": "lithuania",
+    "itemId": "dobilelis",
+    "question": {
+      "lv": "Kāpēc labs āboliņa novākums bija tik svarīgs saimniecībai?",
+      "lt": "Kodėl geras dobilų derlius buvo toks svarbus ūkiui?"
+    },
+    "options": [
+      { "lv": "No āboliņa cepa svētku maizi", "lt": "Iš dobilų kepdavo šventinę duoną" },
+      { "lv": "Āboliņu pārdeva uz ārzemēm", "lt": "Dobilus parduodavo į užsienį" },
+      {
+        "lv": "Tas simbolizēja saimniecības labklājību un veiksmi",
+        "lt": "Tai simbolizavo ūkio gerovę ir sėkmę"
+      }
+    ],
+    "correct": 2,
+    "explanation": {
+      "lv": "Āboliņš bija būtisks lopu barošanai, tāpēc labs novākums nozīmēja saimniecības labklājību.",
+      "lt": "Dobilai buvo gyvybiškai svarbūs gyvulių pašarui, todėl geras derlius reiškė ūkio gerovę."
+    }
+  },
+  {
+    "id": "dizdancis",
+    "country": "latvia",
+    "itemId": "dizdancis",
+    "question": {
+      "lv": "Kura tautas deja iedvesmoja deju „Diždancis“?",
+      "lt": "Koks liaudies šokis įkvėpė šokį „Diždancis“?"
+    },
+    "options": [
+      { "lv": "Jandāliņš", "lt": "Jandāliņš" },
+      { "lv": "Ekosēze", "lt": "Ekosēze" },
+      { "lv": "Pērkoņdancis", "lt": "Pērkoņdancis" }
+    ],
+    "correct": 1,
+    "explanation": {
+      "lv": "Horeogrāfu iedvesmojusi tautas deja „Ekosēze“ un tās mūzika — Diždancis pirmo reizi iestudēts 1973. gadā.",
+      "lt": "Choreografą įkvėpė liaudies šokis „Ekosēze“ ir jo muzika — „Diždancis“ pirmą kartą pastatytas 1973 m."
+    }
+  },
+  {
+    "id": "isjos-brolutelis",
+    "country": "lithuania",
+    "itemId": "isjos-brolutelis",
+    "question": {
+      "lv": "Kas ir sutartinė?",
+      "lt": "Kas yra sutartinė?"
+    },
+    "options": [
+      { "lv": "Lietuviešu tautastērpa daļa", "lt": "Lietuvių tautinio kostiumo dalis" },
+      { "lv": "Koka mūzikas instruments", "lt": "Medinis muzikos instrumentas" },
+      { "lv": "Lietuviešu daudzbalsīgās dziedāšanas stils", "lt": "Lietuvių daugiabalsio dainavimo stilius" }
+    ],
+    "correct": 2,
+    "explanation": {
+      "lv": "Šī sutartinė nāk no Aukštaitijas un ir dialogs starp brāli un māsu — māsa jautā, ko brālis atvedīs no Rīgas.",
+      "lt": "Ši sutartinė iš Aukštaitijos — brolio ir sesers dialogas: sesuo klausia, ką brolis parveš iš Rygos."
+    }
+  },
+  {
+    "id": "tudalin-tagadin",
+    "country": "latvia",
+    "itemId": "tudalin-tagadin",
+    "question": {
+      "lv": "Ko dejotāji dara ar dziesmas tekstu dejā „Tūdaliņ’, tagadiņ’“?",
+      "lt": "Ką šokėjai daro su dainos tekstu šokyje „Tūdaliņ’, tagadiņ’“?"
+    },
+    "options": [
+      { "lv": "Dejo pilnīgā klusumā", "lt": "Šoka visiškoje tyloje" },
+      { "lv": "Klausās kora izpildījumā", "lt": "Klausosi choro atlikimo" },
+      { "lv": "Gan runā, gan dzied līdzi", "lt": "Tekstą ir taria, ir dainuoja" }
+    ],
+    "correct": 2,
+    "explanation": {
+      "lv": "Dejotāji dziesmas tekstu gan runā, gan dzied līdzi. Deju izpilda dzīvi un rotaļīgi — partnerattiecības ir tās pamats.",
+      "lt": "Šokėjai dainos tekstą ir taria, ir dainuoja. Šokis atliekamas gyvai ir žaismingai — jo pagrindas yra partnerių tarpusavio santykiai."
+    }
+  },
+  {
+    "id": "lendleris-zemaitiskais",
+    "country": "lithuania",
+    "itemId": "lendleris-zemaitiskais",
+    "question": {
+      "lv": "No kurienes cēlusies deja „Žemaišu lendlers“?",
+      "lt": "Iš kur kilęs „Žemaitiškas lenderis“?"
+    },
+    "options": [
+      {
+        "lv": "Pārņemta no kaimiņzemes un kļuvusi „polietuvota“",
+        "lt": "Perimtas iš kaimyninio krašto ir „sulietuvėjęs“"
+      },
+      { "lv": "Izgudrota Žemaitijā pirms simtiem gadu", "lt": "Sukurtas Žemaitijoje prieš šimtmečius" },
+      { "lv": "Sacerēta modernam skatuves šovam", "lt": "Sukurtas šiuolaikiniam scenos šou" }
+    ],
+    "correct": 0,
+    "explanation": {
+      "lv": "Visticamāk no Vācijas vai Prūsijas — laika gaitā deja ieguvusi savdabīgi žemaitisku raksturu.",
+      "lt": "Tikėtina, iš Vokietijos ar Prūsijos — laikui bėgant šokis įgavo savitą žemaitišką charakterį."
+    }
+  },
+  {
+    "id": "which-latvian-dance",
+    "country": "both",
+    "question": {
+      "lv": "Kura no šīm dejām ir latviešu deja?",
+      "lt": "Kuris iš šių šokių yra latvių šokis?"
+    },
+    "options": [
+      { "lv": "Blezdingėlė", "lt": "Blezdingėlė" },
+      { "lv": "Sudmaliņas", "lt": "Sudmaliņas" },
+      { "lv": "Dobilėlis", "lt": "Dobilėlis" }
+    ],
+    "correct": 1,
+    "explanation": {
+      "lv": "Sudmaliņas ir latviešu deja; Blezdingėlė un Dobilėlis ir žemaišu dejas no Lietuvas.",
+      "lt": "„Sudmaliņas“ — latvių šokis; „Blezdingėlė“ ir „Dobilėlis“ — žemaičių šokiai iš Lietuvos."
+    }
+  },
+  {
+    "id": "mona-bolundele",
+    "country": "lithuania",
+    "itemId": "mona-bolundele",
+    "question": {
+      "lv": "Ko dziesmā „Mona bolundele“ simbolizē baloži?",
+      "lt": "Ką dainoje „Mona bolundele“ simbolizuoja balandžiai?"
+    },
+    "options": [
+      { "lv": "Karu un briesmas", "lt": "Karą ir pavojų" },
+      { "lv": "Ģimenes harmoniju un dzīves turpināšanos", "lt": "Šeimos darną ir gyvybės tęstinumą" },
+      { "lv": "Tālus ceļojumus", "lt": "Tolimas keliones" }
+    ],
+    "correct": 1,
+    "explanation": {
+      "lv": "Baloži — mierīgi putni cilvēku tuvumā — simbolizē ģimenes harmoniju, dzīvi un tās turpināšanos.",
+      "lt": "Balandžiai — ramūs paukščiai šalia žmonių — simbolizuoja šeimos darną, gyvybę ir jos tęstinumą."
+    }
+  },
+  {
+    "id": "oi-sermuksnio",
+    "country": "lithuania",
+    "itemId": "oi-sermuksnio",
+    "question": {
+      "lv": "Par ko ir dziesma „Ak, pīlādzīti“ (Oi Šermukšnio)?",
+      "lt": "Apie ką daina „Oi Šermukšnio“?"
+    },
+    "options": [
+      { "lv": "Par jaunu karavīru, kas dodas dienēt", "lt": "Apie jauną karį, išeinantį tarnauti" },
+      { "lv": "Par zvejnieku jūrā", "lt": "Apie žvejį jūroje" },
+      { "lv": "Par ganu meitu pļavā", "lt": "Apie piemenaitę pievoje" }
+    ],
+    "correct": 0,
+    "explanation": {
+      "lv": "Dziesma vēsta par jaunu karavīru, viņa ceļu un cīņu — tā atspoguļo drosmi un apņēmību.",
+      "lt": "Daina pasakoja apie jauną karį, jo kelionę ir kovą — ji atspindi drąsą ir ryžtą."
+    }
+  },
+  {
+    "id": "which-lithuanian-dance",
+    "country": "both",
+    "question": {
+      "lv": "Kura no šīm dejām ir lietuviešu deja?",
+      "lt": "Kuris iš šių šokių yra lietuvių šokis?"
+    },
+    "options": [
+      { "lv": "Diždancis", "lt": "Diždancis" },
+      { "lv": "Govju kazaks", "lt": "Govju kazaks" },
+      { "lv": "Dobilėlis", "lt": "Dobilėlis" }
+    ],
+    "correct": 2,
+    "explanation": {
+      "lv": "Dobilėlis ir žemaišu darba deja no Lietuvas; Diždancis un Govju kazaks ir latviešu dejas.",
+      "lt": "„Dobilėlis“ — žemaičių darbo šokis iš Lietuvos; „Diždancis“ ir „Govju kazaks“ — latvių šokiai."
+    }
+  },
+  {
+    "id": "ne-bet-kokia-mergele",
+    "country": "lithuania",
+    "itemId": "ne-bet-kokia-mergele",
+    "question": {
+      "lv": "No kura Lietuvas reģiona nāk dziesma „Ne jau jebkura meitene es biju“?",
+      "lt": "Iš kurio Lietuvos regiono daina „Ne bet kokia aš mergelė buvau“?"
+    },
+    "options": [
+      { "lv": "Žemaitija", "lt": "Žemaitija" },
+      { "lv": "Aukštaitija", "lt": "Aukštaitija" },
+      { "lv": "Dzūkija", "lt": "Dzūkija" }
+    ],
+    "correct": 2,
+    "explanation": {
+      "lv": "Dziesma nāk no Dzūkijas — tā stāsta par lepnu, izvēlīgu jaunavu un divām dejām ar atšķirīgām sekām.",
+      "lt": "Daina iš Dzūkijos — apie išrankią mergelę ir du šokius su skirtingomis pasekmėmis."
+    }
+  }
+]

@@ -7,7 +7,8 @@ import Collection from '../views/Collection.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/', name: 'home', component: Home },
-  { path: '/quiz', name: 'quiz', component: Quiz },
+  // "viktorina" is the word in both Latvian (viktorīna) and Lithuanian, ASCII-safe for a URL.
+  { path: '/viktorina', name: 'quiz', component: Quiz },
   { path: '/collection', name: 'collection', component: Collection },
   {
     path: '/:country',
@@ -26,7 +27,15 @@ const routes: RouteRecordRaw[] = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
-  scrollBehavior() {
+  scrollBehavior(to) {
+    // Reopening the quiz partway through: land on the current question, centered on screen.
+    if (to.name === 'quiz') {
+      const resume = document.querySelector<HTMLElement>('[data-resume]')
+      if (resume) {
+        const offset = Math.max(24, (window.innerHeight - resume.offsetHeight) / 2)
+        return { el: resume, top: offset, behavior: 'instant' }
+      }
+    }
     return { top: 0 }
   },
 })

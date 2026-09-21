@@ -49,7 +49,27 @@
       "song": "Daina"
     },
     "notFoundTitle": "Įrašas nerastas",
-    "notFoundBody": "Deja, šio įrašo nėra."
+    "notFoundBody": "Deja, šio įrašo nėra.",
+    "testTitle": "Patikrink savo žinias",
+    "testText": "Atsakyk į klausimus apie abiejų tautų kultūrą ir rink ženkliukus.",
+    "testButton": "Į viktoriną"
+  },
+  "quiz": {
+    "title": "Viktorina",
+    "intro": "Klausimai apie Latvijos ir Lietuvos šokius bei dainas. Atsakyk teisingai ir rink ženkliukus!",
+    "badges": "Ženkliukai",
+    "both": "Latvija ir Lietuva",
+    "correct": "Teisingai!",
+    "incorrect": "Ne visai. Pabandyk dar kartą!",
+    "tryAgain": "Bandyti dar kartą",
+    "badgeEarned": "Ženkliukas gautas.",
+    "learnMore": "Sužinoti daugiau",
+    "allDone": "Sveikiname! Visi ženkliukai surinkti!",
+    "startOver": "Pradėti iš naujo",
+    "resetTitle": "Pradėti iš naujo?",
+    "resetConfirm": "Visi gauti ženkliukai bus ištrinti, o viktorina prasidės nuo pirmo klausimo.",
+    "resetButton": "Taip, pradėti iš naujo",
+    "cancel": "Atšaukti"
   },
   "common": {
     "latvia": "Latvija",
