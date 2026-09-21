@@ -20,15 +20,14 @@
       if (location.pathname === '/') {
         var head = document.head
         ;[
-          ['/artwork/baltic-table-painted-v1.avif', 'image/avif', 'high'],
-          ['/artwork/painted-land-v1.webp', 'image/webp', 'auto'],
+          ['/artwork/baltic-table-painted-v1.webp', 'high'],
+          ['/artwork/painted-land-v1.webp', 'auto'],
         ].forEach(function (a) {
           var l = document.createElement('link')
           l.rel = 'preload'
           l.as = 'image'
           l.href = a[0]
-          l.type = a[1]
-          l.setAttribute('fetchpriority', a[2])
+          l.setAttribute('fetchpriority', a[1])
           head.appendChild(l)
         })
       }
