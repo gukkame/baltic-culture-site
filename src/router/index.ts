@@ -7,7 +7,8 @@ import Collection from '../views/Collection.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/', name: 'home', component: Home },
-  { path: '/quiz', name: 'quiz', component: Quiz },
+  // "viktorina" is the word in both Latvian (viktorīna) and Lithuanian, ASCII-safe for a URL.
+  { path: '/viktorina', name: 'quiz', component: Quiz },
   { path: '/collection', name: 'collection', component: Collection },
   {
     path: '/:country',

@@ -1,6 +1,7 @@
 import latvia from './latvia.json'
 import lithuania from './lithuania.json'
-import type { ContentItem } from '../types/content'
+import quiz from './quiz.json'
+import type { ContentItem, QuizQuestion } from '../types/content'
 
 export type Country = 'latvia' | 'lithuania'
 
@@ -8,6 +9,8 @@ export const contentByCountry: Record<Country, ContentItem[]> = {
   latvia: latvia as ContentItem[],
   lithuania: lithuania as ContentItem[],
 }
+
+export const quizQuestions = quiz as QuizQuestion[]
 
 export function isCountry(value: string | undefined): value is Country {
   return value === 'latvia' || value === 'lithuania'
