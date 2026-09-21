@@ -11,7 +11,6 @@ const { locale, setLocale } = useLocale()
 const copy = computed(() => homeCopy[locale.value])
 const countryMap = ref<HTMLElement>()
 const story = ref<HTMLElement>()
-const quiz = ref<HTMLElement>()
 const scrollBehavior = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' as const : 'smooth' as const
 
 function goTo(section?: HTMLElement) {
@@ -35,7 +34,7 @@ function toTop() {
         </RouterLink>
         <nav class="home-nav" :aria-label="copy.navLabel">
           <button @click="goTo(countryMap)">{{ copy.navExplore }}</button>
-          <button @click="goTo(quiz)">{{ copy.navQuiz }}</button>
+          <RouterLink to="/viktorina">{{ copy.navQuiz }}</RouterLink>
           <button @click="goTo(story)">{{ copy.navAbout }}</button>
         </nav>
         <div class="home-languages" role="group" :aria-label="copy.languageLabel">
@@ -84,8 +83,8 @@ function toTop() {
           <span class="home-chapter-number">02</span><div><h3>{{ copy.songTitle }}</h3><p>{{ copy.songText }}</p></div>
           <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M20 33V11l19-4v22M20 18l19-4" stroke="currentColor" stroke-width="1.6" /><ellipse cx="14" cy="34" rx="6" ry="4" stroke="currentColor" stroke-width="1.6" /><ellipse cx="33" cy="30" rx="6" ry="4" stroke="currentColor" stroke-width="1.6" /></svg>
         </article>
-        <article ref="quiz" class="home-chapter home-chapter--quiz" tabindex="-1">
-          <span class="home-chapter-number">03</span><div><h3>{{ copy.quizTitle }}</h3><p>{{ copy.quizText }}</p><span class="home-soon">{{ copy.quizSoon }}</span></div>
+        <article class="home-chapter home-chapter--quiz">
+          <span class="home-chapter-number">03</span><div><h3>{{ copy.quizTitle }}</h3><p>{{ copy.quizText }}</p><RouterLink to="/viktorina" class="home-quiz-link">{{ copy.quizCta }} <span aria-hidden="true">→</span></RouterLink></div>
           <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="m24 4 5 13 15 7-15 5-5 15-5-15-15-5 15-7Z" stroke="currentColor" stroke-width="1.6" /><circle cx="24" cy="24" r="5" stroke="currentColor" stroke-width="1.6" /></svg>
         </article>
       </div>

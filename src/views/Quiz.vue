@@ -92,6 +92,7 @@ function confirmStartOver() {
         :key="question.id"
         :question="question"
         :number="index + 1"
+        :data-resume="!allDone && index > 0 && index === visibleQuestions.length - 1 ? '' : undefined"
       />
     </TransitionGroup>
 
