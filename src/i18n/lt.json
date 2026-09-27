@@ -1,6 +1,7 @@
 {
   "site": {
-    "title": "Baltijos Tautų Paveldas"
+    "title": "Baltijos Tautų Paveldas",
+    "description": "Pažink Latvijos ir Lietuvos liaudies šokius, dainas ir tradicijas."
   },
   "nav": {
     "skipToContent": "Pereiti prie pagrindinio turinio"
@@ -80,8 +81,10 @@
     "title": "Apie projektą",
     "intro": "Baltijos Tautų Paveldas supažindina su Latvijos ir Lietuvos liaudies šokiais, dainomis ir simboliais. Čia išvardyti visi svetainėje naudojamų vaizdų, tekstų ir vaizdo įrašų šaltiniai.",
     "symbolsTitle": "Simbolių vaizdai",
-    "symbolsIntro": "Simbolių vaizdai paimti iš Wikimedia Commons. Jie naudojami pagal licencijas, kurios reikalauja nurodyti autorių ir licenciją.",
+    "symbolsIntro": "Latvių simbolių vaizdai paimti iš Wikimedia Commons ir naudojami pagal licencijas, kurios reikalauja nurodyti autorių ir licenciją.",
     "latvianSymbols": "Latvių simboliai",
+    "lithuanianSymbols": "Lietuvių simboliai",
+    "lithuanianSymbolsIntro": "Lietuvių juostų raštų motyvai, perpiešti šiai svetainei pagal Lietuvių liaudies meno instituto straipsnio lentelę; iš ten ir pavadinimai bei reikšmės (nuoroda „Šaltinis“).",
     "author": "Autorius",
     "source": "Šaltinis",
     "textsTitle": "Tekstų šaltiniai",

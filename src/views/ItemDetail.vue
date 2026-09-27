@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLocale } from '../composables/useLocale'
 import { findItem, findNextItem, youtubeEmbedUrl } from '../data'
+import { countryPathFor, quizPath } from '../router/paths'
 
 const props = defineProps<{
   country: string
@@ -20,7 +21,7 @@ const nextItem = computed(() => findNextItem(props.country, props.itemId))
     <h1 class="font-serif text-3xl text-ink">{{ t('item.notFoundTitle') }}</h1>
     <p class="mt-2 text-ink-light">{{ t('item.notFoundBody') }}</p>
     <RouterLink
-      :to="`/${country}`"
+      :to="countryPathFor(country)"
       class="mt-6 inline-block text-terracotta-dark underline-offset-4 transition-colors duration-150 hover:text-terracotta hover:underline"
     >
       ← {{ t('item.backToCulture') }}
@@ -29,7 +30,7 @@ const nextItem = computed(() => findNextItem(props.country, props.itemId))
 
   <article v-else class="mx-auto max-w-3xl px-4 py-12">
     <RouterLink
-      :to="`/${country}`"
+      :to="countryPathFor(country)"
       class="text-sm text-terracotta-dark underline-offset-4 transition-colors duration-150 hover:text-terracotta hover:underline"
     >
       ← {{ t('item.backToCulture') }}
@@ -63,7 +64,7 @@ const nextItem = computed(() => findNextItem(props.country, props.itemId))
         <p class="mt-1 text-sm text-ink-light">{{ t('item.testText') }}</p>
       </div>
       <RouterLink
-        to="/viktorina"
+        :to="quizPath"
         class="mt-4 inline-flex shrink-0 items-center gap-2 rounded-full bg-terracotta px-5 py-2.5 text-sm font-medium text-parchment transition-colors duration-150 hover:bg-terracotta-dark sm:mt-0"
       >
         {{ t('item.testButton') }}
@@ -77,7 +78,7 @@ const nextItem = computed(() => findNextItem(props.country, props.itemId))
       class="mt-12 border-t border-parchment-dark pt-6"
     >
       <RouterLink
-        :to="`/${country}/${nextItem.id}`"
+        :to="countryPathFor(country, nextItem.id)"
         class="group flex items-center justify-between gap-4 rounded-2xl bg-parchment-light p-4 shadow-paper ring-1 ring-parchment-dark transition duration-300 ease-out hover:-translate-y-1 hover:bg-parchment hover:shadow-paper-hover hover:ring-terracotta/30"
       >
         <span class="min-w-0">

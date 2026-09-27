@@ -5,6 +5,7 @@ import type { QuizQuestion } from '../types/content'
 import { useLocale } from '../composables/useLocale'
 import { useQuizProgress } from '../composables/useQuizProgress'
 import { findItem } from '../data'
+import { countryPathFor } from '../router/paths'
 import BadgeSeal from './BadgeSeal.vue'
 
 const props = defineProps<{
@@ -105,7 +106,7 @@ function optionClass(index: number): string {
         <p class="mt-1 leading-relaxed text-ink">{{ question.explanation[locale] }}</p>
         <RouterLink
           v-if="relatedItem"
-          :to="`/${question.country}/${relatedItem.id}`"
+          :to="countryPathFor(question.country, relatedItem.id)"
           class="mt-2 inline-block text-terracotta-dark underline-offset-4 transition-colors duration-150 hover:text-terracotta hover:underline"
         >
           {{ t('quiz.learnMore') }}: {{ relatedItem.title[locale] }} →

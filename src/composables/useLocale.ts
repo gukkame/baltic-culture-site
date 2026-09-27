@@ -8,15 +8,33 @@ const dictionaries = { lv, lt } as const
 
 const STORAGE_KEY = 'baltic-locale'
 
-// Storage can be unavailable (private mode, blocked cookies), so never let it break the app.
+// First visit: guess from the browser. A static site can't look up the visitor's country, but a
+// Lithuanian browser language or the Vilnius time zone is a good sign of a Lithuanian visitor.
+// Everyone else, including Latvia and the rest of the world, starts in Latvian.
+function detectLocale(): Locale {
+  const languages = navigator.languages?.length ? navigator.languages : [navigator.language]
+  for (const language of languages) {
+    const code = language?.toLowerCase().split('-')[0]
+    if (code === 'lt' || code === 'lv') return code
+  }
+  try {
+    if (Intl.DateTimeFormat().resolvedOptions().timeZone === 'Europe/Vilnius') return 'lt'
+  } catch {
+    // no time zone info: fall through
+  }
+  return 'lv'
+}
+
+// A language the visitor picked themselves always wins. Storage can be unavailable
+// (private mode, blocked cookies), so never let it break the app.
 function loadLocale(): Locale {
   try {
     const stored = localStorage.getItem(STORAGE_KEY)
     if (stored === 'lv' || stored === 'lt') return stored
   } catch {
-    // fall through to the default
+    // fall through to detection
   }
-  return 'lv'
+  return detectLocale()
 }
 
 const locale = ref<Locale>(loadLocale())

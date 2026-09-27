@@ -5,15 +5,16 @@ import { useLocale, type Locale } from '../composables/useLocale'
 import CountryMap from '../components/home/CountryMap.vue'
 import FolkMark from '../components/home/FolkMark.vue'
 import homeCopy from '../components/home/copy.json'
+import { aboutPaths, countryPath, quizPath } from '../router/paths'
 
 const { locale, setLocale } = useLocale()
 const copy = computed(() => homeCopy[locale.value])
 // The journey starts in the country whose language the visitor picked.
-const startRoute = computed(() => (locale.value === 'lt' ? '/lithuania' : '/latvia'))
+const startRoute = computed(() => countryPath(locale.value === 'lt' ? 'lithuania' : 'latvia'))
 
 const navLinks = computed(() => [
-  { to: '/viktorina', label: copy.value.navQuiz },
-  { to: '/about', label: copy.value.navAbout },
+  { to: quizPath, label: copy.value.navQuiz },
+  { to: aboutPaths[locale.value], label: copy.value.navAbout },
 ])
 
 const languages: { code: Locale; label: string; name: string }[] = [

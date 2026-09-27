@@ -1,6 +1,7 @@
 {
   "site": {
-    "title": "Baltijas Tautas Mantojums"
+    "title": "Baltijas Tautas Mantojums",
+    "description": "Iepazīsti Latvijas un Lietuvas tautas dejas, dziesmas un tradīcijas."
   },
   "nav": {
     "skipToContent": "Pāriet uz galveno saturu"
@@ -80,8 +81,10 @@
     "title": "Par projektu",
     "intro": "Baltijas Tautas Mantojums iepazīstina ar Latvijas un Lietuvas tautas dejām, dziesmām un simboliem. Šeit uzskaitīti visi attēlu, tekstu un video avoti, ko izmantojam vietnē.",
     "symbolsTitle": "Simbolu attēli",
-    "symbolsIntro": "Simbolu attēli ņemti no Wikimedia Commons. Tie izmantoti atbilstoši licencēm, kas prasa norādīt autoru un licenci.",
+    "symbolsIntro": "Latviešu simbolu attēli ņemti no Wikimedia Commons un izmantoti atbilstoši licencēm, kas prasa norādīt autoru un licenci.",
     "latvianSymbols": "Latviešu simboli",
+    "lithuanianSymbols": "Lietuviešu simboli",
+    "lithuanianSymbolsIntro": "Lietuviešu jostu (juostų) rakstu motīvi, ko pārzīmējām šai vietnei pēc tabulas Lietuviešu tautas mākslas institūta rakstā; no turienes ir arī nosaukumi un nozīmes (saite „Avots”).",
     "author": "Autors",
     "source": "Avots",
     "textsTitle": "Tekstu avoti",
