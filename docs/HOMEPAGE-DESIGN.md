@@ -1,5 +1,7 @@
 # Painted homepage — first local design study
 
+Historical first iteration. The current hero is documented in [Latvian ensemble homepage artwork](HOMEPAGE-ENSEMBLE-ARTWORK.md), and the updated country terrain and labels in [Greener Latvia map artwork](HOMEPAGE-MAP-ARTWORK.md). The original map geometry and table approach below still applies.
+
 2026-09-20. Built on main at 079e573 for visual review, following the supplied municipality-approved reference and the request for a more painted treatment. This first homepage design iteration was approved for committing and pushing to main.
 
 ## Review scope

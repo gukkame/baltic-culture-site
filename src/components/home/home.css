@@ -17,20 +17,20 @@
   overflow: hidden;
   border-radius: 5px;
   color: var(--home-cream);
-  background: #275367;
+  background: #293f35;
 }
 .home-art, .home-shade { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: -2; }
 .home-art { object-fit: cover; object-position: center 62%; }
 .home-shade {
   z-index: -1;
-  background: linear-gradient(90deg, rgba(15, 44, 50, .49), transparent 64%), linear-gradient(0deg, rgba(32, 19, 11, .53), transparent 30%);
+  background: linear-gradient(90deg, rgba(14, 33, 29, .66), transparent 60%), linear-gradient(180deg, rgba(14, 28, 23, .42), transparent 19%), linear-gradient(0deg, rgba(32, 19, 11, .53), transparent 30%);
 }
 .home-header { position: relative; display: flex; align-items: center; gap: 38px; margin: 0 4.1%; height: 112px; border-bottom: 1px solid #fff1d521; }
 .home-brand { display: inline-flex; align-items: center; gap: 16px; line-height: 1.17; letter-spacing: .03em; font-family: var(--font-serif); font-size: 25px; }
 .home-brand svg { width: 47px; height: 47px; }
 .home-brand small { font-family: var(--font-sans); font-size: 12px; letter-spacing: .08em; }
-.home-nav { margin-left: auto; display: flex; gap: 33px; font-size: 13px; color: #253a31; }
-.home-nav button, .home-nav a { position: relative; display: inline-block; padding: 12px 0; text-shadow: 0 1px 8px #fff3daaa; }
+.home-nav { margin-left: auto; display: flex; gap: 33px; font-size: 13px; color: var(--home-cream); }
+.home-nav button, .home-nav a { position: relative; display: inline-block; padding: 12px 0; text-shadow: 0 1px 8px #14261dcc; }
 .home-nav button::after, .home-nav a::after { content: ''; position: absolute; bottom: 5px; left: 0; right: 100%; height: 1px; background: currentColor; transition: right .2s ease; }
 .home-nav button:hover::after, .home-nav a:hover::after { right: 0; }
 .home-languages { display: flex; align-items: center; gap: 7px; font-size: 12px; background: #f5eedce6; color: #263f36; border-radius: 50px; padding: 0 7px; }
@@ -102,7 +102,7 @@
   .folk-home { padding: 7px 7px 0; }
   .home-stage { height: 920px; }
   .home-art { object-position: 62% center; }
-  .home-shade { background: linear-gradient(90deg, #173c4ac2, #173c4a29 100%), linear-gradient(0deg, #25170cc7, transparent 34%); }
+  .home-shade { background: linear-gradient(90deg, #172f28d9, #172f2866 100%), linear-gradient(0deg, #25170cc7, transparent 34%); }
   .home-header { height: 87px; margin: 0 6%; gap: 12px; }
   .home-brand { font-size: 23px; gap: 12px; }
   .home-brand svg { width: 36px; height: 36px; }

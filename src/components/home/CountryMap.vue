@@ -14,7 +14,8 @@ const countries = computed(() => [...countryGeometry].reverse().map((country) =>
   ...country,
   name: country.id === 'latvia' ? props.latvia : props.lithuania,
   subtitle: country.id === 'latvia' ? props.latviaSubtitle : props.lithuaniaSubtitle,
-  tint: country.id === 'latvia' ? '#863d27' : '#183f35',
+  tint: country.id === 'latvia' ? '#174d38' : '#183f35',
+  terrain: country.id === 'latvia' ? 'url(#painted-latvia-forest)' : 'url(#painted-land)',
   offset: country.id === 'latvia' ? -7 : 8,
 })))
 </script>
@@ -24,6 +25,10 @@ const countries = computed(() => [...countryGeometry].reverse().map((country) =>
     <defs>
       <pattern id="painted-land" patternUnits="userSpaceOnUse" width="800" height="360">
         <image href="/artwork/painted-land-v1.webp" width="800" height="360" preserveAspectRatio="xMidYMid slice" />
+      </pattern>
+      <!-- Both terrain images share the same framing so the river stays aligned. -->
+      <pattern id="painted-latvia-forest" patternUnits="userSpaceOnUse" width="800" height="360">
+        <image href="/artwork/painted-latvia-forest-v2.webp" width="800" height="360" preserveAspectRatio="xMidYMid slice" />
       </pattern>
       <linearGradient id="map-edge" x1="0" y1="0" x2="0.3" y2="1">
         <stop stop-color="#e2bc79" /><stop offset=".4" stop-color="#977047" /><stop offset="1" stop-color="#493c2c" />
@@ -43,17 +48,13 @@ const countries = computed(() => [...countryGeometry].reverse().map((country) =>
         <g class="map-piece">
           <path :d="country.path" transform="translate(0 22)" fill="#322b22" stroke="#322b22" stroke-width="3" filter="url(#map-shadow)" />
           <path v-for="depth in [18, 14, 10, 6]" :key="depth" :d="country.path" :transform="`translate(0 ${depth})`" fill="url(#map-edge)" stroke="#78583b" stroke-width="1.1" />
-          <path :d="country.path" fill="url(#painted-land)" stroke="#d6b572" stroke-width="3" stroke-linejoin="round" />
+          <path :d="country.path" :fill="country.terrain" stroke="#d6b572" stroke-width="3" stroke-linejoin="round" />
           <path :d="country.path" :fill="country.tint" class="map-tint" stroke="none" />
           <path :d="country.path" fill="none" class="map-outline" stroke-linejoin="round" />
           <g :transform="`translate(${country.label[0]} ${country.label[1]})`" class="map-label" filter="url(#map-label-shadow)">
-            <g transform="translate(0 -34) scale(.7)" fill="none" stroke="currentColor" stroke-width="1.7">
-              <path d="m0-17 5 12 12 5-12 5-5 12-5-12-12-5 12-5Z" />
-              <path d="M-11-11 11 11M11-11-11 11M0-23v-4M0 23v4M23 0h4M-23 0h-4" /><circle r="3" />
-            </g>
-            <text class="map-name" text-anchor="middle" y="5">{{ country.name }}</text>
-            <text class="map-subtitle" text-anchor="middle" y="29">{{ country.subtitle }}</text>
-            <g class="map-discover" transform="translate(0 47)">
+            <text class="map-name" text-anchor="middle" y="-12">{{ country.name }}</text>
+            <text class="map-subtitle" text-anchor="middle" y="12">{{ country.subtitle }}</text>
+            <g class="map-discover" transform="translate(0 30)">
               <path d="M-12 0h24m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" />
             </g>
           </g>
@@ -68,7 +69,7 @@ const countries = computed(() => [...countryGeometry].reverse().map((country) =>
 .country-map { display: block; width: 100%; overflow: visible; }
 .map-country { cursor: pointer; -webkit-tap-highlight-color: transparent; outline: none; }
 .map-piece { transition: transform .3s ease, filter .3s ease; }
-.map-tint { opacity: .47; transition: opacity .3s ease; }
+.map-tint { opacity: .35; transition: opacity .3s ease; }
 .map-country--lithuania .map-tint { opacity: .54; }
 .map-outline { stroke: #e9c786; stroke-width: 1.8; transition: stroke-width .3s ease, stroke .3s ease; }
 .map-label { color: #fff3d8; pointer-events: none; }
@@ -78,12 +79,12 @@ const countries = computed(() => [...countryGeometry].reverse().map((country) =>
 .map-country:hover .map-piece, .map-country:focus-visible .map-piece { transform: translateY(-7px); }
 .map-country:hover .map-tint, .map-country:focus-visible .map-tint { opacity: .27; }
 .map-country:hover .map-outline, .map-country:focus-visible .map-outline { stroke: #fff4ce; stroke-width: 4; }
-.map-country:hover .map-discover, .map-country:focus-visible .map-discover { transform: translate(5px, 47px); }
+.map-country:hover .map-discover, .map-country:focus-visible .map-discover { transform: translate(5px, 30px); }
 @media (max-width: 640px) {
-  .map-name { font-size: 43px; }
+  .map-name { font-size: 43px; transform: translateY(8px); }
   .map-subtitle { display: none; }
-  .map-discover { transform: translateY(34px); }
-  .map-country:hover .map-discover, .map-country:focus-visible .map-discover { transform: translate(5px, 34px); }
+  .map-discover { transform: translateY(25px); }
+  .map-country:hover .map-discover, .map-country:focus-visible .map-discover { transform: translate(5px, 25px); }
 }
 @media (prefers-reduced-motion: reduce) {
   .map-piece, .map-tint, .map-outline, .map-discover { transition: none; }
