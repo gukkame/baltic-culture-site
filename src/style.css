@@ -7,6 +7,12 @@
   --color-parchment-dark: #e8dac3;
   --color-parchment-darker: #d5c09d;
 
+  /* Unselected filter buttons: a warmer paper with a visible edge, for enough contrast on the page */
+  --color-almond: #faebd7;
+  --color-almond-dark: #f6e1c3;
+  --color-taupe: #c8b999;
+  --color-taupe-dark: #ab9770;
+
   /* Latvian folk accents: red, ochre, forest, indigo */
   --color-terracotta: #9e2929;
   --color-terracotta-dark: #7a1f1f;
