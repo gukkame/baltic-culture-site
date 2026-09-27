@@ -1,19 +1,19 @@
 {
   "lv": {
-    "brandTop": "Baltijas", "brandBottom": "tautas mantojums",
+    "brandTop": "Digitālās izglītojošās programmas izstrāde un video satura sagatavošana", "brandBottom": "jauniešiem par kultūras tradīcijām",
     "navQuiz": "Viktorīna", "navAbout": "Par projektu", "navLabel": "Galvenā navigācija", "languageLabel": "Izvēlies valodu",
     "tagline": "LATVIJAS UN LIETUVAS DZĪVĀS TRADĪCIJAS",
-    "titleFirst": "Dejo. Dziedi.", "titleSecond": "Iepazīsti.",
+    "titleFirst": "Dejo, Dziedi", "titleSecond": "Iepazīsti",
     "lead": "Divas kaimiņzemes. Tik daudz stāstu.",
     "description": "Atklāj Latvijas un Lietuvas dejas, dziesmas un tradīcijas, kas dzīvo mums līdzās.",
     "start": "Sākt ceļojumu", "mapTagline": "IZVĒLIES SAVU CEĻOJUMU", "mapHint": "Pieskaries zemei un atklāj tās stāstus.",
     "mapLabel": "Izvēlies Latviju vai Lietuvu interaktīvajā kartē", "mapLink": "Iepazīsti", "latvia": "Latvija", "lithuania": "Lietuva", "latviaSubtitle": "Dejas, dziesmas un stāsti", "lithuaniaSubtitle": "Dejas, dziesmas un stāsti"
   },
   "lt": {
-    "brandTop": "Baltijos", "brandBottom": "tautos paveldas",
+    "brandTop": "Skaitmeninės edukacinės programos kūrimas ir vaizdo turinio rengimas", "brandBottom": "jaunimui apie kultūros tradicijas",
     "navQuiz": "Viktorina", "navAbout": "Apie projektą", "navLabel": "Pagrindinė navigacija", "languageLabel": "Pasirink kalbą",
     "tagline": "GYVOSIOS LATVIJOS IR LIETUVOS TRADICIJOS",
-    "titleFirst": "Šok. Dainuok.", "titleSecond": "Pažink.",
+    "titleFirst": "Šok, Dainuok", "titleSecond": "Pažink",
     "lead": "Dvi kaimynės. Tiek daug istorijų.",
     "description": "Atrask Latvijos ir Lietuvos šokius, dainas ir tradicijas, kurios gyvena šalia mūsų.",
     "start": "Pradėti kelionę", "mapTagline": "PASIRINK SAVO KELIONĘ", "mapHint": "Paliesk šalį ir atrask jos istorijas.",

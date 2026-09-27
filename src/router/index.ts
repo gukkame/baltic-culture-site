@@ -5,24 +5,39 @@ import ItemDetail from '../views/ItemDetail.vue'
 import Quiz from '../views/Quiz.vue'
 import Collection from '../views/Collection.vue'
 import About from '../views/About.vue'
+import { useLocale } from '../composables/useLocale'
+import { aboutPaths, countryFromSlug, countryPath, quizPath } from './paths'
+
+const { locale } = useLocale()
+
+// Country slugs map back to the internal country ids the views work with.
+const countryProp = (slug: string | string[]) => {
+  const value = String(slug)
+  return countryFromSlug(value) ?? value
+}
 
 const routes: RouteRecordRaw[] = [
   { path: '/', name: 'home', component: Home },
   // "viktorina" is the word in both Latvian (viktorīna) and Lithuanian, ASCII-safe for a URL.
-  { path: '/viktorina', name: 'quiz', component: Quiz },
+  { path: quizPath, name: 'quiz', component: Quiz },
   { path: '/collection', name: 'collection', component: Collection },
-  { path: '/about', name: 'about', component: About },
+  // One page, one address per language; the address also decides the language (see beforeEach below).
+  { path: aboutPaths.lv, name: 'about', alias: aboutPaths.lt, component: About },
+  // Old English addresses keep working.
+  { path: '/about', redirect: () => aboutPaths[locale.value] },
+  { path: '/latvia/:itemId?', redirect: (to) => countryPath('latvia', to.params.itemId as string | undefined) },
+  { path: '/lithuania/:itemId?', redirect: (to) => countryPath('lithuania', to.params.itemId as string | undefined) },
   {
     path: '/:country',
     name: 'culture',
     component: Culture,
-    props: true,
+    props: (route) => ({ country: countryProp(route.params.country) }),
   },
   {
     path: '/:country/:itemId',
     name: 'item-detail',
     component: ItemDetail,
-    props: true,
+    props: (route) => ({ country: countryProp(route.params.country), itemId: String(route.params.itemId) }),
   },
 ]
 
@@ -40,6 +55,11 @@ const router = createRouter({
     }
     return { top: 0 }
   },
+})
+
+// Opening the About page by its Latvian or Lithuanian address switches the site to that language.
+router.beforeEach((to) => {
+  if (to.name === 'about') locale.value = to.path === aboutPaths.lt ? 'lt' : 'lv'
 })
 
 export default router

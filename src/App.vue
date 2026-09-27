@@ -1,18 +1,34 @@
 <script setup lang="ts">
-import { computed, watchEffect } from 'vue'
-import { RouterLink, RouterView, useRoute } from 'vue-router'
+import { computed, watch, watchEffect } from 'vue'
+import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
 import { useLocale } from './composables/useLocale'
+import { aboutPaths, countryFromSlug, countrySymbols } from './router/paths'
 
 const { locale, t } = useLocale()
 const route = useRoute()
+const router = useRouter()
 const isHome = computed(() => route.name === 'home')
+
+// On a country's pages (the country page and its dances and songs) the footer carries that country's folk sign.
+const footerSymbol = computed(() => {
+  const country = typeof route.params.country === 'string' ? countryFromSlug(route.params.country) : undefined
+  return country ? countrySymbols[country] : undefined
+})
 
 function focusMain() {
   document.getElementById('main-content')?.focus()
 }
 
+// Keep the page language, title and description (index.html starts them in Latvian) in the chosen language.
 watchEffect(() => {
   document.documentElement.lang = locale.value
+  document.title = t('site.title')
+  document.querySelector('meta[name="description"]')?.setAttribute('content', t('site.description'))
+})
+
+// The About page's address is language specific, so keep it in step when the language changes.
+watch(locale, (value) => {
+  if (route.name === 'about' && route.path !== aboutPaths[value]) router.replace(aboutPaths[value])
 })
 </script>
 
@@ -27,9 +43,15 @@ watchEffect(() => {
       <RouterView />
     </main>
 
-    <footer v-if="!isHome" class="border-t border-parchment-dark py-6 text-center text-sm text-ink-light">
+    <footer v-if="!isHome" class="relative border-t border-parchment-dark px-4 py-6 text-center text-sm text-ink-light sm:px-20">
       {{ t('site.title') }} — placeholder content ·
-      <RouterLink to="/about" class="underline underline-offset-4 hover:text-terracotta-dark">{{ t('about.footerLink') }}</RouterLink>
+      <RouterLink :to="aboutPaths[locale]" class="underline underline-offset-4 hover:text-terracotta-dark">{{ t('about.footerLink') }}</RouterLink>
+      <img
+        v-if="footerSymbol"
+        :src="footerSymbol"
+        alt=""
+        class="pointer-events-none absolute right-6 top-1/2 hidden size-12 -translate-y-1/2 opacity-70 sm:block"
+      />
     </footer>
   </div>
 </template>

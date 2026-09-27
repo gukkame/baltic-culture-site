@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import countryGeometry from './countryGeometry.json'
+import { countryPathFor } from '../../router/paths'
 
 const props = defineProps<{
   label: string
@@ -43,7 +44,7 @@ const countries = computed(() => [...countryGeometry].reverse().map((country) =>
     </defs>
     <g v-for="country in countries" :key="country.id" :transform="`translate(0 ${country.offset})`">
       <!-- Client-side navigation: a plain href reloads the page and resets the chosen language. -->
-      <RouterLink v-slot="{ href, navigate }" :to="`/${country.id}`" custom>
+      <RouterLink v-slot="{ href, navigate }" :to="countryPathFor(country.id)" custom>
       <a :href="href" :aria-label="`${country.name}: ${country.subtitle}`" class="group cursor-pointer outline-none [-webkit-tap-highlight-color:transparent]" @click="navigate">
         <title>{{ country.name }} · {{ country.subtitle }}</title>
         <!-- Hover and keyboard focus lift the country and brighten its outline. -->

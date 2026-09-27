@@ -1,6 +1,7 @@
 {
   "site": {
-    "title": "Baltijas Tautas Mantojums"
+    "title": "Baltijas Tautas Mantojums",
+    "description": "Iepazīsti Latvijas un Lietuvas tautas dejas, dziesmas un tradīcijas."
   },
   "nav": {
     "skipToContent": "Pāriet uz galveno saturu"
@@ -17,11 +18,6 @@
     "songs": "Dziesmas",
     "images": "Attēli",
     "viewDetails": "Skatīt vairāk",
-    "difficulty": {
-      "beginner": "Iesācējiem",
-      "intermediate": "Vidējs līmenis",
-      "advanced": "Pieredzējušiem"
-    },
     "filters": {
       "all": "Visas"
     },
@@ -53,7 +49,8 @@
     "notFoundBody": "Diemžēl šis ieraksts neeksistē.",
     "testTitle": "Pārbaudi savas zināšanas",
     "testText": "Atbildi uz jautājumiem par abu tautu kultūru un vāc nozīmītes.",
-    "testButton": "Uz viktorīnu"
+    "testButton": "Uz viktorīnu",
+    "testButtonBack": "Atpakaļ uz viktorīnu"
   },
   "quiz": {
     "title": "Viktorīna",
@@ -70,7 +67,11 @@
     "resetTitle": "Sākt no jauna?",
     "resetConfirm": "Visas iegūtās nozīmītes tiks dzēstas, un viktorīna sāksies no pirmā jautājuma.",
     "resetButton": "Jā, sākt no jauna",
-    "cancel": "Atcelt"
+    "cancel": "Atcelt",
+    "openPlaceholder": "Raksti savu atbildi…",
+    "submit": "Atbildēt",
+    "anyAnswer": "Paldies! Šeit der jebkura atbilde.",
+    "yourAnswer": "Tava atbilde"
   },
   "common": {
     "latvia": "Latvija",
@@ -80,8 +81,10 @@
     "title": "Par projektu",
     "intro": "Baltijas Tautas Mantojums iepazīstina ar Latvijas un Lietuvas tautas dejām, dziesmām un simboliem. Šeit uzskaitīti visi attēlu, tekstu un video avoti, ko izmantojam vietnē.",
     "symbolsTitle": "Simbolu attēli",
-    "symbolsIntro": "Simbolu attēli ņemti no Wikimedia Commons. Tie izmantoti atbilstoši licencēm, kas prasa norādīt autoru un licenci.",
+    "symbolsIntro": "Latviešu simbolu attēli ņemti no Wikimedia Commons un izmantoti atbilstoši licencēm, kas prasa norādīt autoru un licenci.",
     "latvianSymbols": "Latviešu simboli",
+    "lithuanianSymbols": "Lietuviešu simboli",
+    "lithuanianSymbolsIntro": "Lietuviešu jostu (juostų) rakstu motīvi, ko pārzīmējām šai vietnei pēc tabulas Lietuviešu tautas mākslas institūta rakstā; no turienes ir arī nosaukumi un nozīmes (saite „Avots”).",
     "author": "Autors",
     "source": "Avots",
     "textsTitle": "Tekstu avoti",
@@ -90,6 +93,7 @@
     "videosIntro": "Video ir iegulti no YouTube. Tiesības uz tiem pieder to autoriem.",
     "footerLink": "Par projektu un avoti",
     "galleryTitle": "Valstu attēli",
+    "galleryIntro": "Fotoattēli ņemti no Wikimedia Commons un izmantoti atbilstoši to licencēm. Vietnē tie ir samazināti, pārveidoti WebP formātā un daļēji apgriezti.",
     "project": {
       "title": "Projekts CultureLINK",
       "name": "“Cilvēku savstarpējās sadarbības atdzīvināšana, iesaistot jauniešus lietuviešu un latviešu tradicionālajās kultūras aktivitātēs”",

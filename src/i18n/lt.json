@@ -1,6 +1,7 @@
 {
   "site": {
-    "title": "Baltijos Tautų Paveldas"
+    "title": "Baltijos Tautų Paveldas",
+    "description": "Pažink Latvijos ir Lietuvos liaudies šokius, dainas ir tradicijas."
   },
   "nav": {
     "skipToContent": "Pereiti prie pagrindinio turinio"
@@ -17,11 +18,6 @@
     "songs": "Dainos",
     "images": "Vaizdai",
     "viewDetails": "Žiūrėti daugiau",
-    "difficulty": {
-      "beginner": "Pradedantiesiems",
-      "intermediate": "Vidutinio lygio",
-      "advanced": "Pažengusiems"
-    },
     "filters": {
       "all": "Visi"
     },
@@ -53,7 +49,8 @@
     "notFoundBody": "Deja, šio įrašo nėra.",
     "testTitle": "Patikrink savo žinias",
     "testText": "Atsakyk į klausimus apie abiejų tautų kultūrą ir rink ženkliukus.",
-    "testButton": "Į viktoriną"
+    "testButton": "Į viktoriną",
+    "testButtonBack": "Atgal į viktoriną"
   },
   "quiz": {
     "title": "Viktorina",
@@ -70,7 +67,11 @@
     "resetTitle": "Pradėti iš naujo?",
     "resetConfirm": "Visi gauti ženkliukai bus ištrinti, o viktorina prasidės nuo pirmo klausimo.",
     "resetButton": "Taip, pradėti iš naujo",
-    "cancel": "Atšaukti"
+    "cancel": "Atšaukti",
+    "openPlaceholder": "Rašyk savo atsakymą…",
+    "submit": "Atsakyti",
+    "anyAnswer": "Ačiū! Čia tinka bet koks atsakymas.",
+    "yourAnswer": "Tavo atsakymas"
   },
   "common": {
     "latvia": "Latvija",
@@ -80,8 +81,10 @@
     "title": "Apie projektą",
     "intro": "Baltijos Tautų Paveldas supažindina su Latvijos ir Lietuvos liaudies šokiais, dainomis ir simboliais. Čia išvardyti visi svetainėje naudojamų vaizdų, tekstų ir vaizdo įrašų šaltiniai.",
     "symbolsTitle": "Simbolių vaizdai",
-    "symbolsIntro": "Simbolių vaizdai paimti iš Wikimedia Commons. Jie naudojami pagal licencijas, kurios reikalauja nurodyti autorių ir licenciją.",
+    "symbolsIntro": "Latvių simbolių vaizdai paimti iš Wikimedia Commons ir naudojami pagal licencijas, kurios reikalauja nurodyti autorių ir licenciją.",
     "latvianSymbols": "Latvių simboliai",
+    "lithuanianSymbols": "Lietuvių simboliai",
+    "lithuanianSymbolsIntro": "Lietuvių juostų raštų motyvai, perpiešti šiai svetainei pagal Lietuvių liaudies meno instituto straipsnio lentelę; iš ten ir pavadinimai bei reikšmės (nuoroda „Šaltinis“).",
     "author": "Autorius",
     "source": "Šaltinis",
     "textsTitle": "Tekstų šaltiniai",
@@ -90,6 +93,7 @@
     "videosIntro": "Vaizdo įrašai įterpti iš YouTube. Teisės į juos priklauso jų autoriams.",
     "footerLink": "Apie projektą ir šaltiniai",
     "galleryTitle": "Šalių vaizdai",
+    "galleryIntro": "Nuotraukos paimtos iš Wikimedia Commons ir naudojamos pagal jų licencijas. Svetainėje jos sumažintos, konvertuotos į WebP formatą ir iš dalies apkarpytos.",
     "project": {
       "title": "Projektas CultureLINK",
       "name": "„Žmonių tarpusavio bendradarbiavimo atgaivinimas, įtraukiant jaunimą į lietuvių ir latvių tradicinės kultūros veiklas“",

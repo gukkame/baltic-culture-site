@@ -3,10 +3,10 @@ import { computed, ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLocale } from '../composables/useLocale'
 import { contentByCountry, isCountry } from '../data'
-import FolkEmblem from '../components/FolkEmblem.vue'
-import CornerSprig from '../components/CornerSprig.vue'
+import CountrySymbol from '../components/CountrySymbol.vue'
 import ItemCardMedia from '../components/ItemCardMedia.vue'
 import { galleryByCountry } from '../data/credits'
+import { countryPath } from '../router/paths'
 
 const props = defineProps<{
   country: string
@@ -27,8 +27,8 @@ const hasDances = computed(() => items.value.some((item) => item.category === 'd
 const hasSongs = computed(() => items.value.some((item) => item.category === 'song'))
 const hasImages = computed(() => galleryImages.value.length > 0)
 
-// "All" only means something when there are two categories to tell apart.
-const showAll = computed(() => [hasDances.value, hasSongs.value, hasImages.value].filter(Boolean).length > 1)
+// "All" covers dances and songs together, so it only means something when the country has both.
+const showAll = computed(() => hasDances.value && hasSongs.value)
 
 const filters = computed(() =>
   [
@@ -44,10 +44,10 @@ watch(validCountry, () => {
   activeFilter.value = 'all'
 })
 
-// With a single category left, that category is the (only) active filter.
+// Keep the picked filter while this country offers it, otherwise fall back to the first one shown.
 const currentFilter = computed<Filter>(() => {
-  if (showAll.value) return activeFilter.value
-  return hasDances.value ? 'dance' : hasSongs.value ? 'song' : hasImages.value ? 'image' : 'all'
+  const available = filters.value.map((filter) => filter.id)
+  return available.includes(activeFilter.value) ? activeFilter.value : (available[0] ?? 'all')
 })
 
 const filteredItems = computed(() => {
@@ -55,15 +55,14 @@ const filteredItems = computed(() => {
   return items.value.filter((item) => item.category === currentFilter.value)
 })
 
-// Images are their own group, shown after the dance/song cards under "All".
-const showImages = computed(() => hasImages.value && (currentFilter.value === 'all' || currentFilter.value === 'image'))
+// Images are their own group: shown only when the Images filter is picked, never under "All".
+const showImages = computed(() => hasImages.value && currentFilter.value === 'image')
 
 // Card currently hovered/focused; only that card plays its video preview.
 const previewId = ref<string>()
 
-const heroImage = computed(() =>
-  validCountry.value ? `/images/hero/${validCountry.value}.svg` : '',
-)
+// A photo from the country in the top-right corner: its first gallery image, which is already credited on the About page.
+const heroImage = computed(() => (validCountry.value ? galleryByCountry[validCountry.value][0] : undefined))
 </script>
 
 <template>
@@ -106,7 +105,7 @@ const heroImage = computed(() =>
       <div
         class="absolute right-0 top-0 aspect-[942/542] w-[38%] overflow-hidden drop-shadow-[0_8px_20px_rgba(50,35,20,0.14)] [clip-path:url(#cultureHeroMask)] sm:w-[35%] lg:w-1/2"
       >
-        <img :src="heroImage" alt="" class="h-full w-full object-cover" />
+        <img v-if="heroImage" :src="heroImage.src" :alt="heroImage.title[locale]" class="h-full w-full object-cover" />
       </div>
 
       <div
@@ -121,7 +120,7 @@ const heroImage = computed(() =>
           </RouterLink>
 
           <div class="mt-4 flex items-center gap-2 text-ink">
-            <FolkEmblem :size="20" />
+            <CountrySymbol :country="validCountry" class="size-5" />
             <span class="font-medium">{{ t(`common.${validCountry}`) }}</span>
           </div>
 
@@ -134,8 +133,6 @@ const heroImage = computed(() =>
         </div>
       </div>
     </div>
-
-    <CornerSprig class="pointer-events-none absolute bottom-4 right-4 hidden opacity-70 sm:block" />
 
     <div class="mx-auto mt-8 max-w-6xl px-4 pb-8 sm:px-6 sm:pb-12 lg:px-8">
       <div role="group" :aria-label="t('culture.filters.all')" class="flex flex-wrap gap-2">
@@ -159,7 +156,7 @@ const heroImage = computed(() =>
       <ul v-if="filteredItems.length" class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <li v-for="item in filteredItems" :key="item.id">
           <RouterLink
-            :to="`/${validCountry}/${item.id}`"
+            :to="countryPath(validCountry, item.id)"
             class="group flex h-full flex-col overflow-hidden rounded-2xl bg-parchment-light shadow-paper ring-1 ring-parchment-dark transition duration-300 ease-out hover:-translate-y-1.5 hover:bg-parchment hover:shadow-paper-hover hover:ring-terracotta/30 focus-visible:-translate-y-1.5 focus-visible:shadow-paper-hover"
             @mouseenter="previewId = item.id"
             @mouseleave="previewId = undefined"
@@ -173,22 +170,16 @@ const heroImage = computed(() =>
                 {{ t(`item.category.${item.category}`) }} · {{ t(`common.${validCountry}`) }}
               </p>
               <p class="mt-1 text-sm text-ink-light">{{ item.tagline[locale] }}</p>
-              <span
-                class="mt-auto pt-3 text-lg text-ink transition group-hover:translate-x-2 group-hover:text-terracotta-dark group-focus-visible:translate-x-2 group-focus-visible:text-terracotta-dark"
-                aria-hidden="true"
-              >
-                →
-              </span>
             </div>
           </RouterLink>
         </li>
       </ul>
 
-      <section v-if="showImages" :class="currentFilter === 'all' ? 'mt-14' : 'mt-6'" aria-labelledby="culture-gallery">
-        <h2 id="culture-gallery" class="font-serif text-2xl text-ink sm:text-3xl" :class="{ 'sr-only': currentFilter === 'image' }">
+      <section v-if="showImages" class="mt-6" aria-labelledby="culture-gallery">
+        <h2 id="culture-gallery" class="sr-only">
           {{ t('culture.images') }}
         </h2>
-        <ul :class="currentFilter === 'image' ? '' : 'mt-6'" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <li v-for="image in galleryImages" :key="image.src">
             <figure class="overflow-hidden rounded-2xl bg-parchment-light shadow-paper ring-1 ring-parchment-dark">
               <a :href="image.src" target="_blank" rel="noopener" class="block aspect-[4/3] overflow-hidden bg-parchment-dark">
@@ -202,10 +193,7 @@ const heroImage = computed(() =>
               </a>
               <figcaption class="p-4">
                 <p class="font-serif text-lg text-ink">{{ image.title[locale] }}</p>
-                <p class="mt-1 text-xs text-ink-light">
-                  {{ image.author }} ·
-                  <a :href="image.license.url" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-terracotta-dark">{{ image.license.name }}</a>
-                </p>
+                <p v-if="image.description" class="mt-2 text-sm leading-relaxed text-ink-light">{{ image.description[locale] }}</p>
               </figcaption>
             </figure>
           </li>

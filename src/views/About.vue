@@ -3,12 +3,13 @@ import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLocale } from '../composables/useLocale'
 import { contentByCountry, type Country } from '../data'
-import { galleryByCountry, latvianSymbolCredits } from '../data/credits'
+import { galleryByCountry, latvianSymbolCredits, lithuanianSymbols } from '../data/credits'
 
 const { locale, t } = useLocale()
 
 const symbolGroups = computed(() => [
-  { title: t('about.latvianSymbols'), credits: latvianSymbolCredits },
+  { title: t('about.latvianSymbols'), intro: '', credits: latvianSymbolCredits },
+  { title: t('about.lithuanianSymbols'), intro: t('about.lithuanianSymbolsIntro'), credits: lithuanianSymbols },
 ])
 
 const countries: Country[] = ['latvia', 'lithuania']
@@ -16,14 +17,14 @@ const countries: Country[] = ['latvia', 'lithuania']
 // Country page photos, listed only once some have been added.
 const galleryGroups = computed(() =>
   countries
-    .map((country) => ({ title: t(`common.${country}`), credits: galleryByCountry[country] }))
+    .map((country) => ({ title: t(`common.${country}`), intro: '', credits: galleryByCountry[country] }))
     .filter((group) => group.credits.length),
 )
 
 const imageSections = computed(() =>
   [
     { id: 'about-symbols', title: t('about.symbolsTitle'), intro: t('about.symbolsIntro'), groups: symbolGroups.value },
-    { id: 'about-gallery', title: t('about.galleryTitle'), intro: '', groups: galleryGroups.value },
+    { id: 'about-gallery', title: t('about.galleryTitle'), intro: t('about.galleryIntro'), groups: galleryGroups.value },
   ].filter((section) => section.groups.length),
 )
 
@@ -105,6 +106,7 @@ const linkClass =
 
       <div v-for="group in section.groups" :key="group.title" class="mt-8">
         <h3 class="font-serif text-xl text-ink">{{ group.title }}</h3>
+        <p v-if="group.intro" class="mt-2 max-w-2xl text-sm text-ink-light">{{ group.intro }}</p>
         <ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <li
             v-for="credit in group.credits"
@@ -114,9 +116,10 @@ const linkClass =
             <img :src="credit.src" alt="" class="h-16 w-16 shrink-0 object-contain" loading="lazy" />
             <div class="min-w-0 text-sm">
               <p class="font-medium text-ink">{{ credit.title[locale] }}</p>
-              <p class="mt-1 text-ink-light">{{ t('about.author') }}: {{ credit.author }}</p>
+              <p v-if="credit.description" class="mt-1 text-ink-light">{{ credit.description[locale] }}</p>
+              <p v-if="credit.author" class="mt-1 text-ink-light">{{ t('about.author') }}: {{ credit.author }}</p>
               <p class="mt-1 flex flex-wrap gap-x-3">
-                <a :href="credit.license.url" target="_blank" rel="noopener" :class="linkClass">{{ credit.license.name }}</a>
+                <a v-if="credit.license" :href="credit.license.url" target="_blank" rel="noopener" :class="linkClass">{{ credit.license.name }}</a>
                 <a :href="credit.sourceUrl" target="_blank" rel="noopener" :class="linkClass">{{ t('about.source') }}</a>
               </p>
             </div>
