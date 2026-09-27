@@ -44,8 +44,8 @@ watch(locale, (value) => {
       <RouterView />
     </main>
 
-    <footer v-if="!isHome" class="border-t border-parchment-dark px-4 py-8 text-ink-light sm:px-6 sm:py-10 lg:px-8">
-      <div class="mx-auto flex max-w-6xl flex-col items-start gap-7 md:flex-row md:items-center md:gap-10 lg:gap-16">
+    <footer v-if="!isHome" class="border-t border-parchment-dark px-4 py-8 text-ink-light sm:px-6 sm:py-6 lg:px-8">
+      <div class="mx-auto flex max-w-6xl flex-col items-start gap-7 md:flex-row md:items-center md:gap-10 lg:gap-10">
         <div class="w-[280px] max-w-full shrink-0 overflow-hidden rounded-xl bg-white p-2 shadow-sm lg:w-80">
           <img
             src="/images/partners/interreg-latvia-lithuania.jpg"
@@ -60,12 +60,12 @@ watch(locale, (value) => {
         </div>
         <div class="flex min-w-0 items-start gap-4 text-ink sm:gap-5">
           <CountrySymbol :country="footerCountry" class="mt-1 size-9 sm:size-12" />
-          <div class="max-w-xl">
-            <p class="font-serif text-lg leading-snug sm:text-xl">{{ projectCopy.brandTop }}</p>
-            <p class="mt-1 text-xs leading-relaxed tracking-wide text-ink-light sm:text-sm">{{ projectCopy.brandBottom }}</p>
+          <div class="max-w-md">
+            <p class="font-serif leading-snug">{{ projectCopy.brandTop }}</p>
+            <p class="mt-1 leading-relaxed tracking-wide text-ink-light text-sm">{{ projectCopy.brandBottom }}</p>
             <RouterLink
               :to="aboutPaths[locale]"
-              class="mt-3 inline-flex min-h-11 items-center text-sm text-ink-light underline underline-offset-4 transition-colors hover:text-terracotta-dark focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-terracotta-dark"
+              class="mt-3 inline-flex items-center text-sm text-ink-light underline underline-offset-4 transition-colors hover:text-terracotta-dark focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-terracotta-dark"
             >{{ t('about.footerLink') }}</RouterLink>
           </div>
         </div>
