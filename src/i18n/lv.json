@@ -15,6 +15,7 @@
     "backHome": "Atpakaļ uz sākumu",
     "dances": "Dejas",
     "songs": "Dziesmas",
+    "images": "Attēli",
     "viewDetails": "Skatīt vairāk",
     "difficulty": {
       "beginner": "Iesācējiem",
@@ -74,5 +75,20 @@
   "common": {
     "latvia": "Latvija",
     "lithuania": "Lietuva"
+  },
+  "about": {
+    "title": "Par projektu",
+    "intro": "Baltijas Tautas Mantojums iepazīstina ar Latvijas un Lietuvas tautas dejām, dziesmām un simboliem. Šeit uzskaitīti visi attēlu, tekstu un video avoti, ko izmantojam vietnē.",
+    "symbolsTitle": "Simbolu attēli",
+    "symbolsIntro": "Simbolu attēli ņemti no Wikimedia Commons. Tie izmantoti atbilstoši licencēm, kas prasa norādīt autoru un licenci.",
+    "latvianSymbols": "Latviešu simboli",
+    "author": "Autors",
+    "source": "Avots",
+    "textsTitle": "Tekstu avoti",
+    "textsIntro": "Latviešu deju apraksti sagatavoti, balstoties uz dejaszeltafonds.lv materiāliem.",
+    "videosTitle": "Video",
+    "videosIntro": "Video ir iegulti no YouTube. Tiesības uz tiem pieder to autoriem.",
+    "footerLink": "Par projektu un avoti",
+    "galleryTitle": "Valstu attēli"
   }
 }

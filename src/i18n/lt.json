@@ -15,6 +15,7 @@
     "backHome": "Atgal į pradžią",
     "dances": "Šokiai",
     "songs": "Dainos",
+    "images": "Vaizdai",
     "viewDetails": "Žiūrėti daugiau",
     "difficulty": {
       "beginner": "Pradedantiesiems",
@@ -74,5 +75,20 @@
   "common": {
     "latvia": "Latvija",
     "lithuania": "Lietuva"
+  },
+  "about": {
+    "title": "Apie projektą",
+    "intro": "Baltijos Tautų Paveldas supažindina su Latvijos ir Lietuvos liaudies šokiais, dainomis ir simboliais. Čia išvardyti visi svetainėje naudojamų vaizdų, tekstų ir vaizdo įrašų šaltiniai.",
+    "symbolsTitle": "Simbolių vaizdai",
+    "symbolsIntro": "Simbolių vaizdai paimti iš Wikimedia Commons. Jie naudojami pagal licencijas, kurios reikalauja nurodyti autorių ir licenciją.",
+    "latvianSymbols": "Latvių simboliai",
+    "author": "Autorius",
+    "source": "Šaltinis",
+    "textsTitle": "Tekstų šaltiniai",
+    "textsIntro": "Latvių šokių aprašymai parengti remiantis dejaszeltafonds.lv medžiaga.",
+    "videosTitle": "Vaizdo įrašai",
+    "videosIntro": "Vaizdo įrašai įterpti iš YouTube. Teisės į juos priklauso jų autoriams.",
+    "footerLink": "Apie projektą ir šaltiniai",
+    "galleryTitle": "Šalių vaizdai"
   }
 }
