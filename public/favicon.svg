@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
-  <!-- The site's folk mark (see src/components/home/FolkMark.vue) in cream on the home hero's pine green. -->
+  <!-- The site's folk mark in cream on the home hero's pine green. -->
   <rect width="48" height="48" rx="10" fill="#293f35"/>
   <g transform="translate(4 4) scale(0.8333)" fill="none" stroke="#fff2d9" stroke-width="3" stroke-linecap="square">
     <path d="M24 3 30 9 24 15 18 9Z M24 33 30 39 24 45 18 39Z"/>

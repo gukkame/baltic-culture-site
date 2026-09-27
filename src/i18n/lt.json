@@ -18,11 +18,6 @@
     "songs": "Dainos",
     "images": "Vaizdai",
     "viewDetails": "Žiūrėti daugiau",
-    "difficulty": {
-      "beginner": "Pradedantiesiems",
-      "intermediate": "Vidutinio lygio",
-      "advanced": "Pažengusiems"
-    },
     "filters": {
       "all": "Visi"
     },
@@ -54,7 +49,8 @@
     "notFoundBody": "Deja, šio įrašo nėra.",
     "testTitle": "Patikrink savo žinias",
     "testText": "Atsakyk į klausimus apie abiejų tautų kultūrą ir rink ženkliukus.",
-    "testButton": "Į viktoriną"
+    "testButton": "Į viktoriną",
+    "testButtonBack": "Atgal į viktoriną"
   },
   "quiz": {
     "title": "Viktorina",
@@ -71,7 +67,11 @@
     "resetTitle": "Pradėti iš naujo?",
     "resetConfirm": "Visi gauti ženkliukai bus ištrinti, o viktorina prasidės nuo pirmo klausimo.",
     "resetButton": "Taip, pradėti iš naujo",
-    "cancel": "Atšaukti"
+    "cancel": "Atšaukti",
+    "openPlaceholder": "Rašyk savo atsakymą…",
+    "submit": "Atsakyti",
+    "anyAnswer": "Ačiū! Čia tinka bet koks atsakymas.",
+    "yourAnswer": "Tavo atsakymas"
   },
   "common": {
     "latvia": "Latvija",

@@ -2,8 +2,8 @@
 import { computed, ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLocale } from '../composables/useLocale'
-import { contentByCountry, isCountry, type Country } from '../data'
-import FolkEmblem from '../components/FolkEmblem.vue'
+import { contentByCountry, isCountry } from '../data'
+import CountrySymbol from '../components/CountrySymbol.vue'
 import ItemCardMedia from '../components/ItemCardMedia.vue'
 import { galleryByCountry } from '../data/credits'
 import { countryPath } from '../router/paths'
@@ -61,16 +61,8 @@ const showImages = computed(() => hasImages.value && currentFilter.value === 'im
 // Card currently hovered/focused; only that card plays its video preview.
 const previewId = ref<string>()
 
-// Each country page carries one of its own folk signs in the bottom-right corner.
-const cornerSymbols: Record<Country, string> = {
-  latvia: '/images/symbols/auseklis.svg',
-  lithuania: '/images/symbols/lt/rozele.svg',
-}
-const cornerSymbol = computed(() => (validCountry.value ? cornerSymbols[validCountry.value] : ''))
-
-const heroImage = computed(() =>
-  validCountry.value ? `/images/hero/${validCountry.value}.svg` : '',
-)
+// A photo from the country in the top-right corner: its first gallery image, which is already credited on the About page.
+const heroImage = computed(() => (validCountry.value ? galleryByCountry[validCountry.value][0] : undefined))
 </script>
 
 <template>
@@ -113,7 +105,7 @@ const heroImage = computed(() =>
       <div
         class="absolute right-0 top-0 aspect-[942/542] w-[38%] overflow-hidden drop-shadow-[0_8px_20px_rgba(50,35,20,0.14)] [clip-path:url(#cultureHeroMask)] sm:w-[35%] lg:w-1/2"
       >
-        <img :src="heroImage" alt="" class="h-full w-full object-cover" />
+        <img v-if="heroImage" :src="heroImage.src" :alt="heroImage.title[locale]" class="h-full w-full object-cover" />
       </div>
 
       <div
@@ -128,7 +120,7 @@ const heroImage = computed(() =>
           </RouterLink>
 
           <div class="mt-4 flex items-center gap-2 text-ink">
-            <FolkEmblem :size="20" />
+            <CountrySymbol :country="validCountry" class="size-5" />
             <span class="font-medium">{{ t(`common.${validCountry}`) }}</span>
           </div>
 
@@ -141,8 +133,6 @@ const heroImage = computed(() =>
         </div>
       </div>
     </div>
-
-    <img :src="cornerSymbol" alt="" class="pointer-events-none absolute bottom-4 right-4 hidden size-16 opacity-70 sm:block" />
 
     <div class="mx-auto mt-8 max-w-6xl px-4 pb-8 sm:px-6 sm:pb-12 lg:px-8">
       <div role="group" :aria-label="t('culture.filters.all')" class="flex flex-wrap gap-2">
@@ -180,12 +170,6 @@ const heroImage = computed(() =>
                 {{ t(`item.category.${item.category}`) }} · {{ t(`common.${validCountry}`) }}
               </p>
               <p class="mt-1 text-sm text-ink-light">{{ item.tagline[locale] }}</p>
-              <span
-                class="mt-auto pt-3 text-lg text-ink transition group-hover:translate-x-2 group-hover:text-terracotta-dark group-focus-visible:translate-x-2 group-focus-visible:text-terracotta-dark"
-                aria-hidden="true"
-              >
-                →
-              </span>
             </div>
           </RouterLink>
         </li>

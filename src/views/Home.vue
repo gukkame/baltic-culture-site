@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLocale, type Locale } from '../composables/useLocale'
 import CountryMap from '../components/home/CountryMap.vue'
-import FolkMark from '../components/home/FolkMark.vue'
+import CountrySymbol from '../components/CountrySymbol.vue'
 import homeCopy from '../components/home/copy.json'
 import { aboutPaths, countryPath, quizPath } from '../router/paths'
 
@@ -11,6 +11,9 @@ const { locale, setLocale } = useLocale()
 const copy = computed(() => homeCopy[locale.value])
 // The journey starts in the country whose language the visitor picked.
 const startRoute = computed(() => countryPath(locale.value === 'lt' ? 'lithuania' : 'latvia'))
+
+// The brand shows a folk sign of the chosen language's country.
+const brandCountry = computed(() => (locale.value === 'lt' ? 'lithuania' : 'latvia'))
 
 const navLinks = computed(() => [
   { to: quizPath, label: copy.value.navQuiz },
@@ -51,12 +54,15 @@ const heroControl =
     >
       <RouterLink
         to="/"
-        class="inline-flex items-center gap-4 font-serif text-[25px] leading-[1.17] tracking-[.03em] max-tablet:gap-3 max-tablet:text-[23px] max-xs:text-[21px]"
+        class="inline-flex min-w-0 items-center gap-4 max-tablet:gap-3"
         :class="heroControl"
         :aria-label="`${copy.brandTop} ${copy.brandBottom}`"
       >
-        <FolkMark class="size-[47px] max-tablet:size-9" />
-        <span>{{ copy.brandTop }}<br /><small class="font-sans text-[12px] tracking-[.08em] max-tablet:text-[10px]">{{ copy.brandBottom }}</small></span>
+        <CountrySymbol :country="brandCountry" class="size-[47px] max-tablet:size-9" />
+        <span class="max-w-[430px] font-serif text-[17px] leading-[1.25] max-laptop:max-w-[330px] max-laptop:text-[15px] max-tablet:text-[12px] max-tablet:leading-tight">
+          {{ copy.brandTop }}
+          <small class="mt-1 block font-sans text-[12px] tracking-[.08em] max-tablet:mt-0.5 max-tablet:text-[10px]">{{ copy.brandBottom }}</small>
+        </span>
       </RouterLink>
 
       <nav class="ml-auto flex gap-[33px] text-[13px] max-laptop:gap-[23px] max-tablet:hidden" :aria-label="copy.navLabel">

@@ -18,11 +18,6 @@
     "songs": "Dziesmas",
     "images": "Attēli",
     "viewDetails": "Skatīt vairāk",
-    "difficulty": {
-      "beginner": "Iesācējiem",
-      "intermediate": "Vidējs līmenis",
-      "advanced": "Pieredzējušiem"
-    },
     "filters": {
       "all": "Visas"
     },
@@ -54,7 +49,8 @@
     "notFoundBody": "Diemžēl šis ieraksts neeksistē.",
     "testTitle": "Pārbaudi savas zināšanas",
     "testText": "Atbildi uz jautājumiem par abu tautu kultūru un vāc nozīmītes.",
-    "testButton": "Uz viktorīnu"
+    "testButton": "Uz viktorīnu",
+    "testButtonBack": "Atpakaļ uz viktorīnu"
   },
   "quiz": {
     "title": "Viktorīna",
@@ -71,7 +67,11 @@
     "resetTitle": "Sākt no jauna?",
     "resetConfirm": "Visas iegūtās nozīmītes tiks dzēstas, un viktorīna sāksies no pirmā jautājuma.",
     "resetButton": "Jā, sākt no jauna",
-    "cancel": "Atcelt"
+    "cancel": "Atcelt",
+    "openPlaceholder": "Raksti savu atbildi…",
+    "submit": "Atbildēt",
+    "anyAnswer": "Paldies! Šeit der jebkura atbilde.",
+    "yourAnswer": "Tava atbilde"
   },
   "common": {
     "latvia": "Latvija",

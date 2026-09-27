@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 import { useLocale } from '../composables/useLocale'
 import { findItem, findNextItem, youtubeEmbedUrl } from '../data'
 import { countryPathFor, quizPath } from '../router/paths'
@@ -14,6 +14,14 @@ const { locale, t } = useLocale()
 
 const item = computed(() => findItem(props.country, props.itemId))
 const nextItem = computed(() => findNextItem(props.country, props.itemId))
+
+// Vue Router keeps the previous address in history.state.back. Reading the route first makes this
+// re-check after every navigation, e.g. when moving on to the next dance.
+const route = useRoute()
+const cameFromQuiz = computed(() => {
+  void route.fullPath
+  return window.history.state?.back === quizPath
+})
 </script>
 
 <template>
@@ -35,10 +43,6 @@ const nextItem = computed(() => findNextItem(props.country, props.itemId))
     >
       ← {{ t('item.backToCulture') }}
     </RouterLink>
-
-    <span class="mt-4 ml-2 inline-block rounded-full bg-parchment-dark px-3 py-1 text-xs text-ink-light">
-      {{ t(`item.category.${item.category}`) }} · {{ t(`culture.difficulty.${item.difficulty}`) }}
-    </span>
 
     <h1 class="mt-3 font-serif text-4xl text-ink">{{ item.title[locale] }}</h1>
     <p class="mt-2 text-lg text-ink-light">{{ item.tagline[locale] }}</p>
@@ -67,8 +71,8 @@ const nextItem = computed(() => findNextItem(props.country, props.itemId))
         :to="quizPath"
         class="mt-4 inline-flex shrink-0 items-center gap-2 rounded-full bg-terracotta px-5 py-2.5 text-sm font-medium text-parchment transition-colors duration-150 hover:bg-terracotta-dark sm:mt-0"
       >
-        {{ t('item.testButton') }}
-        <span aria-hidden="true">→</span>
+        <template v-if="cameFromQuiz"><span aria-hidden="true">←</span> {{ t('item.testButtonBack') }}</template>
+        <template v-else>{{ t('item.testButton') }} <span aria-hidden="true">→</span></template>
       </RouterLink>
     </section>
 
