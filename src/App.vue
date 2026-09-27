@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, watchEffect } from 'vue'
-import { RouterView, useRoute } from 'vue-router'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
 import { useLocale } from './composables/useLocale'
 
 const { locale, t } = useLocale()
@@ -17,14 +17,19 @@ watchEffect(() => {
 </script>
 
 <template>
-  <a class="skip-link" href="#main-content" @click.prevent="focusMain">{{ t('nav.skipToContent') }}</a>
+  <a
+    class="absolute -left-[9999px] top-0 z-100 rounded-br-lg bg-forest-dark px-5 py-3 text-white focus:left-0"
+    href="#main-content"
+    @click.prevent="focusMain"
+  >{{ t('nav.skipToContent') }}</a>
   <div class="flex min-h-screen flex-col">
     <main id="main-content" tabindex="-1" class="flex-1">
       <RouterView />
     </main>
 
     <footer v-if="!isHome" class="border-t border-parchment-dark py-6 text-center text-sm text-ink-light">
-      {{ t('site.title') }} — placeholder content
+      {{ t('site.title') }} — placeholder content ·
+      <RouterLink to="/about" class="underline underline-offset-4 hover:text-terracotta-dark">{{ t('about.footerLink') }}</RouterLink>
     </footer>
   </div>
 </template>

@@ -6,6 +6,7 @@ import { contentByCountry, isCountry } from '../data'
 import FolkEmblem from '../components/FolkEmblem.vue'
 import CornerSprig from '../components/CornerSprig.vue'
 import ItemCardMedia from '../components/ItemCardMedia.vue'
+import { galleryByCountry } from '../data/credits'
 
 const props = defineProps<{
   country: string
@@ -16,15 +17,27 @@ const { locale, t } = useLocale()
 const validCountry = computed(() => (isCountry(props.country) ? props.country : undefined))
 const items = computed(() => (validCountry.value ? contentByCountry[validCountry.value] : []))
 
-type Filter = 'all' | 'dance' | 'song'
+type Filter = 'all' | 'dance' | 'song' | 'image'
 const activeFilter = ref<Filter>('all')
+
+const galleryImages = computed(() => (validCountry.value ? galleryByCountry[validCountry.value] : []))
 
 // Hide a category filter when the country has nothing in it (e.g. Latvia has no songs yet).
 const hasDances = computed(() => items.value.some((item) => item.category === 'dance'))
 const hasSongs = computed(() => items.value.some((item) => item.category === 'song'))
+const hasImages = computed(() => galleryImages.value.length > 0)
 
 // "All" only means something when there are two categories to tell apart.
-const showAll = computed(() => hasDances.value && hasSongs.value)
+const showAll = computed(() => [hasDances.value, hasSongs.value, hasImages.value].filter(Boolean).length > 1)
+
+const filters = computed(() =>
+  [
+    { id: 'all' as const, label: t('culture.filters.all'), shown: showAll.value },
+    { id: 'dance' as const, label: t('culture.dances'), shown: hasDances.value },
+    { id: 'song' as const, label: t('culture.songs'), shown: hasSongs.value },
+    { id: 'image' as const, label: t('culture.images'), shown: hasImages.value },
+  ].filter((filter) => filter.shown),
+)
 
 // The component is reused across countries, so don't keep a filter the new country lacks.
 watch(validCountry, () => {
@@ -34,13 +47,16 @@ watch(validCountry, () => {
 // With a single category left, that category is the (only) active filter.
 const currentFilter = computed<Filter>(() => {
   if (showAll.value) return activeFilter.value
-  return hasDances.value ? 'dance' : hasSongs.value ? 'song' : 'all'
+  return hasDances.value ? 'dance' : hasSongs.value ? 'song' : hasImages.value ? 'image' : 'all'
 })
 
 const filteredItems = computed(() => {
   if (currentFilter.value === 'all') return items.value
   return items.value.filter((item) => item.category === currentFilter.value)
 })
+
+// Images are their own group, shown after the dance/song cards under "All".
+const showImages = computed(() => hasImages.value && (currentFilter.value === 'all' || currentFilter.value === 'image'))
 
 // Card currently hovered/focused; only that card plays its video preview.
 const previewId = ref<string>()
@@ -124,50 +140,23 @@ const heroImage = computed(() =>
     <div class="mx-auto mt-8 max-w-6xl px-4 pb-8 sm:px-6 sm:pb-12 lg:px-8">
       <div role="group" :aria-label="t('culture.filters.all')" class="flex flex-wrap gap-2">
         <button
-          v-if="showAll"
+          v-for="filter in filters"
+          :key="filter.id"
           type="button"
-          :aria-pressed="currentFilter === 'all'"
+          :aria-pressed="currentFilter === filter.id"
           class="rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150"
           :class="
-            currentFilter === 'all'
+            currentFilter === filter.id
               ? 'bg-ink text-parchment hover:bg-ink-light'
               : 'bg-parchment-dark text-ink-light hover:bg-parchment-darker hover:text-ink'
           "
-          @click="activeFilter = 'all'"
+          @click="activeFilter = filter.id"
         >
-          {{ t('culture.filters.all') }}
-        </button>
-        <button
-          v-if="hasDances"
-          type="button"
-          :aria-pressed="currentFilter === 'dance'"
-          class="rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150"
-          :class="
-            currentFilter === 'dance'
-              ? 'bg-ink text-parchment hover:bg-ink-light'
-              : 'bg-parchment-dark text-ink-light hover:bg-parchment-darker hover:text-ink'
-          "
-          @click="activeFilter = 'dance'"
-        >
-          {{ t('culture.dances') }}
-        </button>
-        <button
-          v-if="hasSongs"
-          type="button"
-          :aria-pressed="currentFilter === 'song'"
-          class="rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150"
-          :class="
-            currentFilter === 'song'
-              ? 'bg-ink text-parchment hover:bg-ink-light'
-              : 'bg-parchment-dark text-ink-light hover:bg-parchment-darker hover:text-ink'
-          "
-          @click="activeFilter = 'song'"
-        >
-          {{ t('culture.songs') }}
+          {{ filter.label }}
         </button>
       </div>
 
-      <ul class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <ul v-if="filteredItems.length" class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <li v-for="item in filteredItems" :key="item.id">
           <RouterLink
             :to="`/${validCountry}/${item.id}`"
@@ -194,6 +183,34 @@ const heroImage = computed(() =>
           </RouterLink>
         </li>
       </ul>
+
+      <section v-if="showImages" :class="currentFilter === 'all' ? 'mt-14' : 'mt-6'" aria-labelledby="culture-gallery">
+        <h2 id="culture-gallery" class="font-serif text-2xl text-ink sm:text-3xl" :class="{ 'sr-only': currentFilter === 'image' }">
+          {{ t('culture.images') }}
+        </h2>
+        <ul :class="currentFilter === 'image' ? '' : 'mt-6'" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <li v-for="image in galleryImages" :key="image.src">
+            <figure class="overflow-hidden rounded-2xl bg-parchment-light shadow-paper ring-1 ring-parchment-dark">
+              <a :href="image.src" target="_blank" rel="noopener" class="block aspect-[4/3] overflow-hidden bg-parchment-dark">
+                <img
+                  :src="image.src"
+                  :alt="image.title[locale]"
+                  loading="lazy"
+                  decoding="async"
+                  class="h-full w-full object-cover transition duration-300 ease-out hover:scale-105"
+                />
+              </a>
+              <figcaption class="p-4">
+                <p class="font-serif text-lg text-ink">{{ image.title[locale] }}</p>
+                <p class="mt-1 text-xs text-ink-light">
+                  {{ image.author }} ·
+                  <a :href="image.license.url" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-terracotta-dark">{{ image.license.name }}</a>
+                </p>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
     </div>
   </section>
 </template>

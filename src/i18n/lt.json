@@ -15,6 +15,7 @@
     "backHome": "Atgal į pradžią",
     "dances": "Šokiai",
     "songs": "Dainos",
+    "images": "Vaizdai",
     "viewDetails": "Žiūrėti daugiau",
     "difficulty": {
       "beginner": "Pradedantiesiems",
@@ -74,5 +75,41 @@
   "common": {
     "latvia": "Latvija",
     "lithuania": "Lietuva"
+  },
+  "about": {
+    "title": "Apie projektą",
+    "intro": "Baltijos Tautų Paveldas supažindina su Latvijos ir Lietuvos liaudies šokiais, dainomis ir simboliais. Čia išvardyti visi svetainėje naudojamų vaizdų, tekstų ir vaizdo įrašų šaltiniai.",
+    "symbolsTitle": "Simbolių vaizdai",
+    "symbolsIntro": "Simbolių vaizdai paimti iš Wikimedia Commons. Jie naudojami pagal licencijas, kurios reikalauja nurodyti autorių ir licenciją.",
+    "latvianSymbols": "Latvių simboliai",
+    "author": "Autorius",
+    "source": "Šaltinis",
+    "textsTitle": "Tekstų šaltiniai",
+    "textsIntro": "Latvių šokių aprašymai parengti remiantis dejaszeltafonds.lv medžiaga.",
+    "videosTitle": "Vaizdo įrašai",
+    "videosIntro": "Vaizdo įrašai įterpti iš YouTube. Teisės į juos priklauso jų autoriams.",
+    "footerLink": "Apie projektą ir šaltiniai",
+    "galleryTitle": "Šalių vaizdai",
+    "project": {
+      "title": "Projektas CultureLINK",
+      "name": "„Žmonių tarpusavio bendradarbiavimo atgaivinimas, įtraukiant jaunimą į lietuvių ir latvių tradicinės kultūros veiklas“",
+      "goal": "Projekto tikslas – skatinti jaunimo dalyvavimą liaudies ir tradicinės kultūros veiklose Tytuvėnuose ir Līvāniuose, stiprinant ir plėtojant vietos iniciatyvas bei darant jas patrauklesnes jaunajai auditorijai.",
+      "challenge": "Projekto partneriai Tytuvėnuose (Lietuvoje) ir Līvāniuose (Latvijoje) susiduria su bendru iššūkiu – nepakankamu jaunimo įsitraukimu į liaudies ir tradicinės kultūros veiklas. Latvijos ir Lietuvos kaimo vietovėse jaunimo sumažėjo maždaug 30 %, todėl jauni žmonės vis dažniau išvyksta į didmiesčius ir rečiau dalyvauja vietos kultūros veiklose.",
+      "activities": "Projekte rengiamos dirbtuvės ir mokymai kultūros sektoriaus atstovams, kuriama ir išbandoma jaunimo įtraukimo metodika mokyklose, vasaros stovyklose ir bendruomenės renginiuose, taip pat vyksta bendros Baltų liaudies programos kūrimo dirbtuvės, kurių rezultatai bus pristatyti bendruose koncertuose ir baigiamajame festivalyje. Jaunimui kuriamos socialinių tinklų kampanijos, interaktyvi skaitmeninė mokymosi platforma ir trumpi mokomieji vaizdo įrašai apie liaudies šokius ir dainas.",
+      "programme": "Programa",
+      "programmeValue": "Interreg Latvijos–Lietuvos bendradarbiavimo per sieną programa",
+      "code": "Projekto numeris",
+      "leadPartner": "Pagrindinis partneris",
+      "leadPartnerValue": "Tytuvėnų kultūros centras (Lietuva)",
+      "partner": "Partneris",
+      "partnerValue": "Līvānų savivaldybė (Latvija)",
+      "duration": "Trukmė",
+      "durationValue": "18 mėnesių (2025-07-01–2026-12-31)",
+      "budget": "Biudžetas",
+      "budgetValue": "272 009,37 Eur, iš jų ERPF lėšos 217 607,49 Eur (80 %) ir partnerių įnašas 54 401,88 Eur",
+      "moreInfo": "Daugiau apie projektą",
+      "source": "Informacijos šaltinis",
+      "disclaimer": "Ši interneto svetainė parengta finansiškai remiant Europos Sąjungai. Už jos turinį visiškai atsako Līvānų savivaldybė, ir jis jokiomis aplinkybėmis negali būti laikomas oficialia Europos Sąjungos pozicija."
+    }
   }
 }

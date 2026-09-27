@@ -4,12 +4,14 @@ import Culture from '../views/Culture.vue'
 import ItemDetail from '../views/ItemDetail.vue'
 import Quiz from '../views/Quiz.vue'
 import Collection from '../views/Collection.vue'
+import About from '../views/About.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/', name: 'home', component: Home },
   // "viktorina" is the word in both Latvian (viktorīna) and Lithuanian, ASCII-safe for a URL.
   { path: '/viktorina', name: 'quiz', component: Quiz },
   { path: '/collection', name: 'collection', component: Collection },
+  { path: '/about', name: 'about', component: About },
   {
     path: '/:country',
     name: 'culture',

@@ -15,6 +15,7 @@
     "backHome": "Atpakaļ uz sākumu",
     "dances": "Dejas",
     "songs": "Dziesmas",
+    "images": "Attēli",
     "viewDetails": "Skatīt vairāk",
     "difficulty": {
       "beginner": "Iesācējiem",
@@ -74,5 +75,41 @@
   "common": {
     "latvia": "Latvija",
     "lithuania": "Lietuva"
+  },
+  "about": {
+    "title": "Par projektu",
+    "intro": "Baltijas Tautas Mantojums iepazīstina ar Latvijas un Lietuvas tautas dejām, dziesmām un simboliem. Šeit uzskaitīti visi attēlu, tekstu un video avoti, ko izmantojam vietnē.",
+    "symbolsTitle": "Simbolu attēli",
+    "symbolsIntro": "Simbolu attēli ņemti no Wikimedia Commons. Tie izmantoti atbilstoši licencēm, kas prasa norādīt autoru un licenci.",
+    "latvianSymbols": "Latviešu simboli",
+    "author": "Autors",
+    "source": "Avots",
+    "textsTitle": "Tekstu avoti",
+    "textsIntro": "Latviešu deju apraksti sagatavoti, balstoties uz dejaszeltafonds.lv materiāliem.",
+    "videosTitle": "Video",
+    "videosIntro": "Video ir iegulti no YouTube. Tiesības uz tiem pieder to autoriem.",
+    "footerLink": "Par projektu un avoti",
+    "galleryTitle": "Valstu attēli",
+    "project": {
+      "title": "Projekts CultureLINK",
+      "name": "“Cilvēku savstarpējās sadarbības atdzīvināšana, iesaistot jauniešus lietuviešu un latviešu tradicionālajās kultūras aktivitātēs”",
+      "goal": "Projekta mērķis ir sekmēt jauniešu līdzdalību tautas un tradicionālās kultūras aktivitātēs Tytuvēnos un Līvānos, stiprinot un attīstot vietējās iniciatīvas, kā arī padarot tās saistošākas jauniešu auditorijai.",
+      "challenge": "Projekta partneri Tytuvēnos (Lietuvā) un Līvānos (Latvijā) saskaras ar kopīgu izaicinājumu – nepietiekamu jauniešu iesaisti tautas un tradicionālajās kultūras aktivitātēs. Latvijas un Lietuvas lauku teritorijās jauniešu skaits ir samazinājies par aptuveni 30%, tāpēc jaunieši arvien biežāk migrē uz lielajām pilsētām un retāk piedalās vietējās kultūras aktivitātēs.",
+      "activities": "Projektā notiek darbnīcas un apmācības kultūras nozares pārstāvjiem, tiek izstrādāta un pilotēta metodoloģija jauniešu piesaistei skolās, vasaras nometnēs un kopienas aktivitātēs, kā arī kopīgas darbnīcas Baltijas tautas programmas izstrādei, kuras rezultāti tiks prezentēti kopīgos koncertos un noslēguma festivālā. Jauniešiem tiek veidotas sociālo mediju kampaņas, interaktīva digitālā mācību platforma un īsi izglītojoši video par tautas dejām un dziesmām.",
+      "programme": "Programma",
+      "programmeValue": "Interreg Latvijas–Lietuvas pārrobežu sadarbības programma",
+      "code": "Projekta numurs",
+      "leadPartner": "Vadošais partneris",
+      "leadPartnerValue": "Tytuvēnu kultūras centrs (Lietuva)",
+      "partner": "Partneris",
+      "partnerValue": "Līvānu novada pašvaldība (Latvija)",
+      "duration": "Ilgums",
+      "durationValue": "18 mēneši (01.07.2025.–31.12.2026.)",
+      "budget": "Budžets",
+      "budgetValue": "272 009,37 EUR, no tiem ERDF līdzfinansējums 217 607,49 EUR (80%) un partneru ieguldījums 54 401,88 EUR",
+      "moreInfo": "Vairāk par projektu",
+      "source": "Informācijas avots",
+      "disclaimer": "Šī tīmekļa vietne ir sagatavota ar Eiropas Savienības finansiālu atbalstu. Par tās saturu pilnībā atbild Līvānu novada pašvaldība, un tas nekādos apstākļos nav uzskatāms par Eiropas Savienības oficiālo nostāju."
+    }
   }
 }

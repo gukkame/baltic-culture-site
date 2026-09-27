@@ -1,97 +1,153 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
-import { useLocale } from '../composables/useLocale'
+import { useLocale, type Locale } from '../composables/useLocale'
 import CountryMap from '../components/home/CountryMap.vue'
 import FolkMark from '../components/home/FolkMark.vue'
 import homeCopy from '../components/home/copy.json'
-import '../components/home/home.css'
 
 const { locale, setLocale } = useLocale()
 const copy = computed(() => homeCopy[locale.value])
-const countryMap = ref<HTMLElement>()
-const story = ref<HTMLElement>()
-const scrollBehavior = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' as const : 'smooth' as const
+// The journey starts in the country whose language the visitor picked.
+const startRoute = computed(() => (locale.value === 'lt' ? '/lithuania' : '/latvia'))
 
-function goTo(section?: HTMLElement) {
-  if (!section) return
-  section.focus({ preventScroll: true })
-  section.scrollIntoView({ behavior: scrollBehavior(), block: 'center' })
-}
-function toTop() {
-  window.scrollTo({ top: 0, behavior: scrollBehavior() })
-}
+const navLinks = computed(() => [
+  { to: '/viktorina', label: copy.value.navQuiz },
+  { to: '/about', label: copy.value.navAbout },
+])
+
+const languages: { code: Locale; label: string; name: string }[] = [
+  { code: 'lv', label: 'LV', name: 'Latviešu' },
+  { code: 'lt', label: 'LT', name: 'Lietuvių' },
+]
+
+// Links and buttons on the painted hero: no tap flash, and a focus ring in the text colour instead of the global red one.
+const heroControl =
+  '[-webkit-tap-highlight-color:transparent] focus-visible:outline-2 focus-visible:outline-offset-[6px] focus-visible:outline-current'
 </script>
 
 <template>
-  <div class="folk-home">
-    <section class="home-stage" aria-labelledby="home-title">
-      <img class="home-art" src="/artwork/latvian-ensemble-table-painted-v2.webp" alt="" fetchpriority="high" decoding="async" />
-      <div class="home-shade" aria-hidden="true" />
-      <header class="home-header">
-        <RouterLink to="/" class="home-brand" :aria-label="`${copy.brandTop} ${copy.brandBottom}`">
-          <FolkMark /><span>{{ copy.brandTop }}<br /><small>{{ copy.brandBottom }}</small></span>
+  <!-- The hero is designed desktop-first, so smaller screens use max-* variants of the
+       xs (440px), tablet (760px), laptop (1100px) and wide (1750px) breakpoints from style.css. -->
+  <section
+    class="relative isolate h-svh min-h-[750px] overflow-hidden bg-pine text-cream max-laptop:min-h-[790px] max-tablet:min-h-[860px] max-xs:min-h-[740px]"
+    aria-labelledby="home-title"
+  >
+    <img
+      class="pointer-events-none absolute inset-0 -z-2 size-full object-cover object-[center_62%] max-tablet:object-[62%_center]"
+      src="/artwork/latvian-ensemble-table-painted-v2.webp"
+      alt=""
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div
+      class="pointer-events-none absolute inset-0 -z-1 bg-[linear-gradient(90deg,rgba(14,33,29,.66),transparent_60%),linear-gradient(180deg,rgba(14,28,23,.42),transparent_19%),linear-gradient(0deg,rgba(32,19,11,.53),transparent_30%)] max-tablet:bg-[linear-gradient(90deg,#172f28d9,#172f2866_100%),linear-gradient(0deg,#25170cc7,transparent_34%)]"
+      aria-hidden="true"
+    />
+
+    <header
+      class="relative mx-[4.1%] flex h-28 items-center gap-[38px] border-b border-[#fff1d521] max-laptop:h-25 max-laptop:gap-6 max-tablet:mx-[6%] max-tablet:h-[87px] max-tablet:gap-3"
+    >
+      <RouterLink
+        to="/"
+        class="inline-flex items-center gap-4 font-serif text-[25px] leading-[1.17] tracking-[.03em] max-tablet:gap-3 max-tablet:text-[23px] max-xs:text-[21px]"
+        :class="heroControl"
+        :aria-label="`${copy.brandTop} ${copy.brandBottom}`"
+      >
+        <FolkMark class="size-[47px] max-tablet:size-9" />
+        <span>{{ copy.brandTop }}<br /><small class="font-sans text-[12px] tracking-[.08em] max-tablet:text-[10px]">{{ copy.brandBottom }}</small></span>
+      </RouterLink>
+
+      <nav class="ml-auto flex gap-[33px] text-[13px] max-laptop:gap-[23px] max-tablet:hidden" :aria-label="copy.navLabel">
+        <RouterLink
+          v-for="link in navLinks"
+          :key="link.to"
+          :to="link.to"
+          class="relative inline-block py-3 [text-shadow:0_1px_8px_#14261dcc] after:absolute after:bottom-[5px] after:left-0 after:right-full after:h-px after:bg-current after:transition-[right] after:duration-200 hover:after:right-0"
+          :class="heroControl"
+        >
+          {{ link.label }}
         </RouterLink>
-        <nav class="home-nav" :aria-label="copy.navLabel">
-          <button @click="goTo(countryMap)">{{ copy.navExplore }}</button>
-          <RouterLink to="/viktorina">{{ copy.navQuiz }}</RouterLink>
-          <button @click="goTo(story)">{{ copy.navAbout }}</button>
-        </nav>
-        <div class="home-languages" role="group" :aria-label="copy.languageLabel">
-          <button :aria-pressed="locale === 'lv'" lang="lv" aria-label="Latviešu" @click="setLocale('lv')">LV</button>
-          <span aria-hidden="true">/</span>
-          <button :aria-pressed="locale === 'lt'" lang="lt" aria-label="Lietuvių" @click="setLocale('lt')">LT</button>
-        </div>
-      </header>
-      <div class="home-intro">
-        <p class="home-eyebrow"><span aria-hidden="true">✧</span> {{ copy.eyebrow }}</p>
-        <h1 id="home-title"><span class="home-title-first">{{ copy.titleFirst }}</span><br /><em>{{ copy.titleSecond }}</em></h1>
-        <p class="home-lead">{{ copy.lead }}</p>
-        <p class="home-description">{{ copy.description }}</p>
-        <button class="home-start" @click="goTo(countryMap)">
-          {{ copy.start }}
-          <svg viewBox="0 0 24 12" fill="none" aria-hidden="true"><path d="M1 6h21m-6-5 6 5-6 5" stroke="currentColor" stroke-width="1.5" /></svg>
-        </button>
+      </nav>
+
+      <div
+        class="flex items-center gap-[7px] rounded-full bg-[#f5eedce6] px-[7px] text-[12px] text-[#263f36] max-tablet:ml-auto max-tablet:gap-px max-xs:text-[11px]"
+        role="group"
+        :aria-label="copy.languageLabel"
+      >
+        <template v-for="(language, index) in languages" :key="language.code">
+          <span v-if="index > 0" class="opacity-50" aria-hidden="true">/</span>
+          <button
+            class="min-h-11 min-w-[35px] cursor-pointer opacity-75 aria-pressed:font-semibold aria-pressed:opacity-100 max-tablet:min-w-8"
+            :class="heroControl"
+            :aria-pressed="locale === language.code"
+            :lang="language.code"
+            :aria-label="language.name"
+            @click="setLocale(language.code)"
+          >
+            {{ language.label }}
+          </button>
+        </template>
       </div>
-      <div class="home-map-note">
-        <span class="home-eyebrow">{{ copy.mapEyebrow }}</span><p>{{ copy.mapHint }}</p>
-        <svg class="home-sketch-arrow" viewBox="0 0 112 48" fill="none" aria-hidden="true"><path d="M3 6c35 36 58 30 99 12m-15-8 17 7-9 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
-      </div>
-      <div ref="countryMap" class="home-map-wrap" tabindex="-1" :aria-label="copy.mapLabel">
-        <CountryMap :label="copy.mapLabel" :latvia="copy.latvia" :lithuania="copy.lithuania" :latvia-subtitle="copy.latviaSubtitle" :lithuania-subtitle="copy.lithuaniaSubtitle" />
-      </div>
-      <div class="home-stage-bottom">
-        <span class="home-country-shortcuts">
-          <RouterLink to="/latvia">{{ copy.latvia }} <span aria-hidden="true">↗</span></RouterLink>
-          <span aria-hidden="true">·</span>
-          <RouterLink to="/lithuania">{{ copy.lithuania }} <span aria-hidden="true">↗</span></RouterLink>
-        </span>
-        <button class="home-scroll" @click="goTo(story)">{{ copy.scroll }} <span aria-hidden="true">↓</span></button>
-      </div>
-    </section>
-    <section ref="story" class="home-story" tabindex="-1" aria-labelledby="story-title">
-      <div class="home-story-heading">
-        <p class="home-eyebrow">{{ copy.storyEyebrow }}</p><h2 id="story-title">{{ copy.storyTitle }}</h2>
-      </div>
-      <p class="home-story-body">{{ copy.storyBody }}</p>
-      <div class="home-chapters">
-        <article class="home-chapter">
-          <span class="home-chapter-number">01</span><div><h3>{{ copy.danceTitle }}</h3><p>{{ copy.danceText }}</p></div>
-          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="m10 10 14 14L10 38M24 10l14 14-14 14M10 24h28" stroke="currentColor" stroke-width="1.6" /></svg>
-        </article>
-        <article class="home-chapter">
-          <span class="home-chapter-number">02</span><div><h3>{{ copy.songTitle }}</h3><p>{{ copy.songText }}</p></div>
-          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M20 33V11l19-4v22M20 18l19-4" stroke="currentColor" stroke-width="1.6" /><ellipse cx="14" cy="34" rx="6" ry="4" stroke="currentColor" stroke-width="1.6" /><ellipse cx="33" cy="30" rx="6" ry="4" stroke="currentColor" stroke-width="1.6" /></svg>
-        </article>
-        <article class="home-chapter home-chapter--quiz">
-          <span class="home-chapter-number">03</span><div><h3>{{ copy.quizTitle }}</h3><p>{{ copy.quizText }}</p><RouterLink to="/viktorina" class="home-quiz-link">{{ copy.quizCta }} <span aria-hidden="true">→</span></RouterLink></div>
-          <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="m24 4 5 13 15 7-15 5-5 15-5-15-15-5 15-7Z" stroke="currentColor" stroke-width="1.6" /><circle cx="24" cy="24" r="5" stroke="currentColor" stroke-width="1.6" /></svg>
-        </article>
-      </div>
-    </section>
-    <footer class="home-footer">
-      <div><FolkMark /><span>{{ copy.footer }}</span></div>
-      <button @click="toTop">{{ copy.backTop }} <span aria-hidden="true">↑</span></button>
-    </footer>
-  </div>
+    </header>
+
+    <div
+      class="absolute left-[5.3%] top-[19%] w-[46%] max-w-[660px] wide:top-[18%] max-laptop:top-[17%] max-laptop:w-[56%] max-tablet:left-[7%] max-tablet:right-[6%] max-tablet:top-[139px] max-tablet:w-auto max-xs:top-32"
+    >
+      <p
+        class="mb-5 flex items-center gap-[9px] text-[10px] font-medium leading-[1.7] tracking-[.2em] max-tablet:mb-6 max-tablet:text-[8px] max-tablet:tracking-[.14em]"
+      >
+        <span class="text-[21px] leading-none" aria-hidden="true">✧</span> {{ copy.tagline }}
+      </p>
+      <h1
+        id="home-title"
+        class="text-[length:clamp(58px,5.55vw,92px)] leading-[1.05] font-medium tracking-[-.045em] text-balance [text-shadow:0_2px_25px_#193d4830] max-laptop:text-[67px] max-tablet:text-[length:clamp(54px,10vw,77px)] max-xs:text-[length:clamp(43px,13.7vw,59px)]"
+      >
+        <span class="whitespace-nowrap">{{ copy.titleFirst }}</span><br /><em class="font-normal text-[#f3d6a7]">{{ copy.titleSecond }}</em>
+      </h1>
+      <p class="mt-6 text-[length:clamp(14px,1.15vw,18px)] leading-[1.6] font-medium max-tablet:mt-[25px] max-tablet:text-[15px]">
+        {{ copy.lead }}
+      </p>
+      <p class="mt-[5px] max-w-[350px] text-[13px] leading-[1.8] text-[#fff1dbdc] max-tablet:max-w-[300px]">{{ copy.description }}</p>
+      <RouterLink
+        :to="startRoute"
+        class="group mt-[27px] inline-flex items-center justify-between gap-9 rounded-full border border-[#ffc49e45] bg-folk-red px-[25px] py-[15px] text-[13px] font-medium shadow-[0_5px_20px_#331c1833] transition duration-200 hover:-translate-y-0.5 hover:bg-folk-red-light max-tablet:mt-[25px]"
+        :class="heroControl"
+      >
+        {{ copy.start }}
+        <svg class="h-3 w-[23px] transition-transform duration-200 group-hover:translate-x-[3px]" viewBox="0 0 24 12" fill="none" aria-hidden="true">
+          <path d="M1 6h21m-6-5 6 5-6 5" stroke="currentColor" stroke-width="1.5" />
+        </svg>
+      </RouterLink>
+    </div>
+
+    <!-- Hidden wherever the map spans the full width (phones and portrait tablets), since it would sit on top of it. -->
+    <div
+      class="absolute bottom-[18%] left-[6%] w-1/4 text-[#fff0d4] max-laptop:left-[5.3%] max-laptop:w-[22%] max-laptop:portrait:hidden max-tablet:hidden"
+    >
+      <span class="text-[10px] font-medium leading-[1.7] tracking-[.2em]">{{ copy.mapTagline }}</span>
+      <p class="mt-2.5 max-w-[250px] font-serif text-2xl leading-[1.4] italic max-laptop:text-[21px]">{{ copy.mapHint }}</p>
+      <svg
+        class="absolute left-[70%] top-[68%] h-12 w-[110px] opacity-75 max-laptop:left-[65%] max-laptop:top-[105%] max-laptop:w-[65px]"
+        viewBox="0 0 112 48"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path d="M3 6c35 36 58 30 99 12m-15-8 17 7-9 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      </svg>
+    </div>
+
+    <!-- Full width on phones and portrait tablets, so both countries stay whole instead of being cropped. -->
+    <div
+      class="absolute bottom-[45px] right-0 w-3/5 max-w-[960px] wide:right-[4%] max-laptop:bottom-[38px] max-laptop:w-[69%] max-laptop:portrait:inset-x-[3%] max-laptop:portrait:bottom-7 max-laptop:portrait:w-auto max-tablet:inset-x-[3%] max-tablet:bottom-7 max-tablet:w-auto"
+    >
+      <CountryMap
+        :label="copy.mapLabel"
+        :latvia="copy.latvia"
+        :lithuania="copy.lithuania"
+        :latvia-subtitle="copy.latviaSubtitle"
+        :lithuania-subtitle="copy.lithuaniaSubtitle"
+      />
+    </div>
+  </section>
 </template>
