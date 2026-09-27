@@ -15,13 +15,14 @@ const countries = computed(() => [...countryGeometry].reverse().map((country) =>
   name: country.id === 'latvia' ? props.latvia : props.lithuania,
   subtitle: country.id === 'latvia' ? props.latviaSubtitle : props.lithuaniaSubtitle,
   tint: country.id === 'latvia' ? '#174d38' : '#183f35',
+  tintOpacity: country.id === 'latvia' ? 'opacity-35' : 'opacity-54',
   terrain: country.id === 'latvia' ? 'url(#painted-latvia-forest)' : 'url(#painted-land)',
   offset: country.id === 'latvia' ? -7 : 8,
 })))
 </script>
 
 <template>
-  <svg class="country-map" viewBox="0 0 800 360" role="group" :aria-label="label">
+  <svg class="block w-full overflow-visible" viewBox="0 0 800 360" role="group" :aria-label="label">
     <defs>
       <pattern id="painted-land" patternUnits="userSpaceOnUse" width="800" height="360">
         <image href="/artwork/painted-land-v1.webp" width="800" height="360" preserveAspectRatio="xMidYMid slice" />
@@ -43,18 +44,19 @@ const countries = computed(() => [...countryGeometry].reverse().map((country) =>
     <g v-for="country in countries" :key="country.id" :transform="`translate(0 ${country.offset})`">
       <!-- Client-side navigation: a plain href reloads the page and resets the chosen language. -->
       <RouterLink v-slot="{ href, navigate }" :to="`/${country.id}`" custom>
-      <a :href="href" :aria-label="`${country.name}: ${country.subtitle}`" class="map-country" :class="`map-country--${country.id}`" @click="navigate">
+      <a :href="href" :aria-label="`${country.name}: ${country.subtitle}`" class="group cursor-pointer outline-none [-webkit-tap-highlight-color:transparent]" @click="navigate">
         <title>{{ country.name }} · {{ country.subtitle }}</title>
-        <g class="map-piece">
+        <!-- Hover and keyboard focus lift the country and brighten its outline. -->
+        <g class="transition-[translate,filter] duration-300 ease-[ease] group-hover:-translate-y-[7px] group-focus-visible:-translate-y-[7px]">
           <path :d="country.path" transform="translate(0 22)" fill="#322b22" stroke="#322b22" stroke-width="3" filter="url(#map-shadow)" />
           <path v-for="depth in [18, 14, 10, 6]" :key="depth" :d="country.path" :transform="`translate(0 ${depth})`" fill="url(#map-edge)" stroke="#78583b" stroke-width="1.1" />
           <path :d="country.path" :fill="country.terrain" stroke="#d6b572" stroke-width="3" stroke-linejoin="round" />
-          <path :d="country.path" :fill="country.tint" class="map-tint" stroke="none" />
-          <path :d="country.path" fill="none" class="map-outline" stroke-linejoin="round" />
-          <g :transform="`translate(${country.label[0]} ${country.label[1]})`" class="map-label" filter="url(#map-label-shadow)">
-            <text class="map-name" text-anchor="middle" y="-12">{{ country.name }}</text>
-            <text class="map-subtitle" text-anchor="middle" y="12">{{ country.subtitle }}</text>
-            <g class="map-discover" transform="translate(0 30)">
+          <path :d="country.path" :fill="country.tint" stroke="none" class="transition-opacity duration-300 ease-[ease] group-hover:opacity-27 group-focus-visible:opacity-27" :class="country.tintOpacity" />
+          <path :d="country.path" fill="none" stroke-linejoin="round" class="stroke-[#e9c786] [stroke-width:1.8] transition-[stroke,stroke-width] duration-300 ease-[ease] group-hover:stroke-[#fff4ce] group-hover:stroke-4 group-focus-visible:stroke-[#fff4ce] group-focus-visible:stroke-4" />
+          <g :transform="`translate(${country.label[0]} ${country.label[1]})`" class="pointer-events-none text-[#fff3d8]" filter="url(#map-label-shadow)">
+            <text class="fill-current font-serif text-[35px] max-sm:translate-y-2 max-sm:text-[43px]" text-anchor="middle" y="-12">{{ country.name }}</text>
+            <text class="fill-current font-sans text-[12px] tracking-[.3px] max-sm:hidden" text-anchor="middle" y="12">{{ country.subtitle }}</text>
+            <g class="translate-y-[30px] transition-[translate] duration-300 ease-[ease] group-hover:translate-x-[5px] group-focus-visible:translate-x-[5px] max-sm:translate-y-[25px]">
               <path d="M-12 0h24m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" />
             </g>
           </g>
@@ -64,29 +66,3 @@ const countries = computed(() => [...countryGeometry].reverse().map((country) =>
     </g>
   </svg>
 </template>
-
-<style scoped>
-.country-map { display: block; width: 100%; overflow: visible; }
-.map-country { cursor: pointer; -webkit-tap-highlight-color: transparent; outline: none; }
-.map-piece { transition: transform .3s ease, filter .3s ease; }
-.map-tint { opacity: .35; transition: opacity .3s ease; }
-.map-country--lithuania .map-tint { opacity: .54; }
-.map-outline { stroke: #e9c786; stroke-width: 1.8; transition: stroke-width .3s ease, stroke .3s ease; }
-.map-label { color: #fff3d8; pointer-events: none; }
-.map-name { fill: currentColor; font-family: var(--font-serif); font-size: 35px; }
-.map-subtitle { fill: currentColor; font-family: var(--font-sans); font-size: 12px; letter-spacing: .3px; }
-.map-discover { transition: transform .3s ease; }
-.map-country:hover .map-piece, .map-country:focus-visible .map-piece { transform: translateY(-7px); }
-.map-country:hover .map-tint, .map-country:focus-visible .map-tint { opacity: .27; }
-.map-country:hover .map-outline, .map-country:focus-visible .map-outline { stroke: #fff4ce; stroke-width: 4; }
-.map-country:hover .map-discover, .map-country:focus-visible .map-discover { transform: translate(5px, 30px); }
-@media (max-width: 640px) {
-  .map-name { font-size: 43px; transform: translateY(8px); }
-  .map-subtitle { display: none; }
-  .map-discover { transform: translateY(25px); }
-  .map-country:hover .map-discover, .map-country:focus-visible .map-discover { transform: translate(5px, 25px); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .map-piece, .map-tint, .map-outline, .map-discover { transition: none; }
-}
-</style>
