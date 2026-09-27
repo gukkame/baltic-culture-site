@@ -45,12 +45,12 @@ const heroControl =
       decoding="async"
     />
     <div
-      class="pointer-events-none absolute inset-0 -z-1 bg-[linear-gradient(90deg,rgba(14,33,29,.66),transparent_60%),linear-gradient(180deg,rgba(14,28,23,.42),transparent_19%),linear-gradient(0deg,rgba(32,19,11,.53),transparent_30%)] max-tablet:bg-[linear-gradient(90deg,#172f28d9,#172f2866_100%),linear-gradient(0deg,#25170cc7,transparent_34%)]"
+      class="pointer-events-none absolute inset-0 -z-1 bg-hero-shade max-tablet:bg-hero-shade-full"
       aria-hidden="true"
     />
 
     <header
-      class="relative mx-[4.1%] flex h-28 items-center gap-[38px] border-b border-[#fff1d521] max-laptop:h-25 max-laptop:gap-6 max-tablet:mx-[6%] max-tablet:h-[87px] max-tablet:gap-3"
+      class="relative mx-[4.1%] flex h-28 items-center gap-[38px] border-b border-cream/13 max-laptop:h-25 max-laptop:gap-6 max-tablet:mx-[6%] max-tablet:h-[87px] max-tablet:gap-3"
     >
       <RouterLink
         to="/"
@@ -70,7 +70,7 @@ const heroControl =
           v-for="link in navLinks"
           :key="link.to"
           :to="link.to"
-          class="relative inline-block py-3 [text-shadow:0_1px_8px_#14261dcc] after:absolute after:bottom-[5px] after:left-0 after:right-full after:h-px after:bg-current after:transition-[right] after:duration-200 hover:after:right-0"
+          class="relative inline-block py-3 text-shadow-nav after:absolute after:bottom-[5px] after:left-0 after:right-full after:h-px after:bg-current after:transition-[right] after:duration-200 hover:after:right-0"
           :class="heroControl"
         >
           {{ link.label }}
@@ -78,7 +78,7 @@ const heroControl =
       </nav>
 
       <div
-        class="flex items-center gap-[7px] rounded-full bg-[#f5eedce6] px-[7px] text-[12px] text-[#263f36] max-tablet:ml-auto max-tablet:gap-px max-xs:text-[11px]"
+        class="flex items-center gap-[7px] rounded-full bg-linen/90 px-[7px] text-[12px] text-pine max-tablet:ml-auto max-tablet:gap-px max-xs:text-[11px]"
         role="group"
         :aria-label="copy.languageLabel"
       >
@@ -108,17 +108,17 @@ const heroControl =
       </p>
       <h1
         id="home-title"
-        class="text-[length:clamp(58px,5.55vw,92px)] leading-[1.05] font-medium tracking-[-.045em] text-balance [text-shadow:0_2px_25px_#193d4830] max-laptop:text-[67px] max-tablet:text-[length:clamp(54px,10vw,77px)] max-xs:text-[length:clamp(43px,13.7vw,59px)]"
+        class="text-[length:clamp(58px,5.55vw,92px)] leading-[1.05] font-medium tracking-[-.045em] text-balance text-shadow-title max-laptop:text-[67px] max-tablet:text-[length:clamp(54px,10vw,77px)] max-xs:text-[length:clamp(43px,13.7vw,59px)]"
       >
-        <span class="whitespace-nowrap">{{ copy.titleFirst }}</span><br /><em class="font-normal text-[#f3d6a7]">{{ copy.titleSecond }}</em>
+        <span class="whitespace-nowrap">{{ copy.titleFirst }}</span><br /><em class="font-normal text-sand">{{ copy.titleSecond }}</em>
       </h1>
       <p class="mt-6 text-[length:clamp(14px,1.15vw,18px)] leading-[1.6] font-medium max-tablet:mt-[25px] max-tablet:text-[15px]">
         {{ copy.lead }}
       </p>
-      <p class="mt-[5px] max-w-[350px] text-[13px] leading-[1.8] text-[#fff1dbdc] max-tablet:max-w-[300px]">{{ copy.description }}</p>
+      <p class="mt-[5px] max-w-[350px] text-[13px] leading-[1.8] text-cream/86 max-tablet:max-w-[300px]">{{ copy.description }}</p>
       <RouterLink
         :to="startRoute"
-        class="group mt-[27px] inline-flex items-center justify-between gap-9 rounded-full border border-[#ffc49e45] bg-folk-red px-[25px] py-[15px] text-[13px] font-medium shadow-[0_5px_20px_#331c1833] transition duration-200 hover:-translate-y-0.5 hover:bg-folk-red-light max-tablet:mt-[25px]"
+        class="group mt-[27px] inline-flex items-center justify-between gap-9 rounded-full border border-peach/27 bg-folk-red px-[25px] py-[15px] text-[13px] font-medium shadow-button transition duration-200 hover:-translate-y-0.5 hover:bg-folk-red-light max-tablet:mt-[25px]"
         :class="heroControl"
       >
         {{ copy.start }}
@@ -130,7 +130,7 @@ const heroControl =
 
     <!-- Hidden wherever the map spans the full width (phones and portrait tablets), since it would sit on top of it. -->
     <div
-      class="absolute bottom-[18%] left-[6%] w-1/4 text-[#fff0d4] max-laptop:left-[5.3%] max-laptop:w-[22%] max-laptop:portrait:hidden max-tablet:hidden"
+      class="absolute bottom-[18%] left-[6%] w-1/4 text-cream max-laptop:left-[5.3%] max-laptop:w-[22%] max-laptop:portrait:hidden max-tablet:hidden"
     >
       <span class="text-[10px] font-medium leading-[1.7] tracking-[.2em]">{{ copy.mapTagline }}</span>
       <p class="mt-2.5 max-w-[250px] font-serif text-2xl leading-[1.4] italic max-laptop:text-[21px]">{{ copy.mapHint }}</p>

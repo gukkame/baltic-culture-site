@@ -2,18 +2,15 @@
 import { computed, watch, watchEffect } from 'vue'
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
 import { useLocale } from './composables/useLocale'
-import { aboutPaths, countryFromSlug, countrySymbols } from './router/paths'
+import { aboutPaths, countrySymbols } from './router/paths'
 
 const { locale, t } = useLocale()
 const route = useRoute()
 const router = useRouter()
 const isHome = computed(() => route.name === 'home')
 
-// On a country's pages (the country page and its dances and songs) the footer carries that country's folk sign.
-const footerSymbol = computed(() => {
-  const country = typeof route.params.country === 'string' ? countryFromSlug(route.params.country) : undefined
-  return country ? countrySymbols[country] : undefined
-})
+// The footer carries the folk sign of the chosen language's country, whichever page is open.
+const footerSymbol = computed(() => countrySymbols[locale.value === 'lt' ? 'lithuania' : 'latvia'])
 
 function focusMain() {
   document.getElementById('main-content')?.focus()
@@ -48,7 +45,6 @@ watch(locale, (value) => {
       {{ t('site.title') }} — placeholder content ·
       <RouterLink :to="aboutPaths[locale]" class="underline underline-offset-4 hover:text-terracotta-dark">{{ t('about.footerLink') }}</RouterLink>
       <img
-        v-if="footerSymbol"
         :src="footerSymbol"
         alt=""
         class="pointer-events-none absolute right-6 top-1/2 hidden size-12 -translate-y-1/2 opacity-70 sm:block"

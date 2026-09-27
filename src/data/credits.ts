@@ -35,94 +35,21 @@ export const latvianSymbolCredits: ImageCredit[] = [
     sourceUrl: commons('Auseklis.svg'),
     license: CC_BY_SA_4,
   },
-  {
-    src: '/images/symbols/maras-krusts.svg',
-    title: { lv: 'Māras krusts', lt: 'Māros kryžius' },
-    author: 'RootOfAllLight',
-    sourceUrl: commons('Mārakrusts.svg'),
-    license: CC_BY_SA_4,
-  },
-  {
-    src: '/images/symbols/laima.svg',
-    title: { lv: 'Laimas zīme', lt: 'Laimos ženklas' },
-    author: 'RootOfAllLight',
-    sourceUrl: commons('Laima.svg'),
-    license: CC_BY_SA_4,
-  },
-  {
-    src: '/images/symbols/zalktis.svg',
-    title: { lv: 'Zalktis', lt: 'Žaltys' },
-    author: 'RootOfAllLight',
-    sourceUrl: commons('Zalshka.svg'),
-    license: CC_BY_SA_4,
-  },
-  {
-    src: '/images/symbols/baltic-flower.svg',
-    title: { lv: 'Baltu zieds', lt: 'Baltų žiedas' },
-    author: 'RootOfAllLight',
-    sourceUrl: commons('Baltic Flower Snowflake 1.svg'),
-    license: CC_BY_SA_3,
-  },
 ]
 
 
 
-// Lithuanian woven sash (juosta) motifs, redrawn for this site from the chart in the
-// Lithuanian Folk Art Institute's article, which also gives the names and meanings.
+// The Lithuanian symbol used across the site: the rožėlė sash (juosta) motif, drawn cell by cell
+// after the chart in the Lithuanian Folk Art Institute's article, which also gives its name and meaning.
 const LTFAI_SYMBOLISM = 'https://ltfai.org/the-rich-symbolism-of-lithuanian-folk-art/'
 
 export const lithuanianSymbols: ImageCredit[] = [
-  {
-    src: '/images/symbols/lt/akute.svg',
-    title: { lv: 'Akutė (vārnas actiņa)', lt: 'Akutė (varnos akutė)' },
-    description: {
-      lv: 'Saukta arī par pasaules nabu – reta un noslēpumaina zīme.',
-      lt: 'Dar vadinama pasaulio bamba – retas ir paslaptingas ženklas.',
-    },
-    sourceUrl: LTFAI_SYMBOLISM,
-  },
   {
     src: '/images/symbols/lt/rozele.svg',
     title: { lv: 'Rožėlė (rozīte, zvaigznīte)', lt: 'Rožėlė (žvaigždutė)' },
     description: {
       lv: 'Rozete – dzīves loka un mūžības zīme.',
       lt: 'Rozetė – gyvenimo rato ir amžinybės ženklas.',
-    },
-    sourceUrl: LTFAI_SYMBOLISM,
-  },
-  {
-    src: '/images/symbols/lt/eglute.svg',
-    title: { lv: 'Eglutė (eglīte)', lt: 'Eglutė' },
-    description: {
-      lv: 'Egle – viens no raksturīgākajiem lietuviešu tautas mākslas kokiem, sievišķs maiguma un rūpju simbols.',
-      lt: 'Eglė – vienas būdingiausių lietuvių liaudies meno medžių, moteriškas švelnumo ir globos simbolis.',
-    },
-    sourceUrl: LTFAI_SYMBOLISM,
-  },
-  {
-    src: '/images/symbols/lt/kryziukas.svg',
-    title: { lv: 'Kryžiukas (krustiņš)', lt: 'Kryžiukas (krikštelis)' },
-    description: {
-      lv: 'Viens no izplatītākajiem jostu rakstu motīviem.',
-      lt: 'Vienas dažniausių juostų raštų motyvų.',
-    },
-    sourceUrl: LTFAI_SYMBOLISM,
-  },
-  {
-    src: '/images/symbols/lt/zaltinelis.svg',
-    title: { lv: 'Žaltinėlis (zalktītis)', lt: 'Žaltinėlis' },
-    description: {
-      lv: 'Zalktis ir nozīmīga būtne lietuviešu ticējumos – mājas un ģimenes sargs.',
-      lt: 'Žaltys – svarbi lietuvių tikėjimų būtybė, namų ir šeimos sargas.',
-    },
-    sourceUrl: LTFAI_SYMBOLISM,
-  },
-  {
-    src: '/images/symbols/lt/ozkapede.svg',
-    title: { lv: 'Ožkapėdė (kazas pēdiņa)', lt: 'Ožkapėdė (ožkanagutis)' },
-    description: {
-      lv: 'Motīva nosaukums nozīmē „kazas pēda”.',
-      lt: 'Motyvo pavadinimas reiškia „ožkos pėda“.',
     },
     sourceUrl: LTFAI_SYMBOLISM,
   },
