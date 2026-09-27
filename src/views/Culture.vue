@@ -194,10 +194,6 @@ const heroImage = computed(() => (validCountry.value ? galleryByCountry[validCou
               <figcaption class="p-4">
                 <p class="font-serif text-lg text-ink">{{ image.title[locale] }}</p>
                 <p v-if="image.description" class="mt-2 text-sm leading-relaxed text-ink-light">{{ image.description[locale] }}</p>
-                <p v-if="image.author && image.license" class="mt-2 text-xs text-ink-light">
-                  {{ image.author }} ·
-                  <a :href="image.license.url" target="_blank" rel="noopener" class="underline underline-offset-2 hover:text-terracotta-dark">{{ image.license.name }}</a>
-                </p>
               </figcaption>
             </figure>
           </li>

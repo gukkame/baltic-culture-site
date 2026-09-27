@@ -24,7 +24,7 @@ const galleryGroups = computed(() =>
 const imageSections = computed(() =>
   [
     { id: 'about-symbols', title: t('about.symbolsTitle'), intro: t('about.symbolsIntro'), groups: symbolGroups.value },
-    { id: 'about-gallery', title: t('about.galleryTitle'), intro: '', groups: galleryGroups.value },
+    { id: 'about-gallery', title: t('about.galleryTitle'), intro: t('about.galleryIntro'), groups: galleryGroups.value },
   ].filter((section) => section.groups.length),
 )
 
