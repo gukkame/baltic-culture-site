@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLocale } from '../composables/useLocale'
 import { contentByCountry, isCountry } from '../data'
@@ -61,8 +61,30 @@ const showImages = computed(() => hasImages.value && currentFilter.value === 'im
 // Card currently hovered/focused; only that card plays its video preview.
 const previewId = ref<string>()
 
-// A photo from the country in the top-right corner: its first gallery image, which is already credited on the About page.
-const heroImage = computed(() => (validCountry.value ? galleryByCountry[validCountry.value][0] : undefined))
+// Top-right corner: a slideshow of the country's gallery photos (credited on the About page),
+// cross-fading to the next one every few seconds.
+const HERO_INTERVAL_MS = 4500
+const heroImages = computed(() => (validCountry.value ? galleryByCountry[validCountry.value] : []))
+const heroIndex = ref(0)
+// Only the current and the next photo are fetched, so the slideshow doesn't download the whole gallery up front.
+const heroFetched = ref(new Set<number>())
+let heroTimer: ReturnType<typeof setInterval> | undefined
+
+function startHeroSlideshow() {
+  clearInterval(heroTimer)
+  heroIndex.value = 0
+  heroFetched.value = new Set([0, 1])
+  // Keep a still photo for visitors who ask for less motion, or when there is nothing to cycle through.
+  if (heroImages.value.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  heroTimer = setInterval(() => {
+    const count = heroImages.value.length
+    heroIndex.value = (heroIndex.value + 1) % count
+    heroFetched.value.add((heroIndex.value + 1) % count)
+  }, HERO_INTERVAL_MS)
+}
+
+watch(validCountry, startHeroSlideshow, { immediate: true })
+onBeforeUnmount(() => clearInterval(heroTimer))
 </script>
 
 <template>
@@ -105,7 +127,15 @@ const heroImage = computed(() => (validCountry.value ? galleryByCountry[validCou
       <div
         class="absolute right-0 top-0 aspect-[942/542] w-[38%] overflow-hidden drop-shadow-[0_8px_20px_rgba(50,35,20,0.14)] [clip-path:url(#cultureHeroMask)] sm:w-[35%] lg:w-1/2"
       >
-        <img v-if="heroImage" :src="heroImage.src" :alt="heroImage.title[locale]" class="h-full w-full object-cover" />
+        <img
+          v-for="(image, index) in heroImages"
+          :key="image.src"
+          :src="heroFetched.has(index) ? image.src : undefined"
+          :alt="index === heroIndex ? image.title[locale] : ''"
+          :aria-hidden="index !== heroIndex"
+          class="absolute inset-0 size-full object-cover transition-opacity duration-1000 ease-in-out"
+          :class="index === heroIndex ? 'opacity-100' : 'opacity-0'"
+        />
       </div>
 
       <div

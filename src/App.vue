@@ -19,10 +19,11 @@ function focusMain() {
   document.getElementById('main-content')?.focus()
 }
 
-// Keep the page language, title and description (index.html starts them in Latvian) in the chosen language.
+// Keep the page language, title, description and tab icon (index.html starts them in Latvian) in the chosen language.
 watchEffect(() => {
   document.documentElement.lang = locale.value
   document.title = t('site.title')
+  document.querySelector('link[rel="icon"]')?.setAttribute('href', `/favicon-${locale.value}.svg`)
   document.querySelector('meta[name="description"]')?.setAttribute('content', t('site.description'))
 })
 
