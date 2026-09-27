@@ -1,17 +1,52 @@
 <script setup lang="ts">
-import { useId } from 'vue'
+import { computed, onBeforeUnmount, ref, useId, watch } from 'vue'
 
-defineProps<{ src: string; alt?: string }>()
+export interface HeroSlide {
+  src: string
+  /** Leave out for a purely decorative image. */
+  alt?: string
+}
+
+const props = defineProps<{
+  /** One image stays still; several cross-fade from one to the next. */
+  images: HeroSlide[]
+}>()
+
+const SLIDE_INTERVAL_MS = 4500
+
 const maskId = useId()
+const current = ref(0)
+// Only the current and the next image are fetched, so a slideshow doesn't download every image up front.
+const fetched = ref(new Set<number>())
+let timer: ReturnType<typeof setInterval> | undefined
+
+const currentAlt = computed(() => props.images[current.value]?.alt)
+
+function start() {
+  clearInterval(timer)
+  current.value = 0
+  fetched.value = new Set([0, 1])
+  // Keep a still image for visitors who ask for less motion, or when there is nothing to cycle through.
+  if (props.images.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  timer = setInterval(() => {
+    const count = props.images.length
+    current.value = (current.value + 1) % count
+    fetched.value.add((current.value + 1) % count)
+  }, SLIDE_INTERVAL_MS)
+}
+
+// Restart from the first image whenever a different set comes in (e.g. switching country).
+watch(() => props.images.map((image) => image.src).join('|'), start, { immediate: true })
+onBeforeUnmount(() => clearInterval(timer))
 </script>
 
 <template>
   <svg
-    class="pointer-events-none absolute right-0 top-0 aspect-[942/542] w-[38%] drop-shadow-[0_8px_20px_rgba(50,35,20,0.14)] sm:w-[35%] lg:w-1/2"
+    class="pointer-events-none absolute right-0 top-0 aspect-[942/542] w-[38%] drop-shadow-hero sm:w-[35%] lg:w-1/2"
     viewBox="0 0 942 542"
-    :aria-hidden="alt ? undefined : true"
-    :role="alt ? 'img' : undefined"
-    :aria-label="alt"
+    :aria-hidden="currentAlt ? undefined : true"
+    :role="currentAlt ? 'img' : undefined"
+    :aria-label="currentAlt"
     focusable="false"
   >
     <defs>
@@ -28,6 +63,17 @@ const maskId = useId()
         />
       </clipPath>
     </defs>
-    <image :href="src" width="942" height="542" preserveAspectRatio="xMidYMid slice" :clip-path="`url(#${maskId})`" />
+    <g :clip-path="`url(#${maskId})`">
+      <image
+        v-for="(image, index) in images"
+        :key="image.src"
+        :href="fetched.has(index) ? image.src : undefined"
+        width="942"
+        height="542"
+        preserveAspectRatio="xMidYMid slice"
+        class="transition-opacity duration-1000 ease-in-out"
+        :class="index === current ? 'opacity-100' : 'opacity-0'"
+      />
+    </g>
   </svg>
 </template>

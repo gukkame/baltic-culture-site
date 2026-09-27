@@ -55,7 +55,7 @@ function confirmStartOver() {
 <template>
   <section class="relative" aria-labelledby="quiz-title">
     <div class="relative mx-auto max-w-[1800px]">
-      <CornerHeroImage src="/images/hero/quiz-folk-dancers.jpg" />
+      <CornerHeroImage :images="[{ src: '/images/hero/quiz-folk-dancers.webp' }]" />
       <div class="mx-auto min-h-[clamp(140px,22vw,220px)] max-w-6xl px-4 pb-6 pt-10 sm:min-h-[clamp(180px,20vw,260px)] sm:px-6 sm:pt-16 lg:min-h-[clamp(320px,29vw,520px)] lg:px-8">
         <div class="max-w-[60%] lg:max-w-md">
           <RouterLink
