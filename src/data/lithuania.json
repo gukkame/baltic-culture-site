@@ -132,105 +132,110 @@
     "category": "song",
     "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=LnkV9_o4c8o",
-    "contentStatus": "ai-generated-placeholder",
+    "contentStatus": "title-from-video",
     "videoUrl": "https://www.youtube.com/watch?v=LnkV9_o4c8o",
     "audioUrl": "",
     "title": {
-      "lv": "Nezināma tautasdziesma Nr. 1",
-      "lt": "Nežinoma liaudies daina Nr. 1"
+      "lv": "Zynu, zynu tāva sātu",
+      "lt": "Zynu, zynu tāva sātu"
     },
     "tagline": {
-      "lv": "Gaida īsto nosaukumu un aprakstu no avota video",
-      "lt": "Laukia tikro pavadinimo ir aprašymo iš šaltinio vaizdo įrašo"
+      "lv": "Folkloras kopa \"Ceiruleits\", Latgale",
+      "lt": "Folkloro ansamblis „Ceiruleits\", Latgala"
     },
     "description": {
-      "lv": "Avota materiālā šai dziesmai bija pievienota tikai video saite, bez nosaukuma vai apraksta. Šis teksts ir pilnībā mākslīgā intelekta ģenerēts vietturis — reālais saturs jāiegūst, noklausoties video vai vaicājot klientam.",
-      "lt": "Šaltinio medžiagoje šiai dainai buvo pridėta tik vaizdo įrašo nuoroda, be pavadinimo ar aprašymo. Šis tekstas yra visiškai dirbtinio intelekto sugeneruotas vietaženklis — tikrą turinį reikia gauti peržiūrėjus vaizdo įrašą arba paklausus užsakovo."
-    }
+      "lv": "Latgaliešu tautasdziesma no folkloras kopas \"Ceiruleits\" albuma \"Skaņu balseņu palaidu\" (Lauska, 2021), kurā piedalās arī Anna Kārkle.",
+      "lt": "Latgalių liaudies daina iš folkloro ansamblio „Ceiruleits\" albumo „Skaņu balseņu palaidu\" (Lauska, 2021), kuriame dalyvauja ir Anna Kārkle."
+    },
+    "sourceNote": "Title taken from the YouTube video. The performers (Ceiruleits) are a Latgalian folk group from Latvia and the song is in Latgalian, so this entry probably belongs in latvia.json — confirm with the project owner."
   },
   {
     "id": "unknown-song-2",
     "category": "song",
     "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=Oq31-hjH__g",
-    "contentStatus": "ai-generated-placeholder",
+    "contentStatus": "title-from-video",
     "videoUrl": "https://www.youtube.com/watch?v=Oq31-hjH__g",
     "audioUrl": "",
     "title": {
-      "lv": "Nezināma tautasdziesma Nr. 2",
-      "lt": "Nežinoma liaudies daina Nr. 2"
+      "lv": "Sazīdēja gaiļa pīši",
+      "lt": "Sazīdēja gaiļa pīši"
     },
     "tagline": {
-      "lv": "Gaida īsto nosaukumu un aprakstu no avota video",
-      "lt": "Laukia tikro pavadinimo ir aprašymo iš šaltinio vaizdo įrašo"
+      "lv": "Folkloras kopa \"Ceiruleits\", Latgale",
+      "lt": "Folkloro ansamblis „Ceiruleits\", Latgala"
     },
     "description": {
-      "lv": "Avota materiālā šai dziesmai bija pievienota tikai video saite, bez nosaukuma vai apraksta. Šis teksts ir pilnībā mākslīgā intelekta ģenerēts vietturis — reālais saturs jāiegūst, noklausoties video vai vaicājot klientam.",
-      "lt": "Šaltinio medžiagoje šiai dainai buvo pridėta tik vaizdo įrašo nuoroda, be pavadinimo ar aprašymo. Šis tekstas yra visiškai dirbtinio intelekto sugeneruotas vietaženklis — tikrą turinį reikia gauti peržiūrėjus vaizdo įrašą arba paklausus užsakovo."
-    }
+      "lv": "Latgaliešu tautasdziesma no folkloras kopas \"Ceiruleits\" albuma \"Skaņu balseņu palaidu\" (Lauska, 2021), kurā piedalās arī Anna Kārkle.",
+      "lt": "Latgalių liaudies daina iš folkloro ansamblio „Ceiruleits\" albumo „Skaņu balseņu palaidu\" (Lauska, 2021), kuriame dalyvauja ir Anna Kārkle."
+    },
+    "sourceNote": "Title taken from the YouTube video. The performers (Ceiruleits) are a Latgalian folk group from Latvia and the song is in Latgalian, so this entry probably belongs in latvia.json — confirm with the project owner."
   },
   {
     "id": "unknown-song-3",
     "category": "song",
     "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=GXv3W1UOLhg",
-    "contentStatus": "ai-generated-placeholder",
+    "contentStatus": "title-from-video",
     "videoUrl": "https://www.youtube.com/watch?v=GXv3W1UOLhg",
     "audioUrl": "",
     "title": {
-      "lv": "Nezināma tautasdziesma Nr. 3",
-      "lt": "Nežinoma liaudies daina Nr. 3"
+      "lv": "Nadūd Dīvs veitūlam",
+      "lt": "Nadūd Dīvs veitūlam"
     },
     "tagline": {
-      "lv": "Gaida īsto nosaukumu un aprakstu no avota video",
-      "lt": "Laukia tikro pavadinimo ir aprašymo iš šaltinio vaizdo įrašo"
+      "lv": "Folkloras kopa \"Ceiruleits\", Latgale",
+      "lt": "Folkloro ansamblis „Ceiruleits\", Latgala"
     },
     "description": {
-      "lv": "Avota materiālā šai dziesmai bija pievienota tikai video saite, bez nosaukuma vai apraksta. Šis teksts ir pilnībā mākslīgā intelekta ģenerēts vietturis — reālais saturs jāiegūst, noklausoties video vai vaicājot klientam.",
-      "lt": "Šaltinio medžiagoje šiai dainai buvo pridėta tik vaizdo įrašo nuoroda, be pavadinimo ar aprašymo. Šis tekstas yra visiškai dirbtinio intelekto sugeneruotas vietaženklis — tikrą turinį reikia gauti peržiūrėjus vaizdo įrašą arba paklausus užsakovo."
-    }
+      "lv": "Latgaliešu tautasdziesma no folkloras kopas \"Ceiruleits\" albuma \"Skaņu balseņu palaidu\" (Lauska, 2021), kurā piedalās arī Anna Kārkle.",
+      "lt": "Latgalių liaudies daina iš folkloro ansamblio „Ceiruleits\" albumo „Skaņu balseņu palaidu\" (Lauska, 2021), kuriame dalyvauja ir Anna Kārkle."
+    },
+    "sourceNote": "Title taken from the YouTube video. The performers (Ceiruleits) are a Latgalian folk group from Latvia and the song is in Latgalian, so this entry probably belongs in latvia.json — confirm with the project owner."
   },
   {
     "id": "unknown-song-4",
     "category": "song",
     "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=HpurNXPOCdo",
-    "contentStatus": "ai-generated-placeholder",
+    "contentStatus": "title-from-video",
     "videoUrl": "https://www.youtube.com/watch?v=HpurNXPOCdo",
     "audioUrl": "",
     "title": {
-      "lv": "Nezināma tautasdziesma Nr. 4",
-      "lt": "Nežinoma liaudies daina Nr. 4"
+      "lv": "Pīci bāri kumeleņi",
+      "lt": "Pīci bāri kumeleņi"
     },
     "tagline": {
-      "lv": "Gaida īsto nosaukumu un aprakstu no avota video",
-      "lt": "Laukia tikro pavadinimo ir aprašymo iš šaltinio vaizdo įrašo"
+      "lv": "Folkloras kopa \"Ceiruleits\", Latgale",
+      "lt": "Folkloro ansamblis „Ceiruleits\", Latgala"
     },
     "description": {
-      "lv": "Avota materiālā šai dziesmai bija pievienota tikai video saite, bez nosaukuma vai apraksta. Šis teksts ir pilnībā mākslīgā intelekta ģenerēts vietturis — reālais saturs jāiegūst, noklausoties video vai vaicājot klientam.",
-      "lt": "Šaltinio medžiagoje šiai dainai buvo pridėta tik vaizdo įrašo nuoroda, be pavadinimo ar aprašymo. Šis tekstas yra visiškai dirbtinio intelekto sugeneruotas vietaženklis — tikrą turinį reikia gauti peržiūrėjus vaizdo įrašą arba paklausus užsakovo."
-    }
+      "lv": "Latgaliešu dancis folkloras kopas \"Ceiruleits\" izpildījumā.",
+      "lt": "Latgalių šokis (dancis), atliekamas folkloro ansamblio „Ceiruleits\"."
+    },
+    "sourceNote": "Title taken from the YouTube video. The performers (Ceiruleits) are a Latgalian folk group from Latvia and the song is in Latgalian, so this entry probably belongs in latvia.json — confirm with the project owner."
   },
   {
     "id": "unknown-song-5",
     "category": "song",
     "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=uBbbKnvtsic",
-    "contentStatus": "ai-generated-placeholder",
+    "contentStatus": "title-from-video",
     "videoUrl": "https://www.youtube.com/watch?v=uBbbKnvtsic",
     "audioUrl": "",
     "title": {
-      "lv": "Nezināma tautasdziesma Nr. 5",
-      "lt": "Nežinoma liaudies daina Nr. 5"
+      "lv": "Jau mani vad",
+      "lt": "Jau mani vad"
     },
     "tagline": {
-      "lv": "Gaida īsto nosaukumu un aprakstu no avota video",
-      "lt": "Laukia tikro pavadinimo ir aprašymo iš šaltinio vaizdo įrašo"
+      "lv": "Folkloras kopa \"Ceiruleits\", Latgale",
+      "lt": "Folkloro ansamblis „Ceiruleits\", Latgala"
     },
     "description": {
-      "lv": "Avota materiālā šai dziesmai bija pievienota tikai video saite, bez nosaukuma vai apraksta. Šis teksts ir pilnībā mākslīgā intelekta ģenerēts vietturis — reālais saturs jāiegūst, noklausoties video vai vaicājot klientam.",
-      "lt": "Šaltinio medžiagoje šiai dainai buvo pridėta tik vaizdo įrašo nuoroda, be pavadinimo ar aprašymo. Šis tekstas yra visiškai dirbtinio intelekto sugeneruotas vietaženklis — tikrą turinį reikia gauti peržiūrėjus vaizdo įrašą arba paklausus užsakovo."
-    }
+      "lv": "Latgaliešu tautasdziesma folkloras kopas \"Ceiruleits\" izpildījumā.",
+      "lt": "Latgalių liaudies daina, atliekama folkloro ansamblio „Ceiruleits\"."
+    },
+    "sourceNote": "Title taken from the YouTube video. The performers (Ceiruleits) are a Latgalian folk group from Latvia and the song is in Latgalian, so this entry probably belongs in latvia.json — confirm with the project owner."
   },
   {
     "id": "isjos-brolutelis",

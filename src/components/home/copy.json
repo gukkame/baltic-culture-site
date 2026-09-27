@@ -1,22 +1,22 @@
 {
   "lv": {
     "brandTop": "Baltijas", "brandBottom": "tautas mantojums",
-    "navExplore": "Iepazīsti", "navQuiz": "Viktorīna", "navAbout": "Par projektu", "navLabel": "Galvenā navigācija", "languageLabel": "Izvēlies valodu",
-    "eyebrow": "LATVIJAS UN LIETUVAS DZĪVĀS TRADĪCIJAS",
+    "navQuiz": "Viktorīna", "navAbout": "Par projektu", "navLabel": "Galvenā navigācija", "languageLabel": "Izvēlies valodu",
+    "tagline": "LATVIJAS UN LIETUVAS DZĪVĀS TRADĪCIJAS",
     "titleFirst": "Dejo. Dziedi.", "titleSecond": "Iepazīsti.",
     "lead": "Divas kaimiņzemes. Tik daudz stāstu.",
     "description": "Atklāj Latvijas un Lietuvas dejas, dziesmas un tradīcijas, kas dzīvo mums līdzās.",
-    "start": "Sākt ceļojumu", "mapEyebrow": "IZVĒLIES SAVU CEĻOJUMU", "mapHint": "Pieskaries zemei un atklāj tās stāstus.",
+    "start": "Sākt ceļojumu", "mapTagline": "IZVĒLIES SAVU CEĻOJUMU", "mapHint": "Pieskaries zemei un atklāj tās stāstus.",
     "mapLabel": "Izvēlies Latviju vai Lietuvu interaktīvajā kartē", "mapLink": "Iepazīsti", "latvia": "Latvija", "lithuania": "Lietuva", "latviaSubtitle": "Dejas, dziesmas un stāsti", "lithuaniaSubtitle": "Dejas, dziesmas un stāsti"
   },
   "lt": {
     "brandTop": "Baltijos", "brandBottom": "tautos paveldas",
-    "navExplore": "Pažink", "navQuiz": "Viktorina", "navAbout": "Apie projektą", "navLabel": "Pagrindinė navigacija", "languageLabel": "Pasirink kalbą",
-    "eyebrow": "GYVOSIOS LATVIJOS IR LIETUVOS TRADICIJOS",
+    "navQuiz": "Viktorina", "navAbout": "Apie projektą", "navLabel": "Pagrindinė navigacija", "languageLabel": "Pasirink kalbą",
+    "tagline": "GYVOSIOS LATVIJOS IR LIETUVOS TRADICIJOS",
     "titleFirst": "Šok. Dainuok.", "titleSecond": "Pažink.",
     "lead": "Dvi kaimynės. Tiek daug istorijų.",
     "description": "Atrask Latvijos ir Lietuvos šokius, dainas ir tradicijas, kurios gyvena šalia mūsų.",
-    "start": "Pradėti kelionę", "mapEyebrow": "PASIRINK SAVO KELIONĘ", "mapHint": "Paliesk šalį ir atrask jos istorijas.",
+    "start": "Pradėti kelionę", "mapTagline": "PASIRINK SAVO KELIONĘ", "mapHint": "Paliesk šalį ir atrask jos istorijas.",
     "mapLabel": "Interaktyviame žemėlapyje pasirink Latviją arba Lietuvą", "mapLink": "Pažink", "latvia": "Latvija", "lithuania": "Lietuva", "latviaSubtitle": "Šokiai, dainos ir istorijos", "lithuaniaSubtitle": "Šokiai, dainos ir istorijos"
   }
 }

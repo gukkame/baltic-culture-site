@@ -38,9 +38,9 @@
 .home-languages button[aria-pressed="true"] { opacity: 1; font-weight: 600; }
 .home-languages span { opacity: .5; }
 .home-intro { position: absolute; left: 5.3%; top: 19%; width: 46%; max-width: 660px; }
-.home-eyebrow { font-size: 10px; font-weight: 500; line-height: 1.7; letter-spacing: .2em; }
-.home-intro .home-eyebrow { display: flex; align-items: center; gap: 9px; margin-bottom: 20px; }
-.home-intro .home-eyebrow span { font-size: 21px; line-height: 1; }
+.home-tagline { font-size: 10px; font-weight: 500; line-height: 1.7; letter-spacing: .2em; }
+.home-intro .home-tagline { display: flex; align-items: center; gap: 9px; margin-bottom: 20px; }
+.home-intro .home-tagline span { font-size: 21px; line-height: 1; }
 .home-intro h1 { font-size: clamp(58px, 5.55vw, 92px); line-height: 1.05; letter-spacing: -.045em; font-weight: 500; text-wrap: balance; text-shadow: 0 2px 25px #193d4830; }
 .home-intro h1 em { font-weight: 400; color: #f3d6a7; }
 .home-title-first { white-space: nowrap; }
@@ -50,10 +50,9 @@
 .home-start svg { width: 23px; height: 12px; transition: transform .2s; }
 .home-start:hover { background: #b04d3d; transform: translateY(-2px); }
 .home-start:hover svg { transform: translateX(3px); }
-.home-map-wrap { position: absolute; width: 60%; max-width: 960px; right: 0; bottom: 45px; outline: none; }
-.home-map-wrap:focus-visible { outline: 1px dashed #fff2d966; outline-offset: -20px; border-radius: 40%; }
+.home-map-wrap { position: absolute; width: 60%; max-width: 960px; right: 0; bottom: 45px; }
 .home-map-note { position: absolute; left: 6%; bottom: 18%; width: 25%; color: #fff0d4; }
-.home-map-note .home-eyebrow { font-size: 10px; }
+.home-map-note .home-tagline { font-size: 10px; }
 .home-map-note p { font-family: var(--font-serif); font-style: italic; font-size: 24px; line-height: 1.4; max-width: 250px; margin-top: 10px; }
 .home-sketch-arrow { position: absolute; width: 110px; height: 48px; left: 70%; top: 68%; opacity: .75; }
 @media (min-width: 1750px) { .home-intro { top: 18%; } .home-map-wrap { right: 4%; } }
@@ -86,7 +85,7 @@
   .home-languages { margin-left: auto; gap: 1px; }
   .home-languages button { min-width: 32px; }
   .home-intro { left: 7%; right: 6%; top: 139px; width: auto; }
-  .home-intro .home-eyebrow { font-size: 8px; letter-spacing: .14em; margin-bottom: 24px; }
+  .home-intro .home-tagline { font-size: 8px; letter-spacing: .14em; margin-bottom: 24px; }
   .home-intro h1 { font-size: clamp(54px, 10vw, 77px); }
   .home-lead { margin-top: 25px; font-size: 15px; }
   .home-description { font-size: 13px; max-width: 300px; }

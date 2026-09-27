@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLocale } from '../composables/useLocale'
 import CountryMap from '../components/home/CountryMap.vue'
@@ -9,16 +9,8 @@ import '../components/home/home.css'
 
 const { locale, setLocale } = useLocale()
 const copy = computed(() => homeCopy[locale.value])
-const countryMap = ref<HTMLElement>()
 // The journey starts in the country whose language the visitor picked.
 const startRoute = computed(() => (locale.value === 'lt' ? '/lithuania' : '/latvia'))
-const scrollBehavior = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' as const : 'smooth' as const
-
-function goTo(section?: HTMLElement) {
-  if (!section) return
-  section.focus({ preventScroll: true })
-  section.scrollIntoView({ behavior: scrollBehavior(), block: 'center' })
-}
 </script>
 
 <template>
@@ -31,7 +23,6 @@ function goTo(section?: HTMLElement) {
           <FolkMark /><span>{{ copy.brandTop }}<br /><small>{{ copy.brandBottom }}</small></span>
         </RouterLink>
         <nav class="home-nav" :aria-label="copy.navLabel">
-          <button @click="goTo(countryMap)">{{ copy.navExplore }}</button>
           <RouterLink to="/viktorina">{{ copy.navQuiz }}</RouterLink>
           <RouterLink to="/about">{{ copy.navAbout }}</RouterLink>
         </nav>
@@ -42,7 +33,7 @@ function goTo(section?: HTMLElement) {
         </div>
       </header>
       <div class="home-intro">
-        <p class="home-eyebrow"><span aria-hidden="true">✧</span> {{ copy.eyebrow }}</p>
+        <p class="home-tagline"><span aria-hidden="true">✧</span> {{ copy.tagline }}</p>
         <h1 id="home-title"><span class="home-title-first">{{ copy.titleFirst }}</span><br /><em>{{ copy.titleSecond }}</em></h1>
         <p class="home-lead">{{ copy.lead }}</p>
         <p class="home-description">{{ copy.description }}</p>
@@ -52,10 +43,10 @@ function goTo(section?: HTMLElement) {
         </RouterLink>
       </div>
       <div class="home-map-note">
-        <span class="home-eyebrow">{{ copy.mapEyebrow }}</span><p>{{ copy.mapHint }}</p>
+        <span class="home-tagline">{{ copy.mapTagline }}</span><p>{{ copy.mapHint }}</p>
         <svg class="home-sketch-arrow" viewBox="0 0 112 48" fill="none" aria-hidden="true"><path d="M3 6c35 36 58 30 99 12m-15-8 17 7-9 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
       </div>
-      <div ref="countryMap" class="home-map-wrap" tabindex="-1" :aria-label="copy.mapLabel">
+      <div class="home-map-wrap">
         <CountryMap :label="copy.mapLabel" :latvia="copy.latvia" :lithuania="copy.lithuania" :latvia-subtitle="copy.latviaSubtitle" :lithuania-subtitle="copy.lithuaniaSubtitle" />
       </div>
     </section>
