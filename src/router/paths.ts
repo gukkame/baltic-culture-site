@@ -15,11 +15,6 @@ export const aboutPaths: Record<Locale, string> = {
 
 export const quizPath = '/viktorina'
 
-/** Each country's folk sign, shown in the page footer for the chosen language. */
-export const countrySymbols: Record<Country, string> = {
-  latvia: '/images/symbols/auseklis.svg',
-  lithuania: '/images/symbols/lt/rozele.svg',
-}
 
 export function countryPath(country: Country, itemId?: string): string {
   const base = `/${countrySlugs[country]}`

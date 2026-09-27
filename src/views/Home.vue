@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLocale, type Locale } from '../composables/useLocale'
 import CountryMap from '../components/home/CountryMap.vue'
@@ -25,6 +25,43 @@ const languages: { code: Locale; label: string; name: string }[] = [
   { code: 'lt', label: 'LT', name: 'Lietuvių' },
 ]
 
+const mobileMenuOpen = ref(false)
+const mobileMenu = ref<HTMLElement | null>(null)
+const mobileMenuButton = ref<HTMLButtonElement | null>(null)
+
+function closeOnOutsidePointer(event: PointerEvent) {
+  if (event.target instanceof Node && !mobileMenu.value?.contains(event.target)) {
+    mobileMenuOpen.value = false
+  }
+}
+
+function closeOnFocusLeave(event: FocusEvent) {
+  if (!(event.relatedTarget instanceof Node) || !mobileMenu.value?.contains(event.relatedTarget)) {
+    mobileMenuOpen.value = false
+  }
+}
+
+function closeOnEscape() {
+  mobileMenuOpen.value = false
+  mobileMenuButton.value?.focus()
+}
+
+let desktopQuery: MediaQueryList | undefined
+function closeOnDesktop() {
+  if (desktopQuery?.matches) mobileMenuOpen.value = false
+}
+
+onMounted(() => {
+  document.addEventListener('pointerdown', closeOnOutsidePointer)
+  desktopQuery = window.matchMedia('(min-width: 760px)')
+  desktopQuery.addEventListener('change', closeOnDesktop)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('pointerdown', closeOnOutsidePointer)
+  desktopQuery?.removeEventListener('change', closeOnDesktop)
+})
+
 // Links and buttons on the painted hero: no tap flash, and a focus ring in the text colour instead of the global red one.
 const heroControl =
   '[-webkit-tap-highlight-color:transparent] focus-visible:outline-2 focus-visible:outline-offset-[6px] focus-visible:outline-current'
@@ -34,7 +71,7 @@ const heroControl =
   <!-- The hero is designed desktop-first, so smaller screens use max-* variants of the
        xs (440px), tablet (760px), laptop (1100px) and wide (1750px) breakpoints from style.css. -->
   <section
-    class="relative isolate h-svh min-h-[750px] overflow-hidden bg-pine text-cream max-laptop:min-h-[790px] max-tablet:min-h-[960px] max-xs:min-h-[840px]"
+    class="relative isolate h-svh min-h-[750px] overflow-hidden bg-pine text-cream max-laptop:min-h-[790px] max-tablet:min-h-[960px] max-xs:min-h-[840px] max-[360px]:min-h-[900px]"
     aria-labelledby="home-title"
   >
     <img
@@ -50,11 +87,11 @@ const heroControl =
     />
 
     <header
-      class="relative mx-[4.1%] flex h-28 items-center gap-[38px] border-b border-cream/13 max-laptop:h-25 max-laptop:gap-6 max-tablet:mx-[6%] max-tablet:h-[87px] max-tablet:gap-3"
+      class="relative z-10 mx-[4.1%] flex h-28 items-center gap-[38px] border-b border-cream/13 max-laptop:h-25 max-laptop:gap-6 max-tablet:mx-[6%] max-tablet:h-[87px] max-tablet:gap-3 max-xs:gap-2 max-[360px]:h-auto max-[360px]:flex-wrap max-[360px]:gap-y-2 max-[360px]:py-3"
     >
       <RouterLink
         to="/"
-        class="inline-flex min-w-0 items-center gap-4 max-tablet:gap-3"
+        class="inline-flex min-w-0 items-center gap-4 max-tablet:gap-3 max-[360px]:w-full"
         :class="heroControl"
         :aria-label="`${copy.brandTop} ${copy.brandBottom}`"
       >
@@ -78,7 +115,7 @@ const heroControl =
       </nav>
 
       <div
-        class="flex items-center gap-[7px] rounded-full bg-linen/90 px-[7px] text-[12px] text-pine max-tablet:ml-auto max-tablet:gap-px max-xs:text-[11px]"
+        class="flex shrink-0 items-center gap-[7px] rounded-full bg-linen/90 px-[7px] text-[12px] text-pine max-tablet:ml-auto max-tablet:gap-px max-xs:text-[11px]"
         role="group"
         :aria-label="copy.languageLabel"
       >
@@ -96,10 +133,50 @@ const heroControl =
           </button>
         </template>
       </div>
+
+      <div
+        ref="mobileMenu"
+        class="hidden shrink-0 max-tablet:block"
+        @keydown.esc.stop.prevent="closeOnEscape"
+        @focusout="closeOnFocusLeave"
+      >
+        <button
+          ref="mobileMenuButton"
+          type="button"
+          class="flex size-11 cursor-pointer items-center justify-center rounded-full border border-cream/30 bg-pine/50 text-cream transition-colors hover:bg-pine/80"
+          :class="heroControl"
+          :aria-label="mobileMenuOpen ? copy.closeMenu : copy.openMenu"
+          :aria-expanded="mobileMenuOpen"
+          aria-controls="home-mobile-navigation"
+          @click="mobileMenuOpen = !mobileMenuOpen"
+        >
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path v-if="mobileMenuOpen" d="m6 6 12 12M6 18 18 6" />
+            <path v-else d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <nav
+          v-show="mobileMenuOpen"
+          id="home-mobile-navigation"
+          class="absolute right-0 top-[calc(100%+12px)] w-64 max-w-full rounded-2xl border border-pine/10 bg-cream p-2 text-pine shadow-xl"
+          :aria-label="copy.navLabel"
+        >
+          <RouterLink
+            v-for="link in navLinks"
+            :key="link.to"
+            :to="link.to"
+            class="flex min-h-12 items-center justify-between gap-4 rounded-xl px-4 py-3 text-[15px] font-medium transition-colors hover:bg-pine/10 focus-visible:bg-pine/10 focus-visible:outline-2 focus-visible:outline-pine"
+            @click="mobileMenuOpen = false"
+          >
+            {{ link.label }}
+            <span aria-hidden="true">→</span>
+          </RouterLink>
+        </nav>
+      </div>
     </header>
 
     <div
-      class="absolute left-[5.3%] top-[19%] w-[46%] max-w-[660px] wide:top-[18%] max-laptop:top-[17%] max-laptop:w-[56%] max-tablet:left-[7%] max-tablet:right-[6%] max-tablet:top-[139px] max-tablet:w-auto max-xs:top-32"
+      class="absolute left-[5.3%] top-[19%] w-[46%] max-w-[660px] wide:top-[18%] max-laptop:top-[17%] max-laptop:w-[56%] max-tablet:left-[7%] max-tablet:right-[6%] max-tablet:top-[139px] max-tablet:w-auto max-xs:top-32 max-[360px]:top-[184px]"
     >
       <p
         class="mb-5 flex items-center gap-[9px] text-[10px] font-medium leading-[1.7] tracking-[.2em] max-tablet:mb-6 max-tablet:text-[8px] max-tablet:tracking-[.14em]"

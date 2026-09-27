@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, ref, watch } from "vue";
+import { computed, ref, watch } from "vue";
 import { RouterLink } from "vue-router";
 import { useLocale } from "../composables/useLocale";
 import { contentByCountry, isCountry } from "../data";
 import CountrySymbol from "../components/CountrySymbol.vue";
 import ItemCardMedia from "../components/ItemCardMedia.vue";
+import CornerHeroImage from "../components/CornerHeroImage.vue";
 import { galleryByCountry } from "../data/credits";
 import { countryPath } from "../router/paths";
 
@@ -91,36 +92,15 @@ const showImages = computed(
 // Card currently hovered/focused; only that card plays its video preview.
 const previewId = ref<string>();
 
-// Top-right corner: a slideshow of the country's gallery photos (credited on the About page),
-// cross-fading to the next one every few seconds.
-const HERO_INTERVAL_MS = 4500;
-const heroImages = computed(() =>
-	validCountry.value ? galleryByCountry[validCountry.value] : [],
+// Top-right corner: a slideshow of the country's gallery photos (credited on the About page).
+const heroSlides = computed(() =>
+	validCountry.value
+		? galleryByCountry[validCountry.value].map((image) => ({
+				src: image.src,
+				alt: image.title[locale.value],
+			}))
+		: [],
 );
-const heroIndex = ref(0);
-// Only the current and the next photo are fetched, so the slideshow doesn't download the whole gallery up front.
-const heroFetched = ref(new Set<number>());
-let heroTimer: ReturnType<typeof setInterval> | undefined;
-
-function startHeroSlideshow() {
-	clearInterval(heroTimer);
-	heroIndex.value = 0;
-	heroFetched.value = new Set([0, 1]);
-	// Keep a still photo for visitors who ask for less motion, or when there is nothing to cycle through.
-	if (
-		heroImages.value.length < 2 ||
-		window.matchMedia("(prefers-reduced-motion: reduce)").matches
-	)
-		return;
-	heroTimer = setInterval(() => {
-		const count = heroImages.value.length;
-		heroIndex.value = (heroIndex.value + 1) % count;
-		heroFetched.value.add((heroIndex.value + 1) % count);
-	}, HERO_INTERVAL_MS);
-}
-
-watch(validCountry, startHeroSlideshow, { immediate: true });
-onBeforeUnmount(() => clearInterval(heroTimer));
 </script>
 
 <template>
@@ -137,38 +117,8 @@ onBeforeUnmount(() => clearInterval(heroTimer));
 	</section>
 
 	<section v-else class="relative">
-		<!-- Shared clip-path definition for the masked hero image, scales via objectBoundingBox -->
-		<svg width="0" height="0" class="absolute" aria-hidden="true">
-			<defs>
-				<clipPath
-					id="cultureHeroMask"
-					clipPathUnits="objectBoundingBox">
-					<path
-						d="M0.002169 0
-               L1 0
-               L1 0.938664
-               C0.932540 0.857201 0.892814 0.909042 0.841544 0.938664
-               C0.772082 0.984950 0.675576 1.049749 0.622552 0.938664
-               C0.548317 0.772037 0.465069 0.752598 0.309176 0.846094
-               C0.140028 0.890528 0.277728 0.508210 0.066690 0.474886
-               C-0.059508 0.439708 0.039287 0.223092 0.002169 0.000923 Z" />
-				</clipPath>
-			</defs>
-		</svg>
 		<div class="relative mx-auto">
-			<div
-				class="absolute right-0 top-0 aspect-[942/542] w-[38%] overflow-hidden drop-shadow-hero [clip-path:url(#cultureHeroMask)] sm:w-[35%] lg:w-1/2">
-				<img
-					v-for="(image, index) in heroImages"
-					:key="image.src"
-					:src="heroFetched.has(index) ? image.src : undefined"
-					:alt="index === heroIndex ? image.title[locale] : ''"
-					:aria-hidden="index !== heroIndex"
-					class="absolute inset-0 size-full object-cover transition-opacity duration-1000 ease-in-out"
-					:class="
-						index === heroIndex ? 'opacity-100' : 'opacity-0'
-					" />
-			</div>
+			<CornerHeroImage :images="heroSlides" />
 
 			<div
 				class="mx-auto min-h-[clamp(140px,22vw,220px)] max-w-6xl px-4 pb-2 pt-10 sm:min-h-[clamp(180px,20vw,260px)] sm:px-6 sm:pt-16 lg:min-h-[clamp(320px,29vw,520px)] lg:px-8">
