@@ -5,6 +5,7 @@ import { useLocale } from '../composables/useLocale'
 import { useQuizProgress } from '../composables/useQuizProgress'
 import { quizQuestions } from '../data'
 import QuizQuestionCard from '../components/QuizQuestionCard.vue'
+import CornerHeroImage from '../components/CornerHeroImage.vue'
 
 const { t } = useLocale()
 const { state, reset } = useQuizProgress()
@@ -52,62 +53,70 @@ function confirmStartOver() {
 </script>
 
 <template>
-  <section class="mx-auto max-w-3xl px-4 py-12">
-    <RouterLink
-      to="/"
-      class="text-sm text-ink-light underline-offset-4 transition-colors duration-150 hover:text-terracotta-dark hover:underline"
-    >
-      ← {{ t('culture.backHome') }}
-    </RouterLink>
-
-    <h1 class="mt-4 font-serif text-3xl text-ink sm:text-4xl">{{ t('quiz.title') }}</h1>
-    <p class="mt-2 text-ink-light">{{ t('quiz.intro') }}</p>
-
-    <div class="mt-6 rounded-2xl bg-parchment-light p-4 shadow-paper ring-1 ring-parchment-dark">
-      <div class="flex items-baseline justify-between gap-4 text-sm">
-        <span class="font-medium text-ink">{{ t('quiz.badges') }}</span>
-        <span class="text-ink-light">{{ collected }} / {{ total }}</span>
+  <section class="relative" aria-labelledby="quiz-title">
+    <div class="relative mx-auto max-w-[1800px]">
+      <CornerHeroImage src="/images/hero/quiz-folk-dancers.jpg" />
+      <div class="mx-auto min-h-[clamp(140px,22vw,220px)] max-w-6xl px-4 pb-6 pt-10 sm:min-h-[clamp(180px,20vw,260px)] sm:px-6 sm:pt-16 lg:min-h-[clamp(320px,29vw,520px)] lg:px-8">
+        <div class="max-w-[60%] lg:max-w-md">
+          <RouterLink
+            to="/"
+            class="text-sm text-ink-light underline-offset-4 transition-colors duration-150 hover:text-terracotta-dark hover:underline"
+          >
+            ← {{ t('culture.backHome') }}
+          </RouterLink>
+          <h1 id="quiz-title" class="mt-4 font-serif text-3xl text-ink sm:text-4xl">{{ t('quiz.title') }}</h1>
+          <p class="mt-3 text-sm leading-relaxed text-ink-light sm:text-base">{{ t('quiz.intro') }}</p>
+        </div>
       </div>
-      <div
-        class="mt-2 h-2 overflow-hidden rounded-full bg-parchment-dark"
-        role="progressbar"
-        :aria-label="t('quiz.badges')"
-        aria-valuemin="0"
-        :aria-valuemax="total"
-        :aria-valuenow="collected"
-      >
-        <div class="h-full rounded-full bg-terracotta transition-all duration-500" :style="{ width: `${(collected / total) * 100}%` }" />
-      </div>
-      <p v-if="allDone" class="mt-3 text-sm font-medium text-forest-dark">{{ t('quiz.allDone') }}</p>
     </div>
 
-    <TransitionGroup
-      tag="ol"
-      class="mt-6 grid gap-5"
-      enter-active-class="transition duration-500 ease-out"
-      enter-from-class="translate-y-3 opacity-0"
-    >
-      <QuizQuestionCard
-        v-for="(question, index) in visibleQuestions"
-        :key="question.id"
-        :question="question"
-        :number="index + 1"
-        :data-resume="!allDone && index > 0 && index === visibleQuestions.length - 1 ? '' : undefined"
-      />
-    </TransitionGroup>
+    <div class="mx-auto max-w-3xl px-4 pb-12 pt-6">
+      <div class="rounded-2xl bg-parchment-light p-4 shadow-paper ring-1 ring-parchment-dark">
+        <div class="flex items-baseline justify-between gap-4 text-sm">
+          <span class="font-medium text-ink">{{ t('quiz.badges') }}</span>
+          <span class="text-ink-light">{{ collected }} / {{ total }}</span>
+        </div>
+        <div
+          class="mt-2 h-2 overflow-hidden rounded-full bg-parchment-dark"
+          role="progressbar"
+          :aria-label="t('quiz.badges')"
+          aria-valuemin="0"
+          :aria-valuemax="total"
+          :aria-valuenow="collected"
+        >
+          <div class="h-full rounded-full bg-terracotta transition-all duration-500" :style="{ width: `${(collected / total) * 100}%` }" />
+        </div>
+        <p v-if="allDone" class="mt-3 text-sm font-medium text-forest-dark">{{ t('quiz.allDone') }}</p>
+      </div>
 
-    <div v-if="collected > 0" class="mt-8 text-center">
-      <button
-        type="button"
-        class="text-sm text-ink-light underline underline-offset-4 transition-colors duration-150 hover:text-terracotta-dark"
-        @click="resetDialog?.showModal()"
+      <TransitionGroup
+        tag="ol"
+        class="mt-6 grid gap-5"
+        enter-active-class="transition duration-500 ease-out"
+        enter-from-class="translate-y-3 opacity-0"
       >
-        {{ t('quiz.startOver') }}
-      </button>
-    </div>
+        <QuizQuestionCard
+          v-for="(question, index) in visibleQuestions"
+          :key="question.id"
+          :question="question"
+          :number="index + 1"
+          :data-resume="!allDone && index > 0 && index === visibleQuestions.length - 1 ? '' : undefined"
+        />
+      </TransitionGroup>
 
-    <!-- Room below the newest question, otherwise the page is too short to scroll it to the middle. -->
-    <div v-if="!allDone" class="h-[45vh]" aria-hidden="true" />
+      <div v-if="collected > 0" class="mt-8 text-center">
+        <button
+          type="button"
+          class="text-sm text-ink-light underline underline-offset-4 transition-colors duration-150 hover:text-terracotta-dark"
+          @click="resetDialog?.showModal()"
+        >
+          {{ t('quiz.startOver') }}
+        </button>
+      </div>
+
+      <!-- Room below the newest question, otherwise the page is too short to scroll it to the middle. -->
+      <div v-if="!allDone" class="h-[45vh]" aria-hidden="true" />
+    </div>
 
     <!-- A real dialog instead of window.confirm(): always visible, focus-trapped, closes with Esc. -->
     <dialog

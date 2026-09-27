@@ -2,6 +2,7 @@
   "lv": {
     "brandTop": "Digitālās izglītojošās programmas izstrāde un video satura sagatavošana", "brandBottom": "jauniešiem par kultūras tradīcijām",
     "navQuiz": "Viktorīna", "navAbout": "Par projektu", "navLabel": "Galvenā navigācija", "languageLabel": "Izvēlies valodu",
+    "openMenu": "Atvērt izvēlni", "closeMenu": "Aizvērt izvēlni",
     "tagline": "LATVIJAS UN LIETUVAS DZĪVĀS TRADĪCIJAS",
     "titleFirst": "Dejo, Dziedi", "titleSecond": "Iepazīsti",
     "lead": "Divas kaimiņzemes. Tik daudz stāstu.",
@@ -12,6 +13,7 @@
   "lt": {
     "brandTop": "Skaitmeninės edukacinės programos kūrimas ir vaizdo turinio rengimas", "brandBottom": "jaunimui apie kultūros tradicijas",
     "navQuiz": "Viktorina", "navAbout": "Apie projektą", "navLabel": "Pagrindinė navigacija", "languageLabel": "Pasirink kalbą",
+    "openMenu": "Atidaryti meniu", "closeMenu": "Uždaryti meniu",
     "tagline": "GYVOSIOS LATVIJOS IR LIETUVOS TRADICIJOS",
     "titleFirst": "Šok, Dainuok", "titleSecond": "Pažink",
     "lead": "Dvi kaimynės. Tiek daug istorijų.",

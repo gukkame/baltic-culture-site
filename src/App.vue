@@ -2,18 +2,21 @@
 import { computed, watch, watchEffect } from 'vue'
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
 import { useLocale } from './composables/useLocale'
-import { aboutPaths, countryFromSlug, countrySymbols } from './router/paths'
+import { aboutPaths, countryFromSlug } from './router/paths'
+import CountrySymbol from './components/CountrySymbol.vue'
+import homeCopy from './components/home/copy.json'
 
 const { locale, t } = useLocale()
 const route = useRoute()
 const router = useRouter()
 const isHome = computed(() => route.name === 'home')
 
-// On a country's pages (the country page and its dances and songs) the footer carries that country's folk sign.
-const footerSymbol = computed(() => {
+// Country pages keep their own folk sign; other pages match the homepage's language-based sign.
+const footerCountry = computed(() => {
   const country = typeof route.params.country === 'string' ? countryFromSlug(route.params.country) : undefined
-  return country ? countrySymbols[country] : undefined
+  return country ?? (locale.value === 'lt' ? 'lithuania' : 'latvia')
 })
+const projectCopy = computed(() => homeCopy[locale.value])
 
 function focusMain() {
   document.getElementById('main-content')?.focus()
@@ -43,15 +46,33 @@ watch(locale, (value) => {
       <RouterView />
     </main>
 
-    <footer v-if="!isHome" class="relative border-t border-parchment-dark px-4 py-6 text-center text-sm text-ink-light sm:px-20">
-      {{ t('site.title') }} — placeholder content ·
-      <RouterLink :to="aboutPaths[locale]" class="underline underline-offset-4 hover:text-terracotta-dark">{{ t('about.footerLink') }}</RouterLink>
-      <img
-        v-if="footerSymbol"
-        :src="footerSymbol"
-        alt=""
-        class="pointer-events-none absolute right-6 top-1/2 hidden size-12 -translate-y-1/2 opacity-70 sm:block"
-      />
+    <footer v-if="!isHome" class="border-t border-parchment-dark px-4 py-8 text-ink-light sm:px-6 sm:py-10 lg:px-8">
+      <div class="mx-auto flex max-w-6xl flex-col items-start gap-7 md:flex-row md:items-center md:gap-10 lg:gap-16">
+        <div class="w-[280px] max-w-full shrink-0 overflow-hidden rounded-xl bg-white p-2 shadow-sm lg:w-80">
+          <img
+            src="/images/partners/interreg-latvia-lithuania.jpg"
+            alt="Interreg Latvija–Lietuva. Līdzfinansē Eiropas Savienība."
+            lang="lv"
+            width="400"
+            height="121"
+            loading="lazy"
+            decoding="async"
+            class="block h-auto w-full"
+          />
+        </div>
+        <div class="flex min-w-0 items-start gap-4 text-ink sm:gap-5">
+          <CountrySymbol :country="footerCountry" class="mt-1 size-9 sm:size-12" />
+          <div class="max-w-xl">
+            <p class="font-serif text-lg leading-snug sm:text-xl">{{ projectCopy.brandTop }}</p>
+            <p class="mt-1 text-xs leading-relaxed tracking-wide text-ink-light sm:text-sm">{{ projectCopy.brandBottom }}</p>
+            <RouterLink
+              :to="aboutPaths[locale]"
+              class="mt-3 inline-flex min-h-11 items-center text-sm text-ink-light underline underline-offset-4 transition-colors hover:text-terracotta-dark focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-terracotta-dark"
+            >{{ t('about.footerLink') }}</RouterLink>
+          </div>
+        </div>
+      </div>
     </footer>
+
   </div>
 </template>
