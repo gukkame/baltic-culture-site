@@ -120,11 +120,11 @@ const heroImage = computed(() => (validCountry.value ? galleryByCountry[validCou
           :key="filter.id"
           type="button"
           :aria-pressed="currentFilter === filter.id"
-          class="rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150"
+          class="rounded-full border px-4 py-2 text-sm font-medium transition-colors duration-150"
           :class="
             currentFilter === filter.id
-              ? 'bg-ink text-parchment hover:bg-ink-light'
-              : 'bg-parchment-dark text-ink-light hover:bg-parchment-darker hover:text-ink'
+              ? 'border-transparent bg-ink text-parchment hover:bg-ink-light'
+              : 'border-[#c8b999] bg-[#faebd7] text-ink hover:border-[#ab9770] hover:bg-[#f6e1c3]'
           "
           @click="activeFilter = filter.id"
         >
