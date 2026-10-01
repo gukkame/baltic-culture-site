@@ -1,23 +1,37 @@
 {
   "site": {
     "title": "Baltijos Tautų Paveldas",
-    "description": "Pažink Latvijos ir Lietuvos liaudies šokius, dainas ir tradicijas."
+    "description": "Pažink Latvijos ir Lietuvos liaudies šokius, dainas ir tradicijas.",
+    "programmeTitle": "Skaitmeninės edukacinės programos kūrimas ir vaizdo turinio rengimas",
+    "programmeSubtitle": "jaunimui apie kultūros tradicijas"
   },
   "nav": {
     "skipToContent": "Pereiti prie pagrindinio turinio"
   },
   "home": {
-    "pickCulture": "Pasirink, ką tyrinėti",
-    "latviaDesc": "Rotaļas žaidimai, ziņģes dainelės ir liaudies šokiai.",
-    "lithuaniaDesc": "Sutartinių daugiabalsis dainavimas, kaimo šokiai ir dainos.",
-    "explore": "Tyrinėti"
+    "navQuiz": "Viktorina",
+    "navAbout": "Apie projektą",
+    "navLabel": "Pagrindinė navigacija",
+    "languageLabel": "Pasirink kalbą",
+    "openMenu": "Atidaryti meniu",
+    "closeMenu": "Uždaryti meniu",
+    "tagline": "GYVOSIOS LATVIJOS IR LIETUVOS TRADICIJOS",
+    "titleFirst": "Šok, Dainuok",
+    "titleSecond": "Pažink",
+    "lead": "Dvi kaimynės. Tiek daug istorijų.",
+    "description": "Atrask Latvijos ir Lietuvos šokius, dainas ir tradicijas, kurios gyvena šalia mūsų.",
+    "start": "Pradėti kelionę",
+    "mapTagline": "PASIRINK SAVO KELIONĘ",
+    "mapHint": "Paliesk šalį ir atrask jos istorijas.",
+    "mapLabel": "Interaktyviame žemėlapyje pasirink Latviją arba Lietuvą",
+    "latviaSubtitle": "Šokiai, dainos ir istorijos",
+    "lithuaniaSubtitle": "Šokiai, dainos ir istorijos"
   },
   "culture": {
     "backHome": "Atgal į pradžią",
     "dances": "Šokiai",
     "songs": "Dainos",
     "images": "Vaizdai",
-    "viewDetails": "Žiūrėti daugiau",
     "filters": {
       "all": "Visi"
     },
@@ -32,7 +46,8 @@
       }
     },
     "notFoundTitle": "Kultūra nerasta",
-    "notFoundBody": "Deja, tokio skyriaus nėra."
+    "notFoundBody": "Deja, tokio skyriaus nėra.",
+    "photoAlt": "Liaudies šokių kolektyvo pasirodymas"
   },
   "item": {
     "backToCulture": "Atgal į sąrašą",

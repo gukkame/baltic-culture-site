@@ -2,11 +2,9 @@
   {
     "id": "linksmasis-sokis",
     "category": "dance",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=PNtlBWSjBnE",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=PNtlBWSjBnE",
-    "audioUrl": "",
     "title": {
       "lv": "Priecīgā deja",
       "lt": "Linksmasis šokis"
@@ -23,11 +21,9 @@
   {
     "id": "vaiku-ratelis",
     "category": "dance",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=bJxlcGJEG6w",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=bJxlcGJEG6w",
-    "audioUrl": "",
     "title": {
       "lv": "Bērnu rotaļdeja",
       "lt": "Vaikų ratelis"
@@ -44,12 +40,10 @@
   {
     "id": "vaiku-ratelis-variantas",
     "category": "dance",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
     "contentStatus": "verified-from-source",
     "sourceNote": "Source material reused the same YouTube link (BqQItZLiFS8) for this entry and for 'Blezdingėlė' below — worth confirming with the project owner whether separate clips exist for each dance.",
     "videoUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
-    "audioUrl": "",
     "title": {
       "lv": "Bērnu rotaļdeja (variants)",
       "lt": "Vaikų ratelis (variantas)"
@@ -66,12 +60,10 @@
   {
     "id": "blezdingele",
     "category": "dance",
-    "difficulty": "intermediate",
     "sourceUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
     "contentStatus": "verified-from-source",
     "sourceNote": "Source material reused the same YouTube link (BqQItZLiFS8) for this entry and for 'Vaikų ratelis (variantas)' above — worth confirming with the project owner whether separate clips exist for each dance.",
     "videoUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
-    "audioUrl": "",
     "title": {
       "lv": "Bezdelīdziņa",
       "lt": "Blezdingėlė"
@@ -88,11 +80,9 @@
   {
     "id": "lendleris-zemaitiskais",
     "category": "dance",
-    "difficulty": "intermediate",
     "sourceUrl": "https://www.youtube.com/watch?v=4neeFA--Tps",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=4neeFA--Tps",
-    "audioUrl": "",
     "title": {
       "lv": "Žemaišu lendlers",
       "lt": "Žemaitiškas lenderis"
@@ -109,11 +99,9 @@
   {
     "id": "dobilelis",
     "category": "dance",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=CYc_albY-2k",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=CYc_albY-2k",
-    "audioUrl": "",
     "title": {
       "lv": "Āboliņš",
       "lt": "Dobilėlis"
@@ -128,123 +116,11 @@
     }
   },
   {
-    "id": "unknown-song-1",
-    "category": "song",
-    "difficulty": "beginner",
-    "sourceUrl": "https://www.youtube.com/watch?v=LnkV9_o4c8o",
-    "contentStatus": "title-from-video",
-    "videoUrl": "https://www.youtube.com/watch?v=LnkV9_o4c8o",
-    "audioUrl": "",
-    "title": {
-      "lv": "Zynu, zynu tāva sātu",
-      "lt": "Zynu, zynu tāva sātu"
-    },
-    "tagline": {
-      "lv": "Folkloras kopa \"Ceiruleits\", Latgale",
-      "lt": "Folkloro ansamblis „Ceiruleits\", Latgala"
-    },
-    "description": {
-      "lv": "Latgaliešu tautasdziesma no folkloras kopas \"Ceiruleits\" albuma \"Skaņu balseņu palaidu\" (Lauska, 2021), kurā piedalās arī Anna Kārkle.",
-      "lt": "Latgalių liaudies daina iš folkloro ansamblio „Ceiruleits\" albumo „Skaņu balseņu palaidu\" (Lauska, 2021), kuriame dalyvauja ir Anna Kārkle."
-    },
-    "sourceNote": "Title taken from the YouTube video. The performers (Ceiruleits) are a Latgalian folk group from Latvia and the song is in Latgalian, so this entry probably belongs in latvia.json — confirm with the project owner."
-  },
-  {
-    "id": "unknown-song-2",
-    "category": "song",
-    "difficulty": "beginner",
-    "sourceUrl": "https://www.youtube.com/watch?v=Oq31-hjH__g",
-    "contentStatus": "title-from-video",
-    "videoUrl": "https://www.youtube.com/watch?v=Oq31-hjH__g",
-    "audioUrl": "",
-    "title": {
-      "lv": "Sazīdēja gaiļa pīši",
-      "lt": "Sazīdēja gaiļa pīši"
-    },
-    "tagline": {
-      "lv": "Folkloras kopa \"Ceiruleits\", Latgale",
-      "lt": "Folkloro ansamblis „Ceiruleits\", Latgala"
-    },
-    "description": {
-      "lv": "Latgaliešu tautasdziesma no folkloras kopas \"Ceiruleits\" albuma \"Skaņu balseņu palaidu\" (Lauska, 2021), kurā piedalās arī Anna Kārkle.",
-      "lt": "Latgalių liaudies daina iš folkloro ansamblio „Ceiruleits\" albumo „Skaņu balseņu palaidu\" (Lauska, 2021), kuriame dalyvauja ir Anna Kārkle."
-    },
-    "sourceNote": "Title taken from the YouTube video. The performers (Ceiruleits) are a Latgalian folk group from Latvia and the song is in Latgalian, so this entry probably belongs in latvia.json — confirm with the project owner."
-  },
-  {
-    "id": "unknown-song-3",
-    "category": "song",
-    "difficulty": "beginner",
-    "sourceUrl": "https://www.youtube.com/watch?v=GXv3W1UOLhg",
-    "contentStatus": "title-from-video",
-    "videoUrl": "https://www.youtube.com/watch?v=GXv3W1UOLhg",
-    "audioUrl": "",
-    "title": {
-      "lv": "Nadūd Dīvs veitūlam",
-      "lt": "Nadūd Dīvs veitūlam"
-    },
-    "tagline": {
-      "lv": "Folkloras kopa \"Ceiruleits\", Latgale",
-      "lt": "Folkloro ansamblis „Ceiruleits\", Latgala"
-    },
-    "description": {
-      "lv": "Latgaliešu tautasdziesma no folkloras kopas \"Ceiruleits\" albuma \"Skaņu balseņu palaidu\" (Lauska, 2021), kurā piedalās arī Anna Kārkle.",
-      "lt": "Latgalių liaudies daina iš folkloro ansamblio „Ceiruleits\" albumo „Skaņu balseņu palaidu\" (Lauska, 2021), kuriame dalyvauja ir Anna Kārkle."
-    },
-    "sourceNote": "Title taken from the YouTube video. The performers (Ceiruleits) are a Latgalian folk group from Latvia and the song is in Latgalian, so this entry probably belongs in latvia.json — confirm with the project owner."
-  },
-  {
-    "id": "unknown-song-4",
-    "category": "song",
-    "difficulty": "beginner",
-    "sourceUrl": "https://www.youtube.com/watch?v=HpurNXPOCdo",
-    "contentStatus": "title-from-video",
-    "videoUrl": "https://www.youtube.com/watch?v=HpurNXPOCdo",
-    "audioUrl": "",
-    "title": {
-      "lv": "Pīci bāri kumeleņi",
-      "lt": "Pīci bāri kumeleņi"
-    },
-    "tagline": {
-      "lv": "Folkloras kopa \"Ceiruleits\", Latgale",
-      "lt": "Folkloro ansamblis „Ceiruleits\", Latgala"
-    },
-    "description": {
-      "lv": "Latgaliešu dancis folkloras kopas \"Ceiruleits\" izpildījumā.",
-      "lt": "Latgalių šokis (dancis), atliekamas folkloro ansamblio „Ceiruleits\"."
-    },
-    "sourceNote": "Title taken from the YouTube video. The performers (Ceiruleits) are a Latgalian folk group from Latvia and the song is in Latgalian, so this entry probably belongs in latvia.json — confirm with the project owner."
-  },
-  {
-    "id": "unknown-song-5",
-    "category": "song",
-    "difficulty": "beginner",
-    "sourceUrl": "https://www.youtube.com/watch?v=uBbbKnvtsic",
-    "contentStatus": "title-from-video",
-    "videoUrl": "https://www.youtube.com/watch?v=uBbbKnvtsic",
-    "audioUrl": "",
-    "title": {
-      "lv": "Jau mani vad",
-      "lt": "Jau mani vad"
-    },
-    "tagline": {
-      "lv": "Folkloras kopa \"Ceiruleits\", Latgale",
-      "lt": "Folkloro ansamblis „Ceiruleits\", Latgala"
-    },
-    "description": {
-      "lv": "Latgaliešu tautasdziesma folkloras kopas \"Ceiruleits\" izpildījumā.",
-      "lt": "Latgalių liaudies daina, atliekama folkloro ansamblio „Ceiruleits\"."
-    },
-    "sourceNote": "Title taken from the YouTube video. The performers (Ceiruleits) are a Latgalian folk group from Latvia and the song is in Latgalian, so this entry probably belongs in latvia.json — confirm with the project owner."
-  },
-  {
     "id": "isjos-brolutelis",
     "category": "song",
-    "difficulty": "advanced",
     "sourceUrl": "https://www.youtube.com/watch?v=8eE2MxX7hoA",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=8eE2MxX7hoA",
-    "audioUrl": "",
     "title": {
       "lv": "Aizjāja bāleliņš, sodāto",
       "lt": "Išjos brolutėlis, sodauto"
@@ -261,11 +137,9 @@
   {
     "id": "oi-sermuksnio",
     "category": "song",
-    "difficulty": "intermediate",
     "sourceUrl": "https://www.youtube.com/watch?v=cyA6Ekh70hA",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=cyA6Ekh70hA",
-    "audioUrl": "",
     "title": {
       "lv": "Ak, pīlādzīti",
       "lt": "Oi Šermukšnio"
@@ -282,11 +156,9 @@
   {
     "id": "mona-bolundele",
     "category": "song",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=Jxk0aRv-gwo",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=Jxk0aRv-gwo",
-    "audioUrl": "",
     "title": {
       "lv": "Mona bolundele",
       "lt": "Mona bolundele"
@@ -303,11 +175,9 @@
   {
     "id": "ne-bet-kokia-mergele",
     "category": "song",
-    "difficulty": "advanced",
     "sourceUrl": "https://www.youtube.com/watch?v=wlBKWpXPjjo",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=wlBKWpXPjjo",
-    "audioUrl": "",
     "title": {
       "lv": "Ne jau jebkura meitene es biju",
       "lt": "Ne bet kokia aš mergelė buvau"
@@ -319,6 +189,120 @@
     "description": {
       "lv": "No Dzūkijas reģiona — dziesma par jaunu sievieti, kas lepojas ar savu izvēlīgumu, izvēloties skaistus, labi ģērbtus jauniešus. Dejojot ar jaunekli, viņa jūtas priecīga, it kā zeme trīcētu un rūta ziedētu viņas galvā, gredzeniem mirdzot; dejojot ar atraitni, liktenis apgriežas otrādi — zeme it kā sabrūk, rūta novīst, gredzeni sarūsē.",
       "lt": "Iš Dzūkijos regiono — daina apie jauną moterį, besididžiuojančią savo rinktinumu, renkantis gražius, gerai apsirengusius vaikinus. Šokdama su jaunikaičiu, ji jaučiasi laiminga, tarsi žemė drebėtų ir ruta žydėtų ant galvos, žieduose spindint; šokdama su našliu, likimas apsiverčia — žemė tarsi griūva, ruta vysta, žiedai rūdija."
+    }
+  },
+  {
+    "id": "ant-kalno-karklai",
+    "category": "dance",
+    "sourceUrl": "https://www.youtube.com/watch?v=N9RAVnlkLvg",
+    "contentStatus": "verified-from-source",
+    "videoUrl": "https://www.youtube.com/watch?v=N9RAVnlkLvg",
+    "title": {
+      "lv": "Ant kalno karklai",
+      "lt": "Ant kalno karklai"
+    },
+    "tagline": {
+      "lv": "Visas Lietuvas deja — akcija „Visa Lietuva šoka”",
+      "lt": "Visos Lietuvos šokis — akcija „Visa Lietuva šoka“"
+    },
+    "description": {
+      "lv": "Deja populārās tautasdziesmas „Ant kalno karklai” pavadījumā Lietuvas Nacionālā kultūras centra akcijā „Visa Lietuva šoka”, kurā cilvēki visā Lietuvā mācās un dejo sava novada tradicionālās dejas.",
+      "lt": "Šokis pagal populiarią liaudies dainą „Ant kalno karklai“ Lietuvos nacionalinio kultūros centro akcijoje „Visa Lietuva šoka“, kurioje žmonės visoje Lietuvoje mokosi ir šoka savo regiono tradicinius šokius."
+    }
+  },
+  {
+    "id": "vai-zydek-zydek",
+    "category": "song",
+    "sourceUrl": "https://www.youtube.com/watch?v=dPZ1CgIoT5Y",
+    "contentStatus": "verified-from-source",
+    "videoUrl": "https://www.youtube.com/watch?v=dPZ1CgIoT5Y",
+    "title": {
+      "lv": "Vai žydėk, žydėk",
+      "lt": "Vai žydėk, žydėk"
+    },
+    "tagline": {
+      "lv": "Dzūkijas novada dziesma, dzied Rasa Serra",
+      "lt": "Dzūkijos krašto daina, atlieka Rasa Serra"
+    },
+    "description": {
+      "lv": "Lietuviešu tautasdziesma no Dzūkijas novada. To dzied klaipēdniece Rasa Serra — dziedātāja un vokāla pedagoģe, kas pazīstama kā izcila tautasdziesmu izpildītāja.",
+      "lt": "Lietuvių liaudies daina iš Dzūkijos krašto. Ją dainuoja klaipėdietė Rasa Serra — dainininkė ir vokalo pedagogė, žinoma kaip išskirtinė liaudies dainų atlikėja."
+    }
+  },
+  {
+    "id": "kur-giria-zaliuoja",
+    "category": "song",
+    "sourceUrl": "https://www.youtube.com/watch?v=wFBfyaJd9gc",
+    "contentStatus": "verified-from-source",
+    "videoUrl": "https://www.youtube.com/watch?v=wFBfyaJd9gc",
+    "title": {
+      "lv": "Kur giria žaliuoja",
+      "lt": "Kur giria žaliuoja"
+    },
+    "tagline": {
+      "lv": "Lietuvas skolēnu Dziesmu svētki 2026",
+      "lt": "Lietuvos moksleivių dainų šventė 2026"
+    },
+    "description": {
+      "lv": "Dziesma „Kur giria žaliuoja” Lietuvas skolēnu Dziesmu svētkos 2026. gadā, kur to kopā dzied tūkstošiem jauno dziedātāju. Ieraksts no Lietuvas Nacionālā radio un televīzijas (LRT).",
+      "lt": "Daina „Kur giria žaliuoja“ Lietuvos moksleivių dainų šventėje 2026 m., kur ją kartu dainuoja tūkstančiai jaunųjų dainininkų. Įrašas iš Lietuvos nacionalinio radijo ir televizijos (LRT)."
+    }
+  },
+  {
+    "id": "gervela-dai-ciuto",
+    "category": "song",
+    "sourceUrl": "https://www.youtube.com/watch?v=Wbyn61KgaqA",
+    "contentStatus": "verified-from-source",
+    "videoUrl": "https://www.youtube.com/watch?v=Wbyn61KgaqA",
+    "title": {
+      "lv": "Gervela, dai čiūto",
+      "lt": "Gervela, dai čiūto"
+    },
+    "tagline": {
+      "lv": "Aukštaitijas sutartinė — dialogs ar dzērvi",
+      "lt": "Aukštaitijos sutartinė — dialogas su gerve"
+    },
+    "description": {
+      "lv": "Sutartinė — senā lietuviešu daudzbalsīgā dziesma — no Aukštaitijas, kas atdarina sarunu ar dzērvi: „Kur tu lido, dzērvīte?” Dzied grupa „Trys keturiose” no albuma „Kokiu giedosim, kokiu sutarysim?”.",
+      "lt": "Sutartinė — sena lietuvių daugiabalsė daina — iš Aukštaitijos, imituojanti pokalbį su gerve: „Kur lakioji, tu gervela?“ Atlieka grupė „Trys keturiose“ iš albumo „Kokiu giedosim, kokiu sutarysim?“."
+    }
+  },
+  {
+    "id": "is-triju-rytu-vejuzis-pute",
+    "category": "song",
+    "sourceUrl": "https://www.youtube.com/watch?v=MJuOGJHLuFk",
+    "contentStatus": "verified-from-source",
+    "videoUrl": "https://www.youtube.com/watch?v=MJuOGJHLuFk",
+    "title": {
+      "lv": "Iš trijų rytų vėjužis pūtė",
+      "lt": "Iš trijų rytų vėjužis pūtė"
+    },
+    "tagline": {
+      "lv": "Folkloras ansamblis „Giedružė” mūsdienīgā apdarē",
+      "lt": "Folkloro ansamblis „Giedružė“, moderni aranžuotė"
+    },
+    "description": {
+      "lv": "Lietuviešu tautasdziesma Neringas vidusskolas folkloras ansambļa „Giedružė” izpildījumā mūziķa Donja (Donis) mūsdienīgā apdarē. Darbs veidots konkursam-festivālam „Daina.LT 2014”.",
+      "lt": "Lietuvių liaudies daina, atliekama Neringos vidurinės mokyklos folkloro ansamblio „Giedružė“, moderniai aranžuota Donio. Darbas sukurtas konkursui-festivaliui „Daina.LT 2014“."
+    }
+  },
+  {
+    "id": "apeja-sauliute",
+    "category": "song",
+    "sourceUrl": "https://www.youtube.com/watch?v=njxS_-GUw7A",
+    "contentStatus": "verified-from-source",
+    "videoUrl": "https://www.youtube.com/watch?v=njxS_-GUw7A",
+    "title": {
+      "lv": "Apėja sauliūte",
+      "lt": "Apėja sauliūte"
+    },
+    "tagline": {
+      "lv": "Grupa „Kūlgrinda”, albums „Giesmės Saulei”",
+      "lt": "Grupė „Kūlgrinda“, albumas „Giesmės Saulei“"
+    },
+    "description": {
+      "lv": "Dziesma par sauli no grupas „Kūlgrinda” albuma „Giesmės Saulei” (Dziesmas Saulei). „Kūlgrinda” ir 1990. gadā Viļņā Inijas un Jona Trinkūnu dibināta grupa, kas izpilda senās baltu dziesmas. Nosaukums nozīmē slepenu zemūdens taku no baltu vēstures.",
+      "lt": "Daina apie saulę iš grupės „Kūlgrinda“ albumo „Giesmės Saulei“. „Kūlgrinda“ — 1990 m. Vilniuje Inijos ir Jono Trinkūnų įkurta grupė, atliekanti senąsias baltų giesmes. Pavadinimas reiškia slaptą povandeninį taką iš baltų istorijos."
     }
   }
 ]

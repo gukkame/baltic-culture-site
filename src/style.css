@@ -1,19 +1,83 @@
 @import 'tailwindcss';
 
+/* Self-hosted fonts, SIL Open Font License 1.1 (license texts in src/assets/fonts). */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('./assets/fonts/playfair-display-latin-ext.woff2') format('woff2');
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('./assets/fonts/playfair-display-latin.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./assets/fonts/playfair-display-italic-latin-ext.woff2') format('woff2');
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./assets/fonts/playfair-display-italic-latin.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('./assets/fonts/work-sans-latin-ext.woff2') format('woff2');
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F,
+    U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('./assets/fonts/work-sans-latin.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 @theme {
-  /* Handmade-paper surfaces: page -> light panel/card -> aged edge -> deepest edge */
   --color-parchment: #f3ebdd;
   --color-parchment-light: #f8f1e5;
   --color-parchment-dark: #e8dac3;
   --color-parchment-darker: #d5c09d;
 
-  /* Unselected filter buttons: a warmer paper with a visible edge, for enough contrast on the page */
   --color-almond: #faebd7;
   --color-almond-dark: #f6e1c3;
   --color-taupe: #c8b999;
   --color-taupe-dark: #ab9770;
 
-  /* Latvian folk accents: red, ochre, forest, indigo */
   --color-terracotta: #9e2929;
   --color-terracotta-dark: #7a1f1f;
   --color-amber: #b77a24;
@@ -29,16 +93,13 @@
   --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-sans: 'Work Sans', 'Helvetica Neue', Arial, sans-serif;
 
-  /* Warm dark brown that all paper shadows are made of */
   --color-umber: #322314;
 
-  /* Soft, low-contrast shadows for a tactile paper feel rather than a UI-panel feel */
   --shadow-paper: 0 2px 8px color-mix(in srgb, var(--color-umber) 6%, transparent);
   --shadow-paper-hover: 0 14px 28px color-mix(in srgb, var(--color-umber) 16%, transparent);
   --drop-shadow-seal: 0 2px 4px color-mix(in srgb, var(--color-umber) 25%, transparent);
   --drop-shadow-hero: 0 8px 20px color-mix(in srgb, var(--color-umber) 14%, transparent);
 
-  /* Home page: painted hero palette */
   --color-cream: #fff2d9;
   --color-cream-bright: #fff4ce;
   --color-sand: #f3d6a7;
@@ -54,7 +115,6 @@
   --text-shadow-nav: 0 1px 8px color-mix(in srgb, var(--color-pine-deep) 80%, transparent);
   --text-shadow-title: 0 2px 25px color-mix(in srgb, var(--color-pine-deep) 19%, transparent);
 
-  /* Home page: the carved wooden country map (and the gold of the quiz badges) */
   --color-gold: #e2bc79;
   --color-gold-light: #e9c786;
   --color-gold-dark: #d6b572;
@@ -65,7 +125,6 @@
   --color-map-latvia: #174d38;
   --color-map-lithuania: #183f35;
 
-  /* Extra breakpoints the home hero is tuned for (used as max-* variants, e.g. max-laptop:) */
   --breakpoint-xs: 27.5rem; /* 440px */
   --breakpoint-tablet: 47.5rem; /* 760px */
   --breakpoint-laptop: 68.75rem; /* 1100px */
@@ -83,8 +142,6 @@
   }
 }
 
-/* Darkening over the home hero painting so its text stays readable: from the left behind the
-   intro, a little from the top behind the header, and from the bottom behind the map. */
 @utility bg-hero-shade {
   background-image:
     linear-gradient(90deg, color-mix(in srgb, var(--color-pine-deep) 66%, transparent), transparent 60%),
@@ -92,14 +149,17 @@
     linear-gradient(0deg, color-mix(in srgb, var(--color-bark) 53%, transparent), transparent 30%);
 }
 
-/* Phones: the text covers the whole width, so the shade does too. */
 @utility bg-hero-shade-full {
   background-image:
-    linear-gradient(90deg, color-mix(in srgb, var(--color-pine-deep) 85%, transparent), color-mix(in srgb, var(--color-pine-deep) 40%, transparent)),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--color-pine-deep) 85%, transparent),
+      color-mix(in srgb, var(--color-pine-deep) 40%, transparent)
+    ),
     linear-gradient(0deg, color-mix(in srgb, var(--color-bark) 78%, transparent), transparent 34%);
 }
 
-/* Base element styles live in the base layer so Tailwind utilities can override them. */
+/* In the base layer so Tailwind utilities can override these. */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -107,9 +167,6 @@
 
   body {
     background-color: var(--color-parchment);
-    /* A translucent parchment wash sits over the photo so body text (which has
-       no opaque card behind it on most pages) keeps solid WCAG AA contrast
-       regardless of where the image's darker areas land. */
     background-image:
       linear-gradient(
         color-mix(in srgb, var(--color-parchment) 60%, transparent),

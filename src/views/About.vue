@@ -3,32 +3,40 @@ import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLocale } from '../composables/useLocale'
 import { contentByCountry, type Country } from '../data'
-import { galleryByCountry, latvianSymbolCredits, lithuanianSymbols } from '../data/credits'
+import { galleryByCountry, latvianSymbols, lithuanianSymbols } from '../data/credits'
+import InterregLogo from '../components/InterregLogo.vue'
 
 const { locale, t } = useLocale()
 
 const symbolGroups = computed(() => [
-  { title: t('about.latvianSymbols'), intro: '', credits: latvianSymbolCredits },
+  { title: t('about.latvianSymbols'), intro: '', credits: latvianSymbols },
   { title: t('about.lithuanianSymbols'), intro: t('about.lithuanianSymbolsIntro'), credits: lithuanianSymbols },
 ])
 
 const countries: Country[] = ['latvia', 'lithuania']
 
-// Country page photos, listed only once some have been added.
 const galleryGroups = computed(() =>
   countries
-    .map((country) => ({ title: t(`common.${country}`), intro: '', credits: galleryByCountry[country] }))
+    .map((country) => ({
+      title: t(`common.${country}`),
+      intro: '',
+      credits: galleryByCountry[country].filter((photo) => photo.license),
+    }))
     .filter((group) => group.credits.length),
 )
 
 const imageSections = computed(() =>
   [
     { id: 'about-symbols', title: t('about.symbolsTitle'), intro: t('about.symbolsIntro'), groups: symbolGroups.value },
-    { id: 'about-gallery', title: t('about.galleryTitle'), intro: t('about.galleryIntro'), groups: galleryGroups.value },
+    {
+      id: 'about-gallery',
+      title: t('about.galleryTitle'),
+      intro: t('about.galleryIntro'),
+      groups: galleryGroups.value,
+    },
   ].filter((section) => section.groups.length),
 )
 
-// Text sources are the non-YouTube source pages (the YouTube ones are covered by the video list).
 const textSources = computed(() =>
   countries.flatMap((country) =>
     contentByCountry[country]
@@ -75,7 +83,12 @@ const linkClass =
     <h1 class="mt-4 font-serif text-3xl text-ink sm:text-4xl">{{ t('about.title') }}</h1>
     <p class="mt-3 max-w-2xl text-ink-light">{{ t('about.intro') }}</p>
 
-    <section class="mt-12 rounded-2xl bg-parchment-light p-6 shadow-paper ring-1 ring-parchment-dark sm:p-8" aria-labelledby="about-project">
+    <InterregLogo class="mt-6 w-[280px] max-w-full shadow-sm sm:w-80" />
+
+    <section
+      class="mt-12 rounded-2xl bg-parchment-light p-6 shadow-paper ring-1 ring-parchment-dark sm:p-8"
+      aria-labelledby="about-project"
+    >
       <h2 id="about-project" class="font-serif text-2xl text-ink">{{ t('about.project.title') }}</h2>
       <p class="mt-2 font-serif text-lg italic text-ink">{{ t('about.project.name') }}</p>
       <p class="mt-4 text-ink-light">{{ t('about.project.goal') }}</p>
@@ -90,7 +103,9 @@ const linkClass =
       </dl>
 
       <p class="mt-6 flex flex-wrap gap-x-4 gap-y-1 text-sm">
-        <a :href="PROJECT_PAGE_URL" target="_blank" rel="noopener" :class="linkClass">{{ t('about.project.moreInfo') }}</a>
+        <a :href="PROJECT_PAGE_URL" target="_blank" rel="noopener" :class="linkClass">{{
+          t('about.project.moreInfo')
+        }}</a>
         <span class="text-ink-light">
           {{ t('about.project.source') }}:
           <a :href="PROJECT_SOURCE_URL" target="_blank" rel="noopener" :class="linkClass">livani.lv</a>
@@ -115,12 +130,16 @@ const linkClass =
           >
             <img :src="credit.src" alt="" class="h-16 w-16 shrink-0 object-contain" loading="lazy" />
             <div class="min-w-0 text-sm">
-              <p class="font-medium text-ink">{{ credit.title[locale] }}</p>
+              <p v-if="credit.title" class="font-medium text-ink">{{ credit.title[locale] }}</p>
               <p v-if="credit.description" class="mt-1 text-ink-light">{{ credit.description[locale] }}</p>
               <p v-if="credit.author" class="mt-1 text-ink-light">{{ t('about.author') }}: {{ credit.author }}</p>
               <p class="mt-1 flex flex-wrap gap-x-3">
-                <a v-if="credit.license" :href="credit.license.url" target="_blank" rel="noopener" :class="linkClass">{{ credit.license.name }}</a>
-                <a :href="credit.sourceUrl" target="_blank" rel="noopener" :class="linkClass">{{ t('about.source') }}</a>
+                <a v-if="credit.license" :href="credit.license.url" target="_blank" rel="noopener" :class="linkClass">{{
+                  credit.license.name
+                }}</a>
+                <a v-if="credit.sourceUrl" :href="credit.sourceUrl" target="_blank" rel="noopener" :class="linkClass">{{
+                  t('about.source')
+                }}</a>
               </p>
             </div>
           </li>

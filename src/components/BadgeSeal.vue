@@ -10,7 +10,6 @@ withDefaults(
   { size: 48 },
 )
 
-// Latvia: brick red, Lithuania: forest green, both: indigo.
 const tone: Record<QuizCountry, string> = {
   latvia: 'text-terracotta',
   lithuania: 'text-forest-dark',

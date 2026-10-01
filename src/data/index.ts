@@ -21,7 +21,6 @@ export function findItem(country: string | undefined, itemId: string | undefined
   return contentByCountry[country].find((item) => item.id === itemId)
 }
 
-/** Next item of the same category (dance → dance, song → song), wrapping to the first. */
 export function findNextItem(country: string | undefined, itemId: string | undefined): ContentItem | undefined {
   const current = findItem(country, itemId)
   if (!current || !isCountry(country)) return undefined
@@ -37,16 +36,14 @@ export function youtubeId(videoUrl: string): string | undefined {
 
 export function youtubeEmbedUrl(videoUrl: string): string {
   const id = youtubeId(videoUrl)
-  return id ? `https://www.youtube.com/embed/${id}` : videoUrl
+  return id ? `https://www.youtube-nocookie.com/embed/${id}` : videoUrl
 }
 
-/** hqdefault is 4:3 with letterbox bars, so crop it with object-cover in a 16:9 box. */
 export function youtubeThumbnailUrl(videoUrl: string): string | undefined {
   const id = youtubeId(videoUrl)
   return id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : undefined
 }
 
-/** Muted, looping, chrome-less embed for hover previews on cards. */
 export function youtubePreviewUrl(videoUrl: string): string | undefined {
   const id = youtubeId(videoUrl)
   return id

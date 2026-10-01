@@ -14,9 +14,8 @@ const props = defineProps<{
 }>()
 
 const { locale, t } = useLocale()
-const { recordAnswer, hasBadge } = useQuizProgress()
+const { earnBadge, hasBadge } = useQuizProgress()
 
-// The badge is the source of truth for "solved", so it survives reloads and a reset.
 const solved = computed(() => hasBadge(props.question.id))
 const picked = ref<number>()
 const wrong = computed(() => !solved.value && picked.value !== undefined)
@@ -25,11 +24,9 @@ const isOpen = computed(() => props.question.type === 'open')
 const correctIndex = computed(() => (props.question.type === 'open' ? undefined : props.question.correct))
 const options = computed(() => (props.question.type === 'open' ? [] : props.question.options))
 
-// Open questions: whatever the visitor writes counts, it just has to be something.
 const openAnswer = ref('')
 const canSubmitOpen = computed(() => openAnswer.value.trim().length > 0)
 
-// Start fresh if progress is reset while the page is open.
 watch(solved, (isSolved) => {
   if (!isSolved) {
     picked.value = undefined
@@ -40,13 +37,12 @@ watch(solved, (isSolved) => {
 function pick(index: number) {
   if (solved.value) return
   picked.value = index
-  const correct = index === correctIndex.value
-  recordAnswer(props.question.id, correct, correct ? props.question.id : undefined)
+  if (index === correctIndex.value) earnBadge(props.question.id)
 }
 
 function submitOpen() {
   if (solved.value || !canSubmitOpen.value) return
-  recordAnswer(props.question.id, true, props.question.id)
+  earnBadge(props.question.id)
 }
 
 const relatedItem = computed(() =>
@@ -79,7 +75,13 @@ function optionClass(index: number): string {
       <p class="text-xs text-ink-light">
         {{ number }} · <span class="font-medium">{{ countryLabel }}</span>
       </p>
-      <BadgeSeal v-if="solved" :country="question.country" :label="t('quiz.badgeEarned')" :size="44" class="-mt-1 shrink-0" />
+      <BadgeSeal
+        v-if="solved"
+        :country="question.country"
+        :label="t('quiz.badgeEarned')"
+        :size="44"
+        class="-mt-1 shrink-0"
+      />
     </div>
 
     <h2 class="mt-2 whitespace-pre-line font-serif text-xl text-ink">{{ question.question[locale] }}</h2>
@@ -94,8 +96,12 @@ function optionClass(index: number): string {
         :placeholder="t('quiz.openPlaceholder')"
         class="w-full rounded-xl border border-parchment-darker bg-parchment-light px-4 py-3 text-ink placeholder:text-ink-light/60 focus:border-terracotta focus:outline-none"
       />
-      <p v-else-if="openAnswer" class="rounded-xl border border-forest bg-forest/10 px-4 py-3 whitespace-pre-line text-ink">
-        <span class="block text-xs text-ink-light">{{ t('quiz.yourAnswer') }}</span>{{ openAnswer }}
+      <p
+        v-else-if="openAnswer"
+        class="rounded-xl border border-forest bg-forest/10 px-4 py-3 whitespace-pre-line text-ink"
+      >
+        <span class="block text-xs text-ink-light">{{ t('quiz.yourAnswer') }}</span
+        >{{ openAnswer }}
       </p>
       <button
         v-if="!solved"
@@ -141,7 +147,9 @@ function optionClass(index: number): string {
       </div>
 
       <div v-else-if="solved" class="mt-4 text-sm">
-        <p class="font-medium text-forest-dark">{{ isOpen ? t('quiz.anyAnswer') : t('quiz.correct') }} {{ t('quiz.badgeEarned') }}</p>
+        <p class="font-medium text-forest-dark">
+          {{ isOpen ? t('quiz.anyAnswer') : t('quiz.correct') }} {{ t('quiz.badgeEarned') }}
+        </p>
         <p class="mt-1 whitespace-pre-line leading-relaxed text-ink">{{ question.explanation[locale] }}</p>
         <RouterLink
           v-if="relatedItem"

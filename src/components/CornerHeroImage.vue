@@ -3,12 +3,10 @@ import { computed, onBeforeUnmount, ref, useId, watch } from 'vue'
 
 export interface HeroSlide {
   src: string
-  /** Leave out for a purely decorative image. */
   alt?: string
 }
 
 const props = defineProps<{
-  /** One image stays still; several cross-fade from one to the next. */
   images: HeroSlide[]
 }>()
 
@@ -16,7 +14,7 @@ const SLIDE_INTERVAL_MS = 4500
 
 const maskId = useId()
 const current = ref(0)
-// Only the current and the next image are fetched, so a slideshow doesn't download every image up front.
+// Only the current and the next image are downloaded.
 const fetched = ref(new Set<number>())
 let timer: ReturnType<typeof setInterval> | undefined
 
@@ -26,7 +24,6 @@ function start() {
   clearInterval(timer)
   current.value = 0
   fetched.value = new Set([0, 1])
-  // Keep a still image for visitors who ask for less motion, or when there is nothing to cycle through.
   if (props.images.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
   timer = setInterval(() => {
     const count = props.images.length
@@ -35,7 +32,6 @@ function start() {
   }, SLIDE_INTERVAL_MS)
 }
 
-// Restart from the first image whenever a different set comes in (e.g. switching country).
 watch(() => props.images.map((image) => image.src).join('|'), start, { immediate: true })
 onBeforeUnmount(() => clearInterval(timer))
 </script>

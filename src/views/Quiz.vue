@@ -6,6 +6,7 @@ import { useQuizProgress } from '../composables/useQuizProgress'
 import { quizQuestions } from '../data'
 import QuizQuestionCard from '../components/QuizQuestionCard.vue'
 import CornerHeroImage from '../components/CornerHeroImage.vue'
+import { publicUrl } from '../publicUrl'
 
 const { t } = useLocale()
 const { state, reset } = useQuizProgress()
@@ -14,14 +15,12 @@ const total = quizQuestions.length
 const collected = computed(() => quizQuestions.filter((question) => state.badges.includes(question.id)).length)
 const allDone = computed(() => collected.value === total)
 
-// Questions unlock one at a time: everything answered so far, plus the current one.
 const visibleQuestions = computed(() => {
   const current = quizQuestions.findIndex((question) => !state.badges.includes(question.id))
   return current === -1 ? quizQuestions : quizQuestions.slice(0, current + 1)
 })
 
-// When a new question unlocks, bring it to the middle of the screen so nobody has to scroll for it.
-// A short pause first lets the "Correct! Badge earned" feedback register before the page moves.
+// Short pause so the "Correct!" feedback is seen before the page scrolls to the next question.
 const SCROLL_DELAY_MS = 700
 let scrollTimer: ReturnType<typeof setTimeout> | undefined
 
@@ -29,7 +28,7 @@ watch(
   () => visibleQuestions.value.length,
   async (length, previousLength) => {
     clearTimeout(scrollTimer)
-    if (length <= previousLength) return // start over: nothing to scroll to
+    if (length <= previousLength) return
     await nextTick()
     const unlocked = visibleQuestions.value[length - 1]
     scrollTimer = setTimeout(() => {
@@ -54,9 +53,11 @@ function confirmStartOver() {
 
 <template>
   <section class="relative" aria-labelledby="quiz-title">
-    <div class="relative mx-auto max-w-[1800px]">
-      <CornerHeroImage :images="[{ src: '/images/hero/quiz-folk-dancers.webp' }]" />
-      <div class="mx-auto min-h-[clamp(140px,22vw,220px)] max-w-6xl px-4 pb-6 pt-10 sm:min-h-[clamp(180px,20vw,260px)] sm:px-6 sm:pt-16 lg:min-h-[clamp(320px,29vw,520px)] lg:px-8">
+    <div class="relative mx-auto">
+      <CornerHeroImage :images="[{ src: publicUrl('/images/hero/quiz-folk-dancers.webp') }]" />
+      <div
+        class="mx-auto min-h-[clamp(140px,22vw,220px)] max-w-6xl px-4 pb-6 pt-10 sm:min-h-[clamp(180px,20vw,260px)] sm:px-6 sm:pt-16 lg:min-h-[clamp(320px,29vw,520px)] lg:px-8"
+      >
         <div class="max-w-[60%] lg:max-w-md">
           <RouterLink
             to="/"
@@ -84,7 +85,10 @@ function confirmStartOver() {
           :aria-valuemax="total"
           :aria-valuenow="collected"
         >
-          <div class="h-full rounded-full bg-terracotta transition-all duration-500" :style="{ width: `${(collected / total) * 100}%` }" />
+          <div
+            class="h-full rounded-full bg-terracotta transition-all duration-500"
+            :style="{ width: `${(collected / total) * 100}%` }"
+          />
         </div>
         <p v-if="allDone" class="mt-3 text-sm font-medium text-forest-dark">{{ t('quiz.allDone') }}</p>
       </div>
@@ -114,11 +118,9 @@ function confirmStartOver() {
         </button>
       </div>
 
-      <!-- Room below the newest question, otherwise the page is too short to scroll it to the middle. -->
       <div v-if="!allDone" class="h-[45vh]" aria-hidden="true" />
     </div>
 
-    <!-- A real dialog instead of window.confirm(): always visible, focus-trapped, closes with Esc. -->
     <dialog
       ref="resetDialog"
       aria-labelledby="reset-title"

@@ -6,7 +6,6 @@ import FolkEmblem from './FolkEmblem.vue'
 
 const props = defineProps<{
   item: ContentItem
-  /** True while the parent card is hovered or focused. */
   active: boolean
 }>()
 
@@ -15,11 +14,9 @@ const PREVIEW_DELAY_MS = 400
 const thumbnail = computed(() => (props.item.videoUrl ? youtubeThumbnailUrl(props.item.videoUrl) : undefined))
 const previewUrl = computed(() => (props.item.videoUrl ? youtubePreviewUrl(props.item.videoUrl) : undefined))
 
-// No video, or its thumbnail can't load: show a plain block instead of a broken image.
 const thumbnailFailed = ref(false)
 const showThumbnail = computed(() => thumbnail.value && !thumbnailFailed.value)
 
-// Only autoplay where hover exists and the user hasn't asked for reduced motion.
 const canPreview =
   typeof window !== 'undefined' &&
   window.matchMedia('(hover: hover) and (prefers-reduced-motion: no-preference)').matches
@@ -39,7 +36,6 @@ watch(
   (active) => {
     stop()
     if (active && canPreview && previewUrl.value) {
-      // Short delay so sweeping the mouse across the grid doesn't load a video per card.
       timer = setTimeout(() => (showVideo.value = true), PREVIEW_DELAY_MS)
     }
   },
@@ -50,8 +46,6 @@ onBeforeUnmount(() => clearTimeout(timer))
 
 <template>
   <div class="relative aspect-video w-full overflow-hidden bg-parchment-dark">
-    <!-- Zooms with the parent card's hover/focus (the card is the Tailwind `group`); thumbnail and
-         video preview sit in the same layer so they scale together. -->
     <div
       class="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-105 group-focus-visible:scale-105"
     >
