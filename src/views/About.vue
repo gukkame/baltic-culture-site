@@ -4,6 +4,7 @@ import { RouterLink } from 'vue-router'
 import { useLocale } from '../composables/useLocale'
 import { contentByCountry, type Country } from '../data'
 import { galleryByCountry, latvianSymbolCredits, lithuanianSymbols } from '../data/credits'
+import { publicUrl } from '../publicUrl'
 
 const { locale, t } = useLocale()
 
@@ -80,10 +81,9 @@ const linkClass =
     <h1 class="mt-4 font-serif text-3xl text-ink sm:text-4xl">{{ t('about.title') }}</h1>
     <p class="mt-3 max-w-2xl text-ink-light">{{ t('about.intro') }}</p>
 
-    <!-- EU co-funding logo, as the Interreg programme asks for on project outputs. -->
     <div class="mt-6 w-[280px] max-w-full overflow-hidden rounded-xl bg-white p-2 shadow-sm sm:w-80">
       <img
-        src="/images/partners/interreg-latvia-lithuania.jpg"
+        :src="publicUrl('/images/partners/interreg-latvia-lithuania.jpg')"
         alt="Interreg Latvija–Lietuva. Līdzfinansē Eiropas Savienība."
         lang="lv"
         width="400"

@@ -5,6 +5,7 @@ import { useLocale } from './composables/useLocale'
 import { aboutPaths } from './router/paths'
 import CountrySymbol from './components/CountrySymbol.vue'
 import homeCopy from './components/home/copy.json'
+import { publicUrl } from './publicUrl'
 
 const { locale, t } = useLocale()
 const route = useRoute()
@@ -23,7 +24,7 @@ function focusMain() {
 watchEffect(() => {
   document.documentElement.lang = locale.value
   document.title = t('site.title')
-  document.querySelector('link[rel="icon"]')?.setAttribute('href', `/favicon-${locale.value}.svg`)
+  document.querySelector('link[rel="icon"]')?.setAttribute('href', publicUrl(`/favicon-${locale.value}.svg`))
   document.querySelector('meta[name="description"]')?.setAttribute('content', t('site.description'))
 })
 
@@ -48,7 +49,7 @@ watch(locale, (value) => {
       <div class="mx-auto flex max-w-6xl flex-col items-start gap-7 md:flex-row md:items-center md:gap-10 lg:gap-10">
         <div class="w-[280px] max-w-full shrink-0 overflow-hidden rounded-xl bg-white p-2 shadow-sm lg:w-80">
           <img
-            src="/images/partners/interreg-latvia-lithuania.jpg"
+            :src="publicUrl('/images/partners/interreg-latvia-lithuania.jpg')"
             alt="Interreg Latvija–Lietuva. Līdzfinansē Eiropas Savienība."
             lang="lv"
             width="400"

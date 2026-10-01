@@ -6,6 +6,7 @@ import CountryMap from '../components/home/CountryMap.vue'
 import CountrySymbol from '../components/CountrySymbol.vue'
 import homeCopy from '../components/home/copy.json'
 import { aboutPaths, countryPath, quizPath } from '../router/paths'
+import { publicUrl } from '../publicUrl'
 
 const { locale, setLocale } = useLocale()
 const copy = computed(() => homeCopy[locale.value])
@@ -68,15 +69,13 @@ const heroControl =
 </script>
 
 <template>
-  <!-- The hero is designed desktop-first, so smaller screens use max-* variants of the
-       xs (440px), tablet (760px), laptop (1100px) and wide (1750px) breakpoints from style.css. -->
   <section
     class="relative isolate h-svh min-h-[750px] overflow-hidden bg-pine text-cream max-laptop:min-h-[790px] max-tablet:min-h-[960px] max-xs:min-h-[840px] max-[360px]:min-h-[900px]"
     aria-labelledby="home-title"
   >
     <img
       class="pointer-events-none absolute inset-0 -z-2 size-full object-cover object-[center_62%] max-tablet:object-[62%_center]"
-      src="/artwork/folk-dancers-table-painted-v4.webp"
+      :src="publicUrl('/artwork/folk-dancers-table-painted-v4.webp')"
       alt=""
       fetchpriority="high"
       decoding="async"
@@ -205,7 +204,6 @@ const heroControl =
       </RouterLink>
     </div>
 
-    <!-- Hidden wherever the map spans the full width (phones and portrait tablets), since it would sit on top of it. -->
     <div
       class="absolute bottom-[18%] left-[6%] w-1/4 text-cream max-laptop:left-[5.3%] max-laptop:w-[22%] max-laptop:portrait:hidden max-tablet:hidden"
     >
@@ -221,7 +219,6 @@ const heroControl =
       </svg>
     </div>
 
-    <!-- Full width on phones and portrait tablets, so both countries stay whole instead of being cropped. -->
     <div
       class="absolute bottom-[45px] right-0 w-3/5 max-w-[960px] wide:right-[4%] max-laptop:bottom-[38px] max-laptop:w-[69%] max-laptop:portrait:inset-x-[3%] max-laptop:portrait:bottom-[132px] max-laptop:portrait:w-auto max-tablet:inset-x-[3%] max-tablet:bottom-[132px] max-tablet:w-auto"
     >
@@ -237,7 +234,7 @@ const heroControl =
     <div class="absolute bottom-6 left-[5.3%] w-80 max-w-[86%] overflow-hidden rounded-xl bg-white p-2 shadow-md max-tablet:bottom-5 max-tablet:left-[7%] max-tablet:w-[280px]">
       <img
         class="block h-auto w-full"
-        src="/images/partners/interreg-latvia-lithuania.jpg"
+        :src="publicUrl('/images/partners/interreg-latvia-lithuania.jpg')"
         alt="Interreg Latvija–Lietuva. Līdzfinansē Eiropas Savienība."
         lang="lv"
         width="400"

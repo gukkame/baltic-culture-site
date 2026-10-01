@@ -1,5 +1,6 @@
 import type { LocalizedText } from '../types/content'
 import type { Country } from './index'
+import { publicUrl } from '../publicUrl'
 
 export interface License {
   name: string
@@ -22,9 +23,14 @@ export interface ImageCredit {
 
 export const CC_BY_SA_4: License = { name: 'CC BY-SA 4.0', url: 'https://creativecommons.org/licenses/by-sa/4.0/' }
 
+// Image paths above are written from the public/ folder ('/images/…'); this adds the site's base path.
+function withPublicUrls(images: ImageCredit[]): ImageCredit[] {
+  return images.map((image) => ({ ...image, src: publicUrl(image.src) }))
+}
+
 export const commons = (file: string) => `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(file.replace(/ /g, '_'))}`
 
-export const latvianSymbolCredits: ImageCredit[] = [
+export const latvianSymbolCredits: ImageCredit[] = withPublicUrls([
   {
     src: '/images/symbols/auseklis.svg',
     title: { lv: 'Auseklis', lt: 'Auseklis (Aušrinė)' },
@@ -32,7 +38,7 @@ export const latvianSymbolCredits: ImageCredit[] = [
     sourceUrl: commons('Auseklis.svg'),
     license: CC_BY_SA_4,
   },
-]
+])
 
 
 
@@ -40,7 +46,7 @@ export const latvianSymbolCredits: ImageCredit[] = [
 // after the chart in the Lithuanian Folk Art Institute's article, which also gives its name and meaning.
 const LTFAI_SYMBOLISM = 'https://ltfai.org/the-rich-symbolism-of-lithuanian-folk-art/'
 
-export const lithuanianSymbols: ImageCredit[] = [
+export const lithuanianSymbols: ImageCredit[] = withPublicUrls([
   {
     src: '/images/symbols/lt/rozele.svg',
     title: { lv: 'Rožėlė (rozīte, zvaigznīte)', lt: 'Rožėlė (žvaigždutė)' },
@@ -50,7 +56,7 @@ export const lithuanianSymbols: ImageCredit[] = [
     },
     sourceUrl: LTFAI_SYMBOLISM,
   },
-]
+])
 
 /**
  * Photos shown in the Images group of each country page; the first one also opens the slideshow
@@ -60,7 +66,7 @@ export const lithuanianSymbols: ImageCredit[] = [
  */
 const DEJU_SKATE_2025: LocalizedText = { lv: 'Deju skate 2025', lt: 'Šokių kolektyvų peržiūra 2025' }
 
-export const galleryByCountry: Record<Country, ImageCredit[]> = {
+const gallery: Record<Country, ImageCredit[]> = {
   latvia: [
     { src: '/images/gallery/latvia/deju-skate-2025-122.webp', title: DEJU_SKATE_2025 },
     { src: '/images/gallery/latvia/deju-skate-2025-123.webp', title: DEJU_SKATE_2025 },
@@ -95,4 +101,9 @@ export const galleryByCountry: Record<Country, ImageCredit[]> = {
     { src: '/images/gallery/latvia/foto-496449471.webp' },
   ],
   lithuania: [],
+}
+
+export const galleryByCountry: Record<Country, ImageCredit[]> = {
+  latvia: withPublicUrls(gallery.latvia),
+  lithuania: withPublicUrls(gallery.lithuania),
 }

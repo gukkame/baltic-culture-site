@@ -50,8 +50,6 @@ onBeforeUnmount(() => clearTimeout(timer))
 
 <template>
   <div class="relative aspect-video w-full overflow-hidden bg-parchment-dark">
-    <!-- Zooms with the parent card's hover/focus (the card is the Tailwind `group`); thumbnail and
-         video preview sit in the same layer so they scale together. -->
     <div
       class="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-105 group-focus-visible:scale-105"
     >

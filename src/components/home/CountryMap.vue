@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import countryGeometry from './countryGeometry.json'
 import { countryPathFor } from '../../router/paths'
+import { publicUrl } from '../../publicUrl'
 
 const props = defineProps<{
   label: string
@@ -26,11 +27,10 @@ const countries = computed(() => [...countryGeometry].reverse().map((country) =>
   <svg class="block w-full overflow-visible" viewBox="0 0 800 360" role="group" :aria-label="label">
     <defs>
       <pattern id="painted-land" patternUnits="userSpaceOnUse" width="800" height="360">
-        <image href="/artwork/painted-land-v1.webp" width="800" height="360" preserveAspectRatio="xMidYMid slice" />
+        <image :href="publicUrl('/artwork/painted-land-v1.webp')" width="800" height="360" preserveAspectRatio="xMidYMid slice" />
       </pattern>
-      <!-- Both terrain images share the same framing so the river stays aligned. -->
       <pattern id="painted-latvia-forest" patternUnits="userSpaceOnUse" width="800" height="360">
-        <image href="/artwork/painted-latvia-forest-v2.webp" width="800" height="360" preserveAspectRatio="xMidYMid slice" />
+        <image :href="publicUrl('/artwork/painted-latvia-forest-v2.webp')" width="800" height="360" preserveAspectRatio="xMidYMid slice" />
       </pattern>
       <linearGradient id="map-edge" x1="0" y1="0" x2="0.3" y2="1">
         <stop class="[stop-color:var(--color-gold)]" /><stop offset=".4" class="[stop-color:var(--color-wood)]" /><stop offset="1" class="[stop-color:var(--color-wood-dark)]" />
@@ -43,11 +43,9 @@ const countries = computed(() => [...countryGeometry].reverse().map((country) =>
       </filter>
     </defs>
     <g v-for="country in countries" :key="country.id" :transform="`translate(0 ${country.offset})`">
-      <!-- Client-side navigation: a plain href reloads the page and resets the chosen language. -->
       <RouterLink v-slot="{ href, navigate }" :to="countryPathFor(country.id)" custom>
       <a :href="href" :aria-label="`${country.name}: ${country.subtitle}`" class="group cursor-pointer outline-none [-webkit-tap-highlight-color:transparent]" @click="navigate">
         <title>{{ country.name }} · {{ country.subtitle }}</title>
-        <!-- Hover and keyboard focus lift the country and brighten its outline. -->
         <g class="transition-[translate,filter] duration-300 ease-[ease] group-hover:-translate-y-[7px] group-focus-visible:-translate-y-[7px]">
           <path :d="country.path" transform="translate(0 22)" stroke-width="3" class="fill-wood-shadow stroke-wood-shadow" filter="url(#map-shadow)" />
           <path v-for="depth in [18, 14, 10, 6]" :key="depth" :d="country.path" :transform="`translate(0 ${depth})`" fill="url(#map-edge)" stroke-width="1.1" class="stroke-wood-mid" />

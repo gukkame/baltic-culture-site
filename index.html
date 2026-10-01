@@ -7,20 +7,15 @@
 		<meta
 			name="description"
 			content="Iepazīsti Latvijas un Lietuvas tautas dejas, dziesmas un tradīcijas." />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Work+Sans:wght@400;500;600;700&display=swap"
-			rel="stylesheet" />
 		<script>
 			// Home page only: start fetching the hero art and map texture now, instead of
 			// waiting for the JS bundle to mount the components that reference them.
-			if (location.pathname === "/") {
+			if (location.pathname === "%BASE_URL%") {
 				var head = document.head;
 				[
-					["/artwork/folk-dancers-table-painted-v4.webp", "high"],
-					["/artwork/painted-land-v1.webp", "auto"],
-					["/artwork/painted-latvia-forest-v2.webp", "auto"],
+					["%BASE_URL%artwork/folk-dancers-table-painted-v4.webp", "high"],
+					["%BASE_URL%artwork/painted-land-v1.webp", "auto"],
+					["%BASE_URL%artwork/painted-latvia-forest-v2.webp", "auto"],
 				].forEach(function (a) {
 					var l = document.createElement("link");
 					l.rel = "preload";
