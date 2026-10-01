@@ -32,7 +32,8 @@
       }
     },
     "notFoundTitle": "Kultūra nav atrasta",
-    "notFoundBody": "Diemžēl šāda sadaļa neeksistē."
+    "notFoundBody": "Diemžēl šāda sadaļa neeksistē.",
+    "photoAlt": "Tautas deju kolektīva uzstāšanās"
   },
   "item": {
     "backToCulture": "Atpakaļ uz sarakstu",

@@ -32,7 +32,8 @@
       }
     },
     "notFoundTitle": "Kultūra nerasta",
-    "notFoundBody": "Deja, tokio skyriaus nėra."
+    "notFoundBody": "Deja, tokio skyriaus nėra.",
+    "photoAlt": "Liaudies šokių kolektyvo pasirodymas"
   },
   "item": {
     "backToCulture": "Atgal į sąrašą",

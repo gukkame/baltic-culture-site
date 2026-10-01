@@ -17,7 +17,12 @@ const countries: Country[] = ['latvia', 'lithuania']
 // Country page photos, listed only once some have been added.
 const galleryGroups = computed(() =>
   countries
-    .map((country) => ({ title: t(`common.${country}`), intro: '', credits: galleryByCountry[country] }))
+    // Only photos from elsewhere need crediting; the project's own photos carry no license.
+    .map((country) => ({
+      title: t(`common.${country}`),
+      intro: '',
+      credits: galleryByCountry[country].filter((photo) => photo.license),
+    }))
     .filter((group) => group.credits.length),
 )
 
@@ -75,6 +80,19 @@ const linkClass =
     <h1 class="mt-4 font-serif text-3xl text-ink sm:text-4xl">{{ t('about.title') }}</h1>
     <p class="mt-3 max-w-2xl text-ink-light">{{ t('about.intro') }}</p>
 
+    <!-- EU co-funding logo, as the Interreg programme asks for on project outputs. -->
+    <div class="mt-6 w-[280px] max-w-full overflow-hidden rounded-xl bg-white p-2 shadow-sm sm:w-80">
+      <img
+        src="/images/partners/interreg-latvia-lithuania.jpg"
+        alt="Interreg Latvija–Lietuva. Līdzfinansē Eiropas Savienība."
+        lang="lv"
+        width="400"
+        height="121"
+        decoding="async"
+        class="block h-auto w-full"
+      />
+    </div>
+
     <section class="mt-12 rounded-2xl bg-parchment-light p-6 shadow-paper ring-1 ring-parchment-dark sm:p-8" aria-labelledby="about-project">
       <h2 id="about-project" class="font-serif text-2xl text-ink">{{ t('about.project.title') }}</h2>
       <p class="mt-2 font-serif text-lg italic text-ink">{{ t('about.project.name') }}</p>
@@ -115,12 +133,12 @@ const linkClass =
           >
             <img :src="credit.src" alt="" class="h-16 w-16 shrink-0 object-contain" loading="lazy" />
             <div class="min-w-0 text-sm">
-              <p class="font-medium text-ink">{{ credit.title[locale] }}</p>
+              <p v-if="credit.title" class="font-medium text-ink">{{ credit.title[locale] }}</p>
               <p v-if="credit.description" class="mt-1 text-ink-light">{{ credit.description[locale] }}</p>
               <p v-if="credit.author" class="mt-1 text-ink-light">{{ t('about.author') }}: {{ credit.author }}</p>
               <p class="mt-1 flex flex-wrap gap-x-3">
                 <a v-if="credit.license" :href="credit.license.url" target="_blank" rel="noopener" :class="linkClass">{{ credit.license.name }}</a>
-                <a :href="credit.sourceUrl" target="_blank" rel="noopener" :class="linkClass">{{ t('about.source') }}</a>
+                <a v-if="credit.sourceUrl" :href="credit.sourceUrl" target="_blank" rel="noopener" :class="linkClass">{{ t('about.source') }}</a>
               </p>
             </div>
           </li>

@@ -145,5 +145,236 @@
       "lv": "Tūdaliņ’, tagadiņ’ ir deja 12 pāriem ar Georga Dovgjallo mūziku. Pirmoreiz to 1985. gadā iestudēja tautas deju ansamblis „Rotaļa“, radot īpaši Deju svētku deju fināla konkursam-skatei.\n\nDejas horeogrāfisko leksiku veido skrējiena, galopa un polkas soļi, kāju piesitieni, plaukstu sasitieni, kā arī tautas deju „Jandāliņš“ un „Pērkoņdancis“ elementi. Dejotāji dziesmas tekstu gan runā, gan dzied līdzi, un deju izpilda dzīvi un rotaļīgi — partnerattiecības ir tās rakstura pamats. Deja izpildīta starptautiskajā folkloras festivālā „Baltica-88“ un XII Deju svētkos 1998. gadā.",
       "lt": "„Tūdaliņ’, tagadiņ’“ — šokis 12 porų su Georgo Dovgjallo muzika. Pirmą kartą jį 1985 m. pastatė liaudies šokių ansamblis „Rotaļa“, sukūręs specialiai Šokių šventės šokių finalo konkursui-peržiūrai.\n\nŠokio choreografinį žodyną sudaro bėgimo, galopo ir polkos žingsniai, kojų trepsėjimas, plojimai, taip pat liaudies šokių „Jandāliņš“ ir „Pērkoņdancis“ elementai. Šokėjai dainos tekstą ir taria, ir dainuoja, o šokis atliekamas gyvai ir žaismingai — jo charakterio pagrindas yra partnerių santykiai. Šokis atliktas tarptautiniame folkloro festivalyje „Baltica-88“ ir XII Šokių šventėje 1998 m."
     }
+  },
+  {
+    "id": "zynu-zynu-tava-satu",
+    "category": "song",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=LnkV9_o4c8o",
+    "contentStatus": "title-from-video",
+    "videoUrl": "https://www.youtube.com/watch?v=LnkV9_o4c8o",
+    "audioUrl": "",
+    "title": {
+      "lv": "Zynu, zynu tāva sātu",
+      "lt": "Zynu, zynu tāva sātu"
+    },
+    "tagline": {
+      "lv": "Folkloras kopa \"Ceiruleits\", Latgale",
+      "lt": "Folkloro ansamblis „Ceiruleits\", Latgala"
+    },
+    "description": {
+      "lv": "Latgaliešu tautasdziesma no folkloras kopas \"Ceiruleits\" albuma \"Skaņu balseņu palaidu\" (Lauska, 2021), kurā piedalās arī Anna Kārkle.",
+      "lt": "Latgalių liaudies daina iš folkloro ansamblio „Ceiruleits\" albumo „Skaņu balseņu palaidu\" (Lauska, 2021), kuriame dalyvauja ir Anna Kārkle."
+    }
+  },
+  {
+    "id": "sazideja-gaila-pisi",
+    "category": "song",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=Oq31-hjH__g",
+    "contentStatus": "title-from-video",
+    "videoUrl": "https://www.youtube.com/watch?v=Oq31-hjH__g",
+    "audioUrl": "",
+    "title": {
+      "lv": "Sazīdēja gaiļa pīši",
+      "lt": "Sazīdēja gaiļa pīši"
+    },
+    "tagline": {
+      "lv": "Folkloras kopa \"Ceiruleits\", Latgale",
+      "lt": "Folkloro ansamblis „Ceiruleits\", Latgala"
+    },
+    "description": {
+      "lv": "Latgaliešu tautasdziesma no folkloras kopas \"Ceiruleits\" albuma \"Skaņu balseņu palaidu\" (Lauska, 2021), kurā piedalās arī Anna Kārkle.",
+      "lt": "Latgalių liaudies daina iš folkloro ansamblio „Ceiruleits\" albumo „Skaņu balseņu palaidu\" (Lauska, 2021), kuriame dalyvauja ir Anna Kārkle."
+    }
+  },
+  {
+    "id": "nadud-divs-veitulam",
+    "category": "song",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=GXv3W1UOLhg",
+    "contentStatus": "title-from-video",
+    "videoUrl": "https://www.youtube.com/watch?v=GXv3W1UOLhg",
+    "audioUrl": "",
+    "title": {
+      "lv": "Nadūd Dīvs veitūlam",
+      "lt": "Nadūd Dīvs veitūlam"
+    },
+    "tagline": {
+      "lv": "Folkloras kopa \"Ceiruleits\", Latgale",
+      "lt": "Folkloro ansamblis „Ceiruleits\", Latgala"
+    },
+    "description": {
+      "lv": "Latgaliešu tautasdziesma no folkloras kopas \"Ceiruleits\" albuma \"Skaņu balseņu palaidu\" (Lauska, 2021), kurā piedalās arī Anna Kārkle.",
+      "lt": "Latgalių liaudies daina iš folkloro ansamblio „Ceiruleits\" albumo „Skaņu balseņu palaidu\" (Lauska, 2021), kuriame dalyvauja ir Anna Kārkle."
+    }
+  },
+  {
+    "id": "pici-bari-kumeleni",
+    "category": "song",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=HpurNXPOCdo",
+    "contentStatus": "title-from-video",
+    "videoUrl": "https://www.youtube.com/watch?v=HpurNXPOCdo",
+    "audioUrl": "",
+    "title": {
+      "lv": "Pīci bāri kumeleņi",
+      "lt": "Pīci bāri kumeleņi"
+    },
+    "tagline": {
+      "lv": "Folkloras kopa \"Ceiruleits\", Latgale",
+      "lt": "Folkloro ansamblis „Ceiruleits\", Latgala"
+    },
+    "description": {
+      "lv": "Latgaliešu dancis folkloras kopas \"Ceiruleits\" izpildījumā.",
+      "lt": "Latgalių šokis (dancis), atliekamas folkloro ansamblio „Ceiruleits\"."
+    }
+  },
+  {
+    "id": "jau-mani-vad",
+    "category": "song",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=uBbbKnvtsic",
+    "contentStatus": "title-from-video",
+    "videoUrl": "https://www.youtube.com/watch?v=uBbbKnvtsic",
+    "audioUrl": "",
+    "title": {
+      "lv": "Jau mani vad",
+      "lt": "Jau mani vad"
+    },
+    "tagline": {
+      "lv": "Folkloras kopa \"Ceiruleits\", Latgale",
+      "lt": "Folkloro ansamblis „Ceiruleits\", Latgala"
+    },
+    "description": {
+      "lv": "Latgaliešu tautasdziesma folkloras kopas \"Ceiruleits\" izpildījumā.",
+      "lt": "Latgalių liaudies daina, atliekama folkloro ansamblio „Ceiruleits\"."
+    }
+  },
+  {
+    "id": "put-vejini",
+    "category": "song",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=bevcg5SMJHo",
+    "contentStatus": "verified-from-source",
+    "videoUrl": "https://www.youtube.com/watch?v=bevcg5SMJHo",
+    "audioUrl": "",
+    "title": {
+      "lv": "Pūt, vējiņi",
+      "lt": "Pūt, vējiņi"
+    },
+    "tagline": {
+      "lv": "Tautasdziesma Andreja Jurjāna apdarē",
+      "lt": "Liaudies daina, aranžuota Andrejaus Jurjānio"
+    },
+    "description": {
+      "lv": "Viena no pazīstamākajām latviešu tautasdziesmām, šeit kora izpildījumā Andreja Jurjāna apdarē. To dzied lielais kopkoris Dziesmu svētkos, un tā kļuvusi par vienu no kopīgās dziedāšanas simboliem.",
+      "lt": "Viena žinomiausių latvių liaudies dainų, čia atliekama choro, aranžuota Andrejaus Jurjānio. Ją dainuoja jungtinis choras Dainų šventėse, ir ji tapo vienu bendro dainavimo simbolių."
+    }
+  },
+  {
+    "id": "riga-dimd",
+    "category": "song",
+    "difficulty": "intermediate",
+    "sourceUrl": "https://www.youtube.com/watch?v=mxd_vAE7w90",
+    "contentStatus": "verified-from-source",
+    "videoUrl": "https://www.youtube.com/watch?v=mxd_vAE7w90",
+    "audioUrl": "",
+    "title": {
+      "lv": "Rīga dimd",
+      "lt": "Rīga dimd"
+    },
+    "tagline": {
+      "lv": "Tautasdziesma par Rīgu Jāņa Cimzes apdarē",
+      "lt": "Liaudies daina apie Rygą, aranžuota Janio Cimzės"
+    },
+    "description": {
+      "lv": "Latviešu tautasdziesma par Rīgu — nosaukums nozīmē „Rīga skan” — Jāņa Cimzes apdarē. Dzied Latvijas Radio koris, diriģents Sigvards Kļava.",
+      "lt": "Latvių liaudies daina apie Rygą — pavadinimas reiškia „Ryga skamba“ — aranžuota Janio Cimzės. Atlieka Latvijos radijo choras, diriguoja Sigvardas Kļava."
+    }
+  },
+  {
+    "id": "uz-daugavas-es-dzivoju",
+    "category": "song",
+    "difficulty": "intermediate",
+    "sourceUrl": "https://www.youtube.com/watch?v=IVYXndKKUWE",
+    "contentStatus": "verified-from-source",
+    "videoUrl": "https://www.youtube.com/watch?v=IVYXndKKUWE",
+    "audioUrl": "",
+    "title": {
+      "lv": "Uz Daugavas es dzīvoju",
+      "lt": "Uz Daugavas es dzīvoju"
+    },
+    "tagline": {
+      "lv": "Folkloras grupa „Iļģi”",
+      "lt": "Folkloro grupė „Iļģi“"
+    },
+    "description": {
+      "lv": "Latviešu tautasdziesma folkloras grupas „Iļģi” izpildījumā no albuma „Sēju vēju” (2000). „Iļģi” ir viena no pazīstamākajām Latvijas folkloras grupām, kas tautasdziesmas spēlē ar tradicionālajiem instrumentiem.",
+      "lt": "Latvių liaudies daina, atliekama folkloro grupės „Iļģi“, iš albumo „Sēju vēju“ (2000). „Iļģi“ — viena žinomiausių Latvijos folkloro grupių, liaudies dainas atliekanti su tradiciniais instrumentais."
+    }
+  },
+  {
+    "id": "kod-it-iz-balli",
+    "category": "song",
+    "difficulty": "intermediate",
+    "sourceUrl": "https://www.youtube.com/watch?v=OFh-FlUek5M",
+    "contentStatus": "verified-from-source",
+    "videoUrl": "https://www.youtube.com/watch?v=OFh-FlUek5M",
+    "audioUrl": "",
+    "title": {
+      "lv": "Kod īt iz balli",
+      "lt": "Kod īt iz balli"
+    },
+    "tagline": {
+      "lv": "Latgaliešu tautasdziesma, folkloras kopa „Upīte”",
+      "lt": "Latgalių liaudies daina, folkloro ansamblis „Upīte“"
+    },
+    "description": {
+      "lv": "Latgaliešu tautasdziesma par iešanu uz balli folkloras kopas „Upīte” izpildījumā. Dziesma pierakstīta no teicējas L. Supes.",
+      "lt": "Latgalių liaudies daina apie ėjimą į vakaruškas, atliekama folkloro ansamblio „Upīte“. Daina užrašyta iš pateikėjos L. Supės."
+    }
+  },
+  {
+    "id": "tumsa-tumsa",
+    "category": "song",
+    "difficulty": "intermediate",
+    "sourceUrl": "https://www.youtube.com/watch?v=Pgby61D3xgs",
+    "contentStatus": "verified-from-source",
+    "videoUrl": "https://www.youtube.com/watch?v=Pgby61D3xgs",
+    "audioUrl": "",
+    "title": {
+      "lv": "Tumsa, tumsa, kas par tumsu",
+      "lt": "Tumsa, tumsa, kas par tumsu"
+    },
+    "tagline": {
+      "lv": "Lizuma folkloras kopa „Ūdenszāles”",
+      "lt": "Lizumo folkloro ansamblis „Ūdenszāles“"
+    },
+    "description": {
+      "lv": "Tautasdziesma ar senu mitoloģisku tēlu pasauli: līgaviņa auž zvaigžņu deķus, Mēness skaita zvaigznes, un Auseklītis aizgājis lūkoties Saules meitu. Dzied Lizuma folkloras kopa „Ūdenszāles”.",
+      "lt": "Liaudies daina su senu mitologinių vaizdinių pasauliu: mergelė audžia žvaigždžių apklotus, Mėnulis skaičiuoja žvaigždes, o Aušrinė išėjo pažiūrėti Saulės dukters. Atlieka Lizumo folkloro ansamblis „Ūdenszāles“."
+    }
+  },
+  {
+    "id": "nem-janiti-melnu-zirgu",
+    "category": "song",
+    "difficulty": "beginner",
+    "sourceUrl": "https://www.youtube.com/watch?v=RJzQ1FWyawE",
+    "contentStatus": "verified-from-source",
+    "videoUrl": "https://www.youtube.com/watch?v=RJzQ1FWyawE",
+    "audioUrl": "",
+    "title": {
+      "lv": "Ņem, Jānīti, melnu zirgu",
+      "lt": "Ņem, Jānīti, melnu zirgu"
+    },
+    "tagline": {
+      "lv": "Jāņu (līgo) dziesma, vīru folkloras kopa „Vilkači”",
+      "lt": "Joninių (līgo) daina, vyrų folkloro ansamblis „Vilkači“"
+    },
+    "description": {
+      "lv": "Līgo dziesma Jāņiem — latviešu vasaras saulgriežu svētkiem, ko svin visīsākajā naktī. Dzied vīru folkloras kopa „Vilkači”.",
+      "lt": "Līgo daina Joninėms — latvių vasaros saulėgrįžos šventei, švenčiamai trumpiausią naktį. Atlieka vyrų folkloro ansamblis „Vilkači“."
+    }
   }
 ]

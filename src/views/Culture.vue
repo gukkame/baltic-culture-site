@@ -97,7 +97,7 @@ const heroSlides = computed(() =>
 	validCountry.value
 		? galleryByCountry[validCountry.value].map((image) => ({
 				src: image.src,
-				alt: image.title[locale.value],
+				alt: image.title?.[locale.value] ?? t("culture.photoAlt"),
 			}))
 		: [],
 );
@@ -118,7 +118,7 @@ const heroSlides = computed(() =>
 
 	<section v-else class="relative">
 		<div class="relative mx-auto">
-			<CornerHeroImage :images="heroSlides" />
+			<CornerHeroImage v-if="heroSlides.length" :images="heroSlides" />
 
 			<div
 				class="mx-auto min-h-[clamp(140px,22vw,220px)] max-w-6xl px-4 pb-2 pt-10 sm:min-h-[clamp(180px,20vw,260px)] sm:px-6 sm:pt-16 lg:min-h-[clamp(320px,29vw,520px)] lg:px-8">
@@ -218,13 +218,15 @@ const heroSlides = computed(() =>
 								class="block aspect-[4/3] overflow-hidden bg-parchment-dark">
 								<img
 									:src="image.src"
-									:alt="image.title[locale]"
+									:alt="image.title?.[locale] ?? t('culture.photoAlt')"
 									loading="lazy"
 									decoding="async"
 									class="h-full w-full object-cover transition duration-300 ease-out hover:scale-105" />
 							</a>
-							<figcaption class="p-4">
-								<p class="font-serif text-lg text-ink">
+							<figcaption
+								v-if="image.title || image.description"
+								class="p-4">
+								<p v-if="image.title" class="font-serif text-lg text-ink">
 									{{ image.title[locale] }}
 								</p>
 								<p
