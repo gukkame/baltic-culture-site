@@ -9,7 +9,6 @@ import { aboutPaths, countryFromSlug, countryPath, quizPath } from './paths'
 
 const { locale } = useLocale()
 
-// Country slugs map back to the internal country ids the views work with.
 const countryProp = (slug: string | string[]) => {
   const value = String(slug)
   return countryFromSlug(value) ?? value
@@ -17,11 +16,8 @@ const countryProp = (slug: string | string[]) => {
 
 const routes: RouteRecordRaw[] = [
   { path: '/', name: 'home', component: Home },
-  // "viktorina" is the word in both Latvian (viktorīna) and Lithuanian, ASCII-safe for a URL.
   { path: quizPath, name: 'quiz', component: Quiz },
-  // One page, one address per language; the address also decides the language (see beforeEach below).
   { path: aboutPaths.lv, name: 'about', alias: aboutPaths.lt, component: About },
-  // Old English addresses keep working.
   { path: '/about', redirect: () => aboutPaths[locale.value] },
   { path: '/latvia/:itemId?', redirect: (to) => countryPath('latvia', to.params.itemId as string | undefined) },
   { path: '/lithuania/:itemId?', redirect: (to) => countryPath('lithuania', to.params.itemId as string | undefined) },
@@ -43,7 +39,6 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
   scrollBehavior(to) {
-    // Reopening the quiz partway through: land on the current question, centered on screen.
     if (to.name === 'quiz') {
       const resume = document.querySelector<HTMLElement>('[data-resume]')
       if (resume) {
@@ -55,7 +50,6 @@ const router = createRouter({
   },
 })
 
-// Opening the About page by its Latvian or Lithuanian address switches the site to that language.
 router.beforeEach((to) => {
   if (to.name === 'about') locale.value = to.path === aboutPaths.lt ? 'lt' : 'lv'
 })

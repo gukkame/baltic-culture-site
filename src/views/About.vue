@@ -15,7 +15,6 @@ const symbolGroups = computed(() => [
 
 const countries: Country[] = ['latvia', 'lithuania']
 
-// Only photos from elsewhere need crediting; the project's own photos carry no license.
 const galleryGroups = computed(() =>
   countries
     .map((country) => ({
@@ -38,7 +37,6 @@ const imageSections = computed(() =>
   ].filter((section) => section.groups.length),
 )
 
-// Text sources are the non-YouTube source pages (the YouTube ones are covered by the video list).
 const textSources = computed(() =>
   countries.flatMap((country) =>
     contentByCountry[country]

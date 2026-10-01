@@ -15,14 +15,12 @@ const total = quizQuestions.length
 const collected = computed(() => quizQuestions.filter((question) => state.badges.includes(question.id)).length)
 const allDone = computed(() => collected.value === total)
 
-// Questions unlock one at a time: everything answered so far, plus the current one.
 const visibleQuestions = computed(() => {
   const current = quizQuestions.findIndex((question) => !state.badges.includes(question.id))
   return current === -1 ? quizQuestions : quizQuestions.slice(0, current + 1)
 })
 
-// When a new question unlocks, bring it to the middle of the screen so nobody has to scroll for it.
-// A short pause first lets the "Correct! Badge earned" feedback register before the page moves.
+// Short pause so the "Correct!" feedback is seen before the page scrolls to the next question.
 const SCROLL_DELAY_MS = 700
 let scrollTimer: ReturnType<typeof setTimeout> | undefined
 
@@ -30,7 +28,7 @@ watch(
   () => visibleQuestions.value.length,
   async (length, previousLength) => {
     clearTimeout(scrollTimer)
-    if (length <= previousLength) return // start over: nothing to scroll to
+    if (length <= previousLength) return
     await nextTick()
     const unlocked = visibleQuestions.value[length - 1]
     scrollTimer = setTimeout(() => {

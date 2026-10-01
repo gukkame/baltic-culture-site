@@ -9,21 +9,16 @@ export interface License {
 
 export interface ImageCredit {
   src: string
-  /** Caption on the country page; photos without one show just the image. */
   title?: LocalizedText
-  /** Left out for images drawn for this site, which need no attribution. */
   author?: string
-  /** Where the image comes from, linked as "Source" on the About page. */
   sourceUrl?: string
-  /** Licensed (third-party) images are credited on the About page; the project's own photos are not. */
   license?: License
-  /** Short explanation of the tradition shown, displayed under the photo on the country page. */
   description?: LocalizedText
 }
 
 export const CC_BY_SA_4: License = { name: 'CC BY-SA 4.0', url: 'https://creativecommons.org/licenses/by-sa/4.0/' }
 
-// Image paths in this file are written from the public/ folder ('/images/…'); this adds the site's base path.
+// Paths here are relative to public/; this adds the site's base path.
 function withPublicUrls(images: ImageCredit[]): ImageCredit[] {
   return images.map((image) => ({ ...image, src: publicUrl(image.src) }))
 }
@@ -41,13 +36,11 @@ export const latvianSymbols: ImageCredit[] = withPublicUrls([
   },
 ])
 
-// The Lithuanian symbol used across the site: the rožėlė sash (juosta) motif, drawn cell by cell
-// after the chart in the Lithuanian Folk Art Institute's article, which also gives its name and meaning.
 const LTFAI_SYMBOLISM = 'https://ltfai.org/the-rich-symbolism-of-lithuanian-folk-art/'
 
 export const lithuanianSymbols: ImageCredit[] = withPublicUrls([
   {
-    src: '/images/symbols/lt/rozele.svg',
+    src: '/images/symbols/rozele.svg',
     title: { lv: 'Rožėlė (rozīte, zvaigznīte)', lt: 'Rožėlė (žvaigždutė)' },
     description: {
       lv: 'Rozete – dzīves loka un mūžības zīme.',
@@ -59,12 +52,6 @@ export const lithuanianSymbols: ImageCredit[] = withPublicUrls([
 
 const DEJU_SKATE_2025: LocalizedText = { lv: 'Deju skate 2025', lt: 'Šokių kolektyvų peržiūra 2025' }
 
-/**
- * Photos shown in the Images group of each country page; the first one also opens the slideshow
- * in the page's top-right corner. The project's own photos need no credit; photos from elsewhere
- * get author, sourceUrl and license and are then credited on the About page.
- * Save photos as WebP, at most 1200px on the long side, in public/images/gallery/<country>/.
- */
 const gallery: Record<Country, ImageCredit[]> = {
   latvia: [
     { src: '/images/gallery/latvia/deju-skate-2025-122.webp', title: DEJU_SKATE_2025 },

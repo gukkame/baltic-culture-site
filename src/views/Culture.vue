@@ -23,12 +23,10 @@ const activeFilter = ref<Filter>('all')
 
 const galleryImages = computed(() => (validCountry.value ? galleryByCountry[validCountry.value] : []))
 
-// Hide a filter when the country has nothing in it (e.g. Lithuania has no photos yet).
 const hasDances = computed(() => items.value.some((item) => item.category === 'dance'))
 const hasSongs = computed(() => items.value.some((item) => item.category === 'song'))
 const hasImages = computed(() => galleryImages.value.length > 0)
 
-// "All" covers dances and songs together, so it only means something when the country has both.
 const showAll = computed(() => hasDances.value && hasSongs.value)
 
 const filters = computed(() =>
@@ -56,12 +54,10 @@ const filters = computed(() =>
   ].filter((filter) => filter.shown),
 )
 
-// The component is reused across countries, so don't keep a filter the new country lacks.
 watch(validCountry, () => {
   activeFilter.value = 'all'
 })
 
-// Keep the picked filter while this country offers it, otherwise fall back to the first one shown.
 const currentFilter = computed<Filter>(() => {
   const available = filters.value.map((filter) => filter.id)
   return available.includes(activeFilter.value) ? activeFilter.value : (available[0] ?? 'all')
@@ -72,13 +68,10 @@ const filteredItems = computed(() => {
   return items.value.filter((item) => item.category === currentFilter.value)
 })
 
-// Images are their own group: shown only when the Images filter is picked, never under "All".
 const showImages = computed(() => hasImages.value && currentFilter.value === 'image')
 
-// Card currently hovered/focused; only that card plays its video preview.
 const previewId = ref<string>()
 
-// Top-right corner: a slideshow of the country's gallery photos (credited on the About page).
 const heroSlides = computed(() =>
   galleryImages.value.map((image) => ({
     src: image.src,

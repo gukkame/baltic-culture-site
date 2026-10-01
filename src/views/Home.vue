@@ -58,7 +58,6 @@ onUnmounted(() => {
   desktopQuery?.removeEventListener('change', closeOnDesktop)
 })
 
-// Links and buttons on the painted hero: no tap flash, and a focus ring in the text colour instead of the global red one.
 const heroControl =
   '[-webkit-tap-highlight-color:transparent] focus-visible:outline-2 focus-visible:outline-offset-[6px] focus-visible:outline-current'
 </script>

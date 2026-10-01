@@ -15,8 +15,7 @@ const { locale, t } = useLocale()
 const item = computed(() => findItem(props.country, props.itemId))
 const nextItem = computed(() => findNextItem(props.country, props.itemId))
 
-// Vue Router keeps the previous address in history.state.back. Reading the route first makes this
-// re-check after every navigation, e.g. when moving on to the next dance.
+// history.state.back is the previous address; reading route.fullPath re-runs this after each navigation.
 const route = useRoute()
 const cameFromQuiz = computed(() => {
   void route.fullPath

@@ -15,15 +15,21 @@ Lithuanian; page addresses follow the language (`/latvija`, `/lietuva`, `/par-pr
 
 ```
 public/
-  artwork/            home page paintings and map textures
+  artwork/            home page painting and map textures
   images/gallery/     photo galleries, one folder per country
+  images/hero/        quiz page photo
   images/symbols/     country symbols (Auseklis, rožėlė)
+  images/partners/    Interreg / EU co-funding logo
+  images/backgrounds/ paper texture behind the pages
 src/
   data/               content: latvia.json, lithuania.json, quiz.json, credits.ts (photos, symbols)
   i18n/               all interface texts: lv.json, lt.json
-  components/home/    home page map
+  views/              pages: Home, Culture (country page), ItemDetail (dance/song page), Quiz, About
+  components/         shared parts (photo slideshow, quiz card, symbols, logo); home/ holds the home page map
+  composables/        language (useLocale) and quiz progress (useQuizProgress)
   router/             routes and page addresses (paths.ts)
-  views/              Home, Culture (country page), ItemDetail (dance/song page), Quiz, About
+  assets/fonts/       self-hosted fonts with their licenses
+  style.css           Tailwind setup and theme (colours, breakpoints, fonts)
 ```
 
 ## Scripts
@@ -75,7 +81,7 @@ Add an entry to the end of `src/data/latvia.json` or `src/data/lithuania.json`:
    browser). Originals from a camera are 2–5 MB; the converted file should be roughly 100–300 KB.
 2. Put it in `public/images/gallery/latvia/` or `public/images/gallery/lithuania/`, with a lowercase name
    without spaces or diacritics (e.g. `deju-skate-2025-122.webp`).
-3. Add it to `galleryByCountry` in `src/data/credits.ts`:
+3. Add it to the `gallery` list in `src/data/credits.ts`:
 
    ```ts
    { src: '/images/gallery/latvia/deju-skate-2025-122.webp' },
@@ -103,8 +109,8 @@ Add to `src/data/quiz.json`. Questions unlock one by one in file order, and the 
 ### Interface texts
 
 All fixed texts of every page (buttons, headings, the home page, the programme name in the header and footer)
-are in `src/i18n/lv.json` and `src/i18n/lt.json`, grouped by page (`home`, `culture`, `item`, `quiz`, `about`);
-both files have the same keys.
+are in `src/i18n/lv.json` and `src/i18n/lt.json`, grouped by page (`home`, `culture`, `item`, `quiz`, `about`),
+plus `site` (site title and programme name) and `common` (country names). Both files have the same keys.
 
 ## Artwork
 
@@ -150,9 +156,12 @@ sub-path — see below). Nothing else needs to be installed on the server.
 
 **External services** (for firewall or Content-Security-Policy allow-lists). Fonts are self-hosted, so only YouTube is needed:
 
-- `www.youtube.com`, `www.youtube-nocookie.com`, `i.ytimg.com` — embedded videos, previews and thumbnails
+- `www.youtube-nocookie.com` — embedded video players and hover previews (CSP `frame-src`)
+- `i.ytimg.com` — video thumbnails (CSP `img-src`)
+- inside the player, YouTube streams the video from its own servers (`*.googlevideo.com`); `www.youtube.com` is only linked to
 
-Embedded YouTube players are loaded from YouTube; consider this in the site's privacy/cookie notice.
+Videos use YouTube's privacy-enhanced mode, which sets no YouTube cookies until a visitor plays a video; mention
+the embedded YouTube videos in the site's privacy/cookie notice.
 
 **Updating:** change content (see *Adding content*), rebuild, and replace the published files with the new
 `dist/` contents.

@@ -16,7 +16,6 @@ const props = defineProps<{
 const { locale, t } = useLocale()
 const { earnBadge, hasBadge } = useQuizProgress()
 
-// The badge is the source of truth for "solved", so it survives reloads and a reset.
 const solved = computed(() => hasBadge(props.question.id))
 const picked = ref<number>()
 const wrong = computed(() => !solved.value && picked.value !== undefined)
@@ -25,11 +24,9 @@ const isOpen = computed(() => props.question.type === 'open')
 const correctIndex = computed(() => (props.question.type === 'open' ? undefined : props.question.correct))
 const options = computed(() => (props.question.type === 'open' ? [] : props.question.options))
 
-// Open questions: whatever the visitor writes counts, it just has to be something.
 const openAnswer = ref('')
 const canSubmitOpen = computed(() => openAnswer.value.trim().length > 0)
 
-// Start fresh if progress is reset while the page is open.
 watch(solved, (isSolved) => {
   if (!isSolved) {
     picked.value = undefined

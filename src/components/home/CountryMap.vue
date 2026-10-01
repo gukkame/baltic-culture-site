@@ -13,7 +13,6 @@ const countries = computed(() =>
     ...country,
     name: t(`common.${country.id}`),
     subtitle: t(`home.${country.id}Subtitle`),
-    // Colour wash over the painted terrain, a little lighter over Latvia.
     tint: country.id === 'latvia' ? 'fill-map-latvia opacity-35' : 'fill-map-lithuania opacity-54',
     terrain: country.id === 'latvia' ? 'url(#painted-latvia-forest)' : 'url(#painted-land)',
     offset: country.id === 'latvia' ? -7 : 8,

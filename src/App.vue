@@ -16,7 +16,6 @@ function focusMain() {
   document.getElementById('main-content')?.focus()
 }
 
-// Keep the page language, title, description and tab icon (index.html starts them in Latvian) in the chosen language.
 watchEffect(() => {
   document.documentElement.lang = locale.value
   document.title = t('site.title')
@@ -24,7 +23,6 @@ watchEffect(() => {
   document.querySelector('meta[name="description"]')?.setAttribute('content', t('site.description'))
 })
 
-// The About page's address is language specific, so keep it in step when the language changes.
 watch(locale, (value) => {
   if (route.name === 'about' && route.path !== aboutPaths[value]) router.replace(aboutPaths[value])
 })

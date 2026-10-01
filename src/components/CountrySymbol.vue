@@ -9,12 +9,10 @@ const props = defineProps<{
 
 const files: Record<Country, string> = {
   latvia: '/images/symbols/auseklis.svg',
-  lithuania: '/images/symbols/lt/rozele.svg',
+  lithuania: '/images/symbols/rozele.svg',
 }
 
-// The symbol files are dark red; drawing them through a mask lets them take the surrounding text
-// colour (cream on the home hero, ink on the country pages). The image address goes in a CSS
-// variable so it can include the site's base path.
+// Drawn as a mask so it takes the text colour; the URL is a CSS variable so it can include the base path.
 const symbol = computed(() => ({ '--symbol': `url("${publicUrl(files[props.country])}")` }))
 </script>
 

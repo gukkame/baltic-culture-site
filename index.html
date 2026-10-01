@@ -8,8 +8,7 @@
 			name="description"
 			content="Iepazīsti Latvijas un Lietuvas tautas dejas, dziesmas un tradīcijas." />
 		<script>
-			// Home page only: start fetching the hero art and map texture now, instead of
-			// waiting for the JS bundle to mount the components that reference them.
+			// Home page: preload the hero art before the JS bundle has loaded.
 			if (location.pathname === "%BASE_URL%") {
 				var head = document.head;
 				[
