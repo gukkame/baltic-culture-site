@@ -4,7 +4,6 @@ import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
 import { useLocale } from './composables/useLocale'
 import { aboutPaths } from './router/paths'
 import CountrySymbol from './components/CountrySymbol.vue'
-import homeCopy from './components/home/copy.json'
 import { publicUrl } from './publicUrl'
 
 const { locale, t } = useLocale()
@@ -14,7 +13,6 @@ const isHome = computed(() => route.name === 'home')
 
 // The footer carries the folk sign of the chosen language's country, whichever page is open.
 const footerCountry = computed(() => (locale.value === 'lt' ? 'lithuania' : 'latvia'))
-const projectCopy = computed(() => homeCopy[locale.value])
 
 function focusMain() {
   document.getElementById('main-content')?.focus()
@@ -62,8 +60,8 @@ watch(locale, (value) => {
         <div class="flex min-w-0 items-start gap-4 text-ink sm:gap-5">
           <CountrySymbol :country="footerCountry" class="mt-1 size-9 sm:size-12" />
           <div class="max-w-md">
-            <p class="font-serif leading-snug">{{ projectCopy.brandTop }}</p>
-            <p class="mt-1 leading-relaxed tracking-wide text-ink-light text-sm">{{ projectCopy.brandBottom }}</p>
+            <p class="font-serif leading-snug">{{ t('site.programmeTitle') }}</p>
+            <p class="mt-1 leading-relaxed tracking-wide text-ink-light text-sm">{{ t('site.programmeSubtitle') }}</p>
             <RouterLink
               :to="aboutPaths[locale]"
               class="mt-3 inline-flex items-center text-sm text-ink-light underline underline-offset-4 transition-colors hover:text-terracotta-dark focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-terracotta-dark"

@@ -20,8 +20,8 @@ public/
   images/symbols/     country symbols (Auseklis, rožėlė)
 src/
   data/               content: latvia.json, lithuania.json, quiz.json, credits.ts (photos, symbols)
-  i18n/               interface texts: lv.json, lt.json
-  components/home/    home page map and texts (copy.json)
+  i18n/               all interface texts: lv.json, lt.json
+  components/home/    home page map
   router/             routes and page addresses (paths.ts)
   views/              Home, Culture (country page), ItemDetail (dance/song page), Quiz, About
 ```
@@ -102,8 +102,9 @@ Add to `src/data/quiz.json`. Questions unlock one by one in file order, and the 
 
 ### Interface texts
 
-Buttons, headings and other fixed texts are in `src/i18n/lv.json` and `src/i18n/lt.json` (same keys in both);
-the home page texts are in `src/components/home/copy.json`.
+All fixed texts of every page (buttons, headings, the home page, the programme name in the header and footer)
+are in `src/i18n/lv.json` and `src/i18n/lt.json`, grouped by page (`home`, `culture`, `item`, `quiz`, `about`);
+both files have the same keys.
 
 ## Artwork
 
