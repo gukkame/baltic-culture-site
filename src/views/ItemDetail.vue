@@ -62,7 +62,9 @@ const cameFromQuiz = computed(() => {
       </div>
     </div>
 
-    <section class="mt-10 rounded-2xl bg-parchment-light p-5 shadow-paper ring-1 ring-parchment-dark sm:flex sm:items-center sm:justify-between sm:gap-6">
+    <section
+      class="mt-10 rounded-2xl bg-parchment-light p-5 shadow-paper ring-1 ring-parchment-dark sm:flex sm:items-center sm:justify-between sm:gap-6"
+    >
       <div>
         <h2 class="font-serif text-xl text-ink">{{ t('item.testTitle') }}</h2>
         <p class="mt-1 text-sm text-ink-light">{{ t('item.testText') }}</p>

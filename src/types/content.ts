@@ -1,5 +1,4 @@
 export type ItemCategory = 'dance' | 'song'
-export type Difficulty = 'beginner' | 'intermediate' | 'advanced'
 
 export interface LocalizedText {
   lv: string
@@ -37,13 +36,13 @@ export type QuizQuestion = ChoiceQuestion | OpenQuestion
 export interface ContentItem {
   id: string
   category: ItemCategory
-  difficulty: Difficulty
   videoUrl: string
-  audioUrl: string
   title: LocalizedText
   tagline: LocalizedText
   description: LocalizedText
+  /** Where the text comes from; non-YouTube sources are listed on the About page. */
   sourceUrl?: string
+  /** Editors' notes, not shown on the site: how the text was checked, and anything to follow up. */
   contentStatus?: string
   sourceNote?: string
 }

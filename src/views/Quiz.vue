@@ -57,7 +57,9 @@ function confirmStartOver() {
   <section class="relative" aria-labelledby="quiz-title">
     <div class="relative mx-auto">
       <CornerHeroImage :images="[{ src: publicUrl('/images/hero/quiz-folk-dancers.webp') }]" />
-      <div class="mx-auto min-h-[clamp(140px,22vw,220px)] max-w-6xl px-4 pb-6 pt-10 sm:min-h-[clamp(180px,20vw,260px)] sm:px-6 sm:pt-16 lg:min-h-[clamp(320px,29vw,520px)] lg:px-8">
+      <div
+        class="mx-auto min-h-[clamp(140px,22vw,220px)] max-w-6xl px-4 pb-6 pt-10 sm:min-h-[clamp(180px,20vw,260px)] sm:px-6 sm:pt-16 lg:min-h-[clamp(320px,29vw,520px)] lg:px-8"
+      >
         <div class="max-w-[60%] lg:max-w-md">
           <RouterLink
             to="/"
@@ -85,7 +87,10 @@ function confirmStartOver() {
           :aria-valuemax="total"
           :aria-valuenow="collected"
         >
-          <div class="h-full rounded-full bg-terracotta transition-all duration-500" :style="{ width: `${(collected / total) * 100}%` }" />
+          <div
+            class="h-full rounded-full bg-terracotta transition-all duration-500"
+            :style="{ width: `${(collected / total) * 100}%` }"
+          />
         </div>
         <p v-if="allDone" class="mt-3 text-sm font-medium text-forest-dark">{{ t('quiz.allDone') }}</p>
       </div>

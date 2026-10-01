@@ -3,7 +3,6 @@ import Home from '../views/Home.vue'
 import Culture from '../views/Culture.vue'
 import ItemDetail from '../views/ItemDetail.vue'
 import Quiz from '../views/Quiz.vue'
-import Collection from '../views/Collection.vue'
 import About from '../views/About.vue'
 import { useLocale } from '../composables/useLocale'
 import { aboutPaths, countryFromSlug, countryPath, quizPath } from './paths'
@@ -20,7 +19,6 @@ const routes: RouteRecordRaw[] = [
   { path: '/', name: 'home', component: Home },
   // "viktorina" is the word in both Latvian (viktorīna) and Lithuanian, ASCII-safe for a URL.
   { path: quizPath, name: 'quiz', component: Quiz },
-  { path: '/collection', name: 'collection', component: Collection },
   // One page, one address per language; the address also decides the language (see beforeEach below).
   { path: aboutPaths.lv, name: 'about', alias: aboutPaths.lt, component: About },
   // Old English addresses keep working.

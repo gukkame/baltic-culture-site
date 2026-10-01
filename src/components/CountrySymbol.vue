@@ -19,5 +19,9 @@ const symbol = computed(() => ({ '--symbol': `url("${publicUrl(files[props.count
 </script>
 
 <template>
-  <span class="inline-block shrink-0 bg-current mask-(--symbol) mask-contain mask-center mask-no-repeat" :style="symbol" aria-hidden="true" />
+  <span
+    class="inline-block shrink-0 bg-current mask-(--symbol) mask-contain mask-center mask-no-repeat"
+    :style="symbol"
+    aria-hidden="true"
+  />
 </template>

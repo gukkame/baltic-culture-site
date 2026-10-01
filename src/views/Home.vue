@@ -4,15 +4,12 @@ import { RouterLink } from 'vue-router'
 import { useLocale, type Locale } from '../composables/useLocale'
 import CountryMap from '../components/home/CountryMap.vue'
 import CountrySymbol from '../components/CountrySymbol.vue'
-import { aboutPaths, countryPath, quizPath } from '../router/paths'
+import { aboutPaths, countryPath, localeCountry, quizPath } from '../router/paths'
 import { publicUrl } from '../publicUrl'
+import InterregLogo from '../components/InterregLogo.vue'
 
 const { locale, setLocale, t } = useLocale()
-// The journey starts in the country whose language the visitor picked.
-const startRoute = computed(() => countryPath(locale.value === 'lt' ? 'lithuania' : 'latvia'))
-
-// The brand shows a folk sign of the chosen language's country.
-const brandCountry = computed(() => (locale.value === 'lt' ? 'lithuania' : 'latvia'))
+const startRoute = computed(() => countryPath(localeCountry[locale.value]))
 
 const navLinks = computed(() => [
   { to: quizPath, label: t('home.navQuiz') },
@@ -92,14 +89,21 @@ const heroControl =
         :class="heroControl"
         :aria-label="`${t('site.programmeTitle')} ${t('site.programmeSubtitle')}`"
       >
-        <CountrySymbol :country="brandCountry" class="size-[47px] max-tablet:size-9" />
-        <span class="max-w-[430px] font-serif text-[17px] leading-[1.25] max-laptop:max-w-[330px] max-laptop:text-[15px] max-tablet:text-[12px] max-tablet:leading-tight">
+        <CountrySymbol :country="localeCountry[locale]" class="size-[47px] max-tablet:size-9" />
+        <span
+          class="max-w-[430px] font-serif text-[17px] leading-[1.25] max-laptop:max-w-[330px] max-laptop:text-[15px] max-tablet:text-[12px] max-tablet:leading-tight"
+        >
           {{ t('site.programmeTitle') }}
-          <small class="mt-1 block font-sans text-[12px] tracking-[.08em] max-tablet:mt-0.5 max-tablet:text-[10px]">{{ t('site.programmeSubtitle') }}</small>
+          <small class="mt-1 block font-sans text-[12px] tracking-[.08em] max-tablet:mt-0.5 max-tablet:text-[10px]">{{
+            t('site.programmeSubtitle')
+          }}</small>
         </span>
       </RouterLink>
 
-      <nav class="ml-auto flex gap-[33px] text-[13px] max-laptop:gap-[23px] max-tablet:hidden" :aria-label="t('home.navLabel')">
+      <nav
+        class="ml-auto flex gap-[33px] text-[13px] max-laptop:gap-[23px] max-tablet:hidden"
+        :aria-label="t('home.navLabel')"
+      >
         <RouterLink
           v-for="link in navLinks"
           :key="link.to"
@@ -147,7 +151,15 @@ const heroControl =
           aria-controls="home-mobile-navigation"
           @click="mobileMenuOpen = !mobileMenuOpen"
         >
-          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+          <svg
+            class="size-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
             <path v-if="mobileMenuOpen" d="m6 6 12 12M6 18 18 6" />
             <path v-else d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -184,19 +196,29 @@ const heroControl =
         id="home-title"
         class="text-[length:clamp(58px,5.55vw,92px)] leading-[1.05] font-medium tracking-[-.045em] text-balance text-shadow-title max-laptop:text-[67px] max-tablet:text-[length:clamp(54px,10vw,77px)] max-xs:text-[length:clamp(43px,13.7vw,59px)]"
       >
-        <span class="whitespace-nowrap">{{ t('home.titleFirst') }}</span><br /><em class="font-normal text-sand">{{ t('home.titleSecond') }}</em>
+        <span class="whitespace-nowrap">{{ t('home.titleFirst') }}</span
+        ><br /><em class="font-normal text-sand">{{ t('home.titleSecond') }}</em>
       </h1>
-      <p class="mt-6 text-[length:clamp(14px,1.15vw,18px)] leading-[1.6] font-medium max-tablet:mt-[25px] max-tablet:text-[15px]">
+      <p
+        class="mt-6 text-[length:clamp(14px,1.15vw,18px)] leading-[1.6] font-medium max-tablet:mt-[25px] max-tablet:text-[15px]"
+      >
         {{ t('home.lead') }}
       </p>
-      <p class="mt-[5px] max-w-[350px] text-[13px] leading-[1.8] text-cream/86 max-tablet:max-w-[300px]">{{ t('home.description') }}</p>
+      <p class="mt-[5px] max-w-[350px] text-[13px] leading-[1.8] text-cream/86 max-tablet:max-w-[300px]">
+        {{ t('home.description') }}
+      </p>
       <RouterLink
         :to="startRoute"
         class="group mt-[27px] inline-flex items-center justify-between gap-9 rounded-full border border-peach/27 bg-folk-red px-[25px] py-[15px] text-[13px] font-medium shadow-button transition duration-200 hover:-translate-y-0.5 hover:bg-folk-red-light max-tablet:mt-[25px]"
         :class="heroControl"
       >
         {{ t('home.start') }}
-        <svg class="h-3 w-[23px] transition-transform duration-200 group-hover:translate-x-[3px]" viewBox="0 0 24 12" fill="none" aria-hidden="true">
+        <svg
+          class="h-3 w-[23px] transition-transform duration-200 group-hover:translate-x-[3px]"
+          viewBox="0 0 24 12"
+          fill="none"
+          aria-hidden="true"
+        >
           <path d="M1 6h21m-6-5 6 5-6 5" stroke="currentColor" stroke-width="1.5" />
         </svg>
       </RouterLink>
@@ -206,39 +228,32 @@ const heroControl =
       class="absolute bottom-[18%] left-[6%] w-1/4 text-cream max-laptop:left-[5.3%] max-laptop:w-[22%] max-laptop:portrait:hidden max-tablet:hidden"
     >
       <span class="text-[10px] font-medium leading-[1.7] tracking-[.2em]">{{ t('home.mapTagline') }}</span>
-      <p class="mt-2.5 max-w-[250px] font-serif text-2xl leading-[1.4] italic max-laptop:text-[21px]">{{ t('home.mapHint') }}</p>
+      <p class="mt-2.5 max-w-[250px] font-serif text-2xl leading-[1.4] italic max-laptop:text-[21px]">
+        {{ t('home.mapHint') }}
+      </p>
       <svg
         class="absolute left-[70%] top-[68%] h-12 w-[110px] opacity-75 max-laptop:left-[65%] max-laptop:top-[105%] max-laptop:w-[65px]"
         viewBox="0 0 112 48"
         fill="none"
         aria-hidden="true"
       >
-        <path d="M3 6c35 36 58 30 99 12m-15-8 17 7-9 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        <path
+          d="M3 6c35 36 58 30 99 12m-15-8 17 7-9 17"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
       </svg>
     </div>
 
     <div
       class="absolute bottom-[45px] right-0 w-3/5 max-w-[960px] wide:right-[4%] max-laptop:bottom-[38px] max-laptop:w-[69%] max-laptop:portrait:inset-x-[3%] max-laptop:portrait:bottom-[132px] max-laptop:portrait:w-auto max-tablet:inset-x-[3%] max-tablet:bottom-[132px] max-tablet:w-auto"
     >
-      <CountryMap
-        :label="t('home.mapLabel')"
-        :latvia="t('home.latvia')"
-        :lithuania="t('home.lithuania')"
-        :latvia-subtitle="t('home.latviaSubtitle')"
-        :lithuania-subtitle="t('home.lithuaniaSubtitle')"
-      />
+      <CountryMap />
     </div>
 
-    <div class="absolute bottom-6 left-[5.3%] w-80 max-w-[86%] overflow-hidden rounded-xl bg-white p-2 shadow-md max-tablet:bottom-5 max-tablet:left-[7%] max-tablet:w-[280px]">
-      <img
-        class="block h-auto w-full"
-        :src="publicUrl('/images/partners/interreg-latvia-lithuania.jpg')"
-        alt="Interreg Latvija–Lietuva. Līdzfinansē Eiropas Savienība."
-        lang="lv"
-        width="400"
-        height="121"
-        decoding="async"
-      />
-    </div>
+    <InterregLogo
+      class="absolute bottom-6 left-[5.3%] w-80 max-w-[86%] shadow-md max-tablet:bottom-5 max-tablet:left-[7%] max-tablet:w-[280px]"
+    />
   </section>
 </template>

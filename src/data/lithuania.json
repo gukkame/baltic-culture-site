@@ -2,11 +2,9 @@
   {
     "id": "linksmasis-sokis",
     "category": "dance",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=PNtlBWSjBnE",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=PNtlBWSjBnE",
-    "audioUrl": "",
     "title": {
       "lv": "Priecīgā deja",
       "lt": "Linksmasis šokis"
@@ -23,11 +21,9 @@
   {
     "id": "vaiku-ratelis",
     "category": "dance",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=bJxlcGJEG6w",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=bJxlcGJEG6w",
-    "audioUrl": "",
     "title": {
       "lv": "Bērnu rotaļdeja",
       "lt": "Vaikų ratelis"
@@ -44,12 +40,10 @@
   {
     "id": "vaiku-ratelis-variantas",
     "category": "dance",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
     "contentStatus": "verified-from-source",
     "sourceNote": "Source material reused the same YouTube link (BqQItZLiFS8) for this entry and for 'Blezdingėlė' below — worth confirming with the project owner whether separate clips exist for each dance.",
     "videoUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
-    "audioUrl": "",
     "title": {
       "lv": "Bērnu rotaļdeja (variants)",
       "lt": "Vaikų ratelis (variantas)"
@@ -66,12 +60,10 @@
   {
     "id": "blezdingele",
     "category": "dance",
-    "difficulty": "intermediate",
     "sourceUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
     "contentStatus": "verified-from-source",
     "sourceNote": "Source material reused the same YouTube link (BqQItZLiFS8) for this entry and for 'Vaikų ratelis (variantas)' above — worth confirming with the project owner whether separate clips exist for each dance.",
     "videoUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
-    "audioUrl": "",
     "title": {
       "lv": "Bezdelīdziņa",
       "lt": "Blezdingėlė"
@@ -88,11 +80,9 @@
   {
     "id": "lendleris-zemaitiskais",
     "category": "dance",
-    "difficulty": "intermediate",
     "sourceUrl": "https://www.youtube.com/watch?v=4neeFA--Tps",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=4neeFA--Tps",
-    "audioUrl": "",
     "title": {
       "lv": "Žemaišu lendlers",
       "lt": "Žemaitiškas lenderis"
@@ -109,11 +99,9 @@
   {
     "id": "dobilelis",
     "category": "dance",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=CYc_albY-2k",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=CYc_albY-2k",
-    "audioUrl": "",
     "title": {
       "lv": "Āboliņš",
       "lt": "Dobilėlis"
@@ -130,11 +118,9 @@
   {
     "id": "isjos-brolutelis",
     "category": "song",
-    "difficulty": "advanced",
     "sourceUrl": "https://www.youtube.com/watch?v=8eE2MxX7hoA",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=8eE2MxX7hoA",
-    "audioUrl": "",
     "title": {
       "lv": "Aizjāja bāleliņš, sodāto",
       "lt": "Išjos brolutėlis, sodauto"
@@ -151,11 +137,9 @@
   {
     "id": "oi-sermuksnio",
     "category": "song",
-    "difficulty": "intermediate",
     "sourceUrl": "https://www.youtube.com/watch?v=cyA6Ekh70hA",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=cyA6Ekh70hA",
-    "audioUrl": "",
     "title": {
       "lv": "Ak, pīlādzīti",
       "lt": "Oi Šermukšnio"
@@ -172,11 +156,9 @@
   {
     "id": "mona-bolundele",
     "category": "song",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=Jxk0aRv-gwo",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=Jxk0aRv-gwo",
-    "audioUrl": "",
     "title": {
       "lv": "Mona bolundele",
       "lt": "Mona bolundele"
@@ -193,11 +175,9 @@
   {
     "id": "ne-bet-kokia-mergele",
     "category": "song",
-    "difficulty": "advanced",
     "sourceUrl": "https://www.youtube.com/watch?v=wlBKWpXPjjo",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=wlBKWpXPjjo",
-    "audioUrl": "",
     "title": {
       "lv": "Ne jau jebkura meitene es biju",
       "lt": "Ne bet kokia aš mergelė buvau"
@@ -214,11 +194,9 @@
   {
     "id": "ant-kalno-karklai",
     "category": "dance",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=N9RAVnlkLvg",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=N9RAVnlkLvg",
-    "audioUrl": "",
     "title": {
       "lv": "Ant kalno karklai",
       "lt": "Ant kalno karklai"
@@ -235,11 +213,9 @@
   {
     "id": "vai-zydek-zydek",
     "category": "song",
-    "difficulty": "intermediate",
     "sourceUrl": "https://www.youtube.com/watch?v=dPZ1CgIoT5Y",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=dPZ1CgIoT5Y",
-    "audioUrl": "",
     "title": {
       "lv": "Vai žydėk, žydėk",
       "lt": "Vai žydėk, žydėk"
@@ -256,11 +232,9 @@
   {
     "id": "kur-giria-zaliuoja",
     "category": "song",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=wFBfyaJd9gc",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=wFBfyaJd9gc",
-    "audioUrl": "",
     "title": {
       "lv": "Kur giria žaliuoja",
       "lt": "Kur giria žaliuoja"
@@ -277,11 +251,9 @@
   {
     "id": "gervela-dai-ciuto",
     "category": "song",
-    "difficulty": "advanced",
     "sourceUrl": "https://www.youtube.com/watch?v=Wbyn61KgaqA",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=Wbyn61KgaqA",
-    "audioUrl": "",
     "title": {
       "lv": "Gervela, dai čiūto",
       "lt": "Gervela, dai čiūto"
@@ -298,11 +270,9 @@
   {
     "id": "is-triju-rytu-vejuzis-pute",
     "category": "song",
-    "difficulty": "intermediate",
     "sourceUrl": "https://www.youtube.com/watch?v=MJuOGJHLuFk",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=MJuOGJHLuFk",
-    "audioUrl": "",
     "title": {
       "lv": "Iš trijų rytų vėjužis pūtė",
       "lt": "Iš trijų rytų vėjužis pūtė"
@@ -319,11 +289,9 @@
   {
     "id": "apeja-sauliute",
     "category": "song",
-    "difficulty": "intermediate",
     "sourceUrl": "https://www.youtube.com/watch?v=njxS_-GUw7A",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=njxS_-GUw7A",
-    "audioUrl": "",
     "title": {
       "lv": "Apėja sauliūte",
       "lt": "Apėja sauliūte"

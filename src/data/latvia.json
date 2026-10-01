@@ -2,11 +2,9 @@
   {
     "id": "dejotprieks",
     "category": "dance",
-    "difficulty": "beginner",
     "sourceUrl": "https://dejaszeltafonds.lv/deja/dejotprieks/",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=WOPTsHUa0ws",
-    "audioUrl": "",
     "title": {
       "lv": "Dejotprieks",
       "lt": "Šokio džiaugsmas"
@@ -23,11 +21,9 @@
   {
     "id": "dizdancis",
     "category": "dance",
-    "difficulty": "advanced",
     "sourceUrl": "https://dejaszeltafonds.lv/deja/dizdancis/",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=RKG5OTweBxU",
-    "audioUrl": "",
     "title": {
       "lv": "Diždancis",
       "lt": "Didysis šokis"
@@ -44,11 +40,9 @@
   {
     "id": "govju-kazaks",
     "category": "dance",
-    "difficulty": "intermediate",
     "sourceUrl": "https://dejaszeltafonds.lv/deja/govju-kazaks/",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=cPfRto31n9Y",
-    "audioUrl": "",
     "title": {
       "lv": "Govju kazaks",
       "lt": "Karvių kazokas"
@@ -65,11 +59,9 @@
   {
     "id": "meitu-mate",
     "category": "dance",
-    "difficulty": "intermediate",
     "sourceUrl": "https://dejaszeltafonds.lv/deja/meitu-mate/",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=-3Vk1nMazFE",
-    "audioUrl": "",
     "title": {
       "lv": "Meitu māte",
       "lt": "Merginų motina"
@@ -86,11 +78,9 @@
   {
     "id": "pie-daugavas",
     "category": "dance",
-    "difficulty": "beginner",
     "sourceUrl": "https://dejaszeltafonds.lv/deja/pie-daugavas/",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=s9a56Hnb8p4",
-    "audioUrl": "",
     "title": {
       "lv": "Pie Daugavas",
       "lt": "Prie Dauguvos"
@@ -107,11 +97,9 @@
   {
     "id": "sudmalinas",
     "category": "dance",
-    "difficulty": "beginner",
     "sourceUrl": "https://dejaszeltafonds.lv/deja/sudmalinas/",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=oiy_Hz0WMoI",
-    "audioUrl": "",
     "title": {
       "lv": "Sudmaliņas",
       "lt": "Sudmalinos"
@@ -128,11 +116,9 @@
   {
     "id": "tudalin-tagadin",
     "category": "dance",
-    "difficulty": "intermediate",
     "sourceUrl": "https://dejaszeltafonds.lv/deja/tudalin-tagadin/",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=pqJalRZL9B8",
-    "audioUrl": "",
     "title": {
       "lv": "Tūdaliņ', tagadiņ'",
       "lt": "Tuoj pat, dabar pat"
@@ -149,11 +135,9 @@
   {
     "id": "zynu-zynu-tava-satu",
     "category": "song",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=LnkV9_o4c8o",
     "contentStatus": "title-from-video",
     "videoUrl": "https://www.youtube.com/watch?v=LnkV9_o4c8o",
-    "audioUrl": "",
     "title": {
       "lv": "Zynu, zynu tāva sātu",
       "lt": "Zynu, zynu tāva sātu"
@@ -170,11 +154,9 @@
   {
     "id": "sazideja-gaila-pisi",
     "category": "song",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=Oq31-hjH__g",
     "contentStatus": "title-from-video",
     "videoUrl": "https://www.youtube.com/watch?v=Oq31-hjH__g",
-    "audioUrl": "",
     "title": {
       "lv": "Sazīdēja gaiļa pīši",
       "lt": "Sazīdēja gaiļa pīši"
@@ -191,11 +173,9 @@
   {
     "id": "nadud-divs-veitulam",
     "category": "song",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=GXv3W1UOLhg",
     "contentStatus": "title-from-video",
     "videoUrl": "https://www.youtube.com/watch?v=GXv3W1UOLhg",
-    "audioUrl": "",
     "title": {
       "lv": "Nadūd Dīvs veitūlam",
       "lt": "Nadūd Dīvs veitūlam"
@@ -212,11 +192,9 @@
   {
     "id": "pici-bari-kumeleni",
     "category": "song",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=HpurNXPOCdo",
     "contentStatus": "title-from-video",
     "videoUrl": "https://www.youtube.com/watch?v=HpurNXPOCdo",
-    "audioUrl": "",
     "title": {
       "lv": "Pīci bāri kumeleņi",
       "lt": "Pīci bāri kumeleņi"
@@ -233,11 +211,9 @@
   {
     "id": "jau-mani-vad",
     "category": "song",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=uBbbKnvtsic",
     "contentStatus": "title-from-video",
     "videoUrl": "https://www.youtube.com/watch?v=uBbbKnvtsic",
-    "audioUrl": "",
     "title": {
       "lv": "Jau mani vad",
       "lt": "Jau mani vad"
@@ -254,11 +230,9 @@
   {
     "id": "put-vejini",
     "category": "song",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=bevcg5SMJHo",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=bevcg5SMJHo",
-    "audioUrl": "",
     "title": {
       "lv": "Pūt, vējiņi",
       "lt": "Pūt, vējiņi"
@@ -275,11 +249,9 @@
   {
     "id": "riga-dimd",
     "category": "song",
-    "difficulty": "intermediate",
     "sourceUrl": "https://www.youtube.com/watch?v=mxd_vAE7w90",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=mxd_vAE7w90",
-    "audioUrl": "",
     "title": {
       "lv": "Rīga dimd",
       "lt": "Rīga dimd"
@@ -296,11 +268,9 @@
   {
     "id": "uz-daugavas-es-dzivoju",
     "category": "song",
-    "difficulty": "intermediate",
     "sourceUrl": "https://www.youtube.com/watch?v=IVYXndKKUWE",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=IVYXndKKUWE",
-    "audioUrl": "",
     "title": {
       "lv": "Uz Daugavas es dzīvoju",
       "lt": "Uz Daugavas es dzīvoju"
@@ -317,11 +287,9 @@
   {
     "id": "kod-it-iz-balli",
     "category": "song",
-    "difficulty": "intermediate",
     "sourceUrl": "https://www.youtube.com/watch?v=OFh-FlUek5M",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=OFh-FlUek5M",
-    "audioUrl": "",
     "title": {
       "lv": "Kod īt iz balli",
       "lt": "Kod īt iz balli"
@@ -338,11 +306,9 @@
   {
     "id": "tumsa-tumsa",
     "category": "song",
-    "difficulty": "intermediate",
     "sourceUrl": "https://www.youtube.com/watch?v=Pgby61D3xgs",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=Pgby61D3xgs",
-    "audioUrl": "",
     "title": {
       "lv": "Tumsa, tumsa, kas par tumsu",
       "lt": "Tumsa, tumsa, kas par tumsu"
@@ -359,11 +325,9 @@
   {
     "id": "nem-janiti-melnu-zirgu",
     "category": "song",
-    "difficulty": "beginner",
     "sourceUrl": "https://www.youtube.com/watch?v=RJzQ1FWyawE",
     "contentStatus": "verified-from-source",
     "videoUrl": "https://www.youtube.com/watch?v=RJzQ1FWyawE",
-    "audioUrl": "",
     "title": {
       "lv": "Ņem, Jānīti, melnu zirgu",
       "lt": "Ņem, Jānīti, melnu zirgu"

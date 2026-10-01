@@ -35,6 +35,9 @@ npm run build     # type-check (vue-tsc) + production build
 npm run preview   # preview the production build
 ```
 
+Code style is set in `.editorconfig` and `.prettierrc.json` (2 spaces, single quotes, no semicolons). Editors with
+the Prettier extension apply it on save; to format everything at once run `npx prettier --write "src/**/*.{vue,ts,css}"`.
+
 ## Adding content
 
 Every text exists twice, in Latvian (`lv`) and Lithuanian (`lt`). After any change, run
@@ -48,11 +51,8 @@ Add an entry to the end of `src/data/latvia.json` or `src/data/lithuania.json`:
 {
   "id": "put-vejini",
   "category": "song",
-  "difficulty": "beginner",
   "videoUrl": "https://www.youtube.com/watch?v=bevcg5SMJHo",
   "sourceUrl": "https://www.youtube.com/watch?v=bevcg5SMJHo",
-  "audioUrl": "",
-  "contentStatus": "verified-from-source",
   "title": { "lv": "Pūt, vējiņi", "lt": "Pūt, vējiņi" },
   "tagline": { "lv": "Īss apraksts kartītei", "lt": "Trumpas aprašymas kortelei" },
   "description": { "lv": "Garāks apraksts dziesmas lapai.", "lt": "Ilgesnis aprašymas dainos puslapiui." }
@@ -61,12 +61,12 @@ Add an entry to the end of `src/data/latvia.json` or `src/data/lithuania.json`:
 
 - `id` becomes the page address (`/latvija/put-vejini`): lowercase letters, digits and hyphens, no diacritics, unique.
 - `category`: `"dance"` or `"song"` (decides the Dejas / Dziesmas filter).
-- `difficulty`: `"beginner"`, `"intermediate"` or `"advanced"` (stored, not shown at the moment).
 - `videoUrl`: a normal YouTube link (`https://www.youtube.com/watch?v=…`). The card thumbnail, hover preview and
   embedded player are made from it automatically, and the video is listed on the About page.
 - `sourceUrl`: where the information comes from. Use the video link, or e.g. a dejaszeltafonds.lv page;
   non-YouTube sources are listed as text sources on the About page.
 - Titles of folk songs usually stay in the original language in both `lv` and `lt`.
+- Optional `contentStatus` and `sourceNote` are notes for editors (how the text was checked, what to follow up); they are not shown on the site.
 - Prefer videos from official or the performers' own channels; re-uploads can disappear.
 
 ### Gallery photos

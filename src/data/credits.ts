@@ -23,14 +23,15 @@ export interface ImageCredit {
 
 export const CC_BY_SA_4: License = { name: 'CC BY-SA 4.0', url: 'https://creativecommons.org/licenses/by-sa/4.0/' }
 
-// Image paths above are written from the public/ folder ('/images/…'); this adds the site's base path.
+// Image paths in this file are written from the public/ folder ('/images/…'); this adds the site's base path.
 function withPublicUrls(images: ImageCredit[]): ImageCredit[] {
   return images.map((image) => ({ ...image, src: publicUrl(image.src) }))
 }
 
-export const commons = (file: string) => `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(file.replace(/ /g, '_'))}`
+export const commons = (file: string) =>
+  `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(file.replace(/ /g, '_'))}`
 
-export const latvianSymbolCredits: ImageCredit[] = withPublicUrls([
+export const latvianSymbols: ImageCredit[] = withPublicUrls([
   {
     src: '/images/symbols/auseklis.svg',
     title: { lv: 'Auseklis', lt: 'Auseklis (Aušrinė)' },
@@ -39,8 +40,6 @@ export const latvianSymbolCredits: ImageCredit[] = withPublicUrls([
     license: CC_BY_SA_4,
   },
 ])
-
-
 
 // The Lithuanian symbol used across the site: the rožėlė sash (juosta) motif, drawn cell by cell
 // after the chart in the Lithuanian Folk Art Institute's article, which also gives its name and meaning.
@@ -58,14 +57,14 @@ export const lithuanianSymbols: ImageCredit[] = withPublicUrls([
   },
 ])
 
+const DEJU_SKATE_2025: LocalizedText = { lv: 'Deju skate 2025', lt: 'Šokių kolektyvų peržiūra 2025' }
+
 /**
  * Photos shown in the Images group of each country page; the first one also opens the slideshow
  * in the page's top-right corner. The project's own photos need no credit; photos from elsewhere
  * get author, sourceUrl and license and are then credited on the About page.
  * Save photos as WebP, at most 1200px on the long side, in public/images/gallery/<country>/.
  */
-const DEJU_SKATE_2025: LocalizedText = { lv: 'Deju skate 2025', lt: 'Šokių kolektyvų peržiūra 2025' }
-
 const gallery: Record<Country, ImageCredit[]> = {
   latvia: [
     { src: '/images/gallery/latvia/deju-skate-2025-122.webp', title: DEJU_SKATE_2025 },

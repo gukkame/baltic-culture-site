@@ -37,7 +37,7 @@ export function youtubeId(videoUrl: string): string | undefined {
 
 export function youtubeEmbedUrl(videoUrl: string): string {
   const id = youtubeId(videoUrl)
-  return id ? `https://www.youtube.com/embed/${id}` : videoUrl
+  return id ? `https://www.youtube-nocookie.com/embed/${id}` : videoUrl
 }
 
 /** hqdefault is 4:3 with letterbox bars, so crop it with object-cover in a 16:9 box. */

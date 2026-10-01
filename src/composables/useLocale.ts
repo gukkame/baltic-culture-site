@@ -47,27 +47,21 @@ watch(locale, (value) => {
   }
 })
 
-function toggleLocale(): void {
-  locale.value = locale.value === 'lv' ? 'lt' : 'lv'
-}
-
 function setLocale(next: Locale): void {
   locale.value = next
 }
 
 function t(key: string): string {
   const dict = dictionaries[locale.value]
-  const value = key
-    .split('.')
-    .reduce<unknown>((acc, segment) => {
-      if (acc && typeof acc === 'object' && segment in acc) {
-        return (acc as Record<string, unknown>)[segment]
-      }
-      return undefined
-    }, dict)
+  const value = key.split('.').reduce<unknown>((acc, segment) => {
+    if (acc && typeof acc === 'object' && segment in acc) {
+      return (acc as Record<string, unknown>)[segment]
+    }
+    return undefined
+  }, dict)
   return typeof value === 'string' ? value : key
 }
 
 export function useLocale() {
-  return { locale, toggleLocale, setLocale, t }
+  return { locale, setLocale, t }
 }

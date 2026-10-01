@@ -24,9 +24,6 @@
     "mapTagline": "PASIRINK SAVO KELIONĘ",
     "mapHint": "Paliesk šalį ir atrask jos istorijas.",
     "mapLabel": "Interaktyviame žemėlapyje pasirink Latviją arba Lietuvą",
-    "mapLink": "Pažink",
-    "latvia": "Latvija",
-    "lithuania": "Lietuva",
     "latviaSubtitle": "Šokiai, dainos ir istorijos",
     "lithuaniaSubtitle": "Šokiai, dainos ir istorijos"
   },
@@ -35,7 +32,6 @@
     "dances": "Šokiai",
     "songs": "Dainos",
     "images": "Vaizdai",
-    "viewDetails": "Žiūrėti daugiau",
     "filters": {
       "all": "Visi"
     },

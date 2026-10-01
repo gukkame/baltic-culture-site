@@ -24,9 +24,6 @@
     "mapTagline": "IZVĒLIES SAVU CEĻOJUMU",
     "mapHint": "Pieskaries zemei un atklāj tās stāstus.",
     "mapLabel": "Izvēlies Latviju vai Lietuvu interaktīvajā kartē",
-    "mapLink": "Iepazīsti",
-    "latvia": "Latvija",
-    "lithuania": "Lietuva",
     "latviaSubtitle": "Dejas, dziesmas un stāsti",
     "lithuaniaSubtitle": "Dejas, dziesmas un stāsti"
   },
@@ -35,7 +32,6 @@
     "dances": "Dejas",
     "songs": "Dziesmas",
     "images": "Attēli",
-    "viewDetails": "Skatīt vairāk",
     "filters": {
       "all": "Visas"
     },

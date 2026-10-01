@@ -15,6 +15,11 @@ export const aboutPaths: Record<Locale, string> = {
 
 export const quizPath = '/viktorina'
 
+/** The country that goes with each language: its symbol, and where "Sākt ceļojumu" leads. */
+export const localeCountry: Record<Locale, Country> = {
+  lv: 'latvia',
+  lt: 'lithuania',
+}
 
 export function countryPath(country: Country, itemId?: string): string {
   const base = `/${countrySlugs[country]}`
