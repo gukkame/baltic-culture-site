@@ -21,6 +21,42 @@ const languages: { code: Locale; label: string; name: string }[] = [
   { code: 'lt', label: 'LT', name: 'Lietuvių' },
 ]
 
+const heroPhotos = [
+  { src: '/images/home/folk-group-cabin.jpg', position: 'object-[center_58%]', mobilePosition: 'max-tablet:object-[51%_center]' },
+  { src: '/images/home/folk-choir-stage.jpg', position: 'object-[center_100%]', mobilePosition: 'max-tablet:object-[51%_center]' },
+  { src: '/images/home/folk-circle-dance.jpg', position: 'object-[center_52%]', mobilePosition: 'max-tablet:object-[50%_center]' },
+] as const
+
+const activePhoto = ref(0)
+const slideshowPaused = ref(false)
+const PHOTO_INTERVAL_MS = 6500
+let photoTimer: ReturnType<typeof setInterval> | undefined
+let reducedMotionQuery: MediaQueryList | undefined
+
+function startSlideshow() {
+  if (photoTimer) clearInterval(photoTimer)
+  photoTimer = undefined
+  if (slideshowPaused.value || document.hidden) return
+  photoTimer = setInterval(() => {
+    activePhoto.value = (activePhoto.value + 1) % heroPhotos.length
+  }, PHOTO_INTERVAL_MS)
+}
+
+function toggleSlideshow() {
+  slideshowPaused.value = !slideshowPaused.value
+  startSlideshow()
+}
+
+function choosePhoto(index: number) {
+  activePhoto.value = index
+  startSlideshow()
+}
+
+function syncMotionPreference() {
+  slideshowPaused.value = reducedMotionQuery?.matches ?? false
+  startSlideshow()
+}
+
 const mobileMenuOpen = ref(false)
 const mobileMenu = ref<HTMLElement | null>(null)
 const mobileMenuButton = ref<HTMLButtonElement | null>(null)
@@ -49,13 +85,20 @@ function closeOnDesktop() {
 
 onMounted(() => {
   document.addEventListener('pointerdown', closeOnOutsidePointer)
-  desktopQuery = window.matchMedia('(min-width: 760px)')
+  desktopQuery = window.matchMedia('(min-width: 861px)')
   desktopQuery.addEventListener('change', closeOnDesktop)
+  reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+  reducedMotionQuery.addEventListener('change', syncMotionPreference)
+  document.addEventListener('visibilitychange', startSlideshow)
+  syncMotionPreference()
 })
 
 onUnmounted(() => {
   document.removeEventListener('pointerdown', closeOnOutsidePointer)
   desktopQuery?.removeEventListener('change', closeOnDesktop)
+  reducedMotionQuery?.removeEventListener('change', syncMotionPreference)
+  document.removeEventListener('visibilitychange', startSlideshow)
+  if (photoTimer) clearInterval(photoTimer)
 })
 
 const heroControl =
@@ -68,14 +111,18 @@ const heroControl =
     aria-labelledby="home-title"
   >
     <img
-      class="pointer-events-none absolute inset-0 -z-2 size-full object-cover object-[center_62%] max-tablet:object-[62%_center]"
-      :src="publicUrl('/artwork/folk-dancers-table-painted-v4.webp')"
+      v-for="(photo, index) in heroPhotos"
+      :key="photo.src"
+      class="pointer-events-none absolute inset-0 -z-2 size-full object-cover transition-opacity duration-[1200ms] ease-in-out motion-reduce:transition-none"
+      :class="[photo.position, photo.mobilePosition, index === activePhoto ? 'opacity-100' : 'opacity-0']"
+      :src="publicUrl(photo.src)"
       alt=""
-      fetchpriority="high"
+      aria-hidden="true"
+      :fetchpriority="index === 0 ? 'high' : 'auto'"
       decoding="async"
     />
     <div
-      class="pointer-events-none absolute inset-0 -z-1 bg-hero-shade max-tablet:bg-hero-shade-full"
+      class="pointer-events-none absolute inset-0 -z-1 bg-[linear-gradient(90deg,rgba(14,33,29,.73),transparent_68%),linear-gradient(180deg,rgba(14,28,23,.42),transparent_19%),linear-gradient(0deg,rgba(32,19,11,.53),transparent_30%)] max-tablet:bg-[linear-gradient(90deg,#172f28e8,#172f2880_100%),linear-gradient(0deg,#25170cc7,transparent_34%)]"
       aria-hidden="true"
     />
 
@@ -100,22 +147,23 @@ const heroControl =
       </RouterLink>
 
       <nav
-        class="ml-auto flex gap-[33px] text-[13px] max-laptop:gap-[23px] max-tablet:hidden"
+        class="ml-auto flex items-center gap-6 rounded-full border border-cream/20 bg-pine/80 px-5 text-sm font-medium text-cream shadow-sm backdrop-blur-md max-laptop:gap-4 max-[860px]:hidden"
         :aria-label="t('home.navLabel')"
       >
-        <RouterLink
-          v-for="link in navLinks"
-          :key="link.to"
-          :to="link.to"
-          class="relative inline-block py-3 text-shadow-nav after:absolute after:bottom-[5px] after:left-0 after:right-full after:h-px after:bg-current after:transition-[right] after:duration-200 hover:after:right-0"
-          :class="heroControl"
-        >
-          {{ link.label }}
-        </RouterLink>
+        <template v-for="(link, index) in navLinks" :key="link.to">
+          <span v-if="index > 0" class="h-4 w-px bg-cream/35" aria-hidden="true" />
+          <RouterLink
+            :to="link.to"
+            class="relative inline-flex min-h-11 items-center whitespace-nowrap py-2 after:absolute after:bottom-[7px] after:left-0 after:right-full after:h-px after:bg-current after:transition-[right] after:duration-200 hover:after:right-0"
+            :class="heroControl"
+          >
+            {{ link.label }}
+          </RouterLink>
+        </template>
       </nav>
 
       <div
-        class="flex shrink-0 items-center gap-[7px] rounded-full bg-linen/90 px-[7px] text-[12px] text-pine max-tablet:ml-auto max-tablet:gap-px max-xs:text-[11px]"
+        class="flex shrink-0 items-center gap-[7px] rounded-full bg-linen/90 px-[7px] text-[12px] text-pine max-[860px]:ml-auto max-tablet:gap-px max-xs:text-[11px]"
         role="group"
         :aria-label="t('home.languageLabel')"
       >
@@ -136,7 +184,7 @@ const heroControl =
 
       <div
         ref="mobileMenu"
-        class="hidden shrink-0 max-tablet:block"
+        class="hidden shrink-0 max-[860px]:block"
         @keydown.esc.stop.prevent="closeOnEscape"
         @focusout="closeOnFocusLeave"
       >
@@ -182,6 +230,45 @@ const heroControl =
         </nav>
       </div>
     </header>
+
+    <div
+      class="absolute right-[4%] top-32 z-10 flex items-center rounded-full border border-cream/10 bg-pine/35 p-px text-cream/75 backdrop-blur-sm transition-colors hover:bg-pine/55 focus-within:bg-pine/55 max-tablet:right-[6%] max-tablet:top-[56%] max-[360px]:top-[60%]!"
+      role="group"
+      :aria-label="t('home.slideshowLabel')"
+    >
+      <button
+        v-for="(_, index) in heroPhotos"
+        :key="index"
+        type="button"
+        class="flex size-7 cursor-pointer items-center justify-center rounded-full transition-colors hover:bg-cream/10"
+        :class="heroControl"
+        :aria-label="`${t('home.showPhoto')} ${index + 1}`"
+        :aria-pressed="activePhoto === index"
+        @click="choosePhoto(index)"
+      >
+        <span
+          class="size-1 rounded-full transition-colors"
+          :class="activePhoto === index ? 'bg-cream/90' : 'bg-cream/45'"
+          aria-hidden="true"
+        />
+      </button>
+      <span class="h-2.5 w-px bg-cream/20" aria-hidden="true" />
+      <button
+        type="button"
+        class="flex size-7 cursor-pointer items-center justify-center rounded-full transition-colors hover:bg-cream/10 hover:text-cream"
+        :class="heroControl"
+        :aria-label="slideshowPaused ? t('home.playSlideshow') : t('home.pauseSlideshow')"
+        @click="toggleSlideshow"
+      >
+        <svg v-if="slideshowPaused" class="size-2.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="m6 3 11 7-11 7V3Z" />
+        </svg>
+        <svg v-else class="size-2.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <rect x="4" y="3" width="4" height="14" rx="1" />
+          <rect x="12" y="3" width="4" height="14" rx="1" />
+        </svg>
+      </button>
+    </div>
 
     <div
       class="absolute left-[5.3%] top-[19%] w-[46%] max-w-[660px] wide:top-[18%] max-laptop:top-[17%] max-laptop:w-[56%] max-tablet:left-[7%] max-tablet:right-[6%] max-tablet:top-[139px] max-tablet:w-auto max-xs:top-32 max-[360px]:top-[184px]"
