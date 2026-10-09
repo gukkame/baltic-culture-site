@@ -42,16 +42,6 @@ function startSlideshow() {
   }, PHOTO_INTERVAL_MS)
 }
 
-function toggleSlideshow() {
-  slideshowPaused.value = !slideshowPaused.value
-  startSlideshow()
-}
-
-function choosePhoto(index: number) {
-  activePhoto.value = index
-  startSlideshow()
-}
-
 function syncMotionPreference() {
   slideshowPaused.value = reducedMotionQuery?.matches ?? false
   startSlideshow()
@@ -230,45 +220,6 @@ const heroControl =
         </nav>
       </div>
     </header>
-
-    <div
-      class="absolute right-[4%] top-32 z-10 flex items-center rounded-full border border-cream/10 bg-pine/35 p-px text-cream/75 backdrop-blur-sm transition-colors hover:bg-pine/55 focus-within:bg-pine/55 max-tablet:right-[6%] max-tablet:top-[56%] max-[360px]:top-[60%]!"
-      role="group"
-      :aria-label="t('home.slideshowLabel')"
-    >
-      <button
-        v-for="(_, index) in heroPhotos"
-        :key="index"
-        type="button"
-        class="flex size-7 cursor-pointer items-center justify-center rounded-full transition-colors hover:bg-cream/10"
-        :class="heroControl"
-        :aria-label="`${t('home.showPhoto')} ${index + 1}`"
-        :aria-pressed="activePhoto === index"
-        @click="choosePhoto(index)"
-      >
-        <span
-          class="size-1 rounded-full transition-colors"
-          :class="activePhoto === index ? 'bg-cream/90' : 'bg-cream/45'"
-          aria-hidden="true"
-        />
-      </button>
-      <span class="h-2.5 w-px bg-cream/20" aria-hidden="true" />
-      <button
-        type="button"
-        class="flex size-7 cursor-pointer items-center justify-center rounded-full transition-colors hover:bg-cream/10 hover:text-cream"
-        :class="heroControl"
-        :aria-label="slideshowPaused ? t('home.playSlideshow') : t('home.pauseSlideshow')"
-        @click="toggleSlideshow"
-      >
-        <svg v-if="slideshowPaused" class="size-2.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path d="m6 3 11 7-11 7V3Z" />
-        </svg>
-        <svg v-else class="size-2.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <rect x="4" y="3" width="4" height="14" rx="1" />
-          <rect x="12" y="3" width="4" height="14" rx="1" />
-        </svg>
-      </button>
-    </div>
 
     <div
       class="absolute left-[5.3%] top-[19%] w-[46%] max-w-[660px] wide:top-[18%] max-laptop:top-[17%] max-laptop:w-[56%] max-tablet:left-[7%] max-tablet:right-[6%] max-tablet:top-[139px] max-tablet:w-auto max-xs:top-32 max-[360px]:top-[184px]"
