@@ -119,6 +119,14 @@ const gallery: Record<Country, ImageCredit[]> = {
       title: { lv: 'Tradicionālā deja „Abrūsėlis“', lt: 'Tradicinis šokis „Abrūsėlis“' },
     },
     { src: '/images/gallery/lithuania/dancers-by-church.webp', title: LT_DANCERS_IN_COSTUME },
+    {
+      src: '/images/gallery/lithuania/mustokine.webp',
+      title: { lv: 'Tradicionālā deja „Muštokinė“', lt: 'Tradicinis šokis „Muštokinė“' },
+    },
+    {
+      src: '/images/gallery/lithuania/selininkai.webp',
+      title: { lv: 'Tradicionālā deja „Sėlininkai“', lt: 'Tradicinis šokis „Sėlininkai“' },
+    },
     { src: '/images/gallery/lithuania/schoolchildren-song-festival-2026-2.webp', title: LT_SONG_FESTIVAL_2026 },
     { src: '/images/gallery/lithuania/young-dancers.webp', title: LT_LEK_GERVELE },
     { src: '/images/gallery/lithuania/accordionist.webp' },
