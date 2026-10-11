@@ -55,6 +55,11 @@ const LT_SONG_FESTIVAL_2026: LocalizedText = {
   lv: 'Lietuvas skolēnu dziesmu svētki 2026',
   lt: 'Lietuvos moksleivių dainų šventė 2026',
 }
+const LT_DANCERS_IN_COSTUME: LocalizedText = { lv: 'Dejotāji tautastērpos', lt: 'Šokėjai tautiniais drabužiais' }
+const LT_LEK_GERVELE: LocalizedText = {
+  lv: 'Tradicionālā deja „Lėk, gervele“',
+  lt: 'Tradicinis šokis „Lėk, gervele“',
+}
 
 const gallery: Record<Country, ImageCredit[]> = {
   latvia: [
@@ -106,13 +111,16 @@ const gallery: Record<Country, ImageCredit[]> = {
       src: '/images/gallery/lithuania/folklore-ensemble.webp',
       title: { lv: 'Folkloras ansamblis', lt: 'Folkloro ansamblis' },
     },
-    { src: '/images/gallery/lithuania/women-in-striped-shawls.webp' },
-    { src: '/images/gallery/lithuania/dancing-in-the-rain.webp' },
+    { src: '/images/gallery/lithuania/women-in-striped-shawls.webp', title: LT_DANCERS_IN_COSTUME },
+    { src: '/images/gallery/lithuania/dancing-in-the-rain.webp', title: LT_LEK_GERVELE },
     { src: '/images/gallery/lithuania/schoolchildren-song-festival-2026-1.webp', title: LT_SONG_FESTIVAL_2026 },
-    { src: '/images/gallery/lithuania/circle-with-woven-sashes.webp' },
-    { src: '/images/gallery/lithuania/dancers-by-church.webp' },
+    {
+      src: '/images/gallery/lithuania/circle-with-woven-sashes.webp',
+      title: { lv: 'Tradicionālā deja „Abrūsėlis“', lt: 'Tradicinis šokis „Abrūsėlis“' },
+    },
+    { src: '/images/gallery/lithuania/dancers-by-church.webp', title: LT_DANCERS_IN_COSTUME },
     { src: '/images/gallery/lithuania/schoolchildren-song-festival-2026-2.webp', title: LT_SONG_FESTIVAL_2026 },
-    { src: '/images/gallery/lithuania/young-dancers.webp' },
+    { src: '/images/gallery/lithuania/young-dancers.webp', title: LT_LEK_GERVELE },
     { src: '/images/gallery/lithuania/accordionist.webp' },
   ],
 }
