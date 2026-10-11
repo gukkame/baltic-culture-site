@@ -551,5 +551,140 @@
       "lv": "Tautasdziesma turpinās:\n„Stykla durvis, glōžu lūgi,\nVydā saule rūtojās.”",
       "lt": "Daina tęsiasi:\n„Stykla durvis, glōžu lūgi,\nVydā saule rūtojās.“\n(Stiklo durys, stiklo langai, viduje saulė žaidė.)"
     }
+  },
+  {
+    "id": "tytuvenai-druska",
+    "country": "lithuania",
+    "question": {
+      "lv": "Zemē dzimu, ugunī kristījos, ūdenī kritu un pavisam pazudu. Kas tas ir?",
+      "lt": "Žemėje gimiau, ugnim apsikrikštijau, ant vandens puoliau ir visas prapuoliau. Kas?"
+    },
+    "options": [
+      {
+        "lv": "Sniegs",
+        "lt": "Sniegas"
+      },
+      {
+        "lv": "Sāls",
+        "lt": "Druska"
+      },
+      {
+        "lv": "Pelni",
+        "lt": "Pelenai"
+      }
+    ],
+    "correct": 1,
+    "explanation": {
+      "lv": "Sāli iegūst no zemes, to karsē ugunī, bet ūdenī tā izšķīst pavisam.",
+      "lt": "Druska išgaunama iš žemės, kaitinama ugnimi, o įmesta į vandenį visiškai ištirpsta."
+    }
+  },
+  {
+    "id": "tytuvenai-vezime",
+    "country": "lithuania",
+    "question": {
+      "lv": "Pabeidz lietuviešu sakāmvārdu: „Kura ratos sēdi…“",
+      "lt": "Pabaik lietuvišką patarlę: „Kieno vežime sėdi…“"
+    },
+    "options": [
+      {
+        "lv": "„…tā zirgu arī pazīsti“",
+        "lt": "„…to ir arklį pažįsti“"
+      },
+      {
+        "lv": "„…tā dziesmu arī dziedi“",
+        "lt": "„…to ir giesmę giedi“"
+      },
+      {
+        "lv": "„…tas arī ceļu rāda“",
+        "lt": "„…tas ir kelią rodo“"
+      }
+    ],
+    "correct": 1,
+    "explanation": {
+      "lv": "„Kura ratos sēdi, tā dziesmu arī dziedi“ — cilvēks mēdz pielāgoties tam, no kura ir atkarīgs.",
+      "lt": "„Kieno vežime sėdi, to ir giesmę giedi“ — žmogus linkęs prisitaikyti prie to, nuo kurio priklauso."
+    }
+  },
+  {
+    "id": "tytuvenai-aidas",
+    "country": "lithuania",
+    "question": {
+      "lv": "Dzīvo bez miesas,\nrunā bez mēles,\nneviens to neredz,\nbet ikviens dzird. Kas tas ir?",
+      "lt": "Gyvena be kūno,\nkalba be liežuvio,\nniekas jo nemato,\nbet kiekvienas girdi. Kas?"
+    },
+    "options": [
+      {
+        "lv": "Atbalss",
+        "lt": "Aidas"
+      },
+      {
+        "lv": "Vējš",
+        "lt": "Vėjas"
+      },
+      {
+        "lv": "Sapnis",
+        "lt": "Sapnas"
+      }
+    ],
+    "correct": 0,
+    "explanation": {
+      "lv": "Atbalss ir atstarota skaņa — to nevar redzēt, bet var dzirdēt, kā tā atkārto mūsu vārdus.",
+      "lt": "Aidas — atsimušęs garsas: jo nematome, bet girdime, kaip jis pakartoja mūsų žodžius."
+    }
+  },
+  {
+    "id": "tytuvenai-pasesi",
+    "country": "lithuania",
+    "question": {
+      "lv": "Pabeidz lietuviešu sakāmvārdu: „Ko sēsi…“",
+      "lt": "Pabaik lietuvišką patarlę: „Ką pasėsi…“"
+    },
+    "options": [
+      {
+        "lv": "„…to arī turēsi“",
+        "lt": "„…tą ir turėsi“"
+      },
+      {
+        "lv": "„…to arī ēdīsi“",
+        "lt": "„…tą ir valgysi“"
+      },
+      {
+        "lv": "„…to arī pļausi“",
+        "lt": "„…tą ir pjausi“"
+      }
+    ],
+    "correct": 2,
+    "explanation": {
+      "lv": "Kādi darbi, tādi augļi. Latviešiem ir tieši tāds pats sakāmvārds: „Ko sēsi, to pļausi“.",
+      "lt": "Kokie darbai, tokios ir pasekmės. Latviai turi lygiai tokią pačią patarlę: „Ko sēsi, to pļausi“."
+    }
+  },
+  {
+    "id": "tytuvenai-vestuviu-dainos",
+    "country": "lithuania",
+    "question": {
+      "lv": "Kura lietuviešu tautasdziesmu grupa tiek uzskatīta par visplašāko dziedamās folkloras daļu?",
+      "lt": "Kuri lietuvių liaudies dainų grupė laikoma gausiausia dainuojamosios tautosakos dalimi?"
+    },
+    "options": [
+      {
+        "lv": "Kalendāro gadskārtu dziesmas",
+        "lt": "Kalendorinių apeigų dainos"
+      },
+      {
+        "lv": "Kāzu dziesmas",
+        "lt": "Vestuvių dainos"
+      },
+      {
+        "lv": "Darba dziesmas",
+        "lt": "Darbo dainos"
+      }
+    ],
+    "correct": 1,
+    "explanation": {
+      "lv": "Kāzu dziesmas ir visplašākā lietuviešu tautasdziesmu grupa: senās kāzas ilga vairākas dienas, un gandrīz katru rituālu pavadīja dziesma.",
+      "lt": "Vestuvių dainos — gausiausia lietuvių liaudies dainų grupė: senosios vestuvės truko kelias dienas, ir beveik kiekvieną apeigą lydėjo daina."
+    }
   }
 ]

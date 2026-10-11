@@ -51,6 +51,10 @@ export const lithuanianSymbols: ImageCredit[] = withPublicUrls([
 ])
 
 const DEJU_SKATE_2025: LocalizedText = { lv: 'Deju skate 2025', lt: 'Šokių kolektyvų peržiūra 2025' }
+const LT_SONG_FESTIVAL_2026: LocalizedText = {
+  lv: 'Lietuvas skolēnu dziesmu svētki 2026',
+  lt: 'Lietuvos moksleivių dainų šventė 2026',
+}
 
 const gallery: Record<Country, ImageCredit[]> = {
   latvia: [
@@ -97,7 +101,15 @@ const gallery: Record<Country, ImageCredit[]> = {
     { src: '/images/gallery/latvia/children-in-folk-costume-forest.webp' },
     { src: '/images/gallery/latvia/accordionist-with-doll.webp' },
   ],
-  lithuania: [],
+  lithuania: [
+    {
+      src: '/images/gallery/lithuania/folklore-ensemble.webp',
+      title: { lv: 'Folkloras ansamblis', lt: 'Folkloro ansamblis' },
+    },
+    { src: '/images/gallery/lithuania/schoolchildren-song-festival-2026-1.webp', title: LT_SONG_FESTIVAL_2026 },
+    { src: '/images/gallery/lithuania/schoolchildren-song-festival-2026-2.webp', title: LT_SONG_FESTIVAL_2026 },
+    { src: '/images/gallery/lithuania/accordionist.webp' },
+  ],
 }
 
 export const galleryByCountry: Record<Country, ImageCredit[]> = {
