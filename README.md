@@ -143,7 +143,7 @@ sub-path — see below). Nothing else needs to be installed on the server.
 
 - **SPA fallback (required).** Page addresses such as `/latvija/put-vejini` or `/viktorina` are handled in the
   browser. The server must return `dist/index.html` with status 200 for any path that is not an existing file;
-  otherwise direct visits and page refreshes return 404.
+  otherwise direct visits and page refreshes return 404. On Vercel this is done by `vercel.json`.
 - **HTTPS** recommended.
 - **Caching:** files in `dist/assets/` have content hashes in their names and can be cached long-term
   (e.g. `Cache-Control: public, max-age=31536000, immutable`). `index.html` should not be cached
