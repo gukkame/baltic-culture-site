@@ -3,7 +3,7 @@
     "id": "linksmasis-sokis",
     "category": "dance",
     "sourceUrl": "https://www.youtube.com/watch?v=PNtlBWSjBnE",
-    "contentStatus": "verified-from-source",
+    "contentStatus": "reviewed-by-project-partners",
     "videoUrl": "https://www.youtube.com/watch?v=PNtlBWSjBnE",
     "title": {
       "lv": "Priecīgā deja",
@@ -14,55 +14,37 @@
       "lt": "Socialinis šokis, skirtas patiems šokėjams"
     },
     "description": {
-      "lv": "Priecīgā deja nav paredzēta skatītājiem — tā ir 'deja pašiem dejotājiem', kas kalpoja lauku kopienas saliedēšanai. Jauniešiem tā bija veids, kā satikties, izrādīt simpātijas un atrast dzīvesbiedru.",
-      "lt": "Linksmasis šokis nėra skirtas žiūrovams — tai „šokis patiems šokėjams“, padėjęs suartinti kaimo bendruomenę. Jaunimui tai buvo būdas susipažinti, parodyti simpatiją ir susirasti porą."
-    }
+      "lv": "Priecīgā deja bija paredzēta pašiem dejotājiem. Tā pulcēja lauku kopienu un deva jauniešiem iespēju iepazīties, izrādīt simpātijas un varbūt atrast nākamo dzīvesbiedru.",
+      "lt": "Linksmasis šokis buvo skirtas ne žiūrovams, o patiems šokėjams. Jis suburdavo kaimo bendruomenę, o jaunimui suteikdavo progą susipažinti, parodyti simpatiją ir galbūt atrasti būsimą gyvenimo porą."
+    },
+    "sourceNote": "Text revised from Lithuanian project partner feedback supplied in Lietuva - Latvija.docx."
   },
   {
     "id": "vaiku-ratelis",
     "category": "dance",
     "sourceUrl": "https://www.youtube.com/watch?v=bJxlcGJEG6w",
-    "contentStatus": "verified-from-source",
+    "contentStatus": "reviewed-by-project-partners",
     "videoUrl": "https://www.youtube.com/watch?v=bJxlcGJEG6w",
     "title": {
-      "lv": "Bērnu rotaļdeja",
-      "lt": "Vaikų ratelis"
+      "lv": "Spirgučiai",
+      "lt": "Spirgučiai"
     },
     "tagline": {
-      "lv": "Dzīvespriecīga riņķa rotaļa mazākajiem dejotājiem",
-      "lt": "Gyvybingas ratelio žaidimas patiems mažiausiems šokėjams"
+      "lv": "Dzīvespriecīga, ritmiska Žemaitijas tautas deja",
+      "lt": "Linksmas ir ritmingas Žemaitijos liaudies šokis"
     },
     "description": {
-      "lv": "Šī rotaļdeja pieder pie bērnu un jauniešu tautas deju kategorijas — riņķa rotaļām. Lietuviešu tradīcijā jaunākos dejotājus sauc par 'spirgučiem' (šis vārds saglabāts arī Lietuvas Dziesmu svētku jaunāko dejotāju grupu nosaukumā), un pati deja ir dzīva, enerģiska un rotaļīga.",
-      "lt": "Šis šokis priklauso vaikų ir jaunimo tautinių šokių kategorijai — ratelio žaidimams. Lietuvos tradicijoje patys jauniausi šokėjai vadinami „spirgučiais“ (šis pavadinimas išlikęs ir Lietuvos Dainų šventės jauniausių šokėjų grupių pavadinime), o pats šokis yra gyvas, energingas ir žaismingas."
-    }
-  },
-  {
-    "id": "vaiku-ratelis-variantas",
-    "category": "dance",
-    "sourceUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
-    "contentStatus": "verified-from-source",
-    "sourceNote": "Source material reused the same YouTube link (BqQItZLiFS8) for this entry and for 'Blezdingėlė' below — worth confirming with the project owner whether separate clips exist for each dance.",
-    "videoUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
-    "title": {
-      "lv": "Bērnu rotaļdeja (variants)",
-      "lt": "Vaikų ratelis (variantas)"
+      "lv": "„Spirgučiai” ir dzīvespriecīga, ritmiska un jautra lietuviešu tautas deja, kas saistīta ar Žemaitijas reģionu. Tās kustības ir sīkas, dzīvīgas un lēcienveidīgas, atgādinot pannā čurkstošus speķa gabaliņus. Deja ir enerģiska, rotaļīga un labas noskaņas pilna.",
+      "lt": "„Spirgučiai“ – linksmas, ritmingas ir nuotaikingas lietuvių liaudies šokis, siejamas su Žemaitijos regionu. Jo judesiai smulkūs, gyvybingi ir šoklūs, primenantys keptuvėje čirškančius spirgučius. Šokis kupinas energijos, žaismingumo ir geros nuotaikos."
     },
-    "tagline": {
-      "lv": "Tā paša 'spirguļu' rotaļdeju loka otrs variants",
-      "lt": "Antras tos pačios „spirgučių“ ratelio šokių šeimos variantas"
-    },
-    "description": {
-      "lv": "Šis ieraksts pieder tai pašai bērnu 'spirguļu' riņķa deju kategorijai — enerģiska, rotaļīga dinamika atdarina bērnu dzīvespriecīgo kustību. Avota materiālā šai dejai piesaistīta tā pati video saite, kas dejai 'Blezdingėlė' — tas jāprecizē ar klientu.",
-      "lt": "Šis įrašas priklauso tai pačiai vaikų „spirgučių“ ratelio šokių kategorijai — energinga, žaisminga dinamika mėgdžioja gyvą vaikų judesį. Šaltinio medžiagoje šiam šokiui priskirta ta pati vaizdo įrašo nuoroda kaip ir šokiui „Blezdingėlė“ — tai reikėtų patikslinti su užsakovu."
-    }
+    "sourceNote": "Text revised from Lithuanian project partner feedback supplied in Lietuva - Latvija.docx."
   },
   {
     "id": "blezdingele",
     "category": "dance",
     "sourceUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
-    "contentStatus": "verified-from-source",
-    "sourceNote": "Source material reused the same YouTube link (BqQItZLiFS8) for this entry and for 'Vaikų ratelis (variantas)' above — worth confirming with the project owner whether separate clips exist for each dance.",
+    "contentStatus": "reviewed-by-project-partners",
+    "sourceNote": "Text revised from Lithuanian project partner feedback supplied in Lietuva - Latvija.docx.",
     "videoUrl": "https://www.youtube.com/watch?v=BqQItZLiFS8",
     "title": {
       "lv": "Bezdelīdziņa",
@@ -73,28 +55,29 @@
       "lt": "Sena žemaitiška deja, mėgdžiojanti kregždės skrydį"
     },
     "description": {
-      "lv": "Blezdingėlė ir sena lietuviešu tautas deja, kas cēlusies Žemaitijā un ar plūstošām, viegli slīdošām kustībām atdarina bezdelīgu lidojumu. Nosaukums cēlies no žemaišu vārda 'blezdinga', kas nozīmē bezdelīgu.",
-      "lt": "Blezdingėlė yra sena lietuvių liaudies deja, kilusi Žemaitijoje ir plastiškais, slystančiais judesiais mėgdžiojanti kregždžių skrydį. Pavadinimas kilęs iš žemaitiško žodžio „blezdinga“, reiškiančio kregždę."
+      "lv": "Tā ir sena lietuviešu tautas deja, kas cēlusies Žemaitijā un ataino bezdelīgu lidojumu. Dejas nosaukums cēlies no žemaišu bezdelīgas nosaukuma „blezdinga”.",
+      "lt": "Tai – senovinis lietuvių liaudies šokis, kilęs iš Žemaitijos, vaizduojantis kregždžių skrydį.\n\nŠokio pavadinimas kilęs iš žemaitiško kregždės pavadinimo „blezdinga“."
     }
   },
   {
     "id": "lendleris-zemaitiskais",
     "category": "dance",
     "sourceUrl": "https://www.youtube.com/watch?v=4neeFA--Tps",
-    "contentStatus": "verified-from-source",
+    "contentStatus": "reviewed-by-project-partners",
     "videoUrl": "https://www.youtube.com/watch?v=4neeFA--Tps",
     "title": {
-      "lv": "Žemaišu lendlers",
-      "lt": "Žemaitiškas lenderis"
+      "lv": "Lelinderis",
+      "lt": "Lelinderis"
     },
     "tagline": {
       "lv": "No kaimiņzemes pārņemta deja, kas kļuvusi savdabīgi žemaitiska",
       "lt": "Iš kaimyninio krašto perimtas šokis, tapęs savitai žemaitišku"
     },
     "description": {
-      "lv": "Šī deja pārņemta no kaimiņzemes — visticamāk, Vācijas vai Prūsijas —, un pieder pie 'lendlera' tipa dejām. Laika gaitā tā kļuvusi pilnībā 'polietuvota' un ieguvusi savdabīgi žemaitisku raksturu.",
-      "lt": "Šis šokis perimtas iš kaimyninio krašto — tikėtina, Vokietijos ar Prūsijos — ir priklauso „lenderio“ tipo šokiams. Laikui bėgant jis visiškai „sulietuvėjo“ ir įgavo savitą žemaitišką charakterį."
-    }
+      "lv": "Šī deja pārņemta no kaimiņzemes — visticamāk, Vācijas vai Prūsijas. Laika gaitā tā pilnībā iekļāvusies lietuviešu tradīcijā un ieguvusi savdabīgu žemaišu raksturu.",
+      "lt": "Šis šokis perimtas iš kaimyninio krašto — tikėtina, Vokietijos ar Prūsijos.\n\nLaikui bėgant jis visiškai „sulietuvėjo“ ir įgavo savitą žemaitišką charakterį."
+    },
+    "sourceNote": "Text revised from Lithuanian project partner feedback supplied in Lietuva - Latvija.docx."
   },
   {
     "id": "dobilelis",
@@ -119,26 +102,27 @@
     "id": "isjos-brolutelis",
     "category": "song",
     "sourceUrl": "https://www.youtube.com/watch?v=8eE2MxX7hoA",
-    "contentStatus": "verified-from-source",
+    "contentStatus": "reviewed-by-project-partners",
     "videoUrl": "https://www.youtube.com/watch?v=8eE2MxX7hoA",
     "title": {
       "lv": "Aizjāja bāleliņš, sodāto",
       "lt": "Išjos brolutėlis, sodauto"
     },
     "tagline": {
-      "lv": "Aukštaitijas sutartinė — dialogs starp brāli un māsu",
-      "lt": "Aukštaitijos sutartinė — brolio ir sesers dialogas"
+      "lv": "Aukštaitijas trejinė sutartinė",
+      "lt": "Aukštaitiška trejinė sutartinė"
     },
     "description": {
-      "lv": "Šī ir sutartinė — lietuviešu daudzbalsīgās dziedāšanas stila dziesma — no Aukštaitijas reģiona, kas veidota kā dialogs starp brāli un māsu. Māsa jautā, ko brālis viņai atvedīs no Rīgas; brālis apsola zelta gredzenu.",
-      "lt": "Tai sutartinė — lietuvių daugiabalsio dainavimo stiliaus daina — iš Aukštaitijos regiono, sukurta kaip brolio ir sesers dialogas. Sesuo klausia, ką brolis jai parveš iš Rygos; brolis pažada auksinį žiedą."
-    }
+      "lv": "Sutartinė ir sena lietuviešu daudzbalsīgās dziedāšanas tradīcija, kas īpaši raksturīga Aukštaitijai. Šajā sutartinė māsa jautā brālim, ko viņš tai atvedīs no Rīgas, un brālis apsola zelta gredzenu.",
+      "lt": "Sutartinė – senovinė lietuvių daugiabalsio dainavimo tradicija, ypač būdinga Aukštaitijai. Šioje sutartinėje sesuo klausia brolio, ką jis parveš jai iš Rygos, o brolis pažada auksinį žiedą."
+    },
+    "sourceNote": "Text revised from Lithuanian project partner feedback supplied in Lietuva - Latvija.docx."
   },
   {
     "id": "oi-sermuksnio",
     "category": "song",
     "sourceUrl": "https://www.youtube.com/watch?v=cyA6Ekh70hA",
-    "contentStatus": "verified-from-source",
+    "contentStatus": "reviewed-by-project-partners",
     "videoUrl": "https://www.youtube.com/watch?v=cyA6Ekh70hA",
     "title": {
       "lv": "Ak, pīlādzīti",
@@ -149,160 +133,149 @@
       "lt": "Daina apie jauną karį ir jo kelią į tarnybą"
     },
     "description": {
-      "lv": "Dziesma vēsta par jaunu karavīru, kas dodas dienēt armijā, viņa ceļojumu un cīņu pret ienaidnieku — tā atspoguļo karavīru drosmi un apņēmību.",
-      "lt": "Daina pasakoja apie jauną karį, išeinantį tarnauti kariuomenėje, jo kelionę ir kovą su priešu — ji atspindi karių drąsą ir ryžtą."
-    }
+      "lv": "Dziesma stāsta par jaunu karavīru, kas dodas karadienestā, viņa ceļojumu un cīņu ar ienaidnieku. Dziesmā atklājas karavīru drosme, apņēmība un pašaizliedzība.",
+      "lt": "Daina pasakoja apie jauną karį, išvykstantį į karo tarnybą, jo kelionę ir kovą su priešu.\n\nDainoje atsiskleidžia karių drąsa, ryžtas ir pasiaukojimas."
+    },
+    "sourceNote": "Text revised from Lithuanian project partner feedback supplied in Lietuva - Latvija.docx."
   },
   {
     "id": "mona-bolundele",
     "category": "song",
     "sourceUrl": "https://www.youtube.com/watch?v=Jxk0aRv-gwo",
-    "contentStatus": "verified-from-source",
+    "contentStatus": "reviewed-by-project-partners",
     "videoUrl": "https://www.youtube.com/watch?v=Jxk0aRv-gwo",
     "title": {
       "lv": "Mona bolundele",
       "lt": "Mona bolundele"
     },
     "tagline": {
-      "lv": "Sena žemaišu dziesma par baložu pasargāšanu",
-      "lt": "Sena žemaitiška daina apie balandžių apsaugojimą"
+      "lv": "Sena žemaišu dziesma par baložiem",
+      "lt": "Sena žemaitiška daina apie balandžius"
     },
     "description": {
-      "lv": "Sena žemaišu tautasdziesma, kurā lūdz kaimiņu neizbaidīt balodus. Baloži — mierīgi putni, kas dzīvo cilvēku tuvumā, barojas ar graudiem, dēj olas un audzina mazuļus — simbolizē ģimenes harmoniju, dzīvi un tās turpināšanos.",
-      "lt": "Sena žemaitiška liaudies daina, kurioje prašoma kaimyno neišgąsdinti balandžių. Balandžiai — ramūs paukščiai, gyvenantys šalia žmonių, mintantys grūdais, dedantys kiaušinius ir auginantys jauniklius — simbolizuoja šeimos darną, gyvybę ir jos tęstinumą."
-    }
+      "lv": "„Mona bolundele” ir sena žemaišu tautasdziesma, kurā kaimiņus lūdz nebaidīt baložus. Šie putni, kas jau izsenis dzīvo līdzās cilvēkam, simbolizē mieru, ģimenes saskaņu un dzīves turpināšanos.",
+      "lt": "„Mona bolundele“ – sena žemaitiška liaudies daina, kurioje kaimynų prašoma negąsdinti balandžių. Šie paukščiai, nuo seno gyvenantys šalia žmogaus, simbolizuoja ramybę, šeimos darną ir gyvybės tęstinumą."
+    },
+    "sourceNote": "Text revised from Lithuanian project partner feedback supplied in Lietuva - Latvija.docx."
   },
   {
     "id": "ne-bet-kokia-mergele",
     "category": "song",
     "sourceUrl": "https://www.youtube.com/watch?v=wlBKWpXPjjo",
-    "contentStatus": "verified-from-source",
+    "contentStatus": "reviewed-by-project-partners",
     "videoUrl": "https://www.youtube.com/watch?v=wlBKWpXPjjo",
     "title": {
       "lv": "Ne jau jebkura meitene es biju",
       "lt": "Ne bet kokia aš mergelė buvau"
     },
     "tagline": {
-      "lv": "Dzūkijas dziesma par lepnu un izvēlīgu jaunavu",
-      "lt": "Dzūkijos daina apie išdidžią ir rinktinę merginą"
+      "lv": "Dzūkijas dziesma par lepnu meiteni",
+      "lt": "Dzūkiška daina apie išdidžią merginą"
     },
     "description": {
-      "lv": "No Dzūkijas reģiona — dziesma par jaunu sievieti, kas lepojas ar savu izvēlīgumu, izvēloties skaistus, labi ģērbtus jauniešus. Dejojot ar jaunekli, viņa jūtas priecīga, it kā zeme trīcētu un rūta ziedētu viņas galvā, gredzeniem mirdzot; dejojot ar atraitni, liktenis apgriežas otrādi — zeme it kā sabrūk, rūta novīst, gredzeni sarūsē.",
-      "lt": "Iš Dzūkijos regiono — daina apie jauną moterį, besididžiuojančią savo rinktinumu, renkantis gražius, gerai apsirengusius vaikinus. Šokdama su jaunikaičiu, ji jaučiasi laiminga, tarsi žemė drebėtų ir ruta žydėtų ant galvos, žieduose spindint; šokdama su našliu, likimas apsiverčia — žemė tarsi griūva, ruta vysta, žiedai rūdija."
-    }
+      "lv": "Tā ir Dzūkijas novada tautasdziesma par izvēlīgu meiteni, kura priecājas, dejojot ar saposušos puisi, bet ir vīlusies, par deju partneri izvēloties atraitni. Šīs jūtas atklājas tēlainos salīdzinājumos: dejojot ar puisi, rūta zied un gredzens mirdz, bet ar atraitni rūta vīst un gredzens rūsē.",
+      "lt": "Tai Dzūkijos krašto liaudies daina apie išrankią merginą, kuri džiaugiasi šokdama su pasipuošusiu berneliu, tačiau nusivilia šokio partneriu pasirinkusi našlį. Šie jausmai atsiskleidžia per vaizdingus palyginimus: šokant su berneliu žydi rūta ir spindi žiedelis, o su našliu rūta vysta ir žiedelis rūdija."
+    },
+    "sourceNote": "Text revised from Lithuanian project partner feedback supplied in Lietuva - Latvija.docx."
   },
   {
     "id": "ant-kalno-karklai",
     "category": "dance",
     "sourceUrl": "https://www.youtube.com/watch?v=N9RAVnlkLvg",
-    "contentStatus": "verified-from-source",
+    "contentStatus": "reviewed-by-project-partners",
     "videoUrl": "https://www.youtube.com/watch?v=N9RAVnlkLvg",
     "title": {
       "lv": "Ant kalno karklai",
       "lt": "Ant kalno karklai"
     },
     "tagline": {
-      "lv": "Visas Lietuvas deja — akcija „Visa Lietuva šoka”",
-      "lt": "Visos Lietuvos šokis — akcija „Visa Lietuva šoka“"
+      "lv": "Pāru deja par jaunības jūtām un mīlestību",
+      "lt": "Porų šokis apie jaunystės jausmus ir meilę"
     },
     "description": {
-      "lv": "Deja populārās tautasdziesmas „Ant kalno karklai” pavadījumā Lietuvas Nacionālā kultūras centra akcijā „Visa Lietuva šoka”, kurā cilvēki visā Lietuvā mācās un dejo sava novada tradicionālās dejas.",
-      "lt": "Šokis pagal populiarią liaudies dainą „Ant kalno karklai“ Lietuvos nacionalinio kultūros centro akcijoje „Visa Lietuva šoka“, kurioje žmonės visoje Lietuvoje mokosi ir šoka savo regiono tradicinius šokius."
-    }
+      "lv": "Tā ir tradicionāla lietuviešu tautas deja, ko dejo pāros tāda paša nosaukuma tautasdziesmas pavadījumā. Dziesmas teksts vēsta par meitenes un puiša tikšanos, jaunības jūtām un mīlestību.",
+      "lt": "Tai – tradicinis lietuvių liaudies šokis, atliekamas poromis pagal to paties pavadinimo liaudies dainą, kurios tekstas pasakoja apie mergelės ir bernelio susitikimą, jaunystės jausmus ir meilę."
+    },
+    "sourceNote": "Text revised from Lithuanian project partner feedback supplied in Lietuva - Latvija.docx."
   },
   {
     "id": "vai-zydek-zydek",
     "category": "song",
     "sourceUrl": "https://www.youtube.com/watch?v=dPZ1CgIoT5Y",
-    "contentStatus": "verified-from-source",
+    "contentStatus": "reviewed-by-project-partners",
     "videoUrl": "https://www.youtube.com/watch?v=dPZ1CgIoT5Y",
     "title": {
       "lv": "Vai žydėk, žydėk",
       "lt": "Vai žydėk, žydėk"
     },
     "tagline": {
-      "lv": "Dzūkijas novada dziesma, dzied Rasa Serra",
-      "lt": "Dzūkijos krašto daina, atlieka Rasa Serra"
+      "lv": "Dzūkijas novada dziesma",
+      "lt": "Dzūkijos krašto daina"
     },
     "description": {
-      "lv": "Lietuviešu tautasdziesma no Dzūkijas novada. To dzied klaipēdniece Rasa Serra — dziedātāja un vokāla pedagoģe, kas pazīstama kā izcila tautasdziesmu izpildītāja.",
-      "lt": "Lietuvių liaudies daina iš Dzūkijos krašto. Ją dainuoja klaipėdietė Rasa Serra — dainininkė ir vokalo pedagogė, žinoma kaip išskirtinė liaudies dainų atlikėja."
-    }
-  },
-  {
-    "id": "kur-giria-zaliuoja",
-    "category": "song",
-    "sourceUrl": "https://www.youtube.com/watch?v=wFBfyaJd9gc",
-    "contentStatus": "verified-from-source",
-    "videoUrl": "https://www.youtube.com/watch?v=wFBfyaJd9gc",
-    "title": {
-      "lv": "Kur giria žaliuoja",
-      "lt": "Kur giria žaliuoja"
+      "lv": "Dzūkijas novada tautasdziesma „Vai žydėk, žydėk” skanēja kāzu rituālos. Tajā apdzied sausu ābelīti, kas nespēj uzziedēt un simbolizē jaunu meiteni vai bāreni, kurai nav vecāku, kas varētu sagādāt pūru. Dziesmā dabas spēki un debesu spīdekļi — saule, mēness un zvaigznes — kļūst par palīgiem, ļaujot ābelītei uzziedēt un meitenei izaugt un sagatavoties laulības dzīvei.\n\nŠo aizkustinošo Dzūkijas dziesmu izpilda klaipēdniece Rasa Serra — dziedātāja un vokāla pedagoģe, kura izceļas ar savdabīgu tautasdziesmu izpildījumu.",
+      "lt": "Dzūkijos krašto liaudies daina „Vai žydėk, žydėk“ skambėdavo vestuvių apeigose. Joje apdainuojama sausa, žydėti negalinti obelėlė, simbolizuojanti jauną mergelę ar našlaitę, neturinčią tėvų, kurie galėtų pasirūpinti jos kraičiu. Dainoje gamtos stichijos ir dangaus šviesuliai – saulė, mėnulis ir žvaigždės tampa pagalbininkais, padedančiais obelėlei sužydėti, o mergaitei užaugti ir pasirengti vedybiniam gyvenimui.\n\nŠią jautrią Dzūkijos krašto dainą atlieka klaipėdietė Rasa Serra – dainininkė ir vokalo pedagogė, išsiskirianti savitu liaudies dainų atlikimu."
     },
-    "tagline": {
-      "lv": "Lietuvas skolēnu Dziesmu svētki 2026",
-      "lt": "Lietuvos moksleivių dainų šventė 2026"
-    },
-    "description": {
-      "lv": "Dziesma „Kur giria žaliuoja” Lietuvas skolēnu Dziesmu svētkos 2026. gadā, kur to kopā dzied tūkstošiem jauno dziedātāju. Ieraksts no Lietuvas Nacionālā radio un televīzijas (LRT).",
-      "lt": "Daina „Kur giria žaliuoja“ Lietuvos moksleivių dainų šventėje 2026 m., kur ją kartu dainuoja tūkstančiai jaunųjų dainininkų. Įrašas iš Lietuvos nacionalinio radijo ir televizijos (LRT)."
-    }
+    "sourceNote": "Text revised from Lithuanian project partner feedback supplied in Lietuva - Latvija.docx."
   },
   {
     "id": "gervela-dai-ciuto",
     "category": "song",
     "sourceUrl": "https://www.youtube.com/watch?v=Wbyn61KgaqA",
-    "contentStatus": "verified-from-source",
+    "contentStatus": "reviewed-by-project-partners",
     "videoUrl": "https://www.youtube.com/watch?v=Wbyn61KgaqA",
     "title": {
       "lv": "Gervela, dai čiūto",
       "lt": "Gervela, dai čiūto"
     },
     "tagline": {
-      "lv": "Aukštaitijas sutartinė — dialogs ar dzērvi",
-      "lt": "Aukštaitijos sutartinė — dialogas su gerve"
+      "lv": "Aukštaitijas sutartinė",
+      "lt": "Aukštaitiška sutartinė"
     },
     "description": {
-      "lv": "Sutartinė — senā lietuviešu daudzbalsīgā dziesma — no Aukštaitijas, kas atdarina sarunu ar dzērvi: „Kur tu lido, dzērvīte?” Dzied grupa „Trys keturiose” no albuma „Kokiu giedosim, kokiu sutarysim?”.",
-      "lt": "Sutartinė — sena lietuvių daugiabalsė daina — iš Aukštaitijos, imituojanti pokalbį su gerve: „Kur lakioji, tu gervela?“ Atlieka grupė „Trys keturiose“ iš albumo „Kokiu giedosim, kokiu sutarysim?“."
-    }
+      "lv": "„Gervela, dai čiūto” ir tradicionāla lietuviešu daudzbalsīga tautasdziesma (sutartinė) no Aukštaitijas, kas ataino dialogu ar dzērvi un seno cilvēka saikni ar dabu.",
+      "lt": "„Gervela, dai čiūto“ – tradicinė lietuvių daugiabalsė liaudies daina (sutartinė) iš Aukštaitijos, imituojanti dialogą su gerve ir atspindinti senovinį žmogaus ryšį su gamta."
+    },
+    "sourceNote": "Text revised from Lithuanian project partner feedback supplied in Lietuva - Latvija.docx."
   },
   {
     "id": "is-triju-rytu-vejuzis-pute",
     "category": "song",
     "sourceUrl": "https://www.youtube.com/watch?v=MJuOGJHLuFk",
-    "contentStatus": "verified-from-source",
+    "contentStatus": "reviewed-by-project-partners",
     "videoUrl": "https://www.youtube.com/watch?v=MJuOGJHLuFk",
     "title": {
       "lv": "Iš trijų rytų vėjužis pūtė",
       "lt": "Iš trijų rytų vėjužis pūtė"
     },
     "tagline": {
-      "lv": "Folkloras ansamblis „Giedružė” mūsdienīgā apdarē",
-      "lt": "Folkloro ansamblis „Giedružė“, moderni aranžuotė"
+      "lv": "Mazās Lietuvas novada tautasdziesma",
+      "lt": "Mažosios Lietuvos krašto liaudies daina"
     },
     "description": {
-      "lv": "Lietuviešu tautasdziesma Neringas vidusskolas folkloras ansambļa „Giedružė” izpildījumā mūziķa Donja (Donis) mūsdienīgā apdarē. Darbs veidots konkursam-festivālam „Daina.LT 2014”.",
-      "lt": "Lietuvių liaudies daina, atliekama Neringos vidurinės mokyklos folkloro ansamblio „Giedružė“, moderniai aranžuota Donio. Darbas sukurtas konkursui-festivaliui „Daina.LT 2014“."
-    }
+      "lv": "„Iš trijų rytų vėjužis pūtė” ir Mazās Lietuvas novada tautasdziesma, kas pierakstīta lietuviešu tautasdziesmu krājumā, ko apkopojis Martynas Liudvikas Rėza. Izmantojot jūras un zvejas tēlus, dziesma stāsta par jaunu zvejnieku, kurš iekaro meitenes sirdi.",
+      "lt": "„Iš trijų rytų vėjužis pūtė“ – Mažosios Lietuvos krašto liaudies daina, užrašyta Martyno Liudviko Rėzos surinktų lietuvių liaudies dainų rinkinyje. Dainoje, pasitelkiant jūros ir žvejybos vaizdus, pasakojama apie jauną žvejį, pavergusį merginos širdį."
+    },
+    "sourceNote": "Text revised from Lithuanian project partner feedback supplied in Lietuva - Latvija.docx."
   },
   {
     "id": "apeja-sauliute",
     "category": "song",
     "sourceUrl": "https://www.youtube.com/watch?v=njxS_-GUw7A",
-    "contentStatus": "verified-from-source",
+    "contentStatus": "reviewed-by-project-partners",
     "videoUrl": "https://www.youtube.com/watch?v=njxS_-GUw7A",
     "title": {
       "lv": "Apėja sauliūte",
       "lt": "Apėja sauliūte"
     },
     "tagline": {
-      "lv": "Grupa „Kūlgrinda”, albums „Giesmės Saulei”",
-      "lt": "Grupė „Kūlgrinda“, albumas „Giesmės Saulei“"
+      "lv": "Dzūkijas novada tautasdziesma dzūku izloksnē",
+      "lt": "Dzūkijos krašto liaudies daina dzūkų tarme"
     },
     "description": {
-      "lv": "Dziesma par sauli no grupas „Kūlgrinda” albuma „Giesmės Saulei” (Dziesmas Saulei). „Kūlgrinda” ir 1990. gadā Viļņā Inijas un Jona Trinkūnu dibināta grupa, kas izpilda senās baltu dziesmas. Nosaukums nozīmē slepenu zemūdens taku no baltu vēstures.",
-      "lt": "Daina apie saulę iš grupės „Kūlgrinda“ albumo „Giesmės Saulei“. „Kūlgrinda“ — 1990 m. Vilniuje Inijos ir Jono Trinkūnų įkurta grupė, atliekanti senąsias baltų giesmes. Pavadinimas reiškia slaptą povandeninį taką iš baltų istorijos."
-    }
+      "lv": "„Apėja sauliutė aplinkui zarių” ir tradicionāla Dzūkijas novada tautasdziesma, kas izceļas ar dzūku izloksni. Tajā salīdzinātas divas pasaules — putnu un cilvēku pasaule. Dzeguzes mudināts, piekūns ielido dārzā, savukārt puisis, meitenes mudināts atvērt vārtiņus, vēlas iekļūt muižā.",
+      "lt": "„Apėja sauliutė aplinkui zarių“ – tradicinė Dzūkijos krašto liaudies daina, išsiskirianti dzūkų tarme. Joje sugretinami du pasauliai: paukščių ir žmonių. Sakalas, gegutės patartas, įskrenda į sodą, o bernelis, mergelės paragintas atkelti vartelius, siekia patekti į dvarą."
+    },
+    "sourceNote": "Text revised from Lithuanian project partner feedback supplied in Lietuva - Latvija.docx."
   }
 ]

@@ -41,10 +41,10 @@ const LTFAI_SYMBOLISM = 'https://ltfai.org/the-rich-symbolism-of-lithuanian-folk
 export const lithuanianSymbols: ImageCredit[] = withPublicUrls([
   {
     src: '/images/symbols/rozele.svg',
-    title: { lv: 'Rožėlė (rozīte, zvaigznīte)', lt: 'Rožėlė (žvaigždutė)' },
+    title: { lv: 'Roželė (rozīte, zvaigznīte)', lt: 'Roželė (žvaigždutė)' },
     description: {
-      lv: 'Rozete – dzīves loka un mūžības zīme.',
-      lt: 'Rozetė – gyvenimo rato ir amžinybės ženklas.',
+      lv: 'Roželė – dzīves loka un mūžības zīme.',
+      lt: 'Roželė – gyvenimo rato ir amžinybės ženklas.',
     },
     sourceUrl: LTFAI_SYMBOLISM,
   },

@@ -5,7 +5,7 @@
     "itemId": "govju-kazaks",
     "question": {
       "lv": "Ko dejā „Govju kazaks“ dara saimniece?",
-      "lt": "Ką šokyje „Govju kazaks“ daro šeimininkė?"
+      "lt": "Ką šokyje „Karvių kazokas“ daro šeimininkė?"
     },
     "options": [
       {
@@ -33,7 +33,7 @@
     "itemId": "sudmalinas",
     "question": {
       "lv": "No kā veidojusies deja „Sudmaliņas“?",
-      "lt": "Iš ko susiformavo šokis „Sudmaliņas“?"
+      "lt": "Iš ko susiformavo šokis „Sudmalinos“?"
     },
     "options": [
       {
@@ -61,7 +61,7 @@
     "itemId": "meitu-mate",
     "question": {
       "lv": "Par ko stāsta deja „Meitu māte“?",
-      "lt": "Apie ką pasakoja šokis „Meitu māte“?"
+      "lt": "Apie ką pasakoja šokis „Merginų motina“?"
     },
     "options": [
       {
@@ -89,7 +89,7 @@
     "itemId": "dizdancis",
     "question": {
       "lv": "Kura tautas deja iedvesmoja deju „Diždancis“?",
-      "lt": "Koks liaudies šokis įkvėpė šokį „Diždancis“?"
+      "lt": "Koks liaudies šokis įkvėpė šokį „Didysis šokis“?"
     },
     "options": [
       {
@@ -98,7 +98,7 @@
       },
       {
         "lv": "Ekosēze",
-        "lt": "Ekosēze"
+        "lt": "Ekosezė"
       },
       {
         "lv": "Pērkoņdancis",
@@ -108,7 +108,7 @@
     "correct": 1,
     "explanation": {
       "lv": "Horeogrāfu iedvesmojusi tautas deja „Ekosēze“ un tās mūzika — Diždancis pirmo reizi iestudēts 1973. gadā.",
-      "lt": "Choreografą įkvėpė liaudies šokis „Ekosēze“ ir jo muzika — „Diždancis“ pirmą kartą pastatytas 1973 m."
+      "lt": "Choreografą įkvėpė liaudies šokis „Ekosezė“ ir jo muzika — „Didysis šokis“ pirmą kartą pastatytas 1973 m."
     }
   },
   {
@@ -117,7 +117,7 @@
     "itemId": "tudalin-tagadin",
     "question": {
       "lv": "Ko dejotāji dara ar dziesmas tekstu dejā „Tūdaliņ’, tagadiņ’“?",
-      "lt": "Ką šokėjai daro su dainos tekstu šokyje „Tūdaliņ’, tagadiņ’“?"
+      "lt": "Ką šokėjai daro su dainos tekstu šokyje „Tuoj pat, dabar pat“?"
     },
     "options": [
       {
@@ -153,7 +153,7 @@
       },
       {
         "lv": "Sudmaliņas",
-        "lt": "Sudmaliņas"
+        "lt": "Sudmalinos"
       },
       {
         "lv": "Dobilėlis",
@@ -163,7 +163,7 @@
     "correct": 1,
     "explanation": {
       "lv": "Sudmaliņas ir latviešu deja; Blezdingėlė un Dobilėlis ir žemaišu dejas no Lietuvas.",
-      "lt": "„Sudmaliņas“ — latvių šokis; „Blezdingėlė“ ir „Dobilėlis“ — žemaičių šokiai iš Lietuvos."
+      "lt": "„Sudmalinos“ — latvių šokis; „Blezdingėlė“ ir „Dobilėlis“ — žemaičių šokiai iš Lietuvos."
     }
   },
   {
@@ -176,11 +176,11 @@
     "options": [
       {
         "lv": "Diždancis",
-        "lt": "Diždancis"
+        "lt": "Didysis šokis"
       },
       {
         "lv": "Govju kazaks",
-        "lt": "Govju kazaks"
+        "lt": "Karvių kazokas"
       },
       {
         "lv": "Dobilėlis",
@@ -190,7 +190,7 @@
     "correct": 2,
     "explanation": {
       "lv": "Dobilėlis ir žemaišu darba deja no Lietuvas; Diždancis un Govju kazaks ir latviešu dejas.",
-      "lt": "„Dobilėlis“ — žemaičių darbo šokis iš Lietuvos; „Diždancis“ ir „Govju kazaks“ — latvių šokiai."
+      "lt": "„Dobilėlis“ — žemaičių darbo šokis iš Lietuvos; „Didysis šokis“ ir „Karvių kazokas“ — latvių šokiai."
     }
   },
   {
@@ -224,8 +224,8 @@
     "id": "livani-mikla",
     "country": "latvia",
     "question": {
-      "lv": "Uzmini mīklu! Balts vīriņš, sudraba bārda.",
-      "lt": "Įmink mįslę! Baltas žmogeliukas, sidabrinė barzda."
+      "lv": "Uzmini latviešu mīklu! Balts vīriņš, sudraba bārda.",
+      "lt": "Įmink latvišką mįslę! Baltas žmogeliukas, sidabrinė barzda."
     },
     "options": [
       {
@@ -280,11 +280,11 @@
     "type": "open",
     "question": {
       "lv": "Kā tev šķiet, kāpēc Ubaglīcis ieguvis tādu nosaukumu?",
-      "lt": "Kaip manai, kodėl Ubaglīcis („elgetų įlanka“) gavo tokį pavadinimą?"
+      "lt": "Pasakojama, kad vienoje Līvānų vietoje seniau pietaudavo elgetos.\nKokį pavadinimą sugalvotum tokiai vietai?"
     },
     "explanation": {
       "lv": "Stāsta, ka senāk ubagi šeit ieturējuši pusdienas.",
-      "lt": "Pasakojama, kad seniau elgetos čia pietaudavo."
+      "lt": "Ši vieta vadinama „Ubaglīcis“ – „Elgetų įlanka“. Pasakojama, kad seniau elgetos čia pietaudavo, ir su šiuo pasakojimu siejamas vietovės pavadinimas."
     }
   },
   {
@@ -293,19 +293,19 @@
     "type": "open",
     "question": {
       "lv": "Kāda Līvānos pierakstīta tautasdziesma skan:\n„Leivōns muiža skaista muiža,\nŽāl man beja tū atstōt…”\nVai tu vari sadomāt pārējās divas rindiņas?",
-      "lt": "Viena Līvāniuose užrašyta liaudies daina skamba taip:\n„Leivōns muiža skaista muiža,\nŽāl man beja tū atstōt…“\nAr gali sugalvoti likusias dvi eilutes?"
+      "lt": "Līvāniuose užrašytos latgalių liaudies dainos pradžia, išversta į lietuvių kalbą:\n„Līvānų dvaras – gražus dvaras,\nman buvo gaila jį palikti…“\nSukurk dvi eilutes, kurios galėtų pratęsti šią dainą."
     },
     "explanation": {
       "lv": "Tautasdziesma turpinās:\n„Stykla durvis, glōžu lūgi,\nVydā saule rūtojās.”",
-      "lt": "Daina tęsiasi:\n„Stykla durvis, glōžu lūgi,\nVydā saule rūtojās.“\n(Stiklo durys, stiklo langai, viduje saulė žaidė.)"
+      "lt": "Tradicinės dainos tęsinys, išverstas į lietuvių kalbą:\n„Stiklo durys, stiklo langai,\nviduje saulė žaidė.“\n\nOriginalas latgališkai:\n„Stykla durvis, glōžu lūgi,\nVydā saule rūtojās.“"
     }
   },
   {
     "id": "tytuvenai-druska",
     "country": "lithuania",
     "question": {
-      "lv": "Zemē dzimu, ugunī kristījos, ūdenī kritu un pavisam pazudu. Kas tas ir?",
-      "lt": "Žemėje gimiau, ugnim apsikrikštijau, ant vandens puoliau ir visas prapuoliau. Kas?"
+      "lv": "Uzmini lietuviešu mīklu!\nZemē dzimu, ugunī kristījos, ūdenī kritu un pavisam pazudu. Kas tas ir?",
+      "lt": "Įmink lietuvišką mįslę!\nŽemėje gimiau, ugnim apsikrikštijau, ant vandens puoliau ir visas prapuoliau. Kas?"
     },
     "options": [
       {
@@ -358,8 +358,8 @@
     "id": "tytuvenai-aidas",
     "country": "lithuania",
     "question": {
-      "lv": "Dzīvo bez miesas,\nrunā bez mēles,\nneviens to neredz,\nbet ikviens dzird. Kas tas ir?",
-      "lt": "Gyvena be kūno,\nkalba be liežuvio,\nniekas jo nemato,\nbet kiekvienas girdi. Kas?"
+      "lv": "Uzmini lietuviešu mīklu!\nDzīvo bez miesas,\nrunā bez mēles,\nneviens to neredz,\nbet ikviens dzird. Kas tas ir?",
+      "lt": "Įmink lietuvišką mįslę!\nGyvena be kūno,\nkalba be liežuvio,\nniekas jo nemato,\nbet kiekvienas girdi. Kas?"
     },
     "options": [
       {
