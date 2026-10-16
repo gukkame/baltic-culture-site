@@ -129,7 +129,10 @@ const gallery: Record<Country, ImageCredit[]> = {
     },
     { src: '/images/gallery/lithuania/schoolchildren-song-festival-2026-2.webp', title: LT_SONG_FESTIVAL_2026 },
     { src: '/images/gallery/lithuania/young-dancers.webp', title: LT_LEK_GERVELE },
-    { src: '/images/gallery/lithuania/accordionist.webp' },
+    {
+      src: '/images/gallery/lithuania/accordionist.webp',
+      title: { lv: 'Jaunais akordeonists', lt: 'Jaunasis armonikierius' },
+    },
   ],
 }
 
