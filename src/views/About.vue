@@ -57,6 +57,7 @@ const videoGroups = computed(() =>
   })),
 )
 
+const GOOGLE_PRIVACY_URL = 'https://policies.google.com/privacy'
 const PROJECT_PAGE_URL = 'https://latlit.eu/theprojects/culturelink/'
 const PROJECT_SOURCE_URL =
   'https://www.livani.lv/lv/projekts/livanu-novada-pasvaldiba-isteno-eiropas-regionalas-attistibas-fonda-erdf-projektu-culturelink'
@@ -173,6 +174,17 @@ const linkClass =
           </ul>
         </div>
       </div>
+    </section>
+
+    <section class="mt-12" aria-labelledby="about-privacy">
+      <h2 id="about-privacy" class="scroll-mt-6 font-serif text-2xl text-ink">{{ t('about.privacy.title') }}</h2>
+      <p class="mt-2 max-w-2xl text-ink-light">{{ t('about.privacy.youtube') }}</p>
+      <p class="mt-3 max-w-2xl text-ink-light">{{ t('about.privacy.storage') }}</p>
+      <p class="mt-3 text-sm">
+        <a :href="GOOGLE_PRIVACY_URL" target="_blank" rel="noopener" :class="linkClass">{{
+          t('about.privacy.policyLink')
+        }}</a>
+      </p>
     </section>
   </section>
 </template>

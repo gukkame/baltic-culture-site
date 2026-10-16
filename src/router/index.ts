@@ -39,6 +39,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
   scrollBehavior(to) {
+    if (to.hash) return { el: to.hash }
     if (to.name === 'quiz') {
       const resume = document.querySelector<HTMLElement>('[data-resume]')
       if (resume) {

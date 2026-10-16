@@ -12,6 +12,11 @@ const route = useRoute()
 const router = useRouter()
 const isHome = computed(() => route.name === 'home')
 
+const footerLinks = computed(() => [
+  { to: aboutPaths[locale.value], label: t('about.footerLink') },
+  { to: `${aboutPaths[locale.value]}#about-privacy`, label: t('about.privacy.footerLink') },
+])
+
 function focusMain() {
   document.getElementById('main-content')?.focus()
 }
@@ -48,11 +53,15 @@ watch(locale, (value) => {
           <div class="max-w-md">
             <p class="font-serif leading-snug">{{ t('site.programmeTitle') }}</p>
             <p class="mt-1 text-sm leading-relaxed tracking-wide text-ink-light">{{ t('site.programmeSubtitle') }}</p>
-            <RouterLink
-              :to="aboutPaths[locale]"
-              class="mt-3 inline-flex items-center text-sm text-ink-light underline underline-offset-4 transition-colors hover:text-terracotta-dark focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-terracotta-dark"
-              >{{ t('about.footerLink') }}</RouterLink
-            >
+            <p class="mt-3 flex flex-wrap gap-x-5 gap-y-1">
+              <RouterLink
+                v-for="link in footerLinks"
+                :key="link.to"
+                :to="link.to"
+                class="inline-flex items-center text-sm text-ink-light underline underline-offset-4 transition-colors hover:text-terracotta-dark focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-terracotta-dark"
+                >{{ link.label }}</RouterLink
+              >
+            </p>
           </div>
         </div>
       </div>

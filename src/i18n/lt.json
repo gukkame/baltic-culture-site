@@ -126,6 +126,13 @@
       "moreInfo": "Daugiau apie projektą",
       "source": "Informacijos šaltinis",
       "disclaimer": "Ši interneto svetainė parengta finansiškai remiant Europos Sąjungai. Už jos turinį visiškai atsako Līvānų savivaldybė, ir jis jokiomis aplinkybėmis negali būti laikomas oficialia Europos Sąjungos pozicija."
+    },
+    "privacy": {
+      "title": "Privatumas",
+      "youtube": "Šios svetainės vaizdo įrašai yra iš YouTube (Google) ir įterpti YouTube išplėstinio privatumo režimu (youtube-nocookie.com). Atidarius šalies puslapį, vaizdo įrašų miniatiūros įkeliamos iš YouTube serverių, todėl Google gauna tavo IP adresą. Kai atidarai šokio ar dainos puslapį, užvedi žymeklį ant kortelės arba paleidi vaizdo įrašą, įkeliamas YouTube grotuvas — tada YouTube gali įrašyti duomenis tavo įrenginyje ir tvarkyti informaciją apie peržiūrą pagal Google privatumo politiką.",
+      "storage": "Pati svetainė nenaudoja slapukų ir analitikos. Pasirinkta kalba ir viktorinos pažanga saugomos tik tavo naršyklėje (localStorage) ir niekur nesiunčiamos.",
+      "policyLink": "Google privatumo politika",
+      "footerLink": "Privatumas"
     }
   }
 }

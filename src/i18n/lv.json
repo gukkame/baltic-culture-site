@@ -126,6 +126,13 @@
       "moreInfo": "Vairāk par projektu",
       "source": "Informācijas avots",
       "disclaimer": "Šī tīmekļa vietne ir sagatavota ar Eiropas Savienības finansiālu atbalstu. Par tās saturu pilnībā atbild Līvānu novada pašvaldība, un tas nekādos apstākļos nav uzskatāms par Eiropas Savienības oficiālo nostāju."
+    },
+    "privacy": {
+      "title": "Privātums",
+      "youtube": "Video šajā vietnē ir no YouTube (Google) un ir iegulti YouTube paplašinātā privātuma režīmā (youtube-nocookie.com). Atverot valsts lapu, video priekšskatījuma attēli tiek ielādēti no YouTube serveriem, tāpēc Google saņem tavu IP adresi. Kad atver dejas vai dziesmas lapu, novieto kursoru uz kartītes vai atskaņo video, tiek ielādēts YouTube atskaņotājs — tad YouTube var saglabāt datus tavā ierīcē un apstrādāt informāciju par skatīšanos saskaņā ar Google privātuma politiku.",
+      "storage": "Pati vietne neizmanto sīkdatnes un analītiku. Izvēlētā valoda un viktorīnas progress tiek saglabāti tikai tavā pārlūkprogrammā (localStorage) un netiek nekur nosūtīti.",
+      "policyLink": "Google privātuma politika",
+      "footerLink": "Privātums"
     }
   }
 }

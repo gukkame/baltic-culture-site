@@ -154,8 +154,9 @@ sub-path — see below). Nothing else needs to be installed on the server.
 - `i.ytimg.com` — video thumbnails (CSP `img-src`)
 - inside the player, YouTube streams the video from its own servers (`*.googlevideo.com`); `www.youtube.com` is only linked to
 
-Videos use YouTube's privacy-enhanced mode, which sets no YouTube cookies until a visitor plays a video; mention
-the embedded YouTube videos in the site's privacy/cookie notice.
+Videos use YouTube's privacy-enhanced mode. The privacy notice for visitors is the "Privātums / Privatumas" section
+at the end of the About page (texts in `about.privacy` in `src/i18n/lv.json` and `lt.json`), linked from the footer.
+Update it if the site starts using cookies, analytics or other external services.
 
 **Updating:** change content (see *Adding content*), rebuild, and replace the published files with the new
 `dist/` contents.
