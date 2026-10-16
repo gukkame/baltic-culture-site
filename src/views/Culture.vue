@@ -155,11 +155,11 @@ const heroSlides = computed(() =>
           >
             <ItemCardMedia :item="item" :active="previewId === item.id" />
             <div class="flex flex-1 flex-col gap-1 p-4">
-              <h3
+              <h2
                 class="font-serif text-lg text-ink transition-colors duration-200 group-hover:text-terracotta-dark group-focus-visible:text-terracotta-dark"
               >
                 {{ item.title[locale] }}
-              </h3>
+              </h2>
               <p class="text-xs text-ink-light">
                 {{ t(`item.category.${item.category}`) }} ·
                 {{ t(`common.${validCountry}`) }}
