@@ -112,12 +112,7 @@ All fixed texts of every page (buttons, headings, the home page, the programme n
 are in `src/i18n/lv.json` and `src/i18n/lt.json`, grouped by page (`home`, `culture`, `item`, `quiz`, `about`),
 plus `site` (site title and programme name) and `common` (country names). Both files have the same keys.
 
-## Artwork
-
-The home page painting and the map textures in `public/artwork/` are AI-generated painted interpretations
-based on photographs supplied by the project, not documentary images. The Lithuanian rožėlė symbol is drawn
-after the sash motif chart of the Lithuanian Folk Art Institute; the Auseklis is from Wikimedia Commons
-(credited on the About page).
+## Fonts
 
 The fonts Playfair Display and Work Sans are self-hosted in `src/assets/fonts/` under the SIL Open Font
 License 1.1 (license texts next to the files), so no visitor data goes to Google Fonts.
@@ -165,11 +160,3 @@ the embedded YouTube videos in the site's privacy/cookie notice.
 
 **Updating:** change content (see *Adding content*), rebuild, and replace the published files with the new
 `dist/` contents.
-
-## Claude instructions
-
-- Use as little packages as possible
-- Use i18 for translations
-- Use JSON files for content (dances, songs, quiz questions)
-- Use localStorage for quiz progress and badge collection
-- Use latest accesability rules
