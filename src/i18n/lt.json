@@ -33,7 +33,8 @@
     "songs": "Dainos",
     "images": "Vaizdai",
     "filters": {
-      "all": "Visi"
+      "all": "Visi",
+      "label": "Filtruoti turinį"
     },
     "pages": {
       "latvia": {
@@ -82,11 +83,7 @@
     "resetTitle": "Pradėti iš naujo?",
     "resetConfirm": "Visi gauti ženkliukai bus ištrinti, o viktorina prasidės nuo pirmo klausimo.",
     "resetButton": "Taip, pradėti iš naujo",
-    "cancel": "Atšaukti",
-    "openPlaceholder": "Rašyk savo atsakymą…",
-    "submit": "Atsakyti",
-    "anyAnswer": "Ačiū! Čia tinka bet koks atsakymas.",
-    "yourAnswer": "Tavo atsakymas"
+    "cancel": "Atšaukti"
   },
   "common": {
     "latvia": "Latvija",

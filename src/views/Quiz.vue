@@ -9,14 +9,14 @@ import CornerHeroImage from '../components/CornerHeroImage.vue'
 import { publicUrl } from '../publicUrl'
 
 const { t } = useLocale()
-const { state, reset } = useQuizProgress()
+const { hasBadge, reset } = useQuizProgress()
 
 const total = quizQuestions.length
-const collected = computed(() => quizQuestions.filter((question) => state.badges.includes(question.id)).length)
+const collected = computed(() => quizQuestions.filter((question) => hasBadge(question.id)).length)
 const allDone = computed(() => collected.value === total)
 
 const visibleQuestions = computed(() => {
-  const current = quizQuestions.findIndex((question) => !state.badges.includes(question.id))
+  const current = quizQuestions.findIndex((question) => !hasBadge(question.id))
   return current === -1 ? quizQuestions : quizQuestions.slice(0, current + 1)
 })
 
@@ -31,11 +31,9 @@ watch(
     if (length <= previousLength) return
     await nextTick()
     const unlocked = visibleQuestions.value[length - 1]
+    // Smooth or instant comes from the CSS scroll-behavior, which honours prefers-reduced-motion.
     scrollTimer = setTimeout(() => {
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-      document
-        .getElementById(`q-${unlocked.id}`)
-        ?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' })
+      document.getElementById(`q-${unlocked.id}`)?.scrollIntoView({ block: 'center' })
     }, SCROLL_DELAY_MS)
   },
 )

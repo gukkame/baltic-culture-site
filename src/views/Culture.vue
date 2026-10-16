@@ -90,7 +90,7 @@ const heroSlides = computed(() =>
       to="/"
       class="mt-6 inline-block text-terracotta-dark underline-offset-4 transition-colors duration-150 hover:text-terracotta hover:underline"
     >
-      {{ t('culture.backHome') }}
+      ← {{ t('culture.backHome') }}
     </RouterLink>
   </section>
 
@@ -104,7 +104,7 @@ const heroSlides = computed(() =>
         <div class="max-w-[60%] lg:max-w-md">
           <RouterLink
             to="/"
-            class="inline-flex items-center gap-1 text-sm text-ink-light underline-offset-4 transition-colors duration-150 hover:text-terracotta-dark hover:underline"
+            class="text-sm text-ink-light underline-offset-4 transition-colors duration-150 hover:text-terracotta-dark hover:underline"
           >
             ← {{ t('culture.backHome') }}
           </RouterLink>
@@ -125,7 +125,7 @@ const heroSlides = computed(() =>
     </div>
 
     <div class="mx-auto mt-8 max-w-6xl px-4 pb-8 sm:px-6 sm:pb-12 lg:px-8">
-      <div role="group" :aria-label="t('culture.filters.all')" class="flex flex-wrap gap-2">
+      <div role="group" :aria-label="t('culture.filters.label')" class="flex flex-wrap gap-2">
         <button
           v-for="filter in filters"
           :key="filter.id"

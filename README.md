@@ -15,10 +15,11 @@ Lithuanian; page addresses follow the language (`/latvija`, `/lietuva`, `/par-pr
 
 ```
 public/
-  artwork/            home page painting and map textures
+  artwork/            painted map textures on the home page
+  images/home/        home page slideshow photos
   images/gallery/     photo galleries, one folder per country
   images/hero/        quiz page photo
-  images/symbols/     country symbols (Auseklis, rožėlė)
+  images/symbols/     country symbols (Auseklis, roželė)
   images/partners/    Interreg / EU co-funding logo
   images/backgrounds/ paper texture behind the pages
 src/
@@ -100,10 +101,8 @@ Add an entry to the end of `src/data/latvia.json` or `src/data/lithuania.json`:
 
 Add to `src/data/quiz.json`. Questions unlock one by one in file order, and the `id` is also the badge.
 
-- Multiple choice: `question`, `options` (list of `{ "lv", "lt" }`), `correct` (index of the right option,
-  starting from 0) and `explanation`.
-- Open question (any typed answer earns the badge, then `explanation` shows the traditional answer):
-  `"type": "open"`, `question` and `explanation`.
+- Every question is multiple choice: `question`, `options` (list of `{ "lv", "lt" }`), `correct` (index of the
+  right option, starting from 0) and `explanation`.
 - `country`: `"latvia"`, `"lithuania"` or `"both"`; optional `itemId` links the answer to a dance/song page.
 
 ### Interface texts

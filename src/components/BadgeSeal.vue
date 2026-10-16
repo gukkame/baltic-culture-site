@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { QuizCountry } from '../types/content'
+import FolkEmblem from './FolkEmblem.vue'
 
 withDefaults(
   defineProps<{
@@ -29,11 +30,6 @@ const tone: Record<QuizCountry, string> = {
   >
     <circle cx="24" cy="24" r="22" fill="currentColor" />
     <circle cx="24" cy="24" r="18.5" fill="none" stroke-width="1.5" class="stroke-gold-light" stroke-dasharray="2 3" />
-    <g transform="translate(12 12)">
-      <path
-        d="M12 1 L13.8 9 L21.5 6.2 L15.6 12 L21.5 17.8 L13.8 15 L12 23 L10.2 15 L2.5 17.8 L8.4 12 L2.5 6.2 L10.2 9 Z"
-        class="fill-parchment-light"
-      />
-    </g>
+    <FolkEmblem x="12" y="12" class="text-parchment-light" />
   </svg>
 </template>

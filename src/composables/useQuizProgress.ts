@@ -2,7 +2,7 @@ import { reactive, watch } from 'vue'
 
 const STORAGE_KEY = 'baltic-culture-quiz-progress'
 
-export interface QuizProgressState {
+interface QuizProgressState {
   badges: string[]
 }
 
@@ -39,5 +39,5 @@ export function useQuizProgress() {
     state.badges = []
   }
 
-  return { state, earnBadge, hasBadge, reset }
+  return { earnBadge, hasBadge, reset }
 }

@@ -1,13 +1,12 @@
-import type { LocalizedText } from '../types/content'
-import type { Country } from './index'
+import type { Country, LocalizedText } from '../types/content'
 import { publicUrl } from '../publicUrl'
 
-export interface License {
+interface License {
   name: string
   url: string
 }
 
-export interface ImageCredit {
+interface ImageCredit {
   src: string
   title?: LocalizedText
   author?: string
@@ -16,14 +15,14 @@ export interface ImageCredit {
   description?: LocalizedText
 }
 
-export const CC_BY_SA_4: License = { name: 'CC BY-SA 4.0', url: 'https://creativecommons.org/licenses/by-sa/4.0/' }
+const CC_BY_SA_4: License = { name: 'CC BY-SA 4.0', url: 'https://creativecommons.org/licenses/by-sa/4.0/' }
 
 // Paths here are relative to public/; this adds the site's base path.
 function withPublicUrls(images: ImageCredit[]): ImageCredit[] {
   return images.map((image) => ({ ...image, src: publicUrl(image.src) }))
 }
 
-export const commons = (file: string) =>
+const commons = (file: string) =>
   `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(file.replace(/ /g, '_'))}`
 
 export const latvianSymbols: ImageCredit[] = withPublicUrls([

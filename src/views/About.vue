@@ -2,7 +2,8 @@
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLocale } from '../composables/useLocale'
-import { contentByCountry, type Country } from '../data'
+import { contentByCountry } from '../data'
+import type { Country } from '../types/content'
 import { galleryByCountry, latvianSymbols, lithuanianSymbols } from '../data/credits'
 import InterregLogo from '../components/InterregLogo.vue'
 
@@ -48,9 +49,11 @@ const textSources = computed(() =>
 const videoGroups = computed(() =>
   countries.map((country) => ({
     country,
-    items: contentByCountry[country]
-      .filter((item) => item.videoUrl)
-      .map((item) => ({ id: item.id, title: item.title[locale.value], url: item.videoUrl })),
+    items: contentByCountry[country].map((item) => ({
+      id: item.id,
+      title: item.title[locale.value],
+      url: item.videoUrl,
+    })),
   })),
 )
 

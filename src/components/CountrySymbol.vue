@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { Country } from '../data'
+import type { Country } from '../types/content'
 import { publicUrl } from '../publicUrl'
 
 const props = defineProps<{

@@ -33,7 +33,8 @@
     "songs": "Dziesmas",
     "images": "Attēli",
     "filters": {
-      "all": "Visas"
+      "all": "Visas",
+      "label": "Filtrēt saturu"
     },
     "pages": {
       "latvia": {
@@ -82,11 +83,7 @@
     "resetTitle": "Sākt no jauna?",
     "resetConfirm": "Visas iegūtās nozīmītes tiks dzēstas, un viktorīna sāksies no pirmā jautājuma.",
     "resetButton": "Jā, sākt no jauna",
-    "cancel": "Atcelt",
-    "openPlaceholder": "Raksti savu atbildi…",
-    "submit": "Atbildēt",
-    "anyAnswer": "Paldies! Šeit der jebkura atbilde.",
-    "yourAnswer": "Tava atbilde"
+    "cancel": "Atcelt"
   },
   "common": {
     "latvia": "Latvija",

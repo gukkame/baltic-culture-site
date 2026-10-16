@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useLocale, type Locale } from '../composables/useLocale'
 import CountryMap from '../components/home/CountryMap.vue'
@@ -22,9 +22,21 @@ const languages: { code: Locale; label: string; name: string }[] = [
 ]
 
 const heroPhotos = [
-  { src: '/images/home/folk-group-cabin.jpg', position: 'object-[center_58%]', mobilePosition: 'max-tablet:object-[51%_center]' },
-  { src: '/images/home/folk-choir-stage.jpg', position: 'object-[center_100%]', mobilePosition: 'max-tablet:object-[51%_center]' },
-  { src: '/images/home/folk-circle-dance.jpg', position: 'object-[center_52%]', mobilePosition: 'max-tablet:object-[50%_center]' },
+  {
+    src: '/images/home/folk-group-cabin.webp',
+    position: 'object-[center_58%]',
+    mobilePosition: 'max-tablet:object-[51%_center]',
+  },
+  {
+    src: '/images/home/folk-choir-stage.webp',
+    position: 'object-[center_100%]',
+    mobilePosition: 'max-tablet:object-[51%_center]',
+  },
+  {
+    src: '/images/home/folk-circle-dance.webp',
+    position: 'object-[center_52%]',
+    mobilePosition: 'max-tablet:object-[50%_center]',
+  },
 ] as const
 
 const activePhoto = ref(0)
@@ -34,8 +46,7 @@ let photoTimer: ReturnType<typeof setInterval> | undefined
 let reducedMotionQuery: MediaQueryList | undefined
 
 function startSlideshow() {
-  if (photoTimer) clearInterval(photoTimer)
-  photoTimer = undefined
+  clearInterval(photoTimer)
   if (slideshowPaused.value || document.hidden) return
   photoTimer = setInterval(() => {
     activePhoto.value = (activePhoto.value + 1) % heroPhotos.length
@@ -48,8 +59,8 @@ function syncMotionPreference() {
 }
 
 const mobileMenuOpen = ref(false)
-const mobileMenu = ref<HTMLElement | null>(null)
-const mobileMenuButton = ref<HTMLButtonElement | null>(null)
+const mobileMenu = ref<HTMLElement>()
+const mobileMenuButton = ref<HTMLButtonElement>()
 
 function closeOnOutsidePointer(event: PointerEvent) {
   if (event.target instanceof Node && !mobileMenu.value?.contains(event.target)) {
@@ -83,12 +94,12 @@ onMounted(() => {
   syncMotionPreference()
 })
 
-onUnmounted(() => {
+onBeforeUnmount(() => {
   document.removeEventListener('pointerdown', closeOnOutsidePointer)
   desktopQuery?.removeEventListener('change', closeOnDesktop)
   reducedMotionQuery?.removeEventListener('change', syncMotionPreference)
   document.removeEventListener('visibilitychange', startSlideshow)
-  if (photoTimer) clearInterval(photoTimer)
+  clearInterval(photoTimer)
 })
 
 const heroControl =
@@ -103,7 +114,7 @@ const heroControl =
     <img
       v-for="(photo, index) in heroPhotos"
       :key="photo.src"
-      class="pointer-events-none absolute inset-0 -z-2 size-full object-cover transition-opacity duration-[1200ms] ease-in-out motion-reduce:transition-none"
+      class="pointer-events-none absolute inset-0 -z-2 size-full object-cover transition-opacity duration-[1200ms] ease-in-out"
       :class="[photo.position, photo.mobilePosition, index === activePhoto ? 'opacity-100' : 'opacity-0']"
       :src="publicUrl(photo.src)"
       alt=""

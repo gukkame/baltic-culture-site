@@ -1,9 +1,7 @@
 import latvia from './latvia.json'
 import lithuania from './lithuania.json'
 import quiz from './quiz.json'
-import type { ContentItem, QuizQuestion } from '../types/content'
-
-export type Country = 'latvia' | 'lithuania'
+import type { ContentItem, Country, QuizQuestion } from '../types/content'
 
 export const contentByCountry: Record<Country, ContentItem[]> = {
   latvia: latvia as ContentItem[],
@@ -30,7 +28,7 @@ export function findNextItem(country: string | undefined, itemId: string | undef
   return sameCategory[(index + 1) % sameCategory.length]
 }
 
-export function youtubeId(videoUrl: string): string | undefined {
+function youtubeId(videoUrl: string): string | undefined {
   return videoUrl.match(/[?&]v=([^&]+)/)?.[1]
 }
 

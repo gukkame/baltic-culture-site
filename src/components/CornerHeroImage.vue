@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref, useId, watch } from 'vue'
 
-export interface HeroSlide {
+interface HeroSlide {
   src: string
   alt?: string
 }

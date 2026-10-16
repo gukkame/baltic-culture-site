@@ -11,15 +11,13 @@ const props = defineProps<{
 
 const PREVIEW_DELAY_MS = 400
 
-const thumbnail = computed(() => (props.item.videoUrl ? youtubeThumbnailUrl(props.item.videoUrl) : undefined))
-const previewUrl = computed(() => (props.item.videoUrl ? youtubePreviewUrl(props.item.videoUrl) : undefined))
+const thumbnail = computed(() => youtubeThumbnailUrl(props.item.videoUrl))
+const previewUrl = computed(() => youtubePreviewUrl(props.item.videoUrl))
 
 const thumbnailFailed = ref(false)
 const showThumbnail = computed(() => thumbnail.value && !thumbnailFailed.value)
 
-const canPreview =
-  typeof window !== 'undefined' &&
-  window.matchMedia('(hover: hover) and (prefers-reduced-motion: no-preference)').matches
+const canPreview = window.matchMedia('(hover: hover) and (prefers-reduced-motion: no-preference)').matches
 
 const showVideo = ref(false)
 const videoReady = ref(false)

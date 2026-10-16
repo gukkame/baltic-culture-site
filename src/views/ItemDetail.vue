@@ -38,7 +38,7 @@ const cameFromQuiz = computed(() => {
   <article v-else class="mx-auto max-w-3xl px-4 py-12">
     <RouterLink
       :to="countryPathFor(country)"
-      class="text-sm text-terracotta-dark underline-offset-4 transition-colors duration-150 hover:text-terracotta hover:underline"
+      class="text-sm text-ink-light underline-offset-4 transition-colors duration-150 hover:text-terracotta-dark hover:underline"
     >
       ← {{ t('item.backToCulture') }}
     </RouterLink>
@@ -48,7 +48,7 @@ const cameFromQuiz = computed(() => {
 
     <p class="mt-6 whitespace-pre-line leading-relaxed text-ink">{{ item.description[locale] }}</p>
 
-    <div v-if="item.videoUrl" class="mt-8">
+    <div class="mt-8">
       <h2 class="font-serif text-xl text-ink">{{ t('item.watchVideo') }}</h2>
       <div class="mt-3 aspect-video w-full overflow-hidden rounded-lg border border-parchment-dark">
         <iframe

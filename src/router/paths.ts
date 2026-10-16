@@ -1,7 +1,8 @@
-import { isCountry, type Country } from '../data'
+import { isCountry } from '../data'
+import type { Country } from '../types/content'
 import type { Locale } from '../composables/useLocale'
 
-export const countrySlugs: Record<Country, string> = {
+const countrySlugs: Record<Country, string> = {
   latvia: 'latvija',
   lithuania: 'lietuva',
 }

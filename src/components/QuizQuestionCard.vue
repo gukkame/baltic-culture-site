@@ -20,29 +20,14 @@ const solved = computed(() => hasBadge(props.question.id))
 const picked = ref<number>()
 const wrong = computed(() => !solved.value && picked.value !== undefined)
 
-const isOpen = computed(() => props.question.type === 'open')
-const correctIndex = computed(() => (props.question.type === 'open' ? undefined : props.question.correct))
-const options = computed(() => (props.question.type === 'open' ? [] : props.question.options))
-
-const openAnswer = ref('')
-const canSubmitOpen = computed(() => openAnswer.value.trim().length > 0)
-
 watch(solved, (isSolved) => {
-  if (!isSolved) {
-    picked.value = undefined
-    openAnswer.value = ''
-  }
+  if (!isSolved) picked.value = undefined
 })
 
 function pick(index: number) {
   if (solved.value) return
   picked.value = index
-  if (index === correctIndex.value) earnBadge(props.question.id)
-}
-
-function submitOpen() {
-  if (solved.value || !canSubmitOpen.value) return
-  earnBadge(props.question.id)
+  if (index === props.question.correct) earnBadge(props.question.id)
 }
 
 const relatedItem = computed(() =>
@@ -57,7 +42,7 @@ const countryLabel = computed(() =>
 
 function optionClass(index: number): string {
   if (solved.value) {
-    return index === correctIndex.value
+    return index === props.question.correct
       ? 'border-forest bg-forest/10 text-ink'
       : 'border-parchment-darker bg-parchment-light text-ink-light opacity-60'
   }
@@ -86,40 +71,13 @@ function optionClass(index: number): string {
 
     <h2 class="mt-2 whitespace-pre-line font-serif text-xl text-ink">{{ question.question[locale] }}</h2>
 
-    <form v-if="isOpen" class="mt-4" @submit.prevent="submitOpen">
-      <label v-if="!solved" class="sr-only" :for="`answer-${question.id}`">{{ t('quiz.yourAnswer') }}</label>
-      <textarea
-        v-if="!solved"
-        :id="`answer-${question.id}`"
-        v-model="openAnswer"
-        rows="3"
-        :placeholder="t('quiz.openPlaceholder')"
-        class="w-full rounded-xl border border-parchment-darker bg-parchment-light px-4 py-3 text-ink placeholder:text-ink-light/60 focus:border-terracotta focus:outline-none"
-      />
-      <p
-        v-else-if="openAnswer"
-        class="rounded-xl border border-forest bg-forest/10 px-4 py-3 whitespace-pre-line text-ink"
-      >
-        <span class="block text-xs text-ink-light">{{ t('quiz.yourAnswer') }}</span
-        >{{ openAnswer }}
-      </p>
+    <div role="group" :aria-label="question.question[locale]" class="mt-4 grid gap-2">
       <button
-        v-if="!solved"
-        type="submit"
-        :disabled="!canSubmitOpen"
-        class="mt-3 rounded-full bg-terracotta px-5 py-2 text-sm font-medium text-parchment transition-colors duration-150 hover:bg-terracotta-dark disabled:cursor-not-allowed disabled:opacity-50"
-      >
-        {{ t('quiz.submit') }}
-      </button>
-    </form>
-
-    <div v-else role="group" :aria-label="question.question[locale]" class="mt-4 grid gap-2">
-      <button
-        v-for="(option, index) in options"
+        v-for="(option, index) in question.options"
         :key="index"
         type="button"
         :disabled="solved"
-        :aria-pressed="picked === index || (solved && index === correctIndex)"
+        :aria-pressed="picked === index || (solved && index === question.correct)"
         class="flex w-full items-center gap-3 rounded-xl border px-4 py-3 text-left transition duration-200"
         :class="optionClass(index)"
         @click="pick(index)"
@@ -147,9 +105,7 @@ function optionClass(index: number): string {
       </div>
 
       <div v-else-if="solved" class="mt-4 text-sm">
-        <p class="font-medium text-forest-dark">
-          {{ isOpen ? t('quiz.anyAnswer') : t('quiz.correct') }} {{ t('quiz.badgeEarned') }}
-        </p>
+        <p class="font-medium text-forest-dark">{{ t('quiz.correct') }} {{ t('quiz.badgeEarned') }}</p>
         <p class="mt-1 whitespace-pre-line leading-relaxed text-ink">{{ question.explanation[locale] }}</p>
         <RouterLink
           v-if="relatedItem"

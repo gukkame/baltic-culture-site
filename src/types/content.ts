@@ -1,31 +1,23 @@
-export type ItemCategory = 'dance' | 'song'
+export type Country = 'latvia' | 'lithuania'
+
+type ItemCategory = 'dance' | 'song'
 
 export interface LocalizedText {
   lv: string
   lt: string
 }
 
-export type QuizCountry = 'latvia' | 'lithuania' | 'both'
+export type QuizCountry = Country | 'both'
 
-interface QuizQuestionBase {
+export interface QuizQuestion {
   id: string
   country: QuizCountry
   itemId?: string
   question: LocalizedText
-  explanation: LocalizedText
-}
-
-export interface ChoiceQuestion extends QuizQuestionBase {
-  type?: 'choice'
   options: LocalizedText[]
   correct: number
+  explanation: LocalizedText
 }
-
-export interface OpenQuestion extends QuizQuestionBase {
-  type: 'open'
-}
-
-export type QuizQuestion = ChoiceQuestion | OpenQuestion
 
 export interface ContentItem {
   id: string
