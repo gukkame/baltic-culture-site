@@ -275,32 +275,6 @@
     }
   },
   {
-    "id": "livani-ubaglicis",
-    "country": "latvia",
-    "type": "open",
-    "question": {
-      "lv": "Kā tev šķiet, kāpēc Ubaglīcis ieguvis tādu nosaukumu?",
-      "lt": "Pasakojama, kad vienoje Līvānų vietoje seniau pietaudavo elgetos.\nKokį pavadinimą sugalvotum tokiai vietai?"
-    },
-    "explanation": {
-      "lv": "Stāsta, ka senāk ubagi šeit ieturējuši pusdienas.",
-      "lt": "Ši vieta vadinama „Ubaglīcis“ – „Elgetų įlanka“. Pasakojama, kad seniau elgetos čia pietaudavo, ir su šiuo pasakojimu siejamas vietovės pavadinimas."
-    }
-  },
-  {
-    "id": "livani-dziesma",
-    "country": "latvia",
-    "type": "open",
-    "question": {
-      "lv": "Kāda Līvānos pierakstīta tautasdziesma skan:\n„Leivōns muiža skaista muiža,\nŽāl man beja tū atstōt…”\nVai tu vari sadomāt pārējās divas rindiņas?",
-      "lt": "Līvāniuose užrašytos latgalių liaudies dainos pradžia, išversta į lietuvių kalbą:\n„Līvānų dvaras – gražus dvaras,\nman buvo gaila jį palikti…“\nSukurk dvi eilutes, kurios galėtų pratęsti šią dainą."
-    },
-    "explanation": {
-      "lv": "Tautasdziesma turpinās:\n„Stykla durvis, glōžu lūgi,\nVydā saule rūtojās.”",
-      "lt": "Tradicinės dainos tęsinys, išverstas į lietuvių kalbą:\n„Stiklo durys, stiklo langai,\nviduje saulė žaidė.“\n\nOriginalas latgališkai:\n„Stykla durvis, glōžu lūgi,\nVydā saule rūtojās.“"
-    }
-  },
-  {
     "id": "tytuvenai-druska",
     "country": "lithuania",
     "question": {
